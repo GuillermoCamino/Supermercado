@@ -17,6 +17,7 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
      */
     public Gestion_ventas_cajasDiarias() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -30,39 +31,57 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         PnlInicio = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        PnlFondoPantalla = new javax.swing.JPanel();
         LblFoto = new javax.swing.JLabel();
         LblTitulo = new javax.swing.JLabel();
+        PnlFondo = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PnlInicio.setBackground(new java.awt.Color(255, 255, 255));
+        PnlInicio.setPreferredSize(new java.awt.Dimension(1920, 1080));
         PnlInicio.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setPreferredSize(new java.awt.Dimension(813, 65));
-        jPanel2.setLayout(new java.awt.GridBagLayout());
+        PnlFondoPantalla.setBackground(new java.awt.Color(153, 153, 153));
+        PnlFondoPantalla.setPreferredSize(new java.awt.Dimension(813, 65));
+        PnlFondoPantalla.setLayout(new java.awt.GridBagLayout());
 
-        LblFoto.setText("jLabel1");
+        LblFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        jPanel2.add(LblFoto, gridBagConstraints);
+        PnlFondoPantalla.add(LblFoto, gridBagConstraints);
 
-        LblTitulo.setText("jLabel2");
-        jPanel2.add(LblTitulo, new java.awt.GridBagConstraints());
+        LblTitulo.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        LblTitulo.setText("GESTIÓN DE VENTAS Y CAJAS DIARIAS");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.weightx = 1.0;
+        PnlFondoPantalla.add(LblTitulo, gridBagConstraints);
 
-        PnlInicio.add(jPanel2, java.awt.BorderLayout.PAGE_START);
+        PnlInicio.add(PnlFondoPantalla, java.awt.BorderLayout.PAGE_START);
+
+        PnlFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondopantallagestionventass.png"))); // NOI18N
+        jLabel1.setToolTipText("");
+        PnlFondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 773));
+
+        PnlInicio.add(PnlFondo, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 813, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(PnlInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 1920, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PnlInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -96,7 +115,9 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LblFoto;
     private javax.swing.JLabel LblTitulo;
+    private javax.swing.JPanel PnlFondo;
+    private javax.swing.JPanel PnlFondoPantalla;
     private javax.swing.JPanel PnlInicio;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
