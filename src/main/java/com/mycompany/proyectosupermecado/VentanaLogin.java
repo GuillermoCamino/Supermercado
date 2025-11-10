@@ -56,6 +56,7 @@ public class VentanaLogin extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         pnlUsuarioPassword.add(lblTituloCostaMarket, gridBagConstraints);
 
+        txtDNI.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtDNI.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtDNI.setText("DNI/NIF o código de empleado");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -65,6 +66,7 @@ public class VentanaLogin extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 125, 5, 125);
         pnlUsuarioPassword.add(txtDNI, gridBagConstraints);
 
+        pfContra.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         pfContra.setText("Contraseña");
         pfContra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +81,8 @@ public class VentanaLogin extends javax.swing.JFrame {
         pnlUsuarioPassword.add(pfContra, gridBagConstraints);
 
         btnAcceder.setBackground(new java.awt.Color(255, 102, 102));
+        btnAcceder.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnAcceder.setForeground(new java.awt.Color(255, 255, 255));
         btnAcceder.setText("Iniciar Sesión");
         btnAcceder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
