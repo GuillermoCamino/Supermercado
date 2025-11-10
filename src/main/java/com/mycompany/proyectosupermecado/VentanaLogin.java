@@ -37,14 +37,18 @@ public class VentanaLogin extends javax.swing.JFrame {
         pfContra = new javax.swing.JPasswordField();
         btnAcceder = new javax.swing.JButton();
         lblBienvenida = new javax.swing.JLabel();
-        lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pnlPrincipal.setBackground(new java.awt.Color(153, 153, 153));
+        pnlPrincipal.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        pnlPrincipal.setMinimumSize(new java.awt.Dimension(1920, 1080));
+        pnlPrincipal.setPreferredSize(new java.awt.Dimension(1920, 1080));
         pnlPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlUsuarioPassword.setBackground(new java.awt.Color(255, 255, 255));
+        pnlUsuarioPassword.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        pnlUsuarioPassword.setMinimumSize(new java.awt.Dimension(1920, 1080));
         pnlUsuarioPassword.setLayout(new java.awt.GridBagLayout());
 
         lblTituloCostaMarket.setForeground(new java.awt.Color(0, 0, 0));
@@ -106,10 +110,7 @@ public class VentanaLogin extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 0, 5, 0);
         pnlUsuarioPassword.add(lblBienvenida, gridBagConstraints);
 
-        pnlPrincipal.add(pnlUsuarioPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 31, -1, -1));
-
-        lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondopantalla.png"))); // NOI18N
-        pnlPrincipal.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, 730, 520));
+        pnlPrincipal.add(pnlUsuarioPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 1, 730, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -164,7 +165,6 @@ public class VentanaLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAcceder;
     private javax.swing.JLabel lblBienvenida;
-    private javax.swing.JLabel lblFondo;
     private javax.swing.JLabel lblTituloCostaMarket;
     private javax.swing.JPasswordField pfContra;
     private javax.swing.JPanel pnlPrincipal;
