@@ -30,38 +30,99 @@ public class VentanaLogin extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         pnlPrincipal = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        lblPantallaInicio = new javax.swing.JLabel();
+        pnlUsuarioPassword = new javax.swing.JPanel();
+        lblTituloCostaMarket = new javax.swing.JLabel();
+        txtDNI = new javax.swing.JTextField();
+        pfContra = new javax.swing.JPasswordField();
+        btnAcceder = new javax.swing.JButton();
+        lblBienvenida = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        pnlPrincipal.setBackground(new java.awt.Color(102, 102, 0));
+        pnlPrincipal.setBackground(new java.awt.Color(153, 153, 153));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        lblPantallaInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondopantalla.png"))); // NOI18N
+
+        pnlUsuarioPassword.setBackground(new java.awt.Color(255, 255, 255));
+        pnlUsuarioPassword.setLayout(new java.awt.GridBagLayout());
+
+        lblTituloCostaMarket.setForeground(new java.awt.Color(0, 0, 0));
+        lblTituloCostaMarket.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTituloCostaMarket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotocostamarket.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        pnlUsuarioPassword.add(lblTituloCostaMarket, gridBagConstraints);
+
+        txtDNI.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtDNI.setText("DNI/NIF o código de empleado");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(5, 125, 5, 125);
+        pnlUsuarioPassword.add(txtDNI, gridBagConstraints);
+
+        pfContra.setText("Contraseña");
+        pfContra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pfContraActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(5, 125, 5, 125);
+        pnlUsuarioPassword.add(pfContra, gridBagConstraints);
+
+        btnAcceder.setBackground(new java.awt.Color(255, 102, 102));
+        btnAcceder.setText("Iniciar Sesión");
+        btnAcceder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAccederActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(5, 125, 5, 125);
+        pnlUsuarioPassword.add(btnAcceder, gridBagConstraints);
+
+        lblBienvenida.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
+        lblBienvenida.setForeground(new java.awt.Color(0, 0, 0));
+        lblBienvenida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblBienvenida.setText("Bienvenido de Nuevo");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 0, 5, 0);
+        pnlUsuarioPassword.add(lblBienvenida, gridBagConstraints);
 
         javax.swing.GroupLayout pnlPrincipalLayout = new javax.swing.GroupLayout(pnlPrincipal);
         pnlPrincipal.setLayout(pnlPrincipalLayout);
         pnlPrincipalLayout.setHorizontalGroup(
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipalLayout.createSequentialGroup()
-                .addContainerGap(266, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(233, 233, 233))
+            .addGroup(pnlPrincipalLayout.createSequentialGroup()
+                .addComponent(lblPantallaInicio)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipalLayout.createSequentialGroup()
+                    .addContainerGap(44, Short.MAX_VALUE)
+                    .addComponent(pnlUsuarioPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(57, Short.MAX_VALUE)))
         );
         pnlPrincipalLayout.setVerticalGroup(
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                .addGap(124, 124, 124)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(221, Short.MAX_VALUE))
+            .addComponent(lblPantallaInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipalLayout.createSequentialGroup()
+                    .addContainerGap(31, Short.MAX_VALUE)
+                    .addComponent(pnlUsuarioPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(41, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -78,6 +139,14 @@ public class VentanaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void pfContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pfContraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pfContraActionPerformed
+
+    private void btnAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAccederActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -87,7 +156,7 @@ public class VentanaLogin extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
+        /*try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -98,13 +167,22 @@ public class VentanaLogin extends javax.swing.JFrame {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        */
+        
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new VentanaLogin().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton btnAcceder;
+    private javax.swing.JLabel lblBienvenida;
+    private javax.swing.JLabel lblPantallaInicio;
+    private javax.swing.JLabel lblTituloCostaMarket;
+    private javax.swing.JPasswordField pfContra;
     private javax.swing.JPanel pnlPrincipal;
+    private javax.swing.JPanel pnlUsuarioPassword;
+    private javax.swing.JTextField txtDNI;
     // End of variables declaration//GEN-END:variables
 }
