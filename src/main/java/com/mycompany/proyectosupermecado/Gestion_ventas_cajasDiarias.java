@@ -4,6 +4,11 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author MEDAC
@@ -18,6 +23,7 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
     public Gestion_ventas_cajasDiarias() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        redimensionarIcono(LblFondo, "fondopantallagestionventass.png");
     }
 
     /**
@@ -35,7 +41,7 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
         LblFoto = new javax.swing.JLabel();
         LblTitulo = new javax.swing.JLabel();
         PnlFondo = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        LblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,9 +71,9 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
 
         PnlFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondopantallagestionventass.png"))); // NOI18N
-        jLabel1.setToolTipText("");
-        PnlFondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 773));
+        LblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondopantallagestionventass (1).png"))); // NOI18N
+        LblFondo.setToolTipText("");
+        PnlFondo.add(LblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 773));
 
         PnlInicio.add(PnlFondo, java.awt.BorderLayout.CENTER);
 
@@ -90,6 +96,15 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+    private void redimensionarIconosMenu() {
+        redimensionarIcono(LblFondo, "fondopantallagestionventass.png");     
+    }
+        private void redimensionarIcono(JLabel Lbl, String nombre) {
+        ImageIcon icono = new ImageIcon(getClass().getResource("/" + nombre));
+        Image imagen = icono.getImage().getScaledInstance(PnlInicio.getHeight(), PnlInicio.getWidth(), Image.SCALE_SMOOTH);
+        Lbl.setIcon(new ImageIcon(imagen));
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -110,14 +125,16 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Gestion_ventas_cajasDiarias().setVisible(true));
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LblFondo;
     private javax.swing.JLabel LblFoto;
     private javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlFondo;
     private javax.swing.JPanel PnlFondoPantalla;
     private javax.swing.JPanel PnlInicio;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
