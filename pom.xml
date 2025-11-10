@@ -4,5 +4,12 @@
     <groupId>com.mycompany</groupId>
     <artifactId>ProyectoSupermecado</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>   
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE270</version>
+        </dependency>
+    </dependencies>
 </project>
