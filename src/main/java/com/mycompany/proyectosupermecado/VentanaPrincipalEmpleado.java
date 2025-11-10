@@ -17,6 +17,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
      */
     public VentanaPrincipalEmpleado() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -27,13 +28,21 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         pnlPrincipal = new javax.swing.JPanel();
         pnlUsuario = new javax.swing.JPanel();
         lblLogo = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblEmpleado = new javax.swing.JLabel();
         pnlCopyright = new javax.swing.JPanel();
+        lblFotoPiePagina = new javax.swing.JLabel();
+        txtDerechos = new javax.swing.JLabel();
+        lblCopyRight = new javax.swing.JLabel();
         pnlBotones = new javax.swing.JPanel();
+        btnInventario = new javax.swing.JButton();
+        btnPedidos = new javax.swing.JButton();
+        btnClientes = new javax.swing.JButton();
+        btnVentaCaja = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,43 +50,52 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         pnlUsuario.setBackground(new java.awt.Color(204, 204, 204));
         pnlUsuario.setPreferredSize(new java.awt.Dimension(535, 58));
-        pnlUsuario.setLayout(new javax.swing.BoxLayout(pnlUsuario, javax.swing.BoxLayout.LINE_AXIS));
+        pnlUsuario.setLayout(new java.awt.GridBagLayout());
 
         lblLogo.setForeground(new java.awt.Color(255, 102, 204));
         lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
-        pnlUsuario.add(lblLogo);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 0);
+        pnlUsuario.add(lblLogo, gridBagConstraints);
 
-        jLabel1.setForeground(new java.awt.Color(102, 204, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Un gusto  verlo de vuelta!");
-        pnlUsuario.add(jLabel1);
+        lblEmpleado.setForeground(new java.awt.Color(102, 204, 0));
+        lblEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEmpleado.setText("Un gusto  verlo de vuelta!");
+        pnlUsuario.add(lblEmpleado, new java.awt.GridBagConstraints());
 
         pnlCopyright.setBackground(new java.awt.Color(255, 255, 255));
         pnlCopyright.setPreferredSize(new java.awt.Dimension(0, 58));
 
-        javax.swing.GroupLayout pnlCopyrightLayout = new javax.swing.GroupLayout(pnlCopyright);
-        pnlCopyright.setLayout(pnlCopyrightLayout);
-        pnlCopyrightLayout.setHorizontalGroup(
-            pnlCopyrightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        pnlCopyrightLayout.setVerticalGroup(
-            pnlCopyrightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 58, Short.MAX_VALUE)
-        );
+        lblFotoPiePagina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
+        pnlCopyright.add(lblFotoPiePagina);
+
+        txtDerechos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtDerechos.setForeground(new java.awt.Color(0, 0, 0));
+        txtDerechos.setText("Todos los derechos reservados");
+        pnlCopyright.add(txtDerechos);
+
+        lblCopyRight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/copyright.png"))); // NOI18N
+        pnlCopyright.add(lblCopyRight);
 
         pnlBotones.setBackground(new java.awt.Color(102, 204, 255));
+        pnlBotones.setLayout(new java.awt.GridLayout(2, 2, 10, 10));
 
-        javax.swing.GroupLayout pnlBotonesLayout = new javax.swing.GroupLayout(pnlBotones);
-        pnlBotones.setLayout(pnlBotonesLayout);
-        pnlBotonesLayout.setHorizontalGroup(
-            pnlBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        pnlBotonesLayout.setVerticalGroup(
-            pnlBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 285, Short.MAX_VALUE)
-        );
+        btnInventario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnInventario.setText("Gestión de Productos, inventario y stocks");
+        pnlBotones.add(btnInventario);
+
+        btnPedidos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPedidos.setText("Gestión de Pedidos a Proveedores");
+        pnlBotones.add(btnPedidos);
+
+        btnClientes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnClientes.setText("Modificar Clientes");
+        pnlBotones.add(btnClientes);
+
+        btnVentaCaja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnVentaCaja.setText("Venta y Cajas");
+        pnlBotones.add(btnVentaCaja);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,9 +104,11 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pnlUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
-                    .addComponent(pnlCopyright, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE)
-                    .addComponent(pnlBotones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pnlUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlCopyright, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(pnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 657, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -102,8 +122,8 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(pnlUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(pnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlCopyright, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -136,11 +156,18 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnClientes;
+    private javax.swing.JButton btnInventario;
+    private javax.swing.JButton btnPedidos;
+    private javax.swing.JButton btnVentaCaja;
+    private javax.swing.JLabel lblCopyRight;
+    private javax.swing.JLabel lblEmpleado;
+    private javax.swing.JLabel lblFotoPiePagina;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JPanel pnlBotones;
     private javax.swing.JPanel pnlCopyright;
     private javax.swing.JPanel pnlPrincipal;
     private javax.swing.JPanel pnlUsuario;
+    private javax.swing.JLabel txtDerechos;
     // End of variables declaration//GEN-END:variables
 }
