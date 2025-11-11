@@ -28,95 +28,76 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         pnlPrincipal = new javax.swing.JPanel();
-        pnlUsuario = new javax.swing.JPanel();
-        lblEmpleado = new javax.swing.JLabel();
-        pnlCopyright = new javax.swing.JPanel();
-        lblFotoPiePagina = new javax.swing.JLabel();
-        txtDerechos = new javax.swing.JLabel();
-        lblCopyRight = new javax.swing.JLabel();
-        pnlBotones = new javax.swing.JPanel();
-        btnInventario = new javax.swing.JButton();
-        btnPedidos = new javax.swing.JButton();
-        btnClientes = new javax.swing.JButton();
-        btnVentaCaja = new javax.swing.JButton();
+        pnlMensaje = new javax.swing.JPanel();
+        lblFotoLogo = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pnlPrincipal.setLayout(new java.awt.BorderLayout());
 
-        pnlUsuario.setBackground(new java.awt.Color(204, 204, 204));
-        pnlUsuario.setPreferredSize(new java.awt.Dimension(535, 58));
-        pnlUsuario.setLayout(new java.awt.GridBagLayout());
+        pnlMensaje.setBackground(new java.awt.Color(255, 204, 51));
+        pnlMensaje.setForeground(new java.awt.Color(255, 255, 255));
+        pnlMensaje.setLayout(new java.awt.GridBagLayout());
 
-        lblEmpleado.setForeground(new java.awt.Color(102, 204, 0));
-        lblEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEmpleado.setText("Un gusto  verlo de vuelta!");
-        pnlUsuario.add(lblEmpleado, new java.awt.GridBagConstraints());
+        lblFotoLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
+        lblFotoLogo.setToolTipText("");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        pnlMensaje.add(lblFotoLogo, gridBagConstraints);
 
-        pnlCopyright.setBackground(new java.awt.Color(255, 255, 255));
-        pnlCopyright.setPreferredSize(new java.awt.Dimension(0, 58));
+        jLabel2.setText("Un gusto verlo de nuevo");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.weightx = 1.0;
+        pnlMensaje.add(jLabel2, gridBagConstraints);
 
-        lblFotoPiePagina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
-        pnlCopyright.add(lblFotoPiePagina);
+        jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        txtDerechos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtDerechos.setForeground(new java.awt.Color(0, 0, 0));
-        txtDerechos.setText("Todos los derechos reservados");
-        pnlCopyright.add(txtDerechos);
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new java.awt.GridBagConstraints());
 
-        lblCopyRight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/copyright.png"))); // NOI18N
-        pnlCopyright.add(lblCopyRight);
+        jButton1.setText("jButton1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        jPanel1.add(jButton1, gridBagConstraints);
 
-        pnlBotones.setBackground(new java.awt.Color(102, 204, 255));
-        pnlBotones.setPreferredSize(new java.awt.Dimension(1920, 1080));
-        pnlBotones.setLayout(new java.awt.GridLayout(2, 2, 10, 10));
+        jLabel3.setText("jLabel3");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        jPanel1.add(jLabel3, gridBagConstraints);
 
-        btnInventario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnInventario.setText("Gestión de Productos, inventario y stocks");
-        pnlBotones.add(btnInventario);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.weightx = 1.0;
+        pnlMensaje.add(jPanel1, gridBagConstraints);
 
-        btnPedidos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnPedidos.setText("Gestión de Pedidos a Proveedores");
-        pnlBotones.add(btnPedidos);
-
-        btnClientes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnClientes.setText("Modificar Clientes");
-        pnlBotones.add(btnClientes);
-
-        btnVentaCaja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnVentaCaja.setText("Venta y Cajas");
-        pnlBotones.add(btnVentaCaja);
+        pnlPrincipal.add(pnlMensaje, java.awt.BorderLayout.PAGE_START);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pnlUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlCopyright, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(pnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, 657, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(pnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(pnlUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnlBotones, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlCopyright, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -148,17 +129,13 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnClientes;
-    private javax.swing.JButton btnInventario;
-    private javax.swing.JButton btnPedidos;
-    private javax.swing.JButton btnVentaCaja;
-    private javax.swing.JLabel lblCopyRight;
-    private javax.swing.JLabel lblEmpleado;
-    private javax.swing.JLabel lblFotoPiePagina;
-    private javax.swing.JPanel pnlBotones;
-    private javax.swing.JPanel pnlCopyright;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblFotoLogo;
+    private javax.swing.JPanel pnlMensaje;
     private javax.swing.JPanel pnlPrincipal;
-    private javax.swing.JPanel pnlUsuario;
-    private javax.swing.JLabel txtDerechos;
     // End of variables declaration//GEN-END:variables
 }
