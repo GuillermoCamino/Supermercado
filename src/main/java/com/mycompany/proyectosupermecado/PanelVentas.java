@@ -61,7 +61,7 @@ public class PanelVentas extends javax.swing.JPanel {
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 153, 204));
         jButton2.setText("Confirmar");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 204), 4));
@@ -76,7 +76,7 @@ public class PanelVentas extends javax.swing.JPanel {
         jPanel1.add(jButton2, gridBagConstraints);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jButton3.setForeground(new java.awt.Color(153, 255, 153));
         jButton3.setText("Confirmar");
         jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153), 4));
@@ -86,7 +86,7 @@ public class PanelVentas extends javax.swing.JPanel {
         jPanel1.add(jButton3, gridBagConstraints);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 40)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 153, 255));
         jLabel2.setText("Cliente registrado");
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 255), 5));
@@ -97,7 +97,7 @@ public class PanelVentas extends javax.swing.JPanel {
         jPanel1.add(jLabel2, gridBagConstraints);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 40)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(153, 255, 153));
         jLabel3.setText("Cliente no registrado");
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 102), 5));
