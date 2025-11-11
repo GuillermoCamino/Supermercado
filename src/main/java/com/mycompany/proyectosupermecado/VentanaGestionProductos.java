@@ -34,7 +34,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
 
         PnlTotal = new javax.swing.JPanel();
         PnlNorte = new javax.swing.JPanel();
-        btnLogo = new javax.swing.JButton();
+        lblLogo = new javax.swing.JLabel();
         PnlAlertas = new javax.swing.JPanel();
         lbbAlertas = new javax.swing.JLabel();
         lblIconoA = new javax.swing.JLabel();
@@ -42,7 +42,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         lblIconoC = new javax.swing.JLabel();
         PnlBuscar = new javax.swing.JPanel();
         PnlBarra = new javax.swing.JPanel();
-        lblBuscar = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         PnlLupa = new javax.swing.JPanel();
         btnLupa = new javax.swing.JButton();
         PnlPerfil = new javax.swing.JPanel();
@@ -50,6 +50,22 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         BtnCerrar = new javax.swing.JButton();
         lblPerfil = new javax.swing.JLabel();
         PnlOeste = new javax.swing.JPanel();
+        PnlTipos = new javax.swing.JPanel();
+        PnlTabla = new javax.swing.JPanel();
+        btnConservas = new javax.swing.JButton();
+        btnPastasCereales = new javax.swing.JButton();
+        btnAperitivos = new javax.swing.JButton();
+        btnDulces = new javax.swing.JButton();
+        btnCondimentos = new javax.swing.JButton();
+        btnLacteos = new javax.swing.JButton();
+        btnAlcoholicas = new javax.swing.JButton();
+        btnZumosBebidas = new javax.swing.JButton();
+        btnCervezas = new javax.swing.JButton();
+        PnlFiller = new javax.swing.JPanel();
+        PnlSalir = new javax.swing.JPanel();
+        BtnSalir = new javax.swing.JButton();
+        PnlProductos = new javax.swing.JPanel();
+        jScrollBar1 = new javax.swing.JScrollBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,64 +74,56 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlNorte.setBackground(new java.awt.Color(153, 153, 153));
         PnlNorte.setLayout(new java.awt.GridBagLayout());
 
-        btnLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlNorte.add(btnLogo, gridBagConstraints);
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 20, 0, 0);
+        PnlNorte.add(lblLogo, gridBagConstraints);
 
+        PnlAlertas.setBackground(new java.awt.Color(255, 255, 255));
         PnlAlertas.setLayout(new java.awt.GridBagLayout());
 
-        lbbAlertas.setText("jLabel1");
-        PnlAlertas.add(lbbAlertas, new java.awt.GridBagConstraints());
+        lbbAlertas.setForeground(new java.awt.Color(0, 0, 0));
+        lbbAlertas.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 15, 0, 0);
+        PnlAlertas.add(lbbAlertas, gridBagConstraints);
 
-        lblIconoA.setText("jLabel1");
+        lblIconoA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoalerta.png"))); // NOI18N
         PnlAlertas.add(lblIconoA, new java.awt.GridBagConstraints());
 
-        lblCritico.setText("jLabel1");
+        lblCritico.setForeground(new java.awt.Color(0, 0, 0));
+        lblCritico.setText("0");
         PnlAlertas.add(lblCritico, new java.awt.GridBagConstraints());
 
-        lblIconoC.setText("jLabel1");
+        lblIconoC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoerror.png"))); // NOI18N
         PnlAlertas.add(lblIconoC, new java.awt.GridBagConstraints());
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
-        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weightx = 1.0;
         PnlNorte.add(PnlAlertas, gridBagConstraints);
 
         PnlBuscar.setLayout(new java.awt.GridBagLayout());
 
         PnlBarra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        PnlBarra.setLayout(new java.awt.GridBagLayout());
 
-        lblBuscar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblBuscar.setText("   Buscar Productos                                        ");
-
-        javax.swing.GroupLayout PnlBarraLayout = new javax.swing.GroupLayout(PnlBarra);
-        PnlBarra.setLayout(PnlBarraLayout);
-        PnlBarraLayout.setHorizontalGroup(
-            PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PnlBarraLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(lblBuscar)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        PnlBarraLayout.setVerticalGroup(
-            PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PnlBarraLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(lblBuscar)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTextField1.setText("Buscar Productos");
+        jTextField1.setPreferredSize(new java.awt.Dimension(600, 57));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        PnlBarra.add(jTextField1, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -154,26 +162,35 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
+        gridBagConstraints.weightx = 1.0;
         PnlNorte.add(PnlBuscar, gridBagConstraints);
 
+        PnlPerfil.setBackground(new java.awt.Color(153, 153, 153));
         PnlPerfil.setLayout(new java.awt.GridBagLayout());
 
-        lblUsuario.setText("jLabel1");
+        lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsuario.setText("NombreDeUsuarioAqui");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 10);
         PnlPerfil.add(lblUsuario, gridBagConstraints);
 
-        BtnCerrar.setText("jButton1");
+        BtnCerrar.setBackground(new java.awt.Color(255, 255, 255));
+        BtnCerrar.setForeground(new java.awt.Color(255, 0, 0));
+        BtnCerrar.setText("Cerrar Sesión");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHEAST;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 10);
         PnlPerfil.add(BtnCerrar, gridBagConstraints);
 
-        lblPerfil.setText("jLabel2");
+        lblPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 14);
         PnlPerfil.add(lblPerfil, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -189,29 +206,188 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
 
         PnlOeste.setBackground(new java.awt.Color(153, 153, 153));
         PnlOeste.setPreferredSize(new java.awt.Dimension(150, 400));
+        PnlOeste.setLayout(new java.awt.GridBagLayout());
 
-        javax.swing.GroupLayout PnlOesteLayout = new javax.swing.GroupLayout(PnlOeste);
-        PnlOeste.setLayout(PnlOesteLayout);
-        PnlOesteLayout.setHorizontalGroup(
-            PnlOesteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+        PnlTipos.setLayout(new java.awt.GridBagLayout());
+
+        PnlTabla.setBackground(new java.awt.Color(153, 153, 153));
+        PnlTabla.setLayout(new java.awt.GridBagLayout());
+
+        btnConservas.setBackground(new java.awt.Color(153, 153, 153));
+        btnConservas.setForeground(new java.awt.Color(255, 255, 255));
+        btnConservas.setText("Conservas");
+        btnConservas.setPreferredSize(new java.awt.Dimension(150, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        PnlTabla.add(btnConservas, gridBagConstraints);
+
+        btnPastasCereales.setBackground(new java.awt.Color(153, 153, 153));
+        btnPastasCereales.setForeground(new java.awt.Color(255, 255, 255));
+        btnPastasCereales.setText("Pastas/Cereales");
+        btnPastasCereales.setPreferredSize(new java.awt.Dimension(150, 50));
+        btnPastasCereales.setRequestFocusEnabled(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        PnlTabla.add(btnPastasCereales, gridBagConstraints);
+
+        btnAperitivos.setBackground(new java.awt.Color(153, 153, 153));
+        btnAperitivos.setForeground(new java.awt.Color(255, 255, 255));
+        btnAperitivos.setText("Aperitivos");
+        btnAperitivos.setPreferredSize(new java.awt.Dimension(83, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        PnlTabla.add(btnAperitivos, gridBagConstraints);
+
+        btnDulces.setBackground(new java.awt.Color(153, 153, 153));
+        btnDulces.setForeground(new java.awt.Color(255, 255, 255));
+        btnDulces.setText("Dulces");
+        btnDulces.setPreferredSize(new java.awt.Dimension(72, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        PnlTabla.add(btnDulces, gridBagConstraints);
+
+        btnCondimentos.setBackground(new java.awt.Color(153, 153, 153));
+        btnCondimentos.setForeground(new java.awt.Color(255, 255, 255));
+        btnCondimentos.setText("Condimentos");
+        btnCondimentos.setPreferredSize(new java.awt.Dimension(102, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        PnlTabla.add(btnCondimentos, gridBagConstraints);
+
+        btnLacteos.setBackground(new java.awt.Color(153, 153, 153));
+        btnLacteos.setForeground(new java.awt.Color(255, 255, 255));
+        btnLacteos.setText("Lácteos");
+        btnLacteos.setPreferredSize(new java.awt.Dimension(72, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        PnlTabla.add(btnLacteos, gridBagConstraints);
+
+        btnAlcoholicas.setBackground(new java.awt.Color(153, 153, 153));
+        btnAlcoholicas.setForeground(new java.awt.Color(255, 255, 255));
+        btnAlcoholicas.setText("Alcohólicas");
+        btnAlcoholicas.setPreferredSize(new java.awt.Dimension(91, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        PnlTabla.add(btnAlcoholicas, gridBagConstraints);
+
+        btnZumosBebidas.setBackground(new java.awt.Color(153, 153, 153));
+        btnZumosBebidas.setForeground(new java.awt.Color(255, 255, 255));
+        btnZumosBebidas.setText("Zumos/Bebidas");
+        btnZumosBebidas.setPreferredSize(new java.awt.Dimension(113, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        PnlTabla.add(btnZumosBebidas, gridBagConstraints);
+
+        btnCervezas.setBackground(new java.awt.Color(153, 153, 153));
+        btnCervezas.setForeground(new java.awt.Color(255, 255, 255));
+        btnCervezas.setText("Cervezas");
+        btnCervezas.setPreferredSize(new java.awt.Dimension(76, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
+        PnlTabla.add(btnCervezas, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
+        gridBagConstraints.weighty = 1.0;
+        PnlTipos.add(PnlTabla, gridBagConstraints);
+
+        javax.swing.GroupLayout PnlFillerLayout = new javax.swing.GroupLayout(PnlFiller);
+        PnlFiller.setLayout(PnlFillerLayout);
+        PnlFillerLayout.setHorizontalGroup(
+            PnlFillerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        PnlOesteLayout.setVerticalGroup(
-            PnlOesteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 425, Short.MAX_VALUE)
+        PnlFillerLayout.setVerticalGroup(
+            PnlFillerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        gridBagConstraints.weighty = 5.0;
+        PnlTipos.add(PnlFiller, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
+        gridBagConstraints.weighty = 1.0;
+        PnlOeste.add(PnlTipos, gridBagConstraints);
+
+        PnlSalir.setBackground(new java.awt.Color(255, 102, 102));
+        PnlSalir.setPreferredSize(new java.awt.Dimension(150, 60));
+        PnlSalir.setLayout(new java.awt.GridBagLayout());
+
+        BtnSalir.setBackground(new java.awt.Color(255, 102, 102));
+        BtnSalir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BtnSalir.setForeground(new java.awt.Color(255, 255, 255));
+        BtnSalir.setText("SALIR");
+        BtnSalir.setPreferredSize(new java.awt.Dimension(150, 60));
+        PnlSalir.add(BtnSalir, new java.awt.GridBagConstraints());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        gridBagConstraints.weighty = 1.0;
+        PnlOeste.add(PnlSalir, gridBagConstraints);
 
         PnlTotal.add(PnlOeste, java.awt.BorderLayout.LINE_START);
+
+        PnlProductos.setBackground(new java.awt.Color(255, 255, 255));
+
+        jScrollBar1.setAutoscrolls(true);
+
+        javax.swing.GroupLayout PnlProductosLayout = new javax.swing.GroupLayout(PnlProductos);
+        PnlProductos.setLayout(PnlProductosLayout);
+        PnlProductosLayout.setHorizontalGroup(
+            PnlProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlProductosLayout.createSequentialGroup()
+                .addContainerGap(913, Short.MAX_VALUE)
+                .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        PnlProductosLayout.setVerticalGroup(
+            PnlProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
+        );
+
+        PnlTotal.add(PnlProductos, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 846, Short.MAX_VALUE)
+            .addComponent(PnlTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1073, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
+            .addComponent(PnlTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -245,21 +421,37 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCerrar;
+    private javax.swing.JButton BtnSalir;
     private javax.swing.JPanel PnlAlertas;
     private javax.swing.JPanel PnlBarra;
     private javax.swing.JPanel PnlBuscar;
+    private javax.swing.JPanel PnlFiller;
     private javax.swing.JPanel PnlLupa;
     private javax.swing.JPanel PnlNorte;
     private javax.swing.JPanel PnlOeste;
     private javax.swing.JPanel PnlPerfil;
+    private javax.swing.JPanel PnlProductos;
+    private javax.swing.JPanel PnlSalir;
+    private javax.swing.JPanel PnlTabla;
+    private javax.swing.JPanel PnlTipos;
     private javax.swing.JPanel PnlTotal;
-    private javax.swing.JButton btnLogo;
+    private javax.swing.JButton btnAlcoholicas;
+    private javax.swing.JButton btnAperitivos;
+    private javax.swing.JButton btnCervezas;
+    private javax.swing.JButton btnCondimentos;
+    private javax.swing.JButton btnConservas;
+    private javax.swing.JButton btnDulces;
+    private javax.swing.JButton btnLacteos;
     private javax.swing.JButton btnLupa;
+    private javax.swing.JButton btnPastasCereales;
+    private javax.swing.JButton btnZumosBebidas;
+    private javax.swing.JScrollBar jScrollBar1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbbAlertas;
-    private javax.swing.JLabel lblBuscar;
     private javax.swing.JLabel lblCritico;
     private javax.swing.JLabel lblIconoA;
     private javax.swing.JLabel lblIconoC;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblPerfil;
     private javax.swing.JLabel lblUsuario;
     // End of variables declaration//GEN-END:variables
