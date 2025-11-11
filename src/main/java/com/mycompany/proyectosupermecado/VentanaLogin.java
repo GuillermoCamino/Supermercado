@@ -31,110 +31,91 @@ public class VentanaLogin extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         pnlPrincipal = new javax.swing.JPanel();
-        pnlUsuarioPassword = new javax.swing.JPanel();
-        lblTituloCostaMarket = new javax.swing.JLabel();
-        txtDNI = new javax.swing.JTextField();
-        pfContra = new javax.swing.JPasswordField();
-        btnAcceder = new javax.swing.JButton();
-        lblBienvenida = new javax.swing.JLabel();
+        pnlLogin = new javax.swing.JPanel();
+        lblLogoCosta = new javax.swing.JLabel();
+        txtMensajeBienvenida = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        txtPasswd = new javax.swing.JPasswordField();
+        btnIniciarSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
+        setPreferredSize(new java.awt.Dimension(600, 600));
 
-        pnlPrincipal.setBackground(new java.awt.Color(153, 153, 153));
-        pnlPrincipal.setAlignmentX(0.5F);
-        pnlPrincipal.setAlignmentY(0.5F);
-        pnlPrincipal.setMaximumSize(new java.awt.Dimension(1920, 1080));
-        pnlPrincipal.setMinimumSize(new java.awt.Dimension(1920, 1080));
-        pnlPrincipal.setPreferredSize(new java.awt.Dimension(1920, 1080));
-        pnlPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlPrincipal.setBackground(new java.awt.Color(182, 182, 101));
+        pnlPrincipal.setLayout(new java.awt.GridBagLayout());
 
-        pnlUsuarioPassword.setBackground(new java.awt.Color(255, 255, 255));
-        pnlUsuarioPassword.setMaximumSize(new java.awt.Dimension(1920, 1080));
-        pnlUsuarioPassword.setMinimumSize(new java.awt.Dimension(1920, 1080));
-        pnlUsuarioPassword.setLayout(new java.awt.GridBagLayout());
+        pnlLogin.setBackground(new java.awt.Color(255, 255, 255));
+        pnlLogin.setLayout(new java.awt.GridBagLayout());
 
-        lblTituloCostaMarket.setForeground(new java.awt.Color(0, 0, 0));
-        lblTituloCostaMarket.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTituloCostaMarket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotocostamarket.png"))); // NOI18N
+        lblLogoCosta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotocostamarket.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        pnlUsuarioPassword.add(lblTituloCostaMarket, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        pnlLogin.add(lblLogoCosta, gridBagConstraints);
 
-        txtDNI.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtDNI.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtDNI.setText("DNI/NIF o código de empleado");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(5, 125, 5, 125);
-        pnlUsuarioPassword.add(txtDNI, gridBagConstraints);
-
-        pfContra.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        pfContra.setText("Contraseña");
-        pfContra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pfContraActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(5, 125, 5, 125);
-        pnlUsuarioPassword.add(pfContra, gridBagConstraints);
-
-        btnAcceder.setBackground(new java.awt.Color(255, 102, 102));
-        btnAcceder.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnAcceder.setForeground(new java.awt.Color(255, 255, 255));
-        btnAcceder.setText("Iniciar Sesión");
-        btnAcceder.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAccederActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.insets = new java.awt.Insets(5, 125, 5, 125);
-        pnlUsuarioPassword.add(btnAcceder, gridBagConstraints);
-
-        lblBienvenida.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
-        lblBienvenida.setForeground(new java.awt.Color(0, 0, 0));
-        lblBienvenida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblBienvenida.setText("Bienvenido de Nuevo");
+        txtMensajeBienvenida.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
+        txtMensajeBienvenida.setForeground(new java.awt.Color(0, 0, 0));
+        txtMensajeBienvenida.setText("Bienvenido de Nuevo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(5, 0, 5, 0);
-        pnlUsuarioPassword.add(lblBienvenida, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(12, 6, 25, 0);
+        pnlLogin.add(txtMensajeBienvenida, gridBagConstraints);
 
-        pnlPrincipal.add(pnlUsuarioPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 1, 730, 520));
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(102, 102, 102));
+        jTextField1.setText("DNI/NIF o código de empleado");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(15, 0, 15, 0);
+        pnlLogin.add(jTextField1, gridBagConstraints);
+
+        txtPasswd.setBackground(new java.awt.Color(204, 204, 204));
+        txtPasswd.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtPasswd.setForeground(new java.awt.Color(102, 102, 102));
+        txtPasswd.setText("jPasswordField1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        pnlLogin.add(txtPasswd, gridBagConstraints);
+
+        btnIniciarSesion.setBackground(new java.awt.Color(255, 102, 102));
+        btnIniciarSesion.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnIniciarSesion.setForeground(new java.awt.Color(255, 255, 255));
+        btnIniciarSesion.setText("Iniciar Sesión");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.insets = new java.awt.Insets(15, 0, 15, 0);
+        pnlLogin.add(btnIniciarSesion, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 300;
+        gridBagConstraints.ipady = 192;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(34, 75, 35, 81);
+        pnlPrincipal.add(pnlLogin, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void pfContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pfContraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pfContraActionPerformed
-
-    private void btnAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAccederActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,12 +146,12 @@ public class VentanaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAcceder;
-    private javax.swing.JLabel lblBienvenida;
-    private javax.swing.JLabel lblTituloCostaMarket;
-    private javax.swing.JPasswordField pfContra;
+    private javax.swing.JButton btnIniciarSesion;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblLogoCosta;
+    private javax.swing.JPanel pnlLogin;
     private javax.swing.JPanel pnlPrincipal;
-    private javax.swing.JPanel pnlUsuarioPassword;
-    private javax.swing.JTextField txtDNI;
+    private javax.swing.JLabel txtMensajeBienvenida;
+    private javax.swing.JPasswordField txtPasswd;
     // End of variables declaration//GEN-END:variables
 }
