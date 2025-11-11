@@ -369,7 +369,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlProductosLayout.setHorizontalGroup(
             PnlProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlProductosLayout.createSequentialGroup()
-                .addContainerGap(913, Short.MAX_VALUE)
+                .addGap(0, 913, Short.MAX_VALUE)
                 .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         PnlProductosLayout.setVerticalGroup(
