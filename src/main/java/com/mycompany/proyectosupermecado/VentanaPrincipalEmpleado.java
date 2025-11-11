@@ -28,11 +28,9 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         pnlPrincipal = new javax.swing.JPanel();
         pnlUsuario = new javax.swing.JPanel();
-        lblLogo = new javax.swing.JLabel();
         lblEmpleado = new javax.swing.JLabel();
         pnlCopyright = new javax.swing.JPanel();
         lblFotoPiePagina = new javax.swing.JLabel();
@@ -51,13 +49,6 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         pnlUsuario.setBackground(new java.awt.Color(204, 204, 204));
         pnlUsuario.setPreferredSize(new java.awt.Dimension(535, 58));
         pnlUsuario.setLayout(new java.awt.GridBagLayout());
-
-        lblLogo.setForeground(new java.awt.Color(255, 102, 204));
-        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 1, 0, 0);
-        pnlUsuario.add(lblLogo, gridBagConstraints);
 
         lblEmpleado.setForeground(new java.awt.Color(102, 204, 0));
         lblEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -79,6 +70,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         pnlCopyright.add(lblCopyRight);
 
         pnlBotones.setBackground(new java.awt.Color(102, 204, 255));
+        pnlBotones.setPreferredSize(new java.awt.Dimension(1920, 1080));
         pnlBotones.setLayout(new java.awt.GridLayout(2, 2, 10, 10));
 
         btnInventario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -163,7 +155,6 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     private javax.swing.JLabel lblCopyRight;
     private javax.swing.JLabel lblEmpleado;
     private javax.swing.JLabel lblFotoPiePagina;
-    private javax.swing.JLabel lblLogo;
     private javax.swing.JPanel pnlBotones;
     private javax.swing.JPanel pnlCopyright;
     private javax.swing.JPanel pnlPrincipal;
