@@ -38,11 +38,30 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         LblUsuario = new javax.swing.JLabel();
         BtnCerrarSesion = new javax.swing.JButton();
         LblPerfil = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        PnlPie = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        PnlMenu = new javax.swing.JPanel();
+        LblDescuento = new javax.swing.JLabel();
+        LblRegalo = new javax.swing.JLabel();
+        PnlDescuentos = new javax.swing.JPanel();
+        BtnAltaDescuentos = new javax.swing.JButton();
+        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        BtnTiempo_Descuento = new javax.swing.JButton();
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        BtnBajaDescuentos = new javax.swing.JButton();
+        PnlRegalos = new javax.swing.JPanel();
+        BtnAlta_Regalos = new javax.swing.JButton();
+        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        BtnTiempo_Regalos = new javax.swing.JButton();
+        filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        BtnBajaRegalos = new javax.swing.JButton();
+        PnlTitulodescuento = new javax.swing.JPanel();
+        LblDescu = new javax.swing.JLabel();
+        Pnltituloregalo = new javax.swing.JPanel();
+        Lblregalo = new javax.swing.JLabel();
+        LblEditarDescuento = new javax.swing.JLabel();
+        LblEditarregalo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +89,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         PnlEncabezado.add(LblTItulo, gridBagConstraints);
 
+        PnlUsuario.setBackground(new java.awt.Color(153, 153, 153));
         PnlUsuario.setLayout(new java.awt.GridBagLayout());
 
         LblUsuario.setText("Nombreyapellido");
@@ -107,32 +127,165 @@ public class Gestion_Promociones extends javax.swing.JFrame {
 
         PnlInicio.add(PnlEncabezado, java.awt.BorderLayout.PAGE_START);
 
-        jPanel1.setBackground(new java.awt.Color(255, 0, 51));
+        PnlPie.setBackground(new java.awt.Color(0, 51, 255));
+        PnlPie.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 20, 5));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 886, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("SALIDA");
+        jButton1.setPreferredSize(new java.awt.Dimension(176, 40));
+        PnlPie.add(jButton1);
 
-        PnlInicio.add(jPanel1, java.awt.BorderLayout.PAGE_END);
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("QUE PROMOCIÓN DESEA APLICAR ");
+        jLabel1.setAlignmentX(0.5F);
+        PnlPie.add(jLabel1);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new java.awt.GridBagLayout());
-        jPanel2.add(jLabel1, new java.awt.GridBagConstraints());
+        PnlInicio.add(PnlPie, java.awt.BorderLayout.PAGE_END);
 
-        jLabel2.setText("jLabel2");
-        jPanel2.add(jLabel2, new java.awt.GridBagConstraints());
+        PnlMenu.setBackground(new java.awt.Color(255, 255, 255));
+        PnlMenu.setLayout(new java.awt.GridBagLayout());
 
-        jLabel3.setText("jLabel3");
-        jPanel2.add(jLabel3, new java.awt.GridBagConstraints());
+        LblDescuento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/descuen.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipady = 2;
+        PnlMenu.add(LblDescuento, gridBagConstraints);
 
-        PnlInicio.add(jPanel2, java.awt.BorderLayout.CENTER);
+        LblRegalo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/regalo.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.ipady = 2;
+        PnlMenu.add(LblRegalo, gridBagConstraints);
+
+        PnlDescuentos.setBackground(new java.awt.Color(255, 255, 255));
+        PnlDescuentos.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/marquito.jpg"))), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.red, java.awt.Color.darkGray, java.awt.Color.blue, java.awt.Color.cyan))); // NOI18N
+        PnlDescuentos.setMinimumSize(new java.awt.Dimension(200, 100));
+        PnlDescuentos.setPreferredSize(new java.awt.Dimension(200, 200));
+        PnlDescuentos.setLayout(new javax.swing.BoxLayout(PnlDescuentos, javax.swing.BoxLayout.Y_AXIS));
+
+        BtnAltaDescuentos.setBackground(new java.awt.Color(255, 255, 255));
+        BtnAltaDescuentos.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        BtnAltaDescuentos.setForeground(new java.awt.Color(51, 255, 51));
+        BtnAltaDescuentos.setText("DAR DE ALTA");
+        BtnAltaDescuentos.setAlignmentX(0.5F);
+        BtnAltaDescuentos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.green, java.awt.Color.white, java.awt.Color.green, java.awt.Color.green));
+        PnlDescuentos.add(BtnAltaDescuentos);
+        PnlDescuentos.add(filler2);
+
+        BtnTiempo_Descuento.setBackground(new java.awt.Color(255, 255, 255));
+        BtnTiempo_Descuento.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        BtnTiempo_Descuento.setForeground(new java.awt.Color(0, 0, 255));
+        BtnTiempo_Descuento.setText("VIGENCIA TEMPORAL");
+        BtnTiempo_Descuento.setAlignmentX(0.5F);
+        BtnTiempo_Descuento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.white, java.awt.Color.blue, java.awt.Color.blue));
+        PnlDescuentos.add(BtnTiempo_Descuento);
+        PnlDescuentos.add(filler3);
+
+        BtnBajaDescuentos.setBackground(new java.awt.Color(255, 255, 255));
+        BtnBajaDescuentos.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        BtnBajaDescuentos.setForeground(new java.awt.Color(255, 51, 51));
+        BtnBajaDescuentos.setText("DAR DE BAJA");
+        BtnBajaDescuentos.setAlignmentX(0.5F);
+        BtnBajaDescuentos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.red, java.awt.Color.white, java.awt.Color.red, java.awt.Color.red));
+        PnlDescuentos.add(BtnBajaDescuentos);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(0, 50, 12, 56);
+        PnlMenu.add(PnlDescuentos, gridBagConstraints);
+
+        PnlRegalos.setBackground(new java.awt.Color(255, 255, 255));
+        PnlRegalos.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/marquito.jpg"))), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.red, java.awt.Color.darkGray, java.awt.Color.blue, java.awt.Color.cyan))); // NOI18N
+        PnlRegalos.setMinimumSize(new java.awt.Dimension(200, 100));
+        PnlRegalos.setPreferredSize(new java.awt.Dimension(200, 200));
+        PnlRegalos.setLayout(new javax.swing.BoxLayout(PnlRegalos, javax.swing.BoxLayout.Y_AXIS));
+
+        BtnAlta_Regalos.setBackground(new java.awt.Color(255, 255, 255));
+        BtnAlta_Regalos.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        BtnAlta_Regalos.setForeground(new java.awt.Color(102, 255, 51));
+        BtnAlta_Regalos.setText("DAR DE ALTA");
+        BtnAlta_Regalos.setAlignmentX(0.5F);
+        BtnAlta_Regalos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.green, java.awt.Color.white, java.awt.Color.green, java.awt.Color.green));
+        BtnAlta_Regalos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        PnlRegalos.add(BtnAlta_Regalos);
+        PnlRegalos.add(filler4);
+
+        BtnTiempo_Regalos.setBackground(new java.awt.Color(255, 255, 255));
+        BtnTiempo_Regalos.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        BtnTiempo_Regalos.setForeground(new java.awt.Color(0, 0, 255));
+        BtnTiempo_Regalos.setText("VIGENCIA TEMPORAL");
+        BtnTiempo_Regalos.setAlignmentX(0.5F);
+        BtnTiempo_Regalos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.blue, java.awt.Color.white, java.awt.Color.blue, java.awt.Color.blue));
+        BtnTiempo_Regalos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnTiempo_RegalosActionPerformed(evt);
+            }
+        });
+        PnlRegalos.add(BtnTiempo_Regalos);
+        PnlRegalos.add(filler5);
+
+        BtnBajaRegalos.setBackground(new java.awt.Color(255, 255, 255));
+        BtnBajaRegalos.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        BtnBajaRegalos.setForeground(new java.awt.Color(255, 0, 0));
+        BtnBajaRegalos.setText("DAR DE BAJA");
+        BtnBajaRegalos.setAlignmentX(0.5F);
+        BtnBajaRegalos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.red, java.awt.Color.white, java.awt.Color.red, java.awt.Color.red));
+        PnlRegalos.add(BtnBajaRegalos);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(0, 50, 12, 56);
+        PnlMenu.add(PnlRegalos, gridBagConstraints);
+
+        PnlTitulodescuento.setPreferredSize(new java.awt.Dimension(200, 45));
+        PnlTitulodescuento.setLayout(new java.awt.GridBagLayout());
+
+        LblDescu.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        LblDescu.setForeground(new java.awt.Color(255, 255, 255));
+        LblDescu.setText("DESCUENTOS");
+        PnlTitulodescuento.add(LblDescu, new java.awt.GridBagConstraints());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        PnlMenu.add(PnlTitulodescuento, gridBagConstraints);
+
+        Pnltituloregalo.setPreferredSize(new java.awt.Dimension(200, 40));
+        Pnltituloregalo.setLayout(new java.awt.GridBagLayout());
+
+        Lblregalo.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        Lblregalo.setForeground(new java.awt.Color(255, 255, 255));
+        Lblregalo.setText("REGALOS");
+        Lblregalo.setPreferredSize(new java.awt.Dimension(81, 45));
+        Pnltituloregalo.add(Lblregalo, new java.awt.GridBagConstraints());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        PnlMenu.add(Pnltituloregalo, gridBagConstraints);
+
+        LblEditarDescuento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minieditarr.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTHEAST;
+        PnlMenu.add(LblEditarDescuento, gridBagConstraints);
+
+        LblEditarregalo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minieditarr.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTHEAST;
+        PnlMenu.add(LblEditarregalo, gridBagConstraints);
+
+        PnlInicio.add(PnlMenu, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,11 +295,15 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlInicio, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
+            .addComponent(PnlInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnTiempo_RegalosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTiempo_RegalosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnTiempo_RegalosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,18 +331,37 @@ public class Gestion_Promociones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnAltaDescuentos;
+    private javax.swing.JButton BtnAlta_Regalos;
+    private javax.swing.JButton BtnBajaDescuentos;
+    private javax.swing.JButton BtnBajaRegalos;
     private javax.swing.JButton BtnCerrarSesion;
+    private javax.swing.JButton BtnTiempo_Descuento;
+    private javax.swing.JButton BtnTiempo_Regalos;
+    private javax.swing.JLabel LblDescu;
+    private javax.swing.JLabel LblDescuento;
+    private javax.swing.JLabel LblEditarDescuento;
+    private javax.swing.JLabel LblEditarregalo;
     private javax.swing.JLabel LblFoto;
     private javax.swing.JLabel LblPerfil;
+    private javax.swing.JLabel LblRegalo;
     private javax.swing.JLabel LblTItulo;
     private javax.swing.JLabel LblUsuario;
+    private javax.swing.JLabel Lblregalo;
+    private javax.swing.JPanel PnlDescuentos;
     private javax.swing.JPanel PnlEncabezado;
     private javax.swing.JPanel PnlInicio;
+    private javax.swing.JPanel PnlMenu;
+    private javax.swing.JPanel PnlPie;
+    private javax.swing.JPanel PnlRegalos;
+    private javax.swing.JPanel PnlTitulodescuento;
     private javax.swing.JPanel PnlUsuario;
+    private javax.swing.JPanel Pnltituloregalo;
+    private javax.swing.Box.Filler filler2;
+    private javax.swing.Box.Filler filler3;
+    private javax.swing.Box.Filler filler4;
+    private javax.swing.Box.Filler filler5;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
