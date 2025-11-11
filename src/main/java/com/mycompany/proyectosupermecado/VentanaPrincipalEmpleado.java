@@ -74,7 +74,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         jPanel1.add(jButton1, gridBagConstraints);
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
