@@ -83,7 +83,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 0);
         jPanel1.add(BtnCerrarSesion, gridBagConstraints);
 
-        LblPerfil.setText("jLabel4");
+        LblPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
