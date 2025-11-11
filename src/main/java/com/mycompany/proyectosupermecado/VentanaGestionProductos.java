@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author MEDAC
@@ -17,6 +19,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
      */
     public VentanaGestionProductos() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -31,34 +34,39 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
 
         PnlTotal = new javax.swing.JPanel();
         PnlNorte = new javax.swing.JPanel();
-        lblLogo = new javax.swing.JLabel();
+        btnLogo = new javax.swing.JButton();
         PnlAlertas = new javax.swing.JPanel();
         lbbAlertas = new javax.swing.JLabel();
         lblIconoA = new javax.swing.JLabel();
         lblCritico = new javax.swing.JLabel();
         lblIconoC = new javax.swing.JLabel();
         PnlBuscar = new javax.swing.JPanel();
+        PnlBarra = new javax.swing.JPanel();
         lblBuscar = new javax.swing.JLabel();
-        lblIconoL = new javax.swing.JLabel();
-        lblNombreU = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        lblIconoP = new javax.swing.JLabel();
+        PnlLupa = new javax.swing.JPanel();
+        btnLupa = new javax.swing.JButton();
+        PnlPerfil = new javax.swing.JPanel();
+        lblUsuario = new javax.swing.JLabel();
+        BtnCerrar = new javax.swing.JButton();
+        lblPerfil = new javax.swing.JLabel();
         PnlOeste = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PnlTotal.setLayout(new java.awt.BorderLayout());
 
-        PnlNorte.setBackground(new java.awt.Color(204, 204, 204));
+        PnlNorte.setBackground(new java.awt.Color(153, 153, 153));
         PnlNorte.setLayout(new java.awt.GridBagLayout());
 
-        lblLogo.setForeground(new java.awt.Color(0, 0, 0));
-        lblLogo.setText("jLabel1");
+        btnLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
-        PnlNorte.add(lblLogo, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
+        PnlNorte.add(btnLogo, gridBagConstraints);
 
         PnlAlertas.setLayout(new java.awt.GridBagLayout());
 
@@ -75,63 +83,111 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlAlertas.add(lblIconoC, new java.awt.GridBagConstraints());
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
+        gridBagConstraints.weightx = 0.1;
         PnlNorte.add(PnlAlertas, gridBagConstraints);
 
-        lblBuscar.setText("jLabel1");
+        PnlBuscar.setLayout(new java.awt.GridBagLayout());
 
-        lblIconoL.setText("jLabel2");
+        PnlBarra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
-        javax.swing.GroupLayout PnlBuscarLayout = new javax.swing.GroupLayout(PnlBuscar);
-        PnlBuscar.setLayout(PnlBuscarLayout);
-        PnlBuscarLayout.setHorizontalGroup(
-            PnlBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlBuscarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblBuscar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblIconoL)
-                .addContainerGap())
-        );
-        PnlBuscarLayout.setVerticalGroup(
-            PnlBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlBuscarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(PnlBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        lblBuscar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblBuscar.setText("   Buscar Productos                                        ");
+
+        javax.swing.GroupLayout PnlBarraLayout = new javax.swing.GroupLayout(PnlBarra);
+        PnlBarra.setLayout(PnlBarraLayout);
+        PnlBarraLayout.setHorizontalGroup(
+            PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PnlBarraLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(lblBuscar)
-                    .addComponent(lblIconoL)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        PnlBarraLayout.setVerticalGroup(
+            PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PnlBarraLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(lblBuscar)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        PnlBuscar.add(PnlBarra, gridBagConstraints);
+
+        PnlLupa.setBackground(new java.awt.Color(255, 255, 0));
+
+        btnLupa.setBackground(new java.awt.Color(255, 255, 0));
+        btnLupa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lupa.png"))); // NOI18N
+        btnLupa.setOpaque(true);
+
+        javax.swing.GroupLayout PnlLupaLayout = new javax.swing.GroupLayout(PnlLupa);
+        PnlLupa.setLayout(PnlLupaLayout);
+        PnlLupaLayout.setHorizontalGroup(
+            PnlLupaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PnlLupaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PnlLupaLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(btnLupa)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        PnlLupaLayout.setVerticalGroup(
+            PnlLupaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PnlLupaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PnlLupaLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(btnLupa)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        PnlBuscar.add(PnlLupa, new java.awt.GridBagConstraints());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
         PnlNorte.add(PnlBuscar, gridBagConstraints);
 
-        lblNombreU.setForeground(new java.awt.Color(0, 0, 0));
-        lblNombreU.setText("jLabel1");
-        PnlNorte.add(lblNombreU, new java.awt.GridBagConstraints());
+        PnlPerfil.setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setText("jButton1");
+        lblUsuario.setText("jLabel1");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        PnlNorte.add(jButton1, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        PnlPerfil.add(lblUsuario, gridBagConstraints);
 
-        lblIconoP.setForeground(new java.awt.Color(0, 0, 0));
-        lblIconoP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
+        BtnCerrar.setText("jButton1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        PnlPerfil.add(BtnCerrar, gridBagConstraints);
+
+        lblPerfil.setText("jLabel2");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 2;
+        PnlPerfil.add(lblPerfil, gridBagConstraints);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
-        PnlNorte.add(lblIconoP, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 15);
+        PnlNorte.add(PnlPerfil, gridBagConstraints);
 
         PnlTotal.add(PnlNorte, java.awt.BorderLayout.PAGE_START);
 
-        PnlOeste.setBackground(new java.awt.Color(204, 204, 204));
+        PnlOeste.setBackground(new java.awt.Color(153, 153, 153));
         PnlOeste.setPreferredSize(new java.awt.Dimension(150, 400));
 
         javax.swing.GroupLayout PnlOesteLayout = new javax.swing.GroupLayout(PnlOeste);
@@ -142,7 +198,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         );
         PnlOesteLayout.setVerticalGroup(
             PnlOesteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 447, Short.MAX_VALUE)
+            .addGap(0, 425, Short.MAX_VALUE)
         );
 
         PnlTotal.add(PnlOeste, java.awt.BorderLayout.LINE_START);
@@ -151,7 +207,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PnlTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 846, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,23 +240,27 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new VentanaGestionProductos().setVisible(true));
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnCerrar;
     private javax.swing.JPanel PnlAlertas;
+    private javax.swing.JPanel PnlBarra;
     private javax.swing.JPanel PnlBuscar;
+    private javax.swing.JPanel PnlLupa;
     private javax.swing.JPanel PnlNorte;
     private javax.swing.JPanel PnlOeste;
+    private javax.swing.JPanel PnlPerfil;
     private javax.swing.JPanel PnlTotal;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnLogo;
+    private javax.swing.JButton btnLupa;
     private javax.swing.JLabel lbbAlertas;
     private javax.swing.JLabel lblBuscar;
     private javax.swing.JLabel lblCritico;
     private javax.swing.JLabel lblIconoA;
     private javax.swing.JLabel lblIconoC;
-    private javax.swing.JLabel lblIconoL;
-    private javax.swing.JLabel lblIconoP;
-    private javax.swing.JLabel lblLogo;
-    private javax.swing.JLabel lblNombreU;
+    private javax.swing.JLabel lblPerfil;
+    private javax.swing.JLabel lblUsuario;
     // End of variables declaration//GEN-END:variables
 }
