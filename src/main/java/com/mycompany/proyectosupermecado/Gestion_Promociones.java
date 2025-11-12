@@ -147,21 +147,17 @@ public class Gestion_Promociones extends javax.swing.JFrame {
 
         PnlMenu.setBackground(new java.awt.Color(255, 255, 255));
         PnlMenu.setLayout(new java.awt.GridBagLayout());
-
-        LblDescuento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/descuen.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipady = 2;
         PnlMenu.add(LblDescuento, gridBagConstraints);
-
-        LblRegalo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/regalo.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.ipady = 2;
         PnlMenu.add(LblRegalo, gridBagConstraints);
 
         PnlDescuentos.setBackground(new java.awt.Color(255, 255, 255));
-        PnlDescuentos.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/marquito.jpg"))), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.red, java.awt.Color.darkGray, java.awt.Color.blue, java.awt.Color.cyan))); // NOI18N
+        PnlDescuentos.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.red, java.awt.Color.darkGray, java.awt.Color.blue, java.awt.Color.cyan)));
         PnlDescuentos.setMinimumSize(new java.awt.Dimension(200, 100));
         PnlDescuentos.setPreferredSize(new java.awt.Dimension(200, 200));
         PnlDescuentos.setLayout(new javax.swing.BoxLayout(PnlDescuentos, javax.swing.BoxLayout.Y_AXIS));
@@ -199,7 +195,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         PnlMenu.add(PnlDescuentos, gridBagConstraints);
 
         PnlRegalos.setBackground(new java.awt.Color(255, 255, 255));
-        PnlRegalos.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/marquito.jpg"))), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.red, java.awt.Color.darkGray, java.awt.Color.blue, java.awt.Color.cyan))); // NOI18N
+        PnlRegalos.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.red, java.awt.Color.darkGray, java.awt.Color.blue, java.awt.Color.cyan)));
         PnlRegalos.setMinimumSize(new java.awt.Dimension(200, 100));
         PnlRegalos.setPreferredSize(new java.awt.Dimension(200, 200));
         PnlRegalos.setLayout(new javax.swing.BoxLayout(PnlRegalos, javax.swing.BoxLayout.Y_AXIS));
@@ -270,15 +266,11 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
         PnlMenu.add(Pnltituloregalo, gridBagConstraints);
-
-        LblEditarDescuento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minieditarr.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTHEAST;
         PnlMenu.add(LblEditarDescuento, gridBagConstraints);
-
-        LblEditarregalo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minieditarr.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;

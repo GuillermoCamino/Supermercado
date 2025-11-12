@@ -33,7 +33,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         pnlPrincipal = new javax.swing.JPanel();
         pnlMensaje = new javax.swing.JPanel();
         lblFotoLogo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblTextoBienvenida = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -56,12 +56,14 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         pnlMensaje.add(lblFotoLogo, gridBagConstraints);
 
-        jLabel2.setText("Un gusto verlo de nuevo");
+        lblTextoBienvenida.setFont(new java.awt.Font("Segoe UI", 3, 20)); // NOI18N
+        lblTextoBienvenida.setForeground(new java.awt.Color(0, 0, 0));
+        lblTextoBienvenida.setText("Un gusto verle de nuevo!");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.weightx = 1.0;
-        pnlMensaje.add(jLabel2, gridBagConstraints);
+        pnlMensaje.add(lblTextoBienvenida, gridBagConstraints);
 
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
@@ -97,7 +99,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
         );
 
         pack();
@@ -131,10 +133,10 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblFotoLogo;
+    private javax.swing.JLabel lblTextoBienvenida;
     private javax.swing.JPanel pnlMensaje;
     private javax.swing.JPanel pnlPrincipal;
     // End of variables declaration//GEN-END:variables
