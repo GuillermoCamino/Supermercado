@@ -136,7 +136,7 @@ public class PanelRecibo extends javax.swing.JPanel {
         jPanel1.add(jLabel12, gridBagConstraints);
 
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("Base");
+        jLabel13.setText("Precio");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
@@ -150,7 +150,7 @@ public class PanelRecibo extends javax.swing.JPanel {
         jPanel1.add(jLabel14, gridBagConstraints);
 
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("precio");
+        jLabel15.setText("Base");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 6;
@@ -163,7 +163,7 @@ public class PanelRecibo extends javax.swing.JPanel {
         gridBagConstraints.gridy = 8;
         jPanel1.add(jLabel16, gridBagConstraints);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mastercard", "Tarjeta Regalo", "Paypal", "Bizum" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
