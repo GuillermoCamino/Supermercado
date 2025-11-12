@@ -62,6 +62,10 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         Lblregalo = new javax.swing.JLabel();
         LblEditarDescuento = new javax.swing.JLabel();
         LblEditarregalo = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -153,6 +157,8 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         gridBagConstraints.ipady = 2;
         PnlMenu.add(LblDescuento, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.ipady = 2;
         PnlMenu.add(LblRegalo, gridBagConstraints);
 
@@ -277,6 +283,32 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTHEAST;
         PnlMenu.add(LblEditarregalo, gridBagConstraints);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/regalo.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        PnlMenu.add(jLabel2, gridBagConstraints);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/descuen.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        PnlMenu.add(jLabel3, gridBagConstraints);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minieditarr.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTHEAST;
+        PnlMenu.add(jLabel5, gridBagConstraints);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minieditarr.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTHEAST;
+        PnlMenu.add(jLabel4, gridBagConstraints);
+
         PnlInicio.add(PnlMenu, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -287,7 +319,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PnlInicio, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE)
         );
 
         pack();
@@ -355,5 +387,9 @@ public class Gestion_Promociones extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler5;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
