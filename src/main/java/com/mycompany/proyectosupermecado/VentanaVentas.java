@@ -19,7 +19,7 @@ public class VentanaVentas extends javax.swing.JFrame {
         initComponents();
         
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
-        setResizable(true);
+        setResizable(false);
     }
 
     /**
@@ -103,6 +103,11 @@ public class VentanaVentas extends javax.swing.JFrame {
         jButton5.setForeground(new java.awt.Color(153, 255, 153));
         jButton5.setText("Confirmar");
         jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153), 4));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 5;
@@ -157,8 +162,16 @@ public class VentanaVentas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        VentanaRecibo recibo = new VentanaRecibo();
+        recibo.setVisible(true);
+        this.dispose(); 
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        VentanaRecibo recibo = new VentanaRecibo();
+        recibo.setVisible(true);
+        this.dispose(); // cierra la ventana actual
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
