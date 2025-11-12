@@ -725,6 +725,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(BtnStockP4, gridBagConstraints);
 
@@ -733,13 +735,15 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(lblDescripcionP4, gridBagConstraints);
 
-        lblIconoP4.setText("jLabel1");
+        lblIconoP4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kellogs.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlPastasCereales.add(lblIconoP4, gridBagConstraints);
 
@@ -748,6 +752,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(BtnStockP1, gridBagConstraints);
 
@@ -756,20 +762,23 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(lblDescripcionP1, gridBagConstraints);
 
-        lblIconoP1.setText("jLabel1");
+        lblIconoP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/macarrone.jpg"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlPastasCereales.add(lblIconoP1, gridBagConstraints);
 
-        lblIconoP2.setText("jLabel3");
+        lblIconoP2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/espagueti.jpg"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlPastasCereales.add(lblIconoP2, gridBagConstraints);
 
@@ -778,6 +787,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(lblDescripcionP2, gridBagConstraints);
 
@@ -786,13 +796,16 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(BtnStockP2, gridBagConstraints);
 
-        lblIconoP5.setText("jLabel3");
+        lblIconoP5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cincuenta.jpg"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlPastasCereales.add(lblIconoP5, gridBagConstraints);
 
@@ -801,6 +814,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(lblDescripcionP5, gridBagConstraints);
 
@@ -809,6 +823,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(BtnStockP5, gridBagConstraints);
 
@@ -817,6 +833,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(BtnStockP6, gridBagConstraints);
 
@@ -825,13 +843,15 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(lblDescripcionP6, gridBagConstraints);
 
-        lblIconoP6.setText("jLabel5");
+        lblIconoP6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/krave.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlPastasCereales.add(lblIconoP6, gridBagConstraints);
 
@@ -840,6 +860,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(BtnStockP3, gridBagConstraints);
 
@@ -848,13 +870,15 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlPastasCereales.add(lblDescripcionP3, gridBagConstraints);
 
-        lblIconoP3.setText("jLabel5");
+        lblIconoP3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/choco.jpg"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlPastasCereales.add(lblIconoP3, gridBagConstraints);
 
@@ -863,6 +887,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.weightx = 1.0;
         PnlPastasCereales.add(TtlPastasCereales, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -878,6 +903,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(BtnStockA4, gridBagConstraints);
 
@@ -886,13 +913,15 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(lblDescripcionA4, gridBagConstraints);
 
-        lblIconoA4.setText("jLabel1");
+        lblIconoA4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jumpers.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlAperitivos.add(lblIconoA4, gridBagConstraints);
 
@@ -901,6 +930,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(BtnStockA1, gridBagConstraints);
 
@@ -909,20 +940,23 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(lblDescripcionA1, gridBagConstraints);
 
-        lblIconoA1.setText("jLabel1");
+        lblIconoA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pringles.jpg"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlAperitivos.add(lblIconoA1, gridBagConstraints);
 
-        lblIconoA2.setText("jLabel3");
+        lblIconoA2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fritas.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlAperitivos.add(lblIconoA2, gridBagConstraints);
 
@@ -931,6 +965,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(lblDescripcionA2, gridBagConstraints);
 
@@ -939,13 +974,16 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(BtnStockA2, gridBagConstraints);
 
-        lblIconoA5.setText("jLabel3");
+        lblIconoA5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/palomitas.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlAperitivos.add(lblIconoA5, gridBagConstraints);
 
@@ -954,6 +992,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(lblDescripcionA5, gridBagConstraints);
 
@@ -962,6 +1001,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(BtnStockA5, gridBagConstraints);
 
@@ -970,6 +1011,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(BtnStockA6, gridBagConstraints);
 
@@ -978,13 +1021,15 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(lblDescripcionA6, gridBagConstraints);
 
-        lblIconoA6.setText("jLabel5");
+        lblIconoA6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gusanitos.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlAperitivos.add(lblIconoA6, gridBagConstraints);
 
@@ -993,6 +1038,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(BtnStockA3, gridBagConstraints);
 
@@ -1001,13 +1048,15 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlAperitivos.add(lblDescripcionA3, gridBagConstraints);
 
-        lblIconoA3.setText("jLabel5");
+        lblIconoA3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/doritos.jpg"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlAperitivos.add(lblIconoA3, gridBagConstraints);
 
@@ -1016,6 +1065,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.weightx = 1.0;
         PnlAperitivos.add(TtlAperitivos, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
