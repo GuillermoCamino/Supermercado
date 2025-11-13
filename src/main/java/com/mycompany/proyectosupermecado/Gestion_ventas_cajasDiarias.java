@@ -46,6 +46,7 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
         PnlTabladentro = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
         PnlInformacion = new javax.swing.JPanel();
         Lblhistorico = new javax.swing.JLabel();
         Lblsubtitulos = new javax.swing.JLabel();
@@ -114,6 +115,17 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
         PnlTabladentro.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1280, 380));
 
         PnlTabla.add(PnlTabladentro, new java.awt.GridBagConstraints());
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("SALIDA");
+        jButton1.setPreferredSize(new java.awt.Dimension(176, 40));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        PnlTabla.add(jButton1, gridBagConstraints);
 
         PnlInicio.add(PnlTabla, java.awt.BorderLayout.PAGE_END);
 
@@ -293,6 +305,7 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
     private javax.swing.JPanel PnlSaldoCaja;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTabladentro;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

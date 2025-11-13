@@ -38,6 +38,7 @@ public class gestion_proveedores extends javax.swing.JFrame {
         LblUsuario = new javax.swing.JLabel();
         BtnCerrarSesion = new javax.swing.JButton();
         LblPerfil = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         PnlProveedores = new javax.swing.JPanel();
         LblFoto1 = new javax.swing.JLabel();
         BtnAgregar1 = new javax.swing.JButton();
@@ -134,6 +135,17 @@ public class gestion_proveedores extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 1.0;
         PnlEncabezado.add(PnlUsuario, gridBagConstraints);
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("SALIDA");
+        jButton1.setPreferredSize(new java.awt.Dimension(176, 40));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        PnlEncabezado.add(jButton1, gridBagConstraints);
 
         Pnlinicio.add(PnlEncabezado, java.awt.BorderLayout.PAGE_START);
 
@@ -444,7 +456,7 @@ public class gestion_proveedores extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Pnlinicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Pnlinicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
         );
 
         pack();
@@ -517,6 +529,7 @@ public class gestion_proveedores extends javax.swing.JFrame {
     private javax.swing.JPanel PnlProveedores;
     private javax.swing.JPanel PnlUsuario;
     private javax.swing.JPanel Pnlinicio;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

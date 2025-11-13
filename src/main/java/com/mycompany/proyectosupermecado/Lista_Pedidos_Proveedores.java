@@ -44,6 +44,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         JlabelMinilogo = new javax.swing.JLabel();
         LbTitulito = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         PnlMenu = new javax.swing.JScrollPane();
         Pnlmenucito = new javax.swing.JPanel();
         PnlProveedor1 = new javax.swing.JPanel();
@@ -202,7 +203,10 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblDerechos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblDerechos.setForeground(new java.awt.Color(0, 0, 0));
         LblDerechos.setText("Todos los derechos reservados");
-        PnlPie.add(LblDerechos, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        PnlPie.add(LblDerechos, gridBagConstraints);
 
         LblCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/copyright.png"))); // NOI18N
         PnlPie.add(LblCopy, new java.awt.GridBagConstraints());
@@ -230,6 +234,16 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("0");
         PnlPie.add(jLabel1, new java.awt.GridBagConstraints());
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("SALIDA");
+        jButton1.setPreferredSize(new java.awt.Dimension(176, 40));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 1;
+        PnlPie.add(jButton1, gridBagConstraints);
 
         PnlInicio.add(PnlPie, java.awt.BorderLayout.PAGE_END);
 
@@ -1473,6 +1487,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     private javax.swing.JPanel Pnlmenucito;
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
