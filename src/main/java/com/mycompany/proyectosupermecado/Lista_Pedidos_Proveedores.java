@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Darío
@@ -58,9 +60,9 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblNivel_Reisgo1 = new javax.swing.JLabel();
         LblFoto_Riesgo1 = new javax.swing.JLabel();
         BtnModificar_Pedido1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        IncrementoProducto1 = new javax.swing.JLabel();
         BotonAgregar1 = new javax.swing.JButton();
-        BotonAgregar2 = new javax.swing.JButton();
+        BotonRestar1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         PnlCuadro1 = new javax.swing.JPanel();
         LblTituloSuministrado1 = new javax.swing.JLabel();
@@ -78,9 +80,9 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblNivel_Reisgo2 = new javax.swing.JLabel();
         LblFoto_Riesgo2 = new javax.swing.JLabel();
         BtnModificar_Pedido2 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        BotonAgregar3 = new javax.swing.JButton();
-        BotonAgregar4 = new javax.swing.JButton();
+        IncrementoProducto2 = new javax.swing.JLabel();
+        BotonAgregar2 = new javax.swing.JButton();
+        BotonRestar2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         PnlCuadro3 = new javax.swing.JPanel();
         LblTituloSuministrado2 = new javax.swing.JLabel();
@@ -98,9 +100,9 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblNivel_Reisgo3 = new javax.swing.JLabel();
         LblFoto_Riesgo3 = new javax.swing.JLabel();
         BtnModificar_Pedido3 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        BotonAgregar5 = new javax.swing.JButton();
-        BotonAgregar6 = new javax.swing.JButton();
+        IncrementoProductio3 = new javax.swing.JLabel();
+        BotonAgregar3 = new javax.swing.JButton();
+        BotonRestar3 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         PnlCuadro5 = new javax.swing.JPanel();
         LblTituloSuministrado3 = new javax.swing.JLabel();
@@ -118,9 +120,9 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblNivel_Reisgo4 = new javax.swing.JLabel();
         LblFoto_Riesgo4 = new javax.swing.JLabel();
         BtnModificar_Pedido4 = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
-        BotonAgregar7 = new javax.swing.JButton();
-        BotonAgregar8 = new javax.swing.JButton();
+        IncrementoProducto4 = new javax.swing.JLabel();
+        BotonAgregar4 = new javax.swing.JButton();
+        BotonRestar4 = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         PnlCuadro7 = new javax.swing.JPanel();
         LblTituloSuministrado4 = new javax.swing.JLabel();
@@ -138,9 +140,9 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblNivel_Reisgo5 = new javax.swing.JLabel();
         LblFoto_Riesgo5 = new javax.swing.JLabel();
         BtnModificar_Pedido5 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
-        BotonAgregar9 = new javax.swing.JButton();
-        BotonAgregar10 = new javax.swing.JButton();
+        IncrementoProducto5 = new javax.swing.JLabel();
+        BotonAgregar5 = new javax.swing.JButton();
+        BotonRestar5 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         PnlCuadro9 = new javax.swing.JPanel();
         LblTituloSuministrado5 = new javax.swing.JLabel();
@@ -158,9 +160,9 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblNivel_Reisgo6 = new javax.swing.JLabel();
         LblFoto_Riesgo6 = new javax.swing.JLabel();
         BtnModificar_Pedido6 = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
-        BotonAgregar11 = new javax.swing.JButton();
-        BotonAgregar12 = new javax.swing.JButton();
+        IncrementoProducto6 = new javax.swing.JLabel();
+        BotonAgregar6 = new javax.swing.JButton();
+        BotonRestar6 = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         PnlCuadro11 = new javax.swing.JPanel();
         LblTituloSuministrado6 = new javax.swing.JLabel();
@@ -313,7 +315,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         LblFoto_Riesgo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         LblFoto_Riesgo1.setForeground(new java.awt.Color(0, 0, 0));
-        LblFoto_Riesgo1.setText("Foto_Nivel");
+        LblFoto_Riesgo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/riesgobajo.jpg"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -329,6 +331,11 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         BtnModificar_Pedido1.setForeground(new java.awt.Color(0, 0, 0));
         BtnModificar_Pedido1.setText("MODIFICAR PEDIDO");
         BtnModificar_Pedido1.setPreferredSize(new java.awt.Dimension(300, 27));
+        BtnModificar_Pedido1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnModificar_Pedido1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -336,19 +343,24 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor1.add(BtnModificar_Pedido1, gridBagConstraints);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
-        jLabel2.setText("0");
+        IncrementoProducto1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IncrementoProducto1.setForeground(new java.awt.Color(0, 0, 0));
+        IncrementoProducto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
+        IncrementoProducto1.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor1.add(jLabel2, gridBagConstraints);
+        PnlProveedor1.add(IncrementoProducto1, gridBagConstraints);
 
         BotonAgregar1.setBackground(new java.awt.Color(0, 255, 0));
         BotonAgregar1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         BotonAgregar1.setForeground(new java.awt.Color(0, 0, 0));
         BotonAgregar1.setText("+");
+        BotonAgregar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAgregar1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -356,16 +368,21 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor1.add(BotonAgregar1, gridBagConstraints);
 
-        BotonAgregar2.setBackground(new java.awt.Color(255, 0, 51));
-        BotonAgregar2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar2.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar2.setText("-");
+        BotonRestar1.setBackground(new java.awt.Color(255, 0, 51));
+        BotonRestar1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonRestar1.setForeground(new java.awt.Color(0, 0, 0));
+        BotonRestar1.setText("-");
+        BotonRestar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRestar1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor1.add(BotonAgregar2, gridBagConstraints);
+        PnlProveedor1.add(BotonRestar1, gridBagConstraints);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/flecha.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -452,7 +469,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("20,99 ");
+        jLabel4.setText("8,99");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -516,36 +533,46 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor2.add(BtnModificar_Pedido2, gridBagConstraints);
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
-        jLabel6.setText("0");
+        IncrementoProducto2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IncrementoProducto2.setForeground(new java.awt.Color(0, 0, 0));
+        IncrementoProducto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
+        IncrementoProducto2.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor2.add(jLabel6, gridBagConstraints);
+        PnlProveedor2.add(IncrementoProducto2, gridBagConstraints);
 
-        BotonAgregar3.setBackground(new java.awt.Color(0, 255, 0));
-        BotonAgregar3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar3.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar3.setText("+");
+        BotonAgregar2.setBackground(new java.awt.Color(0, 255, 0));
+        BotonAgregar2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonAgregar2.setForeground(new java.awt.Color(0, 0, 0));
+        BotonAgregar2.setText("+");
+        BotonAgregar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAgregar2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor2.add(BotonAgregar3, gridBagConstraints);
+        PnlProveedor2.add(BotonAgregar2, gridBagConstraints);
 
-        BotonAgregar4.setBackground(new java.awt.Color(255, 0, 51));
-        BotonAgregar4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar4.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar4.setText("-");
+        BotonRestar2.setBackground(new java.awt.Color(255, 0, 51));
+        BotonRestar2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonRestar2.setForeground(new java.awt.Color(0, 0, 0));
+        BotonRestar2.setText("-");
+        BotonRestar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRestar2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor2.add(BotonAgregar4, gridBagConstraints);
+        PnlProveedor2.add(BotonRestar2, gridBagConstraints);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/flecha.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -632,7 +659,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("20,99 ");
+        jLabel8.setText("5,70");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -696,36 +723,46 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor3.add(BtnModificar_Pedido3, gridBagConstraints);
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
-        jLabel9.setText("0");
+        IncrementoProductio3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IncrementoProductio3.setForeground(new java.awt.Color(0, 0, 0));
+        IncrementoProductio3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
+        IncrementoProductio3.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor3.add(jLabel9, gridBagConstraints);
+        PnlProveedor3.add(IncrementoProductio3, gridBagConstraints);
 
-        BotonAgregar5.setBackground(new java.awt.Color(0, 255, 0));
-        BotonAgregar5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar5.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar5.setText("+");
+        BotonAgregar3.setBackground(new java.awt.Color(0, 255, 0));
+        BotonAgregar3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonAgregar3.setForeground(new java.awt.Color(0, 0, 0));
+        BotonAgregar3.setText("+");
+        BotonAgregar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAgregar3ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor3.add(BotonAgregar5, gridBagConstraints);
+        PnlProveedor3.add(BotonAgregar3, gridBagConstraints);
 
-        BotonAgregar6.setBackground(new java.awt.Color(255, 0, 51));
-        BotonAgregar6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar6.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar6.setText("-");
+        BotonRestar3.setBackground(new java.awt.Color(255, 0, 51));
+        BotonRestar3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonRestar3.setForeground(new java.awt.Color(0, 0, 0));
+        BotonRestar3.setText("-");
+        BotonRestar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRestar3ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor3.add(BotonAgregar6, gridBagConstraints);
+        PnlProveedor3.add(BotonRestar3, gridBagConstraints);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/flecha.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -812,7 +849,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("20,99 ");
+        jLabel11.setText("3,99 ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -876,36 +913,46 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor4.add(BtnModificar_Pedido4, gridBagConstraints);
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
-        jLabel12.setText("0");
+        IncrementoProducto4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IncrementoProducto4.setForeground(new java.awt.Color(0, 0, 0));
+        IncrementoProducto4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
+        IncrementoProducto4.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor4.add(jLabel12, gridBagConstraints);
+        PnlProveedor4.add(IncrementoProducto4, gridBagConstraints);
 
-        BotonAgregar7.setBackground(new java.awt.Color(0, 255, 0));
-        BotonAgregar7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar7.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar7.setText("+");
+        BotonAgregar4.setBackground(new java.awt.Color(0, 255, 0));
+        BotonAgregar4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonAgregar4.setForeground(new java.awt.Color(0, 0, 0));
+        BotonAgregar4.setText("+");
+        BotonAgregar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAgregar4ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor4.add(BotonAgregar7, gridBagConstraints);
+        PnlProveedor4.add(BotonAgregar4, gridBagConstraints);
 
-        BotonAgregar8.setBackground(new java.awt.Color(255, 0, 51));
-        BotonAgregar8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar8.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar8.setText("-");
+        BotonRestar4.setBackground(new java.awt.Color(255, 0, 51));
+        BotonRestar4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonRestar4.setForeground(new java.awt.Color(0, 0, 0));
+        BotonRestar4.setText("-");
+        BotonRestar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRestar4ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor4.add(BotonAgregar8, gridBagConstraints);
+        PnlProveedor4.add(BotonRestar4, gridBagConstraints);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/flecha.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -992,7 +1039,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("20,99 ");
+        jLabel14.setText("10,20");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -1056,36 +1103,46 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor5.add(BtnModificar_Pedido5, gridBagConstraints);
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
-        jLabel15.setText("0");
+        IncrementoProducto5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IncrementoProducto5.setForeground(new java.awt.Color(0, 0, 0));
+        IncrementoProducto5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
+        IncrementoProducto5.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor5.add(jLabel15, gridBagConstraints);
+        PnlProveedor5.add(IncrementoProducto5, gridBagConstraints);
 
-        BotonAgregar9.setBackground(new java.awt.Color(0, 255, 0));
-        BotonAgregar9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar9.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar9.setText("+");
+        BotonAgregar5.setBackground(new java.awt.Color(0, 255, 0));
+        BotonAgregar5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonAgregar5.setForeground(new java.awt.Color(0, 0, 0));
+        BotonAgregar5.setText("+");
+        BotonAgregar5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAgregar5ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor5.add(BotonAgregar9, gridBagConstraints);
+        PnlProveedor5.add(BotonAgregar5, gridBagConstraints);
 
-        BotonAgregar10.setBackground(new java.awt.Color(255, 0, 51));
-        BotonAgregar10.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar10.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar10.setText("-");
+        BotonRestar5.setBackground(new java.awt.Color(255, 0, 51));
+        BotonRestar5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonRestar5.setForeground(new java.awt.Color(0, 0, 0));
+        BotonRestar5.setText("-");
+        BotonRestar5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRestar5ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor5.add(BotonAgregar10, gridBagConstraints);
+        PnlProveedor5.add(BotonRestar5, gridBagConstraints);
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/flecha.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1172,7 +1229,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel17.setText("20,99 ");
+        jLabel17.setText("100,00");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -1236,36 +1293,46 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor6.add(BtnModificar_Pedido6, gridBagConstraints);
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
-        jLabel18.setText("0");
+        IncrementoProducto6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IncrementoProducto6.setForeground(new java.awt.Color(0, 0, 0));
+        IncrementoProducto6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logoproducto.png"))); // NOI18N
+        IncrementoProducto6.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor6.add(jLabel18, gridBagConstraints);
+        PnlProveedor6.add(IncrementoProducto6, gridBagConstraints);
 
-        BotonAgregar11.setBackground(new java.awt.Color(0, 255, 0));
-        BotonAgregar11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar11.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar11.setText("+");
+        BotonAgregar6.setBackground(new java.awt.Color(0, 255, 0));
+        BotonAgregar6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonAgregar6.setForeground(new java.awt.Color(0, 0, 0));
+        BotonAgregar6.setText("+");
+        BotonAgregar6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAgregar6ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor6.add(BotonAgregar11, gridBagConstraints);
+        PnlProveedor6.add(BotonAgregar6, gridBagConstraints);
 
-        BotonAgregar12.setBackground(new java.awt.Color(255, 0, 51));
-        BotonAgregar12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        BotonAgregar12.setForeground(new java.awt.Color(0, 0, 0));
-        BotonAgregar12.setText("-");
+        BotonRestar6.setBackground(new java.awt.Color(255, 0, 51));
+        BotonRestar6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BotonRestar6.setForeground(new java.awt.Color(0, 0, 0));
+        BotonRestar6.setText("-");
+        BotonRestar6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRestar6ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
-        PnlProveedor6.add(BotonAgregar12, gridBagConstraints);
+        PnlProveedor6.add(BotonRestar6, gridBagConstraints);
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/flecha.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1344,11 +1411,147 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlInicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1402, Short.MAX_VALUE)
+            .addComponent(PnlInicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 2743, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BotonAgregar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar1ActionPerformed
+     int incremento1;
+     incremento1=Integer.parseInt(IncrementoProducto1.getText());
+     incremento1++;
+     String resultado1= Integer.toString(incremento1);
+     IncrementoProducto1.setText(resultado1);
+     
+    }//GEN-LAST:event_BotonAgregar1ActionPerformed
+
+    private void BotonRestar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar1ActionPerformed
+        int incremento1;
+     incremento1=Integer.parseInt(IncrementoProducto1.getText());
+     incremento1--;
+     String resultado1= Integer.toString(incremento1);
+     IncrementoProducto1.setText(resultado1);
+     if(IncrementoProducto1.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+     
+    }//GEN-LAST:event_BotonRestar1ActionPerformed
+
+    private void BotonRestar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar2ActionPerformed
+          int incremento2;
+     incremento2=Integer.parseInt(IncrementoProducto2.getText());
+     incremento2--;
+     String resultado2= Integer.toString(incremento2);
+     IncrementoProducto2.setText(resultado2);
+     if(IncrementoProducto2.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonRestar2ActionPerformed
+
+    private void BotonAgregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar2ActionPerformed
+           int incremento2;
+     incremento2=Integer.parseInt(IncrementoProducto2.getText());
+     incremento2++;
+     String resultado= Integer.toString(incremento2);
+     IncrementoProducto2.setText(resultado);
+     if(IncrementoProducto2.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonAgregar2ActionPerformed
+
+    private void BotonAgregar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar3ActionPerformed
+           int incremento3;
+     incremento3=Integer.parseInt(IncrementoProductio3.getText());
+     incremento3++;
+     String resultado3= Integer.toString(incremento3);
+     IncrementoProductio3.setText(resultado3);
+     if(IncrementoProductio3.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonAgregar3ActionPerformed
+
+    private void BotonRestar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar3ActionPerformed
+           int incremento3;
+     incremento3=Integer.parseInt(IncrementoProductio3.getText());
+     incremento3--;
+     String resultado3= Integer.toString(incremento3);
+     IncrementoProductio3.setText(resultado3);
+     if(IncrementoProductio3.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonRestar3ActionPerformed
+
+    private void BotonAgregar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar4ActionPerformed
+           int incremento4;
+     incremento4=Integer.parseInt(IncrementoProducto4.getText());
+     incremento4++;
+     String resultado4= Integer.toString(incremento4);
+     IncrementoProducto4.setText(resultado4);
+     if(IncrementoProducto4.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonAgregar4ActionPerformed
+
+    private void BotonRestar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar4ActionPerformed
+           int incremento4;
+     incremento4=Integer.parseInt(IncrementoProducto4.getText());
+     incremento4--;
+     String resultado4= Integer.toString(incremento4);
+     IncrementoProducto4.setText(resultado4);
+     if(IncrementoProducto4.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonRestar4ActionPerformed
+
+    private void BotonAgregar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar5ActionPerformed
+          int incremento5;
+     incremento5=Integer.parseInt(IncrementoProducto5.getText());
+     incremento5++;
+     String resultado5= Integer.toString(incremento5);
+     IncrementoProducto5.setText(resultado5);
+     if(IncrementoProducto5.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonAgregar5ActionPerformed
+
+    private void BotonRestar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar5ActionPerformed
+          int incremento5;
+     incremento5=Integer.parseInt(IncrementoProducto5.getText());
+     incremento5--;
+     String resultado5= Integer.toString(incremento5);
+     IncrementoProducto5.setText(resultado5);
+     if(IncrementoProducto5.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonRestar5ActionPerformed
+
+    private void BotonAgregar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar6ActionPerformed
+           int incremento6;
+     incremento6=Integer.parseInt(IncrementoProducto6.getText());
+     incremento6++;
+     String resultado6= Integer.toString(incremento6);
+     IncrementoProducto6.setText(resultado6);
+     if(IncrementoProducto6.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonAgregar6ActionPerformed
+
+    private void BotonRestar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar6ActionPerformed
+           int incremento6;
+     incremento6=Integer.parseInt(IncrementoProducto6.getText());
+     incremento6--;
+     String resultado6= Integer.toString(incremento6);
+     IncrementoProducto6.setText(resultado6);
+     if(IncrementoProducto6.getText().equals("-1")){
+         JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
+     }
+    }//GEN-LAST:event_BotonRestar6ActionPerformed
+
+    private void BtnModificar_Pedido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificar_Pedido1ActionPerformed
+                JOptionPane.showMessageDialog(this, "Elija que desea hacer", "Modificacion Producto", JOptionPane.INFORMATION_MESSAGE);
+                //NO ESTA TERMINADO EMPEZAR POR AQUI
+    }//GEN-LAST:event_BtnModificar_Pedido1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1377,17 +1580,17 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonAgregar1;
-    private javax.swing.JButton BotonAgregar10;
-    private javax.swing.JButton BotonAgregar11;
-    private javax.swing.JButton BotonAgregar12;
     private javax.swing.JButton BotonAgregar2;
     private javax.swing.JButton BotonAgregar3;
     private javax.swing.JButton BotonAgregar4;
     private javax.swing.JButton BotonAgregar5;
     private javax.swing.JButton BotonAgregar6;
-    private javax.swing.JButton BotonAgregar7;
-    private javax.swing.JButton BotonAgregar8;
-    private javax.swing.JButton BotonAgregar9;
+    private javax.swing.JButton BotonRestar1;
+    private javax.swing.JButton BotonRestar2;
+    private javax.swing.JButton BotonRestar3;
+    private javax.swing.JButton BotonRestar4;
+    private javax.swing.JButton BotonRestar5;
+    private javax.swing.JButton BotonRestar6;
     private javax.swing.JButton BtnConfirmarPedido;
     private javax.swing.JButton BtnModificar_Pedido1;
     private javax.swing.JButton BtnModificar_Pedido2;
@@ -1395,6 +1598,12 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     private javax.swing.JButton BtnModificar_Pedido4;
     private javax.swing.JButton BtnModificar_Pedido5;
     private javax.swing.JButton BtnModificar_Pedido6;
+    private javax.swing.JLabel IncrementoProductio3;
+    private javax.swing.JLabel IncrementoProducto1;
+    private javax.swing.JLabel IncrementoProducto2;
+    private javax.swing.JLabel IncrementoProducto4;
+    private javax.swing.JLabel IncrementoProducto5;
+    private javax.swing.JLabel IncrementoProducto6;
     private javax.swing.JLabel JlabelMinilogo;
     private javax.swing.JLabel LbTitulito;
     private javax.swing.JLabel LblCopy;
@@ -1491,22 +1700,16 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
