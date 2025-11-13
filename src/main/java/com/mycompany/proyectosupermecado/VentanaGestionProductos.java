@@ -1166,7 +1166,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlDulces.add(lblIconoD5, gridBagConstraints);
 
         lblDescripcionD5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionD5.setText("Robada Rochér");
+        lblDescripcionD5.setText("Ferrero Robé");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
