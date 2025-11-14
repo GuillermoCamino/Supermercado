@@ -10,14 +10,14 @@ import javax.swing.JFrame;
  *
  * @author MEDAC
  */
-public class VentanaGestionProductos extends javax.swing.JFrame {
+public class VentanaModificacionProductos extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaGestionProductos.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaModificacionProductos.class.getName());
 
     /**
      * Creates new form VentanaGestionProductos
      */
-    public VentanaGestionProductos() {
+    public VentanaModificacionProductos() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         PnlCentral.getVerticalScrollBar().setUnitIncrement(35);
@@ -831,32 +831,32 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         PnlConservas.add(BtnStockC6, gridBagConstraints);
 
-        lblStockC1.setText("100");
+        lblStockC1.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.ipadx = 1;
         PnlConservas.add(lblStockC1, gridBagConstraints);
 
-        lblStockC2.setText("100");
+        lblStockC2.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
         PnlConservas.add(lblStockC2, gridBagConstraints);
 
-        lblStockC3.setText("100");
+        lblStockC3.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 2;
         PnlConservas.add(lblStockC3, gridBagConstraints);
 
-        lblStockC4.setText("100");
+        lblStockC4.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 6;
         PnlConservas.add(lblStockC4, gridBagConstraints);
 
-        lblStockC5.setText("100");
+        lblStockC5.setText("3");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 6;
@@ -2923,7 +2923,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new VentanaGestionProductos().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new VentanaModificacionProductos().setVisible(true));
         
     }
 
