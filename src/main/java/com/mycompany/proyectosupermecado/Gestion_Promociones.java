@@ -141,9 +141,9 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         jButton1.setPreferredSize(new java.awt.Dimension(176, 40));
         PnlPie.add(jButton1);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 34)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("QUE PROMOCIÓN DESEA APLICAR ");
+        jLabel1.setText("¿QUE PROMOCIÓN DESEA APLICAR? ");
         jLabel1.setAlignmentX(0.5F);
         PnlPie.add(jLabel1);
 
@@ -197,7 +197,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 50, 12, 56);
+        gridBagConstraints.insets = new java.awt.Insets(0, 21, 12, 25);
         PnlMenu.add(PnlDescuentos, gridBagConstraints);
 
         PnlRegalos.setBackground(new java.awt.Color(255, 255, 255));
@@ -241,9 +241,10 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(0, 50, 12, 56);
+        gridBagConstraints.insets = new java.awt.Insets(0, 21, 12, 25);
         PnlMenu.add(PnlRegalos, gridBagConstraints);
 
+        PnlTitulodescuento.setBackground(new java.awt.Color(0, 0, 0));
         PnlTitulodescuento.setPreferredSize(new java.awt.Dimension(200, 45));
         PnlTitulodescuento.setLayout(new java.awt.GridBagLayout());
 
@@ -255,9 +256,10 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        gridBagConstraints.insets = new java.awt.Insets(0, 21, 12, 21);
         PnlMenu.add(PnlTitulodescuento, gridBagConstraints);
 
+        Pnltituloregalo.setBackground(new java.awt.Color(0, 0, 0));
         Pnltituloregalo.setPreferredSize(new java.awt.Dimension(200, 40));
         Pnltituloregalo.setLayout(new java.awt.GridBagLayout());
 
@@ -270,7 +272,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 12, 0);
+        gridBagConstraints.insets = new java.awt.Insets(0, 21, 12, 21);
         PnlMenu.add(Pnltituloregalo, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
