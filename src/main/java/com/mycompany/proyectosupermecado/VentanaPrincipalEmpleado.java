@@ -34,12 +34,22 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         pnlMensaje = new javax.swing.JPanel();
         lblFotoLogo = new javax.swing.JLabel();
         lblTextoBienvenida = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        pnlSeccionEmpleado = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        pnlCopy = new javax.swing.JPanel();
+        lblFotoLogo2 = new javax.swing.JLabel();
+        txtCopy = new javax.swing.JLabel();
+        lblLogoCopy = new javax.swing.JLabel();
+        pnlBoton = new javax.swing.JPanel();
+        btnProductos = new javax.swing.JButton();
+        btnPedidos = new javax.swing.JButton();
+        btnClientes = new javax.swing.JButton();
+        btnVentaYCaja = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Página Principal del Empleado");
 
         pnlPrincipal.setLayout(new java.awt.BorderLayout());
 
@@ -65,16 +75,15 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         pnlMensaje.add(lblTextoBienvenida, gridBagConstraints);
 
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        pnlSeccionEmpleado.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new java.awt.GridBagConstraints());
-
-        jButton1.setText("jButton1");
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
+        jButton1.setText("Cerrar Sesión");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        jPanel1.add(jButton1, gridBagConstraints);
+        pnlSeccionEmpleado.add(jButton1, gridBagConstraints);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -82,24 +91,73 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.gridheight = 2;
-        jPanel1.add(jLabel3, gridBagConstraints);
+        pnlSeccionEmpleado.add(jLabel3, gridBagConstraints);
+
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField1.setText("ID empleado");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        pnlSeccionEmpleado.add(jTextField1, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 1.0;
-        pnlMensaje.add(jPanel1, gridBagConstraints);
+        pnlMensaje.add(pnlSeccionEmpleado, gridBagConstraints);
 
         pnlPrincipal.add(pnlMensaje, java.awt.BorderLayout.PAGE_START);
+
+        pnlCopy.setBackground(new java.awt.Color(255, 204, 51));
+        pnlCopy.setPreferredSize(new java.awt.Dimension(555, 70));
+        pnlCopy.setLayout(new java.awt.GridBagLayout());
+
+        lblFotoLogo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
+        pnlCopy.add(lblFotoLogo2, new java.awt.GridBagConstraints());
+
+        txtCopy.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
+        txtCopy.setForeground(new java.awt.Color(0, 0, 0));
+        txtCopy.setText("Todos los derechos reservados");
+        pnlCopy.add(txtCopy, new java.awt.GridBagConstraints());
+
+        lblLogoCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/copyright.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 6, 0, 0);
+        pnlCopy.add(lblLogoCopy, gridBagConstraints);
+
+        pnlPrincipal.add(pnlCopy, java.awt.BorderLayout.PAGE_END);
+
+        pnlBoton.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 20, 10, 20));
+        pnlBoton.setMinimumSize(new java.awt.Dimension(680, 46));
+        pnlBoton.setLayout(new java.awt.GridLayout(2, 2, 20, 20));
+
+        btnProductos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnProductos.setText("Gestión de Productos, Inventario y Stock");
+        pnlBoton.add(btnProductos);
+
+        btnPedidos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPedidos.setText("Gestión de Pedidos a Proveedores");
+        pnlBoton.add(btnPedidos);
+
+        btnClientes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnClientes.setText("Modificar Clientes");
+        pnlBoton.add(btnClientes);
+
+        btnVentaYCaja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnVentaYCaja.setText("Ventas y Cajas");
+        pnlBoton.add(btnVentaYCaja);
+
+        pnlPrincipal.add(pnlBoton, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -131,13 +189,22 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnClientes;
+    private javax.swing.JButton btnPedidos;
+    private javax.swing.JButton btnProductos;
+    private javax.swing.JButton btnVentaYCaja;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblFotoLogo;
+    private javax.swing.JLabel lblFotoLogo2;
+    private javax.swing.JLabel lblLogoCopy;
     private javax.swing.JLabel lblTextoBienvenida;
+    private javax.swing.JPanel pnlBoton;
+    private javax.swing.JPanel pnlCopy;
     private javax.swing.JPanel pnlMensaje;
     private javax.swing.JPanel pnlPrincipal;
+    private javax.swing.JPanel pnlSeccionEmpleado;
+    private javax.swing.JLabel txtCopy;
     // End of variables declaration//GEN-END:variables
 }
