@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import java.awt.Dimension;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +22,36 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     public Lista_Pedidos_Proveedores() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        PnlMenu.getVerticalScrollBar().setPreferredSize(new Dimension(50,0));
+        PnlMenu.getVerticalScrollBar().setUnitIncrement(35);
+        //NIVEL RIESGO 2
+        if(LblNivel_Riesgo2.getText().equals("Nivel_Riesgo")){
+                LblFoto_Riesgo2.setIcon(new ImageIcon(getClass().getResource("/riesgobajo.jpg")));
+                LblFoto_Riesgo2.setText(" ");
+        }else if(LblNivel_Riesgo2.getText().equals("25")){
+             LblFoto_Riesgo2.setIcon(new ImageIcon(getClass().getResource("/riesgomedio.jpg")));
+                LblFoto_Riesgo2.setText(" ");
+        }else if(LblNivel_Riesgo2.getText().equals("5")){
+             LblFoto_Riesgo2.setIcon(new ImageIcon(getClass().getResource("/riesgopeligro.jpg")));
+                LblFoto_Riesgo2.setText(" ");
+        }
+        
+        
+         //NIVEL RIESGO 2
+        if(LblNivel_Riesgo1.getText().equals("Nivel_Riesgo")){
+                LblFoto_Riesgo1.setIcon(new ImageIcon(getClass().getResource("/riesgobajo.jpg")));
+                LblFoto_Riesgo1.setText(" ");
+        }else if(LblNivel_Riesgo1.getText().equals("25")){
+             LblFoto_Riesgo1.setIcon(new ImageIcon(getClass().getResource("/riesgomedio.jpg")));
+                LblFoto_Riesgo1.setText(" ");
+        }else if(LblNivel_Riesgo1.getText().equals("5")){
+             LblFoto_Riesgo1.setIcon(new ImageIcon(getClass().getResource("/riesgopeligro.jpg")));
+                LblFoto_Riesgo1.setText(" ");
+        }
+        
+        //AQUI FALTARIA CMABIAR LOS GET TEXT EQUALS A NIVEL DEL RIESGO DE STOCK DELA VARIABLE QUE PASARA POR PANTALLA DE LAS UNIDADES DEL PRODUCTO 
+        //ADEMAS DE EL NOMBRE PROVVEDOR, DEL PRODUCTO Y SU PRECIO QUE LO TIENE QUE PASAR EN PANTALLA
+
     }
 
     /**
@@ -42,10 +74,10 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblCopy = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(70, 50), new java.awt.Dimension(32767, 0));
         BtnConfirmarPedido = new javax.swing.JButton();
-        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(70, 0), new java.awt.Dimension(32767, 0));
+        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(50, 0), new java.awt.Dimension(32767, 0));
         JlabelMinilogo = new javax.swing.JLabel();
         LbTitulito = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        LblProductos_Total = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         PnlMenu = new javax.swing.JScrollPane();
         Pnlmenucito = new javax.swing.JPanel();
@@ -57,7 +89,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblTitulo1 = new javax.swing.JLabel();
         LblProveedor1 = new javax.swing.JLabel();
         LblTituloStock1 = new javax.swing.JLabel();
-        LblNivel_Reisgo1 = new javax.swing.JLabel();
+        LblNivel_Riesgo1 = new javax.swing.JLabel();
         LblFoto_Riesgo1 = new javax.swing.JLabel();
         BtnModificar_Pedido1 = new javax.swing.JButton();
         IncrementoProducto1 = new javax.swing.JLabel();
@@ -77,7 +109,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblTitulo2 = new javax.swing.JLabel();
         LblProveedor2 = new javax.swing.JLabel();
         LblTituloStock2 = new javax.swing.JLabel();
-        LblNivel_Reisgo2 = new javax.swing.JLabel();
+        LblNivel_Riesgo2 = new javax.swing.JLabel();
         LblFoto_Riesgo2 = new javax.swing.JLabel();
         BtnModificar_Pedido2 = new javax.swing.JButton();
         IncrementoProducto2 = new javax.swing.JLabel();
@@ -97,7 +129,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblTitulo3 = new javax.swing.JLabel();
         LblProveedor3 = new javax.swing.JLabel();
         LblTituloStock3 = new javax.swing.JLabel();
-        LblNivel_Reisgo3 = new javax.swing.JLabel();
+        LblNivel_Riesgo3 = new javax.swing.JLabel();
         LblFoto_Riesgo3 = new javax.swing.JLabel();
         BtnModificar_Pedido3 = new javax.swing.JButton();
         IncrementoProductio3 = new javax.swing.JLabel();
@@ -117,7 +149,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblTitulo4 = new javax.swing.JLabel();
         LblProveedor4 = new javax.swing.JLabel();
         LblTituloStock4 = new javax.swing.JLabel();
-        LblNivel_Reisgo4 = new javax.swing.JLabel();
+        LblNivel_Riesgo4 = new javax.swing.JLabel();
         LblFoto_Riesgo4 = new javax.swing.JLabel();
         BtnModificar_Pedido4 = new javax.swing.JButton();
         IncrementoProducto4 = new javax.swing.JLabel();
@@ -137,7 +169,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblTitulo5 = new javax.swing.JLabel();
         LblProveedor5 = new javax.swing.JLabel();
         LblTituloStock5 = new javax.swing.JLabel();
-        LblNivel_Reisgo5 = new javax.swing.JLabel();
+        LblNivel_Riesgo5 = new javax.swing.JLabel();
         LblFoto_Riesgo5 = new javax.swing.JLabel();
         BtnModificar_Pedido5 = new javax.swing.JButton();
         IncrementoProducto5 = new javax.swing.JLabel();
@@ -157,7 +189,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         LblTitulo6 = new javax.swing.JLabel();
         LblProveedor6 = new javax.swing.JLabel();
         LblTituloStock6 = new javax.swing.JLabel();
-        LblNivel_Reisgo6 = new javax.swing.JLabel();
+        LblNivel_Riesgo6 = new javax.swing.JLabel();
         LblFoto_Riesgo6 = new javax.swing.JLabel();
         BtnModificar_Pedido6 = new javax.swing.JButton();
         IncrementoProducto6 = new javax.swing.JLabel();
@@ -225,17 +257,24 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlPie.add(filler2, new java.awt.GridBagConstraints());
 
         JlabelMinilogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logitoinformacion.png"))); // NOI18N
-        PnlPie.add(JlabelMinilogo, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 0;
+        PnlPie.add(JlabelMinilogo, gridBagConstraints);
 
         LbTitulito.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         LbTitulito.setForeground(new java.awt.Color(0, 0, 0));
         LbTitulito.setText("Productos Totales Vendidos:");
         PnlPie.add(LbTitulito, new java.awt.GridBagConstraints());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("0");
-        PnlPie.add(jLabel1, new java.awt.GridBagConstraints());
+        LblProductos_Total.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        LblProductos_Total.setForeground(new java.awt.Color(0, 0, 0));
+        LblProductos_Total.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
+        PnlPie.add(LblProductos_Total, gridBagConstraints);
 
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -304,14 +343,14 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         PnlCuadro.add(LblTituloStock1, gridBagConstraints);
 
-        LblNivel_Reisgo1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        LblNivel_Reisgo1.setForeground(new java.awt.Color(0, 0, 0));
-        LblNivel_Reisgo1.setText("Nivel_Riesgo");
+        LblNivel_Riesgo1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        LblNivel_Riesgo1.setForeground(new java.awt.Color(0, 0, 0));
+        LblNivel_Riesgo1.setText("Nivel_Riesgo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        PnlCuadro.add(LblNivel_Reisgo1, gridBagConstraints);
+        PnlCuadro.add(LblNivel_Riesgo1, gridBagConstraints);
 
         LblFoto_Riesgo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         LblFoto_Riesgo1.setForeground(new java.awt.Color(0, 0, 0));
@@ -500,14 +539,14 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         PnlCuadro2.add(LblTituloStock2, gridBagConstraints);
 
-        LblNivel_Reisgo2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        LblNivel_Reisgo2.setForeground(new java.awt.Color(0, 0, 0));
-        LblNivel_Reisgo2.setText("Nivel_Riesgo");
+        LblNivel_Riesgo2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        LblNivel_Riesgo2.setForeground(new java.awt.Color(0, 0, 0));
+        LblNivel_Riesgo2.setText("Nivel_Riesgo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        PnlCuadro2.add(LblNivel_Reisgo2, gridBagConstraints);
+        PnlCuadro2.add(LblNivel_Riesgo2, gridBagConstraints);
 
         LblFoto_Riesgo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         LblFoto_Riesgo2.setForeground(new java.awt.Color(0, 0, 0));
@@ -696,14 +735,14 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         PnlCuadro4.add(LblTituloStock3, gridBagConstraints);
 
-        LblNivel_Reisgo3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        LblNivel_Reisgo3.setForeground(new java.awt.Color(0, 0, 0));
-        LblNivel_Reisgo3.setText("Nivel_Riesgo");
+        LblNivel_Riesgo3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        LblNivel_Riesgo3.setForeground(new java.awt.Color(0, 0, 0));
+        LblNivel_Riesgo3.setText("Nivel_Riesgo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        PnlCuadro4.add(LblNivel_Reisgo3, gridBagConstraints);
+        PnlCuadro4.add(LblNivel_Riesgo3, gridBagConstraints);
 
         LblFoto_Riesgo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         LblFoto_Riesgo3.setForeground(new java.awt.Color(0, 0, 0));
@@ -892,14 +931,14 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         PnlCuadro6.add(LblTituloStock4, gridBagConstraints);
 
-        LblNivel_Reisgo4.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        LblNivel_Reisgo4.setForeground(new java.awt.Color(0, 0, 0));
-        LblNivel_Reisgo4.setText("Nivel_Riesgo");
+        LblNivel_Riesgo4.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        LblNivel_Riesgo4.setForeground(new java.awt.Color(0, 0, 0));
+        LblNivel_Riesgo4.setText("Nivel_Riesgo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        PnlCuadro6.add(LblNivel_Reisgo4, gridBagConstraints);
+        PnlCuadro6.add(LblNivel_Riesgo4, gridBagConstraints);
 
         LblFoto_Riesgo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         LblFoto_Riesgo4.setForeground(new java.awt.Color(0, 0, 0));
@@ -1088,14 +1127,14 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         PnlCuadro8.add(LblTituloStock5, gridBagConstraints);
 
-        LblNivel_Reisgo5.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        LblNivel_Reisgo5.setForeground(new java.awt.Color(0, 0, 0));
-        LblNivel_Reisgo5.setText("Nivel_Riesgo");
+        LblNivel_Riesgo5.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        LblNivel_Riesgo5.setForeground(new java.awt.Color(0, 0, 0));
+        LblNivel_Riesgo5.setText("Nivel_Riesgo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        PnlCuadro8.add(LblNivel_Reisgo5, gridBagConstraints);
+        PnlCuadro8.add(LblNivel_Riesgo5, gridBagConstraints);
 
         LblFoto_Riesgo5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         LblFoto_Riesgo5.setForeground(new java.awt.Color(0, 0, 0));
@@ -1284,14 +1323,14 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         PnlCuadro10.add(LblTituloStock6, gridBagConstraints);
 
-        LblNivel_Reisgo6.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        LblNivel_Reisgo6.setForeground(new java.awt.Color(0, 0, 0));
-        LblNivel_Reisgo6.setText("Nivel_Riesgo");
+        LblNivel_Riesgo6.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        LblNivel_Riesgo6.setForeground(new java.awt.Color(0, 0, 0));
+        LblNivel_Riesgo6.setText("Nivel_Riesgo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        PnlCuadro10.add(LblNivel_Reisgo6, gridBagConstraints);
+        PnlCuadro10.add(LblNivel_Riesgo6, gridBagConstraints);
 
         LblFoto_Riesgo6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         LblFoto_Riesgo6.setForeground(new java.awt.Color(0, 0, 0));
@@ -1448,42 +1487,54 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+       
     private void BotonAgregar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar1ActionPerformed
      int incremento1;
      incremento1=Integer.parseInt(IncrementoProducto1.getText());
      incremento1++;
+     cantidad_total_sumar(incremento1);
      String resultado1= Integer.toString(incremento1);
      IncrementoProducto1.setText(resultado1);
      
     }//GEN-LAST:event_BotonAgregar1ActionPerformed
 
     private void BotonRestar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar1ActionPerformed
-        int incremento1;
-     incremento1=Integer.parseInt(IncrementoProducto1.getText());
-     incremento1--;
-     String resultado1= Integer.toString(incremento1);
-     IncrementoProducto1.setText(resultado1);
-     if(IncrementoProducto1.getText().equals("-1")){
+    if(IncrementoProducto1.getText().equals("0")){
          JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
      }
+    else{
+        int incremento1;
+        incremento1=Integer.parseInt(IncrementoProducto1.getText());
+        incremento1--;
+        cantidad_total_restar(incremento1);
+        String resultado1= Integer.toString(incremento1);
+        IncrementoProducto1.setText(resultado1);
+    }
+        
+     
      
     }//GEN-LAST:event_BotonRestar1ActionPerformed
 
     private void BotonRestar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar2ActionPerformed
-          int incremento2;
-     incremento2=Integer.parseInt(IncrementoProducto2.getText());
-     incremento2--;
-     String resultado2= Integer.toString(incremento2);
-     IncrementoProducto2.setText(resultado2);
-     if(IncrementoProducto2.getText().equals("-1")){
+    
+       if(IncrementoProducto2.getText().equals("0")){
          JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
      }
+    else{
+        int incremento2;
+        incremento2=Integer.parseInt(IncrementoProducto2.getText());
+        incremento2--;
+        cantidad_total_restar(incremento2);
+        String resultado= Integer.toString(incremento2);
+        IncrementoProducto2.setText(resultado);
+    }
     }//GEN-LAST:event_BotonRestar2ActionPerformed
 
     private void BotonAgregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar2ActionPerformed
            int incremento2;
      incremento2=Integer.parseInt(IncrementoProducto2.getText());
      incremento2++;
+     cantidad_total_sumar(incremento2);
      String resultado= Integer.toString(incremento2);
      IncrementoProducto2.setText(resultado);
      if(IncrementoProducto2.getText().equals("-1")){
@@ -1495,6 +1546,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
            int incremento3;
      incremento3=Integer.parseInt(IncrementoProductio3.getText());
      incremento3++;
+     cantidad_total_sumar(incremento3);
      String resultado3= Integer.toString(incremento3);
      IncrementoProductio3.setText(resultado3);
      if(IncrementoProductio3.getText().equals("-1")){
@@ -1503,20 +1555,24 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonAgregar3ActionPerformed
 
     private void BotonRestar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar3ActionPerformed
-           int incremento3;
-     incremento3=Integer.parseInt(IncrementoProductio3.getText());
-     incremento3--;
-     String resultado3= Integer.toString(incremento3);
-     IncrementoProductio3.setText(resultado3);
-     if(IncrementoProductio3.getText().equals("-1")){
+       if(IncrementoProductio3.getText().equals("0")){
          JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
      }
+    else{
+        int incremento3;
+        incremento3=Integer.parseInt(IncrementoProductio3.getText());
+        incremento3--;
+        cantidad_total_restar(incremento3);
+        String resultado= Integer.toString(incremento3);
+        IncrementoProductio3.setText(resultado);
+    }
     }//GEN-LAST:event_BotonRestar3ActionPerformed
 
     private void BotonAgregar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar4ActionPerformed
            int incremento4;
      incremento4=Integer.parseInt(IncrementoProducto4.getText());
      incremento4++;
+     cantidad_total_sumar(incremento4);
      String resultado4= Integer.toString(incremento4);
      IncrementoProducto4.setText(resultado4);
      if(IncrementoProducto4.getText().equals("-1")){
@@ -1525,20 +1581,24 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonAgregar4ActionPerformed
 
     private void BotonRestar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar4ActionPerformed
-           int incremento4;
-     incremento4=Integer.parseInt(IncrementoProducto4.getText());
-     incremento4--;
-     String resultado4= Integer.toString(incremento4);
-     IncrementoProducto4.setText(resultado4);
-     if(IncrementoProducto4.getText().equals("-1")){
+       if(IncrementoProducto4.getText().equals("0")){
          JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
      }
+    else{
+        int incremento4;
+        incremento4=Integer.parseInt(IncrementoProducto4.getText());
+        incremento4--;
+        cantidad_total_restar(incremento4);
+        String resultado= Integer.toString(incremento4);
+        IncrementoProducto2.setText(resultado);
+    }
     }//GEN-LAST:event_BotonRestar4ActionPerformed
 
     private void BotonAgregar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar5ActionPerformed
           int incremento5;
      incremento5=Integer.parseInt(IncrementoProducto5.getText());
      incremento5++;
+cantidad_total_sumar(incremento5);
      String resultado5= Integer.toString(incremento5);
      IncrementoProducto5.setText(resultado5);
      if(IncrementoProducto5.getText().equals("-1")){
@@ -1547,20 +1607,24 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonAgregar5ActionPerformed
 
     private void BotonRestar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar5ActionPerformed
-          int incremento5;
-     incremento5=Integer.parseInt(IncrementoProducto5.getText());
-     incremento5--;
-     String resultado5= Integer.toString(incremento5);
-     IncrementoProducto5.setText(resultado5);
-     if(IncrementoProducto5.getText().equals("-1")){
+         if(IncrementoProducto5.getText().equals("0")){
          JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
      }
+    else{
+        int incremento5;
+        incremento5=Integer.parseInt(IncrementoProducto5.getText());
+        incremento5--;
+        cantidad_total_restar(incremento5);
+        String resultado= Integer.toString(incremento5);
+        IncrementoProducto5.setText(resultado);
+    }
     }//GEN-LAST:event_BotonRestar5ActionPerformed
 
     private void BotonAgregar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregar6ActionPerformed
            int incremento6;
      incremento6=Integer.parseInt(IncrementoProducto6.getText());
      incremento6++;
+     cantidad_total_sumar(incremento6);
      String resultado6= Integer.toString(incremento6);
      IncrementoProducto6.setText(resultado6);
      if(IncrementoProducto6.getText().equals("-1")){
@@ -1569,14 +1633,17 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonAgregar6ActionPerformed
 
     private void BotonRestar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRestar6ActionPerformed
-           int incremento6;
-     incremento6=Integer.parseInt(IncrementoProducto6.getText());
-     incremento6--;
-     String resultado6= Integer.toString(incremento6);
-     IncrementoProducto6.setText(resultado6);
-     if(IncrementoProducto6.getText().equals("-1")){
+        if(IncrementoProducto6.getText().equals("0")){
          JOptionPane.showMessageDialog(this, "No se puede pedir unidades negativas, lo siento", "Imposiblidad", JOptionPane.INFORMATION_MESSAGE);
      }
+    else{
+        int incremento6;
+        incremento6=Integer.parseInt(IncrementoProducto6.getText());
+        incremento6--;
+        cantidad_total_restar(incremento6);
+        String resultado= Integer.toString(incremento6);
+        IncrementoProducto2.setText(resultado);
+    }
     }//GEN-LAST:event_BotonRestar6ActionPerformed
 
     private void BtnModificar_Pedido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificar_Pedido1ActionPerformed
@@ -1638,7 +1705,21 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
            Pnlmenucito.repaint();
         }
     }//GEN-LAST:event_BtnModificar_Pedido6ActionPerformed
-
+ public void cantidad_total_sumar(int incremento) {
+     int incremento1;
+     incremento1=Integer.parseInt(LblProductos_Total.getText());
+     incremento1++;
+     String resultado1= Integer.toString(incremento1);
+     LblProductos_Total.setText(resultado1);
+    }
+ public void cantidad_total_restar(int incremento) {
+     int incremento1;
+     incremento1=Integer.parseInt(LblProductos_Total.getText());
+     incremento1--;
+     String resultado1= Integer.toString(incremento1);
+     LblProductos_Total.setText(resultado1);
+    }
+  
     /**
      * @param args the command line arguments
      */
@@ -1708,12 +1789,12 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
     private javax.swing.JLabel LblFoto_Riesgo6;
     private javax.swing.JLabel LblMiniLogo;
     private javax.swing.JLabel LblMinifoto;
-    private javax.swing.JLabel LblNivel_Reisgo1;
-    private javax.swing.JLabel LblNivel_Reisgo2;
-    private javax.swing.JLabel LblNivel_Reisgo3;
-    private javax.swing.JLabel LblNivel_Reisgo4;
-    private javax.swing.JLabel LblNivel_Reisgo5;
-    private javax.swing.JLabel LblNivel_Reisgo6;
+    private javax.swing.JLabel LblNivel_Riesgo1;
+    private javax.swing.JLabel LblNivel_Riesgo2;
+    private javax.swing.JLabel LblNivel_Riesgo3;
+    private javax.swing.JLabel LblNivel_Riesgo4;
+    private javax.swing.JLabel LblNivel_Riesgo5;
+    private javax.swing.JLabel LblNivel_Riesgo6;
     private javax.swing.JLabel LblNombreProducto1;
     private javax.swing.JLabel LblNombreProducto2;
     private javax.swing.JLabel LblNombreProducto3;
@@ -1726,6 +1807,7 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
     private javax.swing.JLabel LblNombreProveedor4;
     private javax.swing.JLabel LblNombreProveedor5;
     private javax.swing.JLabel LblNombreProveedor6;
+    private javax.swing.JLabel LblProductos_Total;
     private javax.swing.JLabel LblProveedor1;
     private javax.swing.JLabel LblProveedor2;
     private javax.swing.JLabel LblProveedor3;
@@ -1783,7 +1865,6 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
@@ -1803,4 +1884,6 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     // End of variables declaration//GEN-END:variables
+
+
 }
