@@ -35,9 +35,14 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         lblFotoLogo = new javax.swing.JLabel();
         lblTextoBienvenida = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        pnlCopy = new javax.swing.JPanel();
+        lblFotoLogo2 = new javax.swing.JLabel();
+        txtCopy = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        pnlBoton = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,10 +72,8 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new java.awt.GridBagConstraints());
-
-        jButton1.setText("jButton1");
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
+        jButton1.setText("Cerrar Sesión");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -84,6 +87,12 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel1.add(jLabel3, gridBagConstraints);
 
+        jTextField1.setText("ID empleado");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        jPanel1.add(jTextField1, gridBagConstraints);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 1.0;
@@ -91,11 +100,43 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         pnlPrincipal.add(pnlMensaje, java.awt.BorderLayout.PAGE_START);
 
+        pnlCopy.setBackground(new java.awt.Color(255, 204, 51));
+        pnlCopy.setPreferredSize(new java.awt.Dimension(555, 70));
+        pnlCopy.setLayout(new java.awt.GridBagLayout());
+
+        lblFotoLogo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
+        pnlCopy.add(lblFotoLogo2, new java.awt.GridBagConstraints());
+
+        txtCopy.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
+        txtCopy.setForeground(new java.awt.Color(0, 0, 0));
+        txtCopy.setText("Todos los derechos reservados");
+        pnlCopy.add(txtCopy, new java.awt.GridBagConstraints());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/copyright.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(0, 6, 0, 0);
+        pnlCopy.add(jLabel2, gridBagConstraints);
+
+        pnlPrincipal.add(pnlCopy, java.awt.BorderLayout.PAGE_END);
+
+        javax.swing.GroupLayout pnlBotonLayout = new javax.swing.GroupLayout(pnlBoton);
+        pnlBoton.setLayout(pnlBotonLayout);
+        pnlBotonLayout.setHorizontalGroup(
+            pnlBotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 680, Short.MAX_VALUE)
+        );
+        pnlBotonLayout.setVerticalGroup(
+            pnlBotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 398, Short.MAX_VALUE)
+        );
+
+        pnlPrincipal.add(pnlBoton, java.awt.BorderLayout.CENTER);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,12 +173,17 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblFotoLogo;
+    private javax.swing.JLabel lblFotoLogo2;
     private javax.swing.JLabel lblTextoBienvenida;
+    private javax.swing.JPanel pnlBoton;
+    private javax.swing.JPanel pnlCopy;
     private javax.swing.JPanel pnlMensaje;
     private javax.swing.JPanel pnlPrincipal;
+    private javax.swing.JLabel txtCopy;
     // End of variables declaration//GEN-END:variables
 }
