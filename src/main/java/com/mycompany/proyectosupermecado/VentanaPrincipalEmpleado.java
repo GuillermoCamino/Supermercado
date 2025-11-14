@@ -41,8 +41,12 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         pnlCopy = new javax.swing.JPanel();
         lblFotoLogo2 = new javax.swing.JLabel();
         txtCopy = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblLogoCopy = new javax.swing.JLabel();
         pnlBoton = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +76,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Cerrar Sesión");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -87,6 +92,8 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         jPanel1.add(jLabel3, gridBagConstraints);
 
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setText("ID empleado");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -112,23 +119,31 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         txtCopy.setText("Todos los derechos reservados");
         pnlCopy.add(txtCopy, new java.awt.GridBagConstraints());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/copyright.png"))); // NOI18N
+        lblLogoCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/copyright.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(0, 6, 0, 0);
-        pnlCopy.add(jLabel2, gridBagConstraints);
+        pnlCopy.add(lblLogoCopy, gridBagConstraints);
 
         pnlPrincipal.add(pnlCopy, java.awt.BorderLayout.PAGE_END);
 
-        javax.swing.GroupLayout pnlBotonLayout = new javax.swing.GroupLayout(pnlBoton);
-        pnlBoton.setLayout(pnlBotonLayout);
-        pnlBotonLayout.setHorizontalGroup(
-            pnlBotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
-        );
-        pnlBotonLayout.setVerticalGroup(
-            pnlBotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
-        );
+        pnlBoton.setMinimumSize(new java.awt.Dimension(680, 46));
+        pnlBoton.setLayout(new java.awt.GridLayout(2, 2));
+
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton2.setText("Gestión de Productos, Inventario y Stock");
+        pnlBoton.add(jButton2);
+
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton3.setText("Gestión de Pedidos a Proveedores");
+        pnlBoton.add(jButton3);
+
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton4.setText("Modificar Clientes");
+        pnlBoton.add(jButton4);
+
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton5.setText("Ventas y Cajas");
+        pnlBoton.add(jButton5);
 
         pnlPrincipal.add(pnlBoton, java.awt.BorderLayout.CENTER);
 
@@ -140,7 +155,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -173,12 +188,16 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblFotoLogo;
     private javax.swing.JLabel lblFotoLogo2;
+    private javax.swing.JLabel lblLogoCopy;
     private javax.swing.JLabel lblTextoBienvenida;
     private javax.swing.JPanel pnlBoton;
     private javax.swing.JPanel pnlCopy;
