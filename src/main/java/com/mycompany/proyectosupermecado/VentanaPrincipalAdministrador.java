@@ -27,29 +27,50 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         pnlPrincipal = new javax.swing.JPanel();
         pnlCabezera = new javax.swing.JPanel();
+        lblLogoCostaMarket = new javax.swing.JLabel();
+        txtMensajeAdmin = new javax.swing.JLabel();
+        pnlSeccionCliente = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         pnlCopy = new javax.swing.JPanel();
         pnlBotonesAdmin = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Página Principal Administrador");
+        setPreferredSize(new java.awt.Dimension(680, 468));
 
         pnlPrincipal.setLayout(new java.awt.BorderLayout());
 
         pnlCabezera.setBackground(new java.awt.Color(255, 204, 51));
+        pnlCabezera.setPreferredSize(new java.awt.Dimension(555, 70));
+        pnlCabezera.setLayout(new java.awt.GridBagLayout());
 
-        javax.swing.GroupLayout pnlCabezeraLayout = new javax.swing.GroupLayout(pnlCabezera);
-        pnlCabezera.setLayout(pnlCabezeraLayout);
-        pnlCabezeraLayout.setHorizontalGroup(
-            pnlCabezeraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 776, Short.MAX_VALUE)
-        );
-        pnlCabezeraLayout.setVerticalGroup(
-            pnlCabezeraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        lblLogoCostaMarket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        pnlCabezera.add(lblLogoCostaMarket, gridBagConstraints);
+
+        txtMensajeAdmin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtMensajeAdmin.setForeground(new java.awt.Color(0, 0, 0));
+        txtMensajeAdmin.setText("Seleccione un tipo de gestión:");
+        pnlCabezera.add(txtMensajeAdmin, new java.awt.GridBagConstraints());
+
+        pnlSeccionCliente.setBackground(new java.awt.Color(255, 255, 255));
+        pnlSeccionCliente.setLayout(new java.awt.GridBagLayout());
+
+        jLabel1.setText("jLabel1");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        pnlSeccionCliente.add(jLabel1, gridBagConstraints);
+
+        pnlCabezera.add(pnlSeccionCliente, new java.awt.GridBagConstraints());
 
         pnlPrincipal.add(pnlCabezera, java.awt.BorderLayout.PAGE_START);
 
@@ -59,7 +80,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         pnlCopy.setLayout(pnlCopyLayout);
         pnlCopyLayout.setHorizontalGroup(
             pnlCopyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 776, Short.MAX_VALUE)
+            .addGap(0, 846, Short.MAX_VALUE)
         );
         pnlCopyLayout.setVerticalGroup(
             pnlCopyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,11 +93,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         pnlBotonesAdmin.setLayout(pnlBotonesAdminLayout);
         pnlBotonesAdminLayout.setHorizontalGroup(
             pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 776, Short.MAX_VALUE)
+            .addGap(0, 846, Short.MAX_VALUE)
         );
         pnlBotonesAdminLayout.setVerticalGroup(
             pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 359, Short.MAX_VALUE)
+            .addGap(0, 389, Short.MAX_VALUE)
         );
 
         pnlPrincipal.add(pnlBotonesAdmin, java.awt.BorderLayout.CENTER);
@@ -123,9 +144,13 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblLogoCostaMarket;
     private javax.swing.JPanel pnlBotonesAdmin;
     private javax.swing.JPanel pnlCabezera;
     private javax.swing.JPanel pnlCopy;
     private javax.swing.JPanel pnlPrincipal;
+    private javax.swing.JPanel pnlSeccionCliente;
+    private javax.swing.JLabel txtMensajeAdmin;
     // End of variables declaration//GEN-END:variables
 }
