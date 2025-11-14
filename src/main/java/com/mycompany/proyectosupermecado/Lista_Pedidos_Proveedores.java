@@ -426,6 +426,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 50);
         PnlProveedor1.add(Lblproveedor1, gridBagConstraints);
 
@@ -526,6 +527,11 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         BtnModificar_Pedido2.setForeground(new java.awt.Color(0, 0, 0));
         BtnModificar_Pedido2.setText("MODIFICAR PEDIDO");
         BtnModificar_Pedido2.setPreferredSize(new java.awt.Dimension(300, 27));
+        BtnModificar_Pedido2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnModificar_Pedido2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -616,6 +622,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 50);
         PnlProveedor2.add(Lblproveedor2, gridBagConstraints);
 
@@ -716,6 +723,11 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         BtnModificar_Pedido3.setForeground(new java.awt.Color(0, 0, 0));
         BtnModificar_Pedido3.setText("MODIFICAR PEDIDO");
         BtnModificar_Pedido3.setPreferredSize(new java.awt.Dimension(300, 27));
+        BtnModificar_Pedido3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnModificar_Pedido3ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -806,6 +818,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 50);
         PnlProveedor3.add(Lblproveedor3, gridBagConstraints);
 
@@ -906,6 +919,11 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         BtnModificar_Pedido4.setForeground(new java.awt.Color(0, 0, 0));
         BtnModificar_Pedido4.setText("MODIFICAR PEDIDO");
         BtnModificar_Pedido4.setPreferredSize(new java.awt.Dimension(300, 27));
+        BtnModificar_Pedido4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnModificar_Pedido4ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -996,6 +1014,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 50);
         PnlProveedor4.add(Lblproveedor4, gridBagConstraints);
 
@@ -1096,6 +1115,11 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         BtnModificar_Pedido5.setForeground(new java.awt.Color(0, 0, 0));
         BtnModificar_Pedido5.setText("MODIFICAR PEDIDO");
         BtnModificar_Pedido5.setPreferredSize(new java.awt.Dimension(300, 27));
+        BtnModificar_Pedido5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnModificar_Pedido5ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -1186,6 +1210,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 50);
         PnlProveedor5.add(Lblproveedor5, gridBagConstraints);
 
@@ -1286,6 +1311,11 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         BtnModificar_Pedido6.setForeground(new java.awt.Color(0, 0, 0));
         BtnModificar_Pedido6.setText("MODIFICAR PEDIDO");
         BtnModificar_Pedido6.setPreferredSize(new java.awt.Dimension(300, 27));
+        BtnModificar_Pedido6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnModificar_Pedido6ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -1372,10 +1402,11 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor6.add(PnlCuadro11, gridBagConstraints);
 
-        Lblproveedor6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BosqueVerde.png"))); // NOI18N
+        Lblproveedor6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blosteverde.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 50);
         PnlProveedor6.add(Lblproveedor6, gridBagConstraints);
 
@@ -1549,9 +1580,64 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonRestar6ActionPerformed
 
     private void BtnModificar_Pedido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificar_Pedido1ActionPerformed
-                JOptionPane.showMessageDialog(this, "Elija que desea hacer", "Modificacion Producto", JOptionPane.INFORMATION_MESSAGE);
-                //NO ESTA TERMINADO EMPEZAR POR AQUI
+String [] opciones={"Eliminar peticion producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Qué desea hacer?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           Pnlmenucito.remove(PnlProveedor1);
+           Pnlmenucito.revalidate();
+           Pnlmenucito.repaint();
+        }
     }//GEN-LAST:event_BtnModificar_Pedido1ActionPerformed
+
+    private void BtnModificar_Pedido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificar_Pedido2ActionPerformed
+        String [] opciones={"Eliminar peticion producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Qué desea hacer?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           Pnlmenucito.remove(PnlProveedor2);
+           Pnlmenucito.revalidate();
+           Pnlmenucito.repaint();
+        }
+    }//GEN-LAST:event_BtnModificar_Pedido2ActionPerformed
+
+    private void BtnModificar_Pedido3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificar_Pedido3ActionPerformed
+        String [] opciones={"Eliminar peticion producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Qué desea hacer?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           Pnlmenucito.remove(PnlProveedor3);
+           Pnlmenucito.revalidate();
+           Pnlmenucito.repaint();
+        }
+    }//GEN-LAST:event_BtnModificar_Pedido3ActionPerformed
+
+    private void BtnModificar_Pedido4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificar_Pedido4ActionPerformed
+        String [] opciones={"Eliminar peticion producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Qué desea hacer?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           Pnlmenucito.remove(PnlProveedor4);
+           Pnlmenucito.revalidate();
+           Pnlmenucito.repaint();
+        }
+    }//GEN-LAST:event_BtnModificar_Pedido4ActionPerformed
+
+    private void BtnModificar_Pedido5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificar_Pedido5ActionPerformed
+        String [] opciones={"Eliminar peticion producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Qué desea hacer?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           Pnlmenucito.remove(PnlProveedor5);
+           Pnlmenucito.revalidate();
+           Pnlmenucito.repaint();
+        }
+    }//GEN-LAST:event_BtnModificar_Pedido5ActionPerformed
+
+    private void BtnModificar_Pedido6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificar_Pedido6ActionPerformed
+        String [] opciones={"Eliminar peticion producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Qué desea hacer?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           Pnlmenucito.remove(PnlProveedor6);
+           Pnlmenucito.revalidate();
+           Pnlmenucito.repaint();
+        }
+    }//GEN-LAST:event_BtnModificar_Pedido6ActionPerformed
 
     /**
      * @param args the command line arguments
