@@ -34,7 +34,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         pnlMensaje = new javax.swing.JPanel();
         lblFotoLogo = new javax.swing.JLabel();
         lblTextoBienvenida = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        pnlSeccionEmpleado = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -43,12 +43,13 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         txtCopy = new javax.swing.JLabel();
         lblLogoCopy = new javax.swing.JLabel();
         pnlBoton = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnProductos = new javax.swing.JButton();
+        btnPedidos = new javax.swing.JButton();
+        btnClientes = new javax.swing.JButton();
+        btnVentaYCaja = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Página Principal del Empleado");
 
         pnlPrincipal.setLayout(new java.awt.BorderLayout());
 
@@ -74,7 +75,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         pnlMensaje.add(lblTextoBienvenida, gridBagConstraints);
 
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        pnlSeccionEmpleado.setLayout(new java.awt.GridBagLayout());
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
@@ -82,7 +83,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        jPanel1.add(jButton1, gridBagConstraints);
+        pnlSeccionEmpleado.add(jButton1, gridBagConstraints);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -90,7 +91,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.gridheight = 2;
-        jPanel1.add(jLabel3, gridBagConstraints);
+        pnlSeccionEmpleado.add(jLabel3, gridBagConstraints);
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setForeground(new java.awt.Color(0, 0, 0));
@@ -98,12 +99,12 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        jPanel1.add(jTextField1, gridBagConstraints);
+        pnlSeccionEmpleado.add(jTextField1, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 1.0;
-        pnlMensaje.add(jPanel1, gridBagConstraints);
+        pnlMensaje.add(pnlSeccionEmpleado, gridBagConstraints);
 
         pnlPrincipal.add(pnlMensaje, java.awt.BorderLayout.PAGE_START);
 
@@ -126,24 +127,25 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         pnlPrincipal.add(pnlCopy, java.awt.BorderLayout.PAGE_END);
 
+        pnlBoton.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 20, 10, 20));
         pnlBoton.setMinimumSize(new java.awt.Dimension(680, 46));
-        pnlBoton.setLayout(new java.awt.GridLayout(2, 2));
+        pnlBoton.setLayout(new java.awt.GridLayout(2, 2, 20, 20));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Gestión de Productos, Inventario y Stock");
-        pnlBoton.add(jButton2);
+        btnProductos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnProductos.setText("Gestión de Productos, Inventario y Stock");
+        pnlBoton.add(btnProductos);
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setText("Gestión de Pedidos a Proveedores");
-        pnlBoton.add(jButton3);
+        btnPedidos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPedidos.setText("Gestión de Pedidos a Proveedores");
+        pnlBoton.add(btnPedidos);
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setText("Modificar Clientes");
-        pnlBoton.add(jButton4);
+        btnClientes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnClientes.setText("Modificar Clientes");
+        pnlBoton.add(btnClientes);
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setText("Ventas y Cajas");
-        pnlBoton.add(jButton5);
+        btnVentaYCaja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnVentaYCaja.setText("Ventas y Cajas");
+        pnlBoton.add(btnVentaYCaja);
 
         pnlPrincipal.add(pnlBoton, java.awt.BorderLayout.CENTER);
 
@@ -187,13 +189,12 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnClientes;
+    private javax.swing.JButton btnPedidos;
+    private javax.swing.JButton btnProductos;
+    private javax.swing.JButton btnVentaYCaja;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblFotoLogo;
     private javax.swing.JLabel lblFotoLogo2;
@@ -203,6 +204,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     private javax.swing.JPanel pnlCopy;
     private javax.swing.JPanel pnlMensaje;
     private javax.swing.JPanel pnlPrincipal;
+    private javax.swing.JPanel pnlSeccionEmpleado;
     private javax.swing.JLabel txtCopy;
     // End of variables declaration//GEN-END:variables
 }
