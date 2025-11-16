@@ -50,6 +50,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Página Principal del Empleado");
+        setResizable(false);
 
         pnlPrincipal.setLayout(new java.awt.BorderLayout());
 
@@ -157,7 +158,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
         );
 
         pack();
