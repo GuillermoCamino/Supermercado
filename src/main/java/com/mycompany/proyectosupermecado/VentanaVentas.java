@@ -17,11 +17,9 @@ public class VentanaVentas extends javax.swing.JFrame {
      */
     public VentanaVentas() {
         initComponents();
-        
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         setResizable(false);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,6 +61,11 @@ public class VentanaVentas extends javax.swing.JFrame {
         jPanel3.add(jLabel26, gridBagConstraints);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotocostamarketLogo.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -162,16 +165,57 @@ public class VentanaVentas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        VentanaRecibo recibo = new VentanaRecibo();
-        recibo.setVisible(true);
-        this.dispose(); 
+    String dni = javax.swing.JOptionPane.showInputDialog(
+                this,
+                "Introduce el DNI del cliente:",
+                "DNI Cliente",
+                javax.swing.JOptionPane.PLAIN_MESSAGE
+        );
+
+        if (dni == null) {
+            return;
+        }
+
+        if (!dni.isBlank()) {
+            VentanaAsociarProductos ventana = new VentanaAsociarProductos();
+            ventana.setVisible(true);
+            this.dispose(); 
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this,
+                    "Debe introducir un DNI válido.",
+                    "Error",
+                    javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        VentanaRecibo recibo = new VentanaRecibo();
-        recibo.setVisible(true);
-        this.dispose(); // cierra la ventana actual
+    String dni = javax.swing.JOptionPane.showInputDialog(
+                    this,
+                    "Introduce el DNI del cliente:",
+                    "DNI Cliente",
+                    javax.swing.JOptionPane.PLAIN_MESSAGE
+            );
+
+            if (dni == null) {
+                return;
+            }
+            if (!dni.isBlank()) {
+                VentanaAsociarProductos ventana = new VentanaAsociarProductos();
+                ventana.setVisible(true);
+                this.dispose(); 
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(this,
+                        "Debe introducir un DNI válido.",
+                        "Error",
+                        javax.swing.JOptionPane.ERROR_MESSAGE);
+            }
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        VentanaPrincipalEmpleado principal=new VentanaPrincipalEmpleado();
+        principal.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
