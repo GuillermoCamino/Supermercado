@@ -774,9 +774,6 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlConservas.add(lblIconoC1, gridBagConstraints);
 
         BtnConfigurrarminimoC1.setBackground(new java.awt.Color(0, 0, 204));
