@@ -40,6 +40,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         LblPerfil = new javax.swing.JLabel();
         PnlPie = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(800, 0), new java.awt.Dimension(32767, 0));
         jLabel1 = new javax.swing.JLabel();
         PnlMenu = new javax.swing.JPanel();
         LblDescuento = new javax.swing.JLabel();
@@ -139,7 +140,13 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SALIDA");
         jButton1.setPreferredSize(new java.awt.Dimension(176, 40));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         PnlPie.add(jButton1);
+        PnlPie.add(filler1);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 34)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -331,6 +338,11 @@ public class Gestion_Promociones extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnTiempo_RegalosActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        volver_admin.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -383,6 +395,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
     private javax.swing.JPanel PnlTitulodescuento;
     private javax.swing.JPanel PnlUsuario;
     private javax.swing.JPanel Pnltituloregalo;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.Box.Filler filler3;
     private javax.swing.Box.Filler filler4;

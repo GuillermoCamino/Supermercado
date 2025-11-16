@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Darío
@@ -141,6 +143,11 @@ public class gestion_proveedores extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SALIDA");
         jButton1.setPreferredSize(new java.awt.Dimension(176, 40));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -161,6 +168,11 @@ public class gestion_proveedores extends javax.swing.JFrame {
         BtnAgregar1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnAgregar1.setForeground(new java.awt.Color(255, 255, 255));
         BtnAgregar1.setText("Agregar Producto");
+        BtnAgregar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAgregar1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -181,6 +193,11 @@ public class gestion_proveedores extends javax.swing.JFrame {
         BtnBaja1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnBaja1.setForeground(new java.awt.Color(255, 255, 255));
         BtnBaja1.setText("Dar de Baja");
+        BtnBaja1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBaja1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -367,7 +384,7 @@ public class gestion_proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(42, 40, 42, 40);
         PnlProveedores.add(BtnBaja7, gridBagConstraints);
 
-        LblFoto8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BosqueVerde.png"))); // NOI18N
+        LblFoto8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blosteverde.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
@@ -456,11 +473,34 @@ public class gestion_proveedores extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Pnlinicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
+            .addComponent(Pnlinicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1268, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnAgregar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregar1ActionPerformed
+        VentanaAsociarProductos conectar_asociarproducto=new VentanaAsociarProductos();
+        conectar_asociarproducto.setVisible(true);
+    }//GEN-LAST:event_BtnAgregar1ActionPerformed
+
+    private void BtnBaja1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBaja1ActionPerformed
+       String [] opciones={"Eliminar proveedor","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Esta seguro que desea eliminar este proveedor?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+          PnlProveedores.remove(LblFoto1);
+          PnlProveedores.remove(BtnAgregar1);
+          PnlProveedores.remove(BtnConsultar1);
+          PnlProveedores.remove(BtnBaja1);
+          
+           
+        }
+    }//GEN-LAST:event_BtnBaja1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        volver_admin.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
