@@ -54,6 +54,7 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         lblUsuario = new javax.swing.JLabel();
         BtnCerrar = new javax.swing.JButton();
         lblPerfil = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         PnlOeste = new javax.swing.JPanel();
         PnlTipos = new javax.swing.JPanel();
         PnlTabla = new javax.swing.JPanel();
@@ -528,6 +529,17 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 14);
         PnlPerfil.add(lblPerfil, gridBagConstraints);
+
+        jButton1.setBackground(new java.awt.Color(51, 255, 51));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("NUEVO PRODUCTO");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        PnlPerfil.add(jButton1, new java.awt.GridBagConstraints());
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1019,6 +1031,11 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         DarBaja1.setBackground(new java.awt.Color(204, 0, 0));
         DarBaja1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         DarBaja1.setText("Dar de Baja");
+        DarBaja1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DarBaja1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -3703,6 +3720,26 @@ if (opcion == JOptionPane.OK_OPTION) {
                 TtlCervezas.scrollRectToVisible(TtlCervezas.getBounds());
     }//GEN-LAST:event_btnCervezasActionPerformed
 
+    private void DarBaja1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DarBaja1ActionPerformed
+        String [] opciones={"Dar de baja este producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Esta seguro que dessea dar de baja este producto?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           PnlConservas.remove(lblIconoC1);
+          PnlConservas.remove(lblDescripcionC1);
+           PnlConservas.remove(lblStockC1);
+           PnlConservas.remove(lblAlertaC1);
+           PnlConservas.remove(BtnConfigurrarminimoC1);
+           PnlConservas.remove(DarBaja1);
+           PnlConservas.revalidate();
+           PnlConservas.repaint();
+           
+        }
+    }//GEN-LAST:event_DarBaja1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3876,6 +3913,7 @@ if (opcion == JOptionPane.OK_OPTION) {
     private javax.swing.JButton btnLupa_Asociar_Producto;
     private javax.swing.JButton btnPastasCereales;
     private javax.swing.JButton btnZumosBebidas;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton13;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbbAlertas;

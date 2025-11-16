@@ -281,6 +281,11 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SALIDA");
         jButton1.setPreferredSize(new java.awt.Dimension(176, 40));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 1;
@@ -293,8 +298,9 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         Pnlmenucito.setBackground(new java.awt.Color(255, 255, 255));
         Pnlmenucito.setLayout(new java.awt.GridLayout(99, 1, 5, 0));
 
-        PnlProveedor1.setBackground(new java.awt.Color(0, 255, 204));
-        PnlProveedor1.setPreferredSize(new java.awt.Dimension(2400, 404));
+        PnlProveedor1.setBackground(new java.awt.Color(204, 153, 255));
+        PnlProveedor1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        PnlProveedor1.setPreferredSize(new java.awt.Dimension(2600, 404));
         PnlProveedor1.setLayout(new java.awt.GridBagLayout());
 
         LblFoto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asturiana.png"))); // NOI18N
@@ -321,7 +327,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor1.add(jLabel3, gridBagConstraints);
 
         PnlCuadro.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro.setMinimumSize(new java.awt.Dimension(500, 100));
         PnlCuadro.setLayout(new java.awt.GridBagLayout());
 
@@ -433,7 +439,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor1.add(jLabel5, gridBagConstraints);
 
         PnlCuadro1.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro1.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro1.setMinimumSize(new java.awt.Dimension(400, 100));
         PnlCuadro1.setLayout(new java.awt.GridBagLayout());
 
@@ -489,11 +495,12 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         Pnlmenucito.add(PnlProveedor1);
 
-        PnlProveedor2.setBackground(new java.awt.Color(0, 255, 204));
+        PnlProveedor2.setBackground(new java.awt.Color(204, 153, 255));
+        PnlProveedor2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         PnlProveedor2.setPreferredSize(new java.awt.Dimension(2400, 404));
         PnlProveedor2.setLayout(new java.awt.GridBagLayout());
 
-        LblFoto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/choco.jpg"))); // NOI18N
+        LblFoto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gusanitos.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor2.add(LblFoto2, gridBagConstraints);
@@ -517,7 +524,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor2.add(jLabel4, gridBagConstraints);
 
         PnlCuadro2.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro2.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro2.setMinimumSize(new java.awt.Dimension(500, 100));
         PnlCuadro2.setLayout(new java.awt.GridBagLayout());
 
@@ -629,7 +636,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor2.add(jLabel7, gridBagConstraints);
 
         PnlCuadro3.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro3.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro3.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro3.setMinimumSize(new java.awt.Dimension(400, 100));
         PnlCuadro3.setLayout(new java.awt.GridBagLayout());
 
@@ -657,7 +664,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor2.add(PnlCuadro3, gridBagConstraints);
 
-        Lblproveedor2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cuetara.png"))); // NOI18N
+        Lblproveedor2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hacendado.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
@@ -685,11 +692,12 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         Pnlmenucito.add(PnlProveedor2);
 
-        PnlProveedor3.setBackground(new java.awt.Color(0, 255, 204));
+        PnlProveedor3.setBackground(new java.awt.Color(204, 153, 255));
+        PnlProveedor3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         PnlProveedor3.setPreferredSize(new java.awt.Dimension(2400, 404));
         PnlProveedor3.setLayout(new java.awt.GridBagLayout());
 
-        LblFoto3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gofre.jpg"))); // NOI18N
+        LblFoto3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/krave.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor3.add(LblFoto3, gridBagConstraints);
@@ -713,7 +721,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor3.add(jLabel8, gridBagConstraints);
 
         PnlCuadro4.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro4.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro4.setMinimumSize(new java.awt.Dimension(500, 100));
         PnlCuadro4.setLayout(new java.awt.GridBagLayout());
 
@@ -825,7 +833,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor3.add(jLabel10, gridBagConstraints);
 
         PnlCuadro5.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro5.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro5.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro5.setMinimumSize(new java.awt.Dimension(400, 100));
         PnlCuadro5.setLayout(new java.awt.GridBagLayout());
 
@@ -853,7 +861,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor3.add(PnlCuadro5, gridBagConstraints);
 
-        Lblproveedor3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hacendado.png"))); // NOI18N
+        Lblproveedor3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cuetara.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
@@ -881,11 +889,12 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         Pnlmenucito.add(PnlProveedor3);
 
-        PnlProveedor4.setBackground(new java.awt.Color(0, 255, 204));
+        PnlProveedor4.setBackground(new java.awt.Color(204, 153, 255));
+        PnlProveedor4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         PnlProveedor4.setPreferredSize(new java.awt.Dimension(2400, 404));
         PnlProveedor4.setLayout(new java.awt.GridBagLayout());
 
-        LblFoto4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/donut.jpg"))); // NOI18N
+        LblFoto4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atun.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor4.add(LblFoto4, gridBagConstraints);
@@ -909,7 +918,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor4.add(jLabel11, gridBagConstraints);
 
         PnlCuadro6.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro6.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro6.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro6.setMinimumSize(new java.awt.Dimension(500, 100));
         PnlCuadro6.setLayout(new java.awt.GridBagLayout());
 
@@ -1021,7 +1030,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor4.add(jLabel13, gridBagConstraints);
 
         PnlCuadro7.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro7.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro7.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro7.setMinimumSize(new java.awt.Dimension(400, 100));
         PnlCuadro7.setLayout(new java.awt.GridBagLayout());
 
@@ -1049,7 +1058,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 15, 38);
         PnlProveedor4.add(PnlCuadro7, gridBagConstraints);
 
-        Lblproveedor4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hacendado.png"))); // NOI18N
+        Lblproveedor4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blosteverde.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
@@ -1077,7 +1086,8 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         Pnlmenucito.add(PnlProveedor4);
 
-        PnlProveedor5.setBackground(new java.awt.Color(0, 255, 204));
+        PnlProveedor5.setBackground(new java.awt.Color(204, 153, 255));
+        PnlProveedor5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         PnlProveedor5.setPreferredSize(new java.awt.Dimension(2400, 404));
         PnlProveedor5.setLayout(new java.awt.GridBagLayout());
 
@@ -1105,7 +1115,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor5.add(jLabel14, gridBagConstraints);
 
         PnlCuadro8.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro8.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro8.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro8.setMinimumSize(new java.awt.Dimension(500, 100));
         PnlCuadro8.setLayout(new java.awt.GridBagLayout());
 
@@ -1217,7 +1227,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor5.add(jLabel16, gridBagConstraints);
 
         PnlCuadro9.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro9.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro9.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro9.setMinimumSize(new java.awt.Dimension(400, 100));
         PnlCuadro9.setLayout(new java.awt.GridBagLayout());
 
@@ -1273,7 +1283,8 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
 
         Pnlmenucito.add(PnlProveedor5);
 
-        PnlProveedor6.setBackground(new java.awt.Color(0, 255, 204));
+        PnlProveedor6.setBackground(new java.awt.Color(204, 153, 255));
+        PnlProveedor6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         PnlProveedor6.setPreferredSize(new java.awt.Dimension(2400, 404));
         PnlProveedor6.setLayout(new java.awt.GridBagLayout());
 
@@ -1301,7 +1312,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor6.add(jLabel17, gridBagConstraints);
 
         PnlCuadro10.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro10.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro10.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro10.setMinimumSize(new java.awt.Dimension(500, 100));
         PnlCuadro10.setLayout(new java.awt.GridBagLayout());
 
@@ -1413,7 +1424,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         PnlProveedor6.add(jLabel19, gridBagConstraints);
 
         PnlCuadro11.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCuadro11.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.blue, java.awt.Color.white), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 5)));
+        PnlCuadro11.setBorder(javax.swing.BorderFactory.createCompoundBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 204, 255), 2, true), javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         PnlCuadro11.setMinimumSize(new java.awt.Dimension(400, 100));
         PnlCuadro11.setLayout(new java.awt.GridBagLayout());
 
@@ -1705,6 +1716,11 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
            Pnlmenucito.repaint();
         }
     }//GEN-LAST:event_BtnModificar_Pedido6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        volver_admin.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
  public void cantidad_total_sumar(int incremento) {
      int incremento1;
      incremento1=Integer.parseInt(LblProductos_Total.getText());
