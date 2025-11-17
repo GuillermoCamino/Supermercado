@@ -13,6 +13,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
             String nombre_producto;
                     int precio;
                     boolean alcohol;
+            String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaPrincipalAdministrador.class.getName());
 
     /**
@@ -28,9 +29,15 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         this.nombre_producto=nombre_producto;
         this.precio=precio;
         this.alcohol=alcohol;
-        jLabel1.setText("Esto es una prueba de dario, el producto transferido es:"+this.nombre_producto+" el numero de ref es:"+this.numero_referencia+"'el precio y si tiene alcohol es:"+precio+alcohol);
+        lblTextoBienvenida.setText("Esto es una prueba de dario, el producto transferido es:"+this.nombre_producto+" el numero de ref es:"+this.numero_referencia+"'el precio y si tiene alcohol es:"+precio+alcohol);
         //NESTOR ESTO LO HA HECHO DARIO QUE ES PARA LA CONEXION DE PAGINAS ENTRE LA PRINCIPAL DEL ADMIN Y YA LA CREACION DEL PRODUCTO, HAY QUE UNIRLA AL CATALOGO Y HACER QUE SE AGREGE ESTE PRODUCTO
         //Esta conectado al label que tenias en el encabezado el JLABEL1 
+    }
+          public VentanaPrincipalAdministrador(String nombre) {
+        initComponents();
+        this.nombre=nombre;
+        jTextField1.setText(nombre);
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -44,49 +51,21 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         pnlPrincipal = new javax.swing.JPanel();
-        pnlCabezera = new javax.swing.JPanel();
-        lblLogoCostaMarket = new javax.swing.JLabel();
-        txtMensajeAdmin = new javax.swing.JLabel();
-        pnlSeccionCliente = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         pnlCopy = new javax.swing.JPanel();
         pnlBotonesAdmin = new javax.swing.JPanel();
+        pnlMensaje = new javax.swing.JPanel();
+        lblFotoLogo = new javax.swing.JLabel();
+        lblTextoBienvenida = new javax.swing.JLabel();
+        pnlSeccionEmpleado = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Página Principal Administrador");
         setPreferredSize(new java.awt.Dimension(680, 468));
 
         pnlPrincipal.setLayout(new java.awt.BorderLayout());
-
-        pnlCabezera.setBackground(new java.awt.Color(255, 204, 51));
-        pnlCabezera.setPreferredSize(new java.awt.Dimension(555, 70));
-        pnlCabezera.setLayout(new java.awt.GridBagLayout());
-
-        lblLogoCostaMarket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        pnlCabezera.add(lblLogoCostaMarket, gridBagConstraints);
-
-        txtMensajeAdmin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        txtMensajeAdmin.setForeground(new java.awt.Color(0, 0, 0));
-        txtMensajeAdmin.setText("Seleccione un tipo de gestión:");
-        pnlCabezera.add(txtMensajeAdmin, new java.awt.GridBagConstraints());
-
-        pnlSeccionCliente.setBackground(new java.awt.Color(255, 255, 255));
-        pnlSeccionCliente.setLayout(new java.awt.GridBagLayout());
-
-        jLabel1.setText("jLabel1");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        pnlSeccionCliente.add(jLabel1, gridBagConstraints);
-
-        pnlCabezera.add(pnlSeccionCliente, new java.awt.GridBagConstraints());
-
-        pnlPrincipal.add(pnlCabezera, java.awt.BorderLayout.PAGE_START);
 
         pnlCopy.setBackground(new java.awt.Color(255, 204, 0));
 
@@ -115,6 +94,61 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         );
 
         pnlPrincipal.add(pnlBotonesAdmin, java.awt.BorderLayout.CENTER);
+
+        pnlMensaje.setBackground(new java.awt.Color(255, 204, 51));
+        pnlMensaje.setForeground(new java.awt.Color(255, 255, 255));
+        pnlMensaje.setLayout(new java.awt.GridBagLayout());
+
+        lblFotoLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
+        lblFotoLogo.setToolTipText("");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        pnlMensaje.add(lblFotoLogo, gridBagConstraints);
+
+        lblTextoBienvenida.setFont(new java.awt.Font("Segoe UI", 3, 20)); // NOI18N
+        lblTextoBienvenida.setForeground(new java.awt.Color(0, 0, 0));
+        lblTextoBienvenida.setText("Un gusto verle de nuevo!");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.weightx = 1.0;
+        pnlMensaje.add(lblTextoBienvenida, gridBagConstraints);
+
+        pnlSeccionEmpleado.setLayout(new java.awt.GridBagLayout());
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
+        jButton1.setText("Cerrar Sesión");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        pnlSeccionEmpleado.add(jButton1, gridBagConstraints);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        pnlSeccionEmpleado.add(jLabel3, gridBagConstraints);
+
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField1.setText("ID empleado");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        pnlSeccionEmpleado.add(jTextField1, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.weightx = 1.0;
+        pnlMensaje.add(pnlSeccionEmpleado, gridBagConstraints);
+
+        pnlPrincipal.add(pnlMensaje, java.awt.BorderLayout.PAGE_START);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -158,13 +192,15 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblLogoCostaMarket;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblFotoLogo;
+    private javax.swing.JLabel lblTextoBienvenida;
     private javax.swing.JPanel pnlBotonesAdmin;
-    private javax.swing.JPanel pnlCabezera;
     private javax.swing.JPanel pnlCopy;
+    private javax.swing.JPanel pnlMensaje;
     private javax.swing.JPanel pnlPrincipal;
-    private javax.swing.JPanel pnlSeccionCliente;
-    private javax.swing.JLabel txtMensajeAdmin;
+    private javax.swing.JPanel pnlSeccionEmpleado;
     // End of variables declaration//GEN-END:variables
 }

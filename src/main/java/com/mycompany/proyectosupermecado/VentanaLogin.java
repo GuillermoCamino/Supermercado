@@ -4,6 +4,9 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author MEDAC
@@ -18,6 +21,7 @@ public class VentanaLogin extends javax.swing.JFrame {
     public VentanaLogin() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        texto_inicial();
     }
 
     /**
@@ -34,7 +38,7 @@ public class VentanaLogin extends javax.swing.JFrame {
         pnlLogin = new javax.swing.JPanel();
         lblLogoCosta = new javax.swing.JLabel();
         txtMensajeBienvenida = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        TxtUsuario = new javax.swing.JTextField();
         txtPasswd = new javax.swing.JPasswordField();
         btnIniciarSesion = new javax.swing.JButton();
 
@@ -64,15 +68,15 @@ public class VentanaLogin extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(12, 6, 25, 0);
         pnlLogin.add(txtMensajeBienvenida, gridBagConstraints);
 
-        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(102, 102, 102));
-        jTextField1.setText("DNI/NIF o código de empleado");
+        TxtUsuario.setBackground(new java.awt.Color(204, 204, 204));
+        TxtUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TxtUsuario.setForeground(new java.awt.Color(102, 102, 102));
+        TxtUsuario.setText("DNI/NIF o código de empleado");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.insets = new java.awt.Insets(15, 0, 15, 0);
-        pnlLogin.add(jTextField1, gridBagConstraints);
+        pnlLogin.add(TxtUsuario, gridBagConstraints);
 
         txtPasswd.setBackground(new java.awt.Color(204, 204, 204));
         txtPasswd.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -88,6 +92,11 @@ public class VentanaLogin extends javax.swing.JFrame {
         btnIniciarSesion.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         btnIniciarSesion.setForeground(new java.awt.Color(255, 255, 255));
         btnIniciarSesion.setText("Iniciar Sesión");
+        btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniciarSesionActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -117,6 +126,37 @@ public class VentanaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
+        //CASO DE SER ADMIN a través de email o DNI
+        String email = TxtUsuario.getText();
+        String codigo=TxtUsuario.getText();
+        String DNI=TxtUsuario.getText();
+        String nombre_usuario=TxtUsuario.getText();
+        String contrasena = String.valueOf(txtPasswd.getPassword());
+        if ((email.equals("bloste.volarcoche@gmail.com")||DNI.equals("08003716S")||nombre_usuario.equals("lobatito")) && contrasena.equals("bloste123")) {
+            String nombre=TxtUsuario.getText().toString();
+            VentanaPrincipalAdministrador home_administrador = new VentanaPrincipalAdministrador(nombre);
+            home_administrador.setVisible(true);
+            this.dispose();
+        } else if (TxtUsuario.getText().equals(" ") || contrasena.equals(" ")) {
+            JOptionPane.showMessageDialog(this,"Por favor, introduce unas credenciales para acceder a la aplicación","Credenciales vacías",JOptionPane.WARNING_MESSAGE);
+        }
+            
+            
+            //CASO DE SER EMPLEADO puedes poner su codigo de empleado y DNI
+              if ((email.equals("mbappeprime@gmail.com")||DNI.equals("12345A")||codigo.equals("720AR")||nombre_usuario.equals("Mbappe")) && contrasena.equals("1234")) {
+             String nombre=TxtUsuario.getText().toString();
+            VentanaPrincipalEmpleado home_empleado = new VentanaPrincipalEmpleado(nombre);
+            home_empleado.setVisible(true);
+            this.dispose();
+        } else if (email.equals("Escribe aqui el nombre del usuario") || contrasena.equals("Aqui la contra")) {
+            JOptionPane.showMessageDialog(
+                this,"Por favor, introduce unas credenciales para acceder a la aplicación","Credenciales vacías",JOptionPane.WARNING_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this,"El usuario introducido no existe o la contraseña es incorrecta","Credenciales incorrectas",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnIniciarSesionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -144,10 +184,54 @@ public class VentanaLogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new VentanaLogin().setVisible(true));
     }
+     private void texto_inicial(){
+    // Texto inicial y color
+    TxtUsuario.setText("Escribe aqui el nombre del usuario");
+    TxtUsuario.setForeground(Color.GRAY);
+
+    txtPasswd.setText("Aqui la contra");
+    txtPasswd.setForeground(Color.GRAY);
+
+    // Listener para TxtUsuario
+    TxtUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
+        @Override
+        public void focusGained(java.awt.event.FocusEvent e) {
+            if (TxtUsuario.getText().equals("Escribe aqui el nombre del usuario")) {
+                TxtUsuario.setText("");
+                TxtUsuario.setForeground(Color.BLACK);
+            }
+        }
+        @Override
+        public void focusLost(java.awt.event.FocusEvent e) {
+            if (TxtUsuario.getText().trim().isEmpty()) {
+                TxtUsuario.setText("Escribe aqui el nombre del usuario");
+                TxtUsuario.setForeground(Color.GRAY);
+            }
+        }
+    });
+    //Listener para el TxtPassd
+      txtPasswd.addFocusListener(new java.awt.event.FocusAdapter() {
+        @Override
+        public void focusGained(java.awt.event.FocusEvent e) {
+            if (txtPasswd.getText().equals("Aqui la contra")) {
+                txtPasswd.setText("");
+                txtPasswd.setForeground(Color.BLACK);
+            }
+        }
+        @Override
+        public void focusLost(java.awt.event.FocusEvent e) {
+            if (txtPasswd.getText().trim().isEmpty()) {
+                txtPasswd.setText("Aqui la contra");
+                txtPasswd.setForeground(Color.GRAY);
+            }
+        }
+    });
+    
+     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField TxtUsuario;
     private javax.swing.JButton btnIniciarSesion;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblLogoCosta;
     private javax.swing.JPanel pnlLogin;
     private javax.swing.JPanel pnlPrincipal;
