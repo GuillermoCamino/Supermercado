@@ -34,9 +34,18 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         lblLogoCostaMarket = new javax.swing.JLabel();
         txtMensajeAdmin = new javax.swing.JLabel();
         pnlSeccionCliente = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lblFotoPerfil = new javax.swing.JLabel();
+        txtIDEmpleado = new javax.swing.JTextField();
+        btnCerrarSesion = new javax.swing.JButton();
         pnlCopy = new javax.swing.JPanel();
         pnlBotonesAdmin = new javax.swing.JPanel();
+        btnGestionEmpleados = new javax.swing.JButton();
+        btnModificarProducto = new javax.swing.JButton();
+        btnGestionarPromociones = new javax.swing.JButton();
+        btnFuncionesEmpleado = new javax.swing.JButton();
+        btnGestionarProveedores = new javax.swing.JButton();
+        btnHistoricoVentas = new javax.swing.JButton();
+        btnInformes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Página Principal Administrador");
@@ -53,28 +62,55 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
         pnlCabezera.add(lblLogoCostaMarket, gridBagConstraints);
 
         txtMensajeAdmin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txtMensajeAdmin.setForeground(new java.awt.Color(0, 0, 0));
         txtMensajeAdmin.setText("Seleccione un tipo de gestión:");
-        pnlCabezera.add(txtMensajeAdmin, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.weightx = 1.0;
+        pnlCabezera.add(txtMensajeAdmin, gridBagConstraints);
 
-        pnlSeccionCliente.setBackground(new java.awt.Color(255, 255, 255));
+        pnlSeccionCliente.setBackground(new java.awt.Color(51, 51, 51));
         pnlSeccionCliente.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setText("jLabel1");
+        lblFotoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        pnlSeccionCliente.add(lblFotoPerfil, gridBagConstraints);
+
+        txtIDEmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        txtIDEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        txtIDEmpleado.setText("ID Admin");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        pnlSeccionCliente.add(jLabel1, gridBagConstraints);
+        gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
+        pnlSeccionCliente.add(txtIDEmpleado, gridBagConstraints);
 
-        pnlCabezera.add(pnlSeccionCliente, new java.awt.GridBagConstraints());
+        btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setForeground(new java.awt.Color(255, 51, 51));
+        btnCerrarSesion.setText("Cerrar Sesión");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        pnlSeccionCliente.add(btnCerrarSesion, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.weightx = 1.0;
+        pnlCabezera.add(pnlSeccionCliente, gridBagConstraints);
 
         pnlPrincipal.add(pnlCabezera, java.awt.BorderLayout.PAGE_START);
 
         pnlCopy.setBackground(new java.awt.Color(255, 204, 0));
+        pnlCopy.setPreferredSize(new java.awt.Dimension(555, 70));
 
         javax.swing.GroupLayout pnlCopyLayout = new javax.swing.GroupLayout(pnlCopy);
         pnlCopy.setLayout(pnlCopyLayout);
@@ -84,21 +120,73 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         );
         pnlCopyLayout.setVerticalGroup(
             pnlCopyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 70, Short.MAX_VALUE)
         );
 
         pnlPrincipal.add(pnlCopy, java.awt.BorderLayout.PAGE_END);
 
-        javax.swing.GroupLayout pnlBotonesAdminLayout = new javax.swing.GroupLayout(pnlBotonesAdmin);
-        pnlBotonesAdmin.setLayout(pnlBotonesAdminLayout);
-        pnlBotonesAdminLayout.setHorizontalGroup(
-            pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 846, Short.MAX_VALUE)
-        );
-        pnlBotonesAdminLayout.setVerticalGroup(
-            pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 389, Short.MAX_VALUE)
-        );
+        pnlBotonesAdmin.setLayout(new java.awt.GridBagLayout());
+
+        btnGestionEmpleados.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGestionEmpleados.setText("Gestionar Empleados");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnGestionEmpleados, gridBagConstraints);
+
+        btnModificarProducto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnModificarProducto.setText("Modificación Producto");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnModificarProducto, gridBagConstraints);
+
+        btnGestionarPromociones.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGestionarPromociones.setText("Gestionar Promociones");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnGestionarPromociones, gridBagConstraints);
+
+        btnFuncionesEmpleado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnFuncionesEmpleado.setText("Funciones de Empleado");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnFuncionesEmpleado, gridBagConstraints);
+
+        btnGestionarProveedores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGestionarProveedores.setText("Gestionar Proveedores");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnGestionarProveedores, gridBagConstraints);
+
+        btnHistoricoVentas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnHistoricoVentas.setText("Histórico de Ventas");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnHistoricoVentas, gridBagConstraints);
+
+        btnInformes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnInformes.setText("Informes");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnInformes, gridBagConstraints);
 
         pnlPrincipal.add(pnlBotonesAdmin, java.awt.BorderLayout.CENTER);
 
@@ -144,13 +232,22 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnFuncionesEmpleado;
+    private javax.swing.JButton btnGestionEmpleados;
+    private javax.swing.JButton btnGestionarPromociones;
+    private javax.swing.JButton btnGestionarProveedores;
+    private javax.swing.JButton btnHistoricoVentas;
+    private javax.swing.JButton btnInformes;
+    private javax.swing.JButton btnModificarProducto;
+    private javax.swing.JLabel lblFotoPerfil;
     private javax.swing.JLabel lblLogoCostaMarket;
     private javax.swing.JPanel pnlBotonesAdmin;
     private javax.swing.JPanel pnlCabezera;
     private javax.swing.JPanel pnlCopy;
     private javax.swing.JPanel pnlPrincipal;
     private javax.swing.JPanel pnlSeccionCliente;
+    private javax.swing.JTextField txtIDEmpleado;
     private javax.swing.JLabel txtMensajeAdmin;
     // End of variables declaration//GEN-END:variables
 }
