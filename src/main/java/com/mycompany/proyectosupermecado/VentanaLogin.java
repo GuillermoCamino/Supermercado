@@ -138,26 +138,21 @@ public class VentanaLogin extends javax.swing.JFrame {
             VentanaPrincipalAdministrador home_administrador = new VentanaPrincipalAdministrador(nombre);
             home_administrador.setVisible(true);
             this.dispose();
+            return;
         } else if (TxtUsuario.getText().equals(" ") || contrasena.equals(" ")) {
             JOptionPane.showMessageDialog(this,"Por favor, introduce unas credenciales para acceder a la aplicación","Credenciales vacías",JOptionPane.WARNING_MESSAGE);
-        }else {
-            JOptionPane.showMessageDialog(this,"El usuario introducido no existe o la contraseña es incorrecta","Credenciales incorrectas",JOptionPane.ERROR_MESSAGE);
         }
-            
-            
-            //CASO DE SER EMPLEADO puedes poner su codigo de empleado y DNI
-              if ((email.equals("bichoprime@gmail.com")||DNI.equals("12345A")||codigo.equals("720AR")||nombre_usuario.equals("CR7")) && contrasena.equals("1234")) {
+//CASO DE SER EMPLEADO puedes poner su codigo de empleado y DNI
+             else if ((email.equals("bichoprime@gmail.com")||DNI.equals("12345A")||codigo.equals("720AR")||nombre_usuario.equals("CR7")) && contrasena.equals("1234")) {
              String nombre=TxtUsuario.getText().toString();
             String dni = TxtUsuario.getText(); // O el DNI real si lo tienes guardado
             VentanaPrincipalEmpleado v = new VentanaPrincipalEmpleado(nombre);
             v.setVisible(true);
             this.dispose();
-        } else if (email.equals("Escribe aqui el nombre del usuario") || contrasena.equals("Aqui la contra")) {
-            JOptionPane.showMessageDialog(
-                this,"Por favor, introduce unas credenciales para acceder a la aplicación","Credenciales vacías",JOptionPane.WARNING_MESSAGE);
-        } else {
+            return;
+              } else {
             JOptionPane.showMessageDialog(this,"El usuario introducido no existe o la contraseña es incorrecta","Credenciales incorrectas",JOptionPane.ERROR_MESSAGE);
-        }
+        }              
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     /**
