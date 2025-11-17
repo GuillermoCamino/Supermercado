@@ -1720,6 +1720,7 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
         volver_admin.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
  public void cantidad_total_sumar(int incremento) {
      int incremento1;

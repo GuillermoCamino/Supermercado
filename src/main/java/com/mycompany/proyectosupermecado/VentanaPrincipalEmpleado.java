@@ -4,12 +4,14 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author MEDAC
  */
 public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
-    
+    String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaPrincipalEmpleado.class.getName());
 
     /**
@@ -18,6 +20,15 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     public VentanaPrincipalEmpleado() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+    }
+     public VentanaPrincipalEmpleado(String nombre) {
+        initComponents();
+        this.nombre=nombre;
+        setExtendedState(MAXIMIZED_BOTH);
+        jTextField1.setText(nombre);
+        jLabel3.setText(" ");
+                jLabel3.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+
     }
 
     /**
