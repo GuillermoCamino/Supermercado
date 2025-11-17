@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author MEDAC
@@ -24,6 +26,9 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         this.nombre=nombre;
         setExtendedState(MAXIMIZED_BOTH);
         jTextField1.setText(nombre);
+        jLabel3.setText(" ");
+                jLabel3.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+
     }
 
     /**
