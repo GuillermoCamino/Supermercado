@@ -114,6 +114,11 @@ public class gestion_proveedores extends javax.swing.JFrame {
         BtnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
         BtnCerrarSesion.setForeground(new java.awt.Color(255, 51, 51));
         BtnCerrarSesion.setText("Cerrar sesión");
+        BtnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCerrarSesionActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -511,6 +516,12 @@ public class gestion_proveedores extends javax.swing.JFrame {
     private void BtnConsultar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsultar1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnConsultar1ActionPerformed
+
+    private void BtnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCerrarSesionActionPerformed
+         VentanaLogin vuelta_inicio=new VentanaLogin();
+       vuelta_inicio.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_BtnCerrarSesionActionPerformed
 
     /**
      * @param args the command line arguments
