@@ -183,6 +183,11 @@ public class gestion_proveedores extends javax.swing.JFrame {
         BtnConsultar1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnConsultar1.setForeground(new java.awt.Color(255, 255, 255));
         BtnConsultar1.setText("Consultar");
+        BtnConsultar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsultar1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -473,7 +478,7 @@ public class gestion_proveedores extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Pnlinicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1268, Short.MAX_VALUE)
+            .addComponent(Pnlinicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
         );
 
         pack();
@@ -502,6 +507,10 @@ public class gestion_proveedores extends javax.swing.JFrame {
         volver_admin.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BtnConsultar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsultar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsultar1ActionPerformed
 
     /**
      * @param args the command line arguments
