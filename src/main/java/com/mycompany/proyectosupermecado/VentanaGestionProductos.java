@@ -6,6 +6,7 @@ package com.mycompany.proyectosupermecado;
 
 import java.awt.Component;
 import java.awt.Container;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -27,7 +28,16 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
     }
     
     public VentanaGestionProductos(String nombre, int codigo, int precio) {
-        
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        PnlCentral.getVerticalScrollBar().setUnitIncrement(35);
+    }
+        public VentanaGestionProductos(String nombre) {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        PnlCentral.getVerticalScrollBar().setUnitIncrement(35);
+        lblUsuario.setText(nombre);
+        lblPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
     }
 
     /**
