@@ -216,7 +216,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
     private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
         // TODO add your handling code here:
-        Lista_Pedidos_Proveedores ListaPedidoProv= new Lista_Pedidos_Proveedores();
+        Lista_Pedidos_Proveedores ListaPedidoProv= new Lista_Pedidos_Proveedores(jTextField1.getText());
         ListaPedidoProv.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnPedidosActionPerformed

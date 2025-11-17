@@ -140,6 +140,8 @@ public class VentanaLogin extends javax.swing.JFrame {
             this.dispose();
         } else if (TxtUsuario.getText().equals(" ") || contrasena.equals(" ")) {
             JOptionPane.showMessageDialog(this,"Por favor, introduce unas credenciales para acceder a la aplicación","Credenciales vacías",JOptionPane.WARNING_MESSAGE);
+        }else {
+            JOptionPane.showMessageDialog(this,"El usuario introducido no existe o la contraseña es incorrecta","Credenciales incorrectas",JOptionPane.ERROR_MESSAGE);
         }
             
             

@@ -9,7 +9,7 @@ package com.mycompany.proyectosupermecado;
  * @author MEDAC
  */
 public class Gestion_Promociones extends javax.swing.JFrame {
-    
+    String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Gestion_Promociones.class.getName());
 
     /**
@@ -17,6 +17,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
      */
     public Gestion_Promociones() {
         initComponents();
+        this.nombre=nombre;
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -344,7 +345,7 @@ public class Gestion_Promociones extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnTiempo_RegalosActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador(nombre);
         volver_admin.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
