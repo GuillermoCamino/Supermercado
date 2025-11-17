@@ -628,6 +628,11 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         BtnSalir.setForeground(new java.awt.Color(255, 255, 255));
         BtnSalir.setText("SALIR");
         BtnSalir.setPreferredSize(new java.awt.Dimension(150, 60));
+        BtnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSalirActionPerformed(evt);
+            }
+        });
         PnlSalir.add(BtnSalir, new java.awt.GridBagConstraints());
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -2900,6 +2905,12 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void BtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalirActionPerformed
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        volver_admin.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnSalirActionPerformed
 
     /**
      * @param args the command line arguments

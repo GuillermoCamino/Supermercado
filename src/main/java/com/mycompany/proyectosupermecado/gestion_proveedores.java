@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -11,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author Darío
  */
 public class gestion_proveedores extends javax.swing.JFrame {
-    
+    String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(gestion_proveedores.class.getName());
 
     /**
@@ -19,6 +20,13 @@ public class gestion_proveedores extends javax.swing.JFrame {
      */
     public gestion_proveedores() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+    }
+  public gestion_proveedores(String nombre) {
+        initComponents();
+        this.nombre=nombre;
+        LblUsuario.setText(this.nombre);
+        LblPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -114,6 +122,11 @@ public class gestion_proveedores extends javax.swing.JFrame {
         BtnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
         BtnCerrarSesion.setForeground(new java.awt.Color(255, 51, 51));
         BtnCerrarSesion.setText("Cerrar sesión");
+        BtnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCerrarSesionActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -183,6 +196,11 @@ public class gestion_proveedores extends javax.swing.JFrame {
         BtnConsultar1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnConsultar1.setForeground(new java.awt.Color(255, 255, 255));
         BtnConsultar1.setText("Consultar");
+        BtnConsultar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsultar1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -473,7 +491,7 @@ public class gestion_proveedores extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Pnlinicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1268, Short.MAX_VALUE)
+            .addComponent(Pnlinicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
         );
 
         pack();
@@ -498,9 +516,20 @@ public class gestion_proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnBaja1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador(nombre);
         volver_admin.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BtnConsultar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsultar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsultar1ActionPerformed
+
+    private void BtnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCerrarSesionActionPerformed
+         VentanaLogin vuelta_inicio=new VentanaLogin();
+       vuelta_inicio.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_BtnCerrarSesionActionPerformed
 
     /**
      * @param args the command line arguments

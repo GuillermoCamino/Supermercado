@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Coron
@@ -55,7 +57,6 @@ public class VentanaGestiónEmpleado extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestión de Empleado");
-        setPreferredSize(new java.awt.Dimension(680, 494));
 
         pnlPrincipal.setMinimumSize(new java.awt.Dimension(680, 172));
         pnlPrincipal.setPreferredSize(new java.awt.Dimension(664, 234));
@@ -92,6 +93,11 @@ public class VentanaGestiónEmpleado extends javax.swing.JFrame {
 
         btnCerrarSesion.setForeground(new java.awt.Color(255, 0, 0));
         btnCerrarSesion.setText("Cerrar Sesión");
+        btnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSesionActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -117,6 +123,11 @@ public class VentanaGestiónEmpleado extends javax.swing.JFrame {
         btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(0, 0, 0));
         btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -191,6 +202,11 @@ public class VentanaGestiónEmpleado extends javax.swing.JFrame {
         btnCambiarPasswd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnCambiarPasswd.setForeground(new java.awt.Color(0, 0, 0));
         btnCambiarPasswd.setText("Cambiar Contraseña");
+        btnCambiarPasswd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCambiarPasswdActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
@@ -201,6 +217,11 @@ public class VentanaGestiónEmpleado extends javax.swing.JFrame {
         btnCrearPerfil.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         btnCrearPerfil.setForeground(new java.awt.Color(0, 153, 204));
         btnCrearPerfil.setText("Crear Nuevo Perfil");
+        btnCrearPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearPerfilActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -211,6 +232,11 @@ public class VentanaGestiónEmpleado extends javax.swing.JFrame {
         btnSalirSinGuardar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         btnSalirSinGuardar.setForeground(new java.awt.Color(255, 51, 51));
         btnSalirSinGuardar.setText("Salir sin guardar");
+        btnSalirSinGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirSinGuardarActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
@@ -221,6 +247,11 @@ public class VentanaGestiónEmpleado extends javax.swing.JFrame {
         btnGuardarCambios.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         btnGuardarCambios.setForeground(new java.awt.Color(102, 255, 102));
         btnGuardarCambios.setText("Guardar Cambios");
+        btnGuardarCambios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarCambiosActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
@@ -242,6 +273,42 @@ public class VentanaGestiónEmpleado extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCrearPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPerfilActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Se ha creado el perfil correctamente", "Perfil Guardado", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_btnCrearPerfilActionPerformed
+
+    private void btnSalirSinGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirSinGuardarActionPerformed
+        // TODO add your handling code here:
+        VentanaPrincipalAdministrador VnPrinAdm= new VentanaPrincipalAdministrador();
+        VnPrinAdm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnSalirSinGuardarActionPerformed
+
+    private void btnGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCambiosActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Se han guardado los datos correctamente", "Datos Guardado", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_btnGuardarCambiosActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+        VentanaPrincipalAdministrador VenPrinAdm= new VentanaPrincipalAdministrador();
+        VenPrinAdm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnCambiarPasswdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarPasswdActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "La contraseña ya ha sido cambiada con antelación.", "Contraseña Cambiada", JOptionPane.WARNING_MESSAGE);
+    }//GEN-LAST:event_btnCambiarPasswdActionPerformed
+
+    private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
+        // TODO add your handling code here:
+        VentanaLogin VenLog= new VentanaLogin();
+        VenLog.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCerrarSesionActionPerformed
 
     /**
      * @param args the command line arguments

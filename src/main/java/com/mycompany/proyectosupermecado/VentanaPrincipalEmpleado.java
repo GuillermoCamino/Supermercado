@@ -4,21 +4,41 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author MEDAC
  */
 public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
-    
+    String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaPrincipalEmpleado.class.getName());
 
     /**
      * Creates new form VentanaPrincipalEmpleado
      */
+    private String nombreUsuario;
+    private String dniUsuario;
     public VentanaPrincipalEmpleado() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+            jLabel3.setText(" ");
+         jLabel3.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+                 jTextField1.setText(nombre);
     }
+     public VentanaPrincipalEmpleado(String nombre) {
+        initComponents();
+        this.nombre=nombre;
+        setExtendedState(MAXIMIZED_BOTH);
+        jTextField1.setText(nombre);
+        jLabel3.setText(" ");
+                jLabel3.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+    }
+        public VentanaPrincipalEmpleado(String nombre, String dni) {
+       initComponents();
+       this.nombreUsuario = nombre;
+       this.dniUsuario = dni;
+   }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -81,6 +101,11 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Cerrar Sesión");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -134,18 +159,38 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         btnProductos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnProductos.setText("Gestión de Productos, Inventario y Stock");
+        btnProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProductosActionPerformed(evt);
+            }
+        });
         pnlBoton.add(btnProductos);
 
         btnPedidos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPedidos.setText("Gestión de Pedidos a Proveedores");
+        btnPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPedidosActionPerformed(evt);
+            }
+        });
         pnlBoton.add(btnPedidos);
 
         btnClientes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnClientes.setText("Modificar Clientes");
+        btnClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClientesActionPerformed(evt);
+            }
+        });
         pnlBoton.add(btnClientes);
 
         btnVentaYCaja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnVentaYCaja.setText("Ventas y Cajas");
+        btnVentaYCaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVentaYCajaActionPerformed(evt);
+            }
+        });
         pnlBoton.add(btnVentaYCaja);
 
         pnlPrincipal.add(pnlBoton, java.awt.BorderLayout.CENTER);
@@ -163,6 +208,43 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosActionPerformed
+        // TODO add your handling code here:
+        
+        VentanaGestionProductos ventanaGProductos= new VentanaGestionProductos(nombre);
+        ventanaGProductos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnProductosActionPerformed
+
+    private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
+        // TODO add your handling code here:
+        Lista_Pedidos_Proveedores ListaPedidoProv= new Lista_Pedidos_Proveedores(jTextField1.getText());
+        ListaPedidoProv.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_btnPedidosActionPerformed
+
+    private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
+        // TODO add your handling code here:
+        VentanaModificarClientes ventanaCliente = new VentanaModificarClientes(nombre);
+        ventanaCliente.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_btnClientesActionPerformed
+
+    private void btnVentaYCajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentaYCajaActionPerformed
+        // TODO add your handling code here:
+        VentanaVentas ir_ventas_empleado=new VentanaVentas(nombre);
+        ir_ventas_empleado.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVentaYCajaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        VentanaLogin VenLo= new VentanaLogin();
+        VenLo.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author Darío
  */
 public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
-    
+    String nombre_usuario;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Lista_Pedidos_Proveedores.class.getName());
 
     /**
@@ -22,9 +22,21 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     public Lista_Pedidos_Proveedores() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
-        PnlMenu.getVerticalScrollBar().setPreferredSize(new Dimension(50,0));
+      
+        
+       
+
+    }
+    
+    public Lista_Pedidos_Proveedores(String nombre_usuario){
+       initComponents();
+        this.nombre_usuario=nombre_usuario;
+        if(!this.nombre_usuario.equals("lobatito")){
+            BtnConfirmarPedido.setEnabled(false);
+        }
+          PnlMenu.getVerticalScrollBar().setPreferredSize(new Dimension(50,0));
         PnlMenu.getVerticalScrollBar().setUnitIncrement(35);
-        //NIVEL RIESGO 2
+        //NIVEL RIESGO PRODUCTO 2
         if(LblNivel_Riesgo2.getText().equals("Nivel_Riesgo")){
                 LblFoto_Riesgo2.setIcon(new ImageIcon(getClass().getResource("/riesgobajo.jpg")));
                 LblFoto_Riesgo2.setText(" ");
@@ -35,9 +47,11 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
              LblFoto_Riesgo2.setIcon(new ImageIcon(getClass().getResource("/riesgopeligro.jpg")));
                 LblFoto_Riesgo2.setText(" ");
         }
+         //AQUI FALTARIA CMABIAR LOS GET TEXT EQUALS A NIVEL DEL RIESGO DE STOCK DELA VARIABLE QUE PASARA POR PANTALLA DE LAS UNIDADES DEL PRODUCTO 
+        //ADEMAS DE EL NOMBRE PROVVEDOR, DEL PRODUCTO Y SU PRECIO QUE LO TIENE QUE PASAR EN PANTALLA
         
         
-         //NIVEL RIESGO 2
+         //NIVEL RIESGO PRODUCTO 1
         if(LblNivel_Riesgo1.getText().equals("Nivel_Riesgo")){
                 LblFoto_Riesgo1.setIcon(new ImageIcon(getClass().getResource("/riesgobajo.jpg")));
                 LblFoto_Riesgo1.setText(" ");
@@ -48,10 +62,6 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
              LblFoto_Riesgo1.setIcon(new ImageIcon(getClass().getResource("/riesgopeligro.jpg")));
                 LblFoto_Riesgo1.setText(" ");
         }
-        
-        //AQUI FALTARIA CMABIAR LOS GET TEXT EQUALS A NIVEL DEL RIESGO DE STOCK DELA VARIABLE QUE PASARA POR PANTALLA DE LAS UNIDADES DEL PRODUCTO 
-        //ADEMAS DE EL NOMBRE PROVVEDOR, DEL PRODUCTO Y SU PRECIO QUE LO TIENE QUE PASAR EN PANTALLA
-
     }
 
     /**
@@ -78,7 +88,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         JlabelMinilogo = new javax.swing.JLabel();
         LbTitulito = new javax.swing.JLabel();
         LblProductos_Total = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BtnSalida = new javax.swing.JButton();
         PnlMenu = new javax.swing.JScrollPane();
         Pnlmenucito = new javax.swing.JPanel();
         PnlProveedor1 = new javax.swing.JPanel();
@@ -276,20 +286,20 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         PnlPie.add(LblProductos_Total, gridBagConstraints);
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("SALIDA");
-        jButton1.setPreferredSize(new java.awt.Dimension(176, 40));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnSalida.setBackground(new java.awt.Color(255, 0, 0));
+        BtnSalida.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnSalida.setForeground(new java.awt.Color(255, 255, 255));
+        BtnSalida.setText("SALIDA");
+        BtnSalida.setPreferredSize(new java.awt.Dimension(176, 40));
+        BtnSalida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnSalidaActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 1;
-        PnlPie.add(jButton1, gridBagConstraints);
+        PnlPie.add(BtnSalida, gridBagConstraints);
 
         PnlInicio.add(PnlPie, java.awt.BorderLayout.PAGE_END);
 
@@ -1717,10 +1727,18 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
         }
     }//GEN-LAST:event_BtnModificar_Pedido6ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+    private void BtnSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalidaActionPerformed
+        if(this.nombre_usuario=="lobatito"){
+         VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador(nombre_usuario);
         volver_admin.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        this.dispose();   
+        }else{
+            VentanaPrincipalEmpleado volver_empleado=new VentanaPrincipalEmpleado(nombre_usuario);
+            volver_empleado.setVisible(true);
+            this.dispose();
+        }
+        
+    }//GEN-LAST:event_BtnSalidaActionPerformed
  public void cantidad_total_sumar(int incremento) {
      int incremento1;
      incremento1=Integer.parseInt(LblProductos_Total.getText());
@@ -1781,6 +1799,7 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
     private javax.swing.JButton BtnModificar_Pedido4;
     private javax.swing.JButton BtnModificar_Pedido5;
     private javax.swing.JButton BtnModificar_Pedido6;
+    private javax.swing.JButton BtnSalida;
     private javax.swing.JLabel IncrementoProductio3;
     private javax.swing.JLabel IncrementoProducto1;
     private javax.swing.JLabel IncrementoProducto2;
@@ -1880,7 +1899,6 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
     private javax.swing.JPanel Pnlmenucito;
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;

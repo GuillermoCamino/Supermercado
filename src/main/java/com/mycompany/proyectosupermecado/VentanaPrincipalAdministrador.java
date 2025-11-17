@@ -4,12 +4,19 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author MEDAC
  */
 public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
-    
+    String numero_referencia;
+            String nombre_producto;
+                    int precio;
+                    boolean alcohol;
+            String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaPrincipalAdministrador.class.getName());
 
     /**
@@ -17,6 +24,22 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
      */
     public VentanaPrincipalAdministrador() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        
+    }
+        public VentanaPrincipalAdministrador(String numero_referencia,String nombre_producto, int precio,boolean alcohol) {
+                    initComponents();
+        this.numero_referencia=numero_referencia;
+        this.nombre_producto=nombre_producto;
+        this.precio=precio;
+        this.alcohol=alcohol;
+    }
+          public VentanaPrincipalAdministrador(String nombre) {
+        initComponents();
+        this.nombre=nombre;
+        txtIDEmpleado.setText(nombre);
+        lblFotoPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -69,6 +92,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         txtMensajeAdmin.setForeground(new java.awt.Color(0, 0, 0));
         txtMensajeAdmin.setText("Seleccione un tipo de gestión:");
         gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         pnlCabezera.add(txtMensajeAdmin, gridBagConstraints);
 
@@ -96,6 +120,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
         btnCerrarSesion.setForeground(new java.awt.Color(255, 51, 51));
         btnCerrarSesion.setText("Cerrar Sesión");
+        btnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSesionActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -129,6 +158,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         btnGestionEmpleados.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnGestionEmpleados.setText("Gestionar Empleados");
+        btnGestionEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGestionEmpleadosActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
@@ -200,11 +234,71 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnGestionarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarEmpleadosActionPerformed
+         Ventana_Creacion_Producto VenCrePro= new Ventana_Creacion_Producto();
+         VenCrePro.setVisible(true);
+         this.dispose();
+    }//GEN-LAST:event_btnGestionarEmpleadosActionPerformed
+
+    private void btnPromocionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPromocionesActionPerformed
+        // TODO add your handling code here:
+        Gestion_Promociones gesPromo= new Gestion_Promociones();
+        gesPromo.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnPromocionesActionPerformed
+
+    private void btnProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresActionPerformed
+        // TODO add your handling code here:
+        Lista_Pedidos_Proveedores LisGesPro= new Lista_Pedidos_Proveedores(nombre);
+        LisGesPro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnProveedoresActionPerformed
+
+    private void btnFuncionesEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionesEmpleadoActionPerformed
+        // TODO add your handling code here:
+        VentanaPrincipalEmpleado VenPrinEm= new VentanaPrincipalEmpleado(nombre);
+        VenPrinEm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnFuncionesEmpleadoActionPerformed
+
+    private void btnGestionProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionProductoActionPerformed
+        // TODO add your handling code here:
+        VentanaGestionProductos VenGesPro= new VentanaGestionProductos(nombre);
+        VenGesPro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnGestionProductoActionPerformed
+
+    private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
+        // TODO add your handling code here:
+        Gestion_ventas_cajasDiarias GesVenCaja= new Gestion_ventas_cajasDiarias(nombre);
+        GesVenCaja.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVentasActionPerformed
+
+    private void btnInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformesActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this,"Ventana en construcción, por favor seleccione otra opción.","Apartado en construcción.",JOptionPane.WARNING_MESSAGE);
+    }//GEN-LAST:event_btnInformesActionPerformed
+
+    private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
+        // TODO add your handling code here:
+        VentanaLogin VenLog = new VentanaLogin();
+        VenLog.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCerrarSesionActionPerformed
+
+    private void btnGestionEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionEmpleadosActionPerformed
+        // TODO add your handling code here:
+        VentanaGestiónEmpleado VenGesEm= new VentanaGestiónEmpleado();
+        VenGesEm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnGestionEmpleadosActionPerformed
 
     /**
      * @param args the command line arguments

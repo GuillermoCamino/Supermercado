@@ -515,6 +515,11 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         BtnCerrar.setBackground(new java.awt.Color(255, 255, 255));
         BtnCerrar.setForeground(new java.awt.Color(255, 0, 0));
         BtnCerrar.setText("Cerrar Sesión");
+        BtnCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCerrarActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -741,6 +746,11 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         BtnSalir.setForeground(new java.awt.Color(255, 255, 255));
         BtnSalir.setText("SALIR");
         BtnSalir.setPreferredSize(new java.awt.Dimension(150, 60));
+        BtnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSalirActionPerformed(evt);
+            }
+        });
         PnlSalir.add(BtnSalir, new java.awt.GridBagConstraints());
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -774,9 +784,6 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         PnlConservas.add(lblIconoC1, gridBagConstraints);
 
         BtnConfigurrarminimoC1.setBackground(new java.awt.Color(0, 0, 204));
@@ -3739,6 +3746,18 @@ if (opcion == JOptionPane.OK_OPTION) {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalirActionPerformed
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        volver_admin.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnSalirActionPerformed
+
+    private void BtnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCerrarActionPerformed
+         VentanaLogin vuelta_inicio=new VentanaLogin();
+       vuelta_inicio.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_BtnCerrarActionPerformed
 
     /**
      * @param args the command line arguments
