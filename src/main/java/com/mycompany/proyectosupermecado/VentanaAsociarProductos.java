@@ -672,7 +672,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlConservas.add(lblIconoC1, gridBagConstraints);
 
         BtnStockC1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC1.setText("Añadir Stock");
+        BtnStockC1.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -710,7 +710,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlConservas.add(lblDescripcionC2, gridBagConstraints);
 
         BtnStockC2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC2.setText("Añadir Stock");
+        BtnStockC2.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -739,7 +739,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlConservas.add(lblDescripcionC3, gridBagConstraints);
 
         BtnStockC3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC3.setText("Añadir Stock");
+        BtnStockC3.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
@@ -768,7 +768,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlConservas.add(lblDescripcionC4, gridBagConstraints);
 
         BtnStockC4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC4.setText("Añadir Stock");
+        BtnStockC4.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -797,7 +797,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlConservas.add(lblDescripcionC5, gridBagConstraints);
 
         BtnStockC5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC5.setText("Añadir Stock");
+        BtnStockC5.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
@@ -826,7 +826,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlConservas.add(lblDescripcionC6, gridBagConstraints);
 
         BtnStockC6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC6.setText("Añadir Stock");
+        BtnStockC6.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
@@ -915,7 +915,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlPastasCereales.setLayout(new java.awt.GridBagLayout());
 
         BtnStockP4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP4.setText("Añadir Stock");
+        BtnStockP4.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -944,7 +944,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlPastasCereales.add(lblIconoP4, gridBagConstraints);
 
         BtnStockP1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP1.setText("Añadir Stock");
+        BtnStockP1.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -991,7 +991,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlPastasCereales.add(lblDescripcionP2, gridBagConstraints);
 
         BtnStockP2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP2.setText("Añadir Stock");
+        BtnStockP2.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -1020,7 +1020,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlPastasCereales.add(lblDescripcionP5, gridBagConstraints);
 
         BtnStockP5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP5.setText("Añadir Stock");
+        BtnStockP5.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
@@ -1031,7 +1031,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlPastasCereales.add(BtnStockP5, gridBagConstraints);
 
         BtnStockP6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP6.setText("Añadir Stock");
+        BtnStockP6.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
@@ -1060,7 +1060,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlPastasCereales.add(lblIconoP6, gridBagConstraints);
 
         BtnStockP3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP3.setText("Añadir Stock");
+        BtnStockP3.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
@@ -1177,7 +1177,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAperitivos.setLayout(new java.awt.GridBagLayout());
 
         BtnStockA4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA4.setText("Añadir Stock");
+        BtnStockA4.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -1206,7 +1206,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAperitivos.add(lblIconoA4, gridBagConstraints);
 
         BtnStockA1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA1.setText("Añadir Stock");
+        BtnStockA1.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -1253,7 +1253,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAperitivos.add(lblDescripcionA2, gridBagConstraints);
 
         BtnStockA2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA2.setText("Añadir Stock");
+        BtnStockA2.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -1282,7 +1282,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAperitivos.add(lblDescripcionA5, gridBagConstraints);
 
         BtnStockA5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA5.setText("Añadir Stock");
+        BtnStockA5.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
@@ -1293,7 +1293,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAperitivos.add(BtnStockA5, gridBagConstraints);
 
         BtnStockA6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA6.setText("Añadir Stock");
+        BtnStockA6.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
@@ -1322,7 +1322,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAperitivos.add(lblIconoA6, gridBagConstraints);
 
         BtnStockA3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA3.setText("Añadir Stock");
+        BtnStockA3.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
@@ -1439,7 +1439,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlDulces.setLayout(new java.awt.GridBagLayout());
 
         BtnStockD4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD4.setText("Añadir Stock");
+        BtnStockD4.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -1468,7 +1468,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlDulces.add(lblIconoD4, gridBagConstraints);
 
         BtnStockD1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD1.setText("Añadir Stock");
+        BtnStockD1.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -1515,7 +1515,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlDulces.add(lblDescripcionD2, gridBagConstraints);
 
         BtnStockD2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD2.setText("Añadir Stock");
+        BtnStockD2.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -1544,7 +1544,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlDulces.add(lblDescripcionD5, gridBagConstraints);
 
         BtnStockD5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD5.setText("Añadir Stock");
+        BtnStockD5.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
@@ -1555,7 +1555,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlDulces.add(BtnStockD5, gridBagConstraints);
 
         BtnStockD6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD6.setText("Añadir Stock");
+        BtnStockD6.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
@@ -1584,7 +1584,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlDulces.add(lblIconoD6, gridBagConstraints);
 
         BtnStockD3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD3.setText("Añadir Stock");
+        BtnStockD3.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
@@ -1701,7 +1701,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlCondimentos.setLayout(new java.awt.GridBagLayout());
 
         BtnStockCo4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo4.setText("Añadir Stock");
+        BtnStockCo4.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -1730,7 +1730,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlCondimentos.add(lblIconoCo4, gridBagConstraints);
 
         BtnStockCo1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo1.setText("Añadir Stock");
+        BtnStockCo1.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -1777,7 +1777,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlCondimentos.add(lblDescripcionCo2, gridBagConstraints);
 
         BtnStockCo2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo2.setText("Añadir Stock");
+        BtnStockCo2.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -1806,7 +1806,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlCondimentos.add(lblDescripcionCo5, gridBagConstraints);
 
         BtnStockCo5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo5.setText("Añadir Stock");
+        BtnStockCo5.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
@@ -1817,7 +1817,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlCondimentos.add(BtnStockCo5, gridBagConstraints);
 
         BtnStockCo6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo6.setText("Añadir Stock");
+        BtnStockCo6.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
@@ -1846,7 +1846,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlCondimentos.add(lblIconoCo6, gridBagConstraints);
 
         BtnStockCo3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo3.setText("Añadir Stock");
+        BtnStockCo3.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
@@ -1963,7 +1963,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlLacteos.setLayout(new java.awt.GridBagLayout());
 
         BtnStockL4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL4.setText("Añadir Stock");
+        BtnStockL4.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -1992,7 +1992,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlLacteos.add(lblIconoL4, gridBagConstraints);
 
         BtnStockL1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL1.setText("Añadir Stock");
+        BtnStockL1.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -2039,7 +2039,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlLacteos.add(lblDescripcionL2, gridBagConstraints);
 
         BtnStockL2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL2.setText("Añadir Stock");
+        BtnStockL2.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -2068,7 +2068,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlLacteos.add(lblDescripcionL5, gridBagConstraints);
 
         BtnStockL5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL5.setText("Añadir Stock");
+        BtnStockL5.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
@@ -2079,7 +2079,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlLacteos.add(BtnStockL5, gridBagConstraints);
 
         BtnStockL6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL6.setText("Añadir Stock");
+        BtnStockL6.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
@@ -2108,7 +2108,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlLacteos.add(lblIconoL6, gridBagConstraints);
 
         BtnStockL3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL3.setText("Añadir Stock");
+        BtnStockL3.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
@@ -2225,7 +2225,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlZumosBebidas.setLayout(new java.awt.GridBagLayout());
 
         BtnStockZ4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ4.setText("Añadir Stock");
+        BtnStockZ4.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -2254,7 +2254,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlZumosBebidas.add(lblIconoZ4, gridBagConstraints);
 
         BtnStockZ1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ1.setText("Añadir Stock");
+        BtnStockZ1.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -2301,7 +2301,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlZumosBebidas.add(lblDescripcionZ2, gridBagConstraints);
 
         BtnStockZ2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ2.setText("Añadir Stock");
+        BtnStockZ2.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -2330,7 +2330,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlZumosBebidas.add(lblDescripcionZ5, gridBagConstraints);
 
         BtnStockZ5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ5.setText("Añadir Stock");
+        BtnStockZ5.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
@@ -2341,7 +2341,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlZumosBebidas.add(BtnStockZ5, gridBagConstraints);
 
         BtnStockZ6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ6.setText("Añadir Stock");
+        BtnStockZ6.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
@@ -2370,7 +2370,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlZumosBebidas.add(lblIconoZ6, gridBagConstraints);
 
         BtnStockZ3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ3.setText("Añadir Stock");
+        BtnStockZ3.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
@@ -2487,7 +2487,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAlcoholicas.setLayout(new java.awt.GridBagLayout());
 
         BtnStockAl4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl4.setText("Añadir Stock");
+        BtnStockAl4.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -2516,7 +2516,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAlcoholicas.add(lblIconoAl4, gridBagConstraints);
 
         BtnStockAl1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl1.setText("Añadir Stock");
+        BtnStockAl1.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -2563,7 +2563,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAlcoholicas.add(lblDescripcionAl2, gridBagConstraints);
 
         BtnStockAl2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl2.setText("Añadir Stock");
+        BtnStockAl2.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -2592,7 +2592,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAlcoholicas.add(lblDescripcionAl5, gridBagConstraints);
 
         BtnStockAl5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl5.setText("Añadir Stock");
+        BtnStockAl5.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 7;
@@ -2603,7 +2603,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAlcoholicas.add(BtnStockAl5, gridBagConstraints);
 
         BtnStockAl6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl6.setText("Añadir Stock");
+        BtnStockAl6.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 7;
@@ -2632,7 +2632,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlAlcoholicas.add(lblIconoAl6, gridBagConstraints);
 
         BtnStockAl3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl3.setText("Añadir Stock");
+        BtnStockAl3.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
@@ -2749,7 +2749,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlCervezas.setLayout(new java.awt.GridBagLayout());
 
         BtnStockCe1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCe1.setText("Añadir Stock");
+        BtnStockCe1.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -2796,7 +2796,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlCervezas.add(lblDescripcionCe2, gridBagConstraints);
 
         BtnStockCe2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCe2.setText("Añadir Stock");
+        BtnStockCe2.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 3;
@@ -2807,7 +2807,7 @@ public class VentanaAsociarProductos extends javax.swing.JFrame {
         PnlCervezas.add(BtnStockCe2, gridBagConstraints);
 
         BtnStockCe3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCe3.setText("Añadir Stock");
+        BtnStockCe3.setText("Agregar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 3;
