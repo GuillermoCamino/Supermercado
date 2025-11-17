@@ -5,6 +5,7 @@
 package com.mycompany.proyectosupermecado;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -57,12 +58,18 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         pnlPrincipal = new javax.swing.JPanel();
         pnlCopy = new javax.swing.JPanel();
         pnlBotonesAdmin = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btnGestionarEmpleados = new javax.swing.JButton();
+        btnPromociones = new javax.swing.JButton();
+        btnProveedores = new javax.swing.JButton();
+        btnFuncionesEmpleado = new javax.swing.JButton();
+        btnGestionProducto = new javax.swing.JButton();
+        btnVentas = new javax.swing.JButton();
+        btnInformes = new javax.swing.JButton();
         pnlMensaje = new javax.swing.JPanel();
         lblFotoLogo = new javax.swing.JLabel();
         lblTextoBienvenida = new javax.swing.JLabel();
         pnlSeccionEmpleado = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnCerrarSesion = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
 
@@ -87,29 +94,99 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         pnlPrincipal.add(pnlCopy, java.awt.BorderLayout.PAGE_END);
 
-        jButton2.setText("LLEVAR A LISTA PEDIDOS");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        pnlBotonesAdmin.setLayout(new java.awt.GridBagLayout());
+
+        btnGestionarEmpleados.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGestionarEmpleados.setText("Gestionar Empleados");
+        btnGestionarEmpleados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnGestionarEmpleadosActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        pnlBotonesAdmin.add(btnGestionarEmpleados, gridBagConstraints);
 
-        javax.swing.GroupLayout pnlBotonesAdminLayout = new javax.swing.GroupLayout(pnlBotonesAdmin);
-        pnlBotonesAdmin.setLayout(pnlBotonesAdminLayout);
-        pnlBotonesAdminLayout.setHorizontalGroup(
-            pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBotonesAdminLayout.createSequentialGroup()
-                .addGap(379, 379, 379)
-                .addComponent(jButton2)
-                .addContainerGap(304, Short.MAX_VALUE))
-        );
-        pnlBotonesAdminLayout.setVerticalGroup(
-            pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBotonesAdminLayout.createSequentialGroup()
-                .addGap(175, 175, 175)
-                .addComponent(jButton2)
-                .addContainerGap(191, Short.MAX_VALUE))
-        );
+        btnPromociones.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnPromociones.setText("Gestionar Promociones");
+        btnPromociones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPromocionesActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        pnlBotonesAdmin.add(btnPromociones, gridBagConstraints);
+
+        btnProveedores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnProveedores.setText("Gestionar Proveedores");
+        btnProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProveedoresActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        pnlBotonesAdmin.add(btnProveedores, gridBagConstraints);
+
+        btnFuncionesEmpleado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnFuncionesEmpleado.setText("Funciones de Empleado");
+        btnFuncionesEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFuncionesEmpleadoActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        pnlBotonesAdmin.add(btnFuncionesEmpleado, gridBagConstraints);
+
+        btnGestionProducto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGestionProducto.setText("Gestión de Producto");
+        btnGestionProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGestionProductoActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        pnlBotonesAdmin.add(btnGestionProducto, gridBagConstraints);
+
+        btnVentas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnVentas.setText("Histórico de Ventas");
+        btnVentas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVentasActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        pnlBotonesAdmin.add(btnVentas, gridBagConstraints);
+
+        btnInformes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnInformes.setText("Informes");
+        btnInformes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInformesActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        pnlBotonesAdmin.add(btnInformes, gridBagConstraints);
 
         pnlPrincipal.add(pnlBotonesAdmin, java.awt.BorderLayout.CENTER);
 
@@ -137,13 +214,18 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         pnlSeccionEmpleado.setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("Cerrar Sesión");
+        btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setForeground(new java.awt.Color(255, 0, 0));
+        btnCerrarSesion.setText("Cerrar Sesión");
+        btnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSesionActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        pnlSeccionEmpleado.add(jButton1, gridBagConstraints);
+        pnlSeccionEmpleado.add(btnCerrarSesion, gridBagConstraints);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -184,11 +266,57 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Lista_Pedidos_Proveedores pedidos_proveedores_admin=new Lista_Pedidos_Proveedores(nombre);
-        pedidos_proveedores_admin.setVisible(true);
+    private void btnGestionarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarEmpleadosActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnGestionarEmpleadosActionPerformed
+
+    private void btnPromocionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPromocionesActionPerformed
+        // TODO add your handling code here:
+        Gestion_Promociones gesPromo= new Gestion_Promociones();
+        gesPromo.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnPromocionesActionPerformed
+
+    private void btnProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresActionPerformed
+        // TODO add your handling code here:
+        Lista_Pedidos_Proveedores LisGesPro= new Lista_Pedidos_Proveedores();
+        LisGesPro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnProveedoresActionPerformed
+
+    private void btnFuncionesEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionesEmpleadoActionPerformed
+        // TODO add your handling code here:
+        VentanaPrincipalEmpleado VenPrinEm= new VentanaPrincipalEmpleado();
+        VenPrinEm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnFuncionesEmpleadoActionPerformed
+
+    private void btnGestionProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionProductoActionPerformed
+        // TODO add your handling code here:
+        VentanaGestionProductos VenGesPro= new VentanaGestionProductos();
+        VenGesPro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnGestionProductoActionPerformed
+
+    private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
+        // TODO add your handling code here:
+        Gestion_ventas_cajasDiarias GesVenCaja= new Gestion_ventas_cajasDiarias();
+        GesVenCaja.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVentasActionPerformed
+
+    private void btnInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformesActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this,"Ventana en construcción, por favor seleccione otra opción.","Apartado en construcción.",JOptionPane.WARNING_MESSAGE);
+    }//GEN-LAST:event_btnInformesActionPerformed
+
+    private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
+        // TODO add your handling code here:
+        VentanaLogin VenLog = new VentanaLogin();
+        VenLog.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCerrarSesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,8 +344,14 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnFuncionesEmpleado;
+    private javax.swing.JButton btnGestionProducto;
+    private javax.swing.JButton btnGestionarEmpleados;
+    private javax.swing.JButton btnInformes;
+    private javax.swing.JButton btnPromociones;
+    private javax.swing.JButton btnProveedores;
+    private javax.swing.JButton btnVentas;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblFotoLogo;
