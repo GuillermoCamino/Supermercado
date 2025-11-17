@@ -57,6 +57,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         pnlPrincipal = new javax.swing.JPanel();
         pnlCopy = new javax.swing.JPanel();
         pnlBotonesAdmin = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
         pnlMensaje = new javax.swing.JPanel();
         lblFotoLogo = new javax.swing.JLabel();
         lblTextoBienvenida = new javax.swing.JLabel();
@@ -86,15 +87,28 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         pnlPrincipal.add(pnlCopy, java.awt.BorderLayout.PAGE_END);
 
+        jButton2.setText("LLEVAR A LISTA PEDIDOS");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlBotonesAdminLayout = new javax.swing.GroupLayout(pnlBotonesAdmin);
         pnlBotonesAdmin.setLayout(pnlBotonesAdminLayout);
         pnlBotonesAdminLayout.setHorizontalGroup(
             pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 846, Short.MAX_VALUE)
+            .addGroup(pnlBotonesAdminLayout.createSequentialGroup()
+                .addGap(379, 379, 379)
+                .addComponent(jButton2)
+                .addContainerGap(304, Short.MAX_VALUE))
         );
         pnlBotonesAdminLayout.setVerticalGroup(
             pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 389, Short.MAX_VALUE)
+            .addGroup(pnlBotonesAdminLayout.createSequentialGroup()
+                .addGap(175, 175, 175)
+                .addComponent(jButton2)
+                .addContainerGap(191, Short.MAX_VALUE))
         );
 
         pnlPrincipal.add(pnlBotonesAdmin, java.awt.BorderLayout.CENTER);
@@ -170,6 +184,12 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Lista_Pedidos_Proveedores pedidos_proveedores_admin=new Lista_Pedidos_Proveedores(nombre);
+        pedidos_proveedores_admin.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -197,6 +217,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblFotoLogo;
