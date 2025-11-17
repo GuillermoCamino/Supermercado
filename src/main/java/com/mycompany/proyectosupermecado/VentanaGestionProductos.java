@@ -3369,6 +3369,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         if (lblEncontrado != null) {
             System.out.println("encontrado " + lblEncontrado.getText());
             lblEncontrado.scrollRectToVisible(lblEncontrado.getBounds());
+            System.out.println("Bounds " + lblEncontrado.getBounds());
+            lblEncontrado = null;
 
         } else {
             System.out.println("no encontrao");
