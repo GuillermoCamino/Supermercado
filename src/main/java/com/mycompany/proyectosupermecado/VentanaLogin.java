@@ -146,8 +146,10 @@ public class VentanaLogin extends javax.swing.JFrame {
             //CASO DE SER EMPLEADO puedes poner su codigo de empleado y DNI
               if ((email.equals("bichoprime@gmail.com")||DNI.equals("12345A")||codigo.equals("720AR")||nombre_usuario.equals("CR7")) && contrasena.equals("1234")) {
              String nombre=TxtUsuario.getText().toString();
-            VentanaPrincipalEmpleado home_empleado = new VentanaPrincipalEmpleado(nombre);
-            home_empleado.setVisible(true);
+            String dni = TxtUsuario.getText(); // O el DNI real si lo tienes guardado
+            VentanaPrincipalEmpleado v = new VentanaPrincipalEmpleado(nombre, dni);
+            v.setVisible(true);
+            this.dispose();
             this.dispose();
         } else if (email.equals("Escribe aqui el nombre del usuario") || contrasena.equals("Aqui la contra")) {
             JOptionPane.showMessageDialog(
