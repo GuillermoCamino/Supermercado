@@ -91,7 +91,7 @@ public class Ventana_Creacion_Producto extends javax.swing.JFrame {
 
         jPanel2.add(PnlEncabezado, java.awt.BorderLayout.PAGE_START);
 
-        Pnl_Creacionproducto.setBackground(new java.awt.Color(255, 255, 255));
+        Pnl_Creacionproducto.setBackground(new java.awt.Color(204, 153, 255));
         Pnl_Creacionproducto.setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
