@@ -4,7 +4,10 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import java.awt.Component;
+import java.awt.Container;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 /**
  *
@@ -21,6 +24,10 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         PnlCentral.getVerticalScrollBar().setUnitIncrement(35);
+    }
+    
+    public VentanaGestionProductos(String nombre, int codigo, int precio) {
+        
     }
 
     /**
@@ -43,7 +50,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         lblIconoC = new javax.swing.JLabel();
         PnlBuscar = new javax.swing.JPanel();
         PnlBarra = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        FieldBusqueda = new javax.swing.JTextField();
         PnlLupa = new javax.swing.JPanel();
         btnLupa = new javax.swing.JButton();
         PnlPerfil = new javax.swing.JPanel();
@@ -430,12 +437,12 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlBarra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         PnlBarra.setLayout(new java.awt.GridBagLayout());
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField1.setText("Buscar Productos");
-        jTextField1.setPreferredSize(new java.awt.Dimension(600, 57));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        FieldBusqueda.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        FieldBusqueda.setText("Buscar Productos");
+        FieldBusqueda.setPreferredSize(new java.awt.Dimension(600, 57));
+        FieldBusqueda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                FieldBusquedaActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -443,7 +450,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        PnlBarra.add(jTextField1, gridBagConstraints);
+        PnlBarra.add(FieldBusqueda, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -454,6 +461,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnLupa.setBackground(new java.awt.Color(255, 255, 0));
         btnLupa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lupa.png"))); // NOI18N
         btnLupa.setOpaque(true);
+        btnLupa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLupaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PnlLupaLayout = new javax.swing.GroupLayout(PnlLupa);
         PnlLupa.setLayout(PnlLupaLayout);
@@ -498,6 +510,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         BtnCerrar.setBackground(new java.awt.Color(255, 255, 255));
         BtnCerrar.setForeground(new java.awt.Color(255, 0, 0));
         BtnCerrar.setText("Cerrar Sesión");
+        BtnCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCerrarActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -537,6 +554,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnConservas.setForeground(new java.awt.Color(255, 255, 255));
         btnConservas.setText("Conservas");
         btnConservas.setPreferredSize(new java.awt.Dimension(150, 50));
+        btnConservas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConservasActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
@@ -547,6 +569,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnPastasCereales.setText("Pastas/Cereales");
         btnPastasCereales.setPreferredSize(new java.awt.Dimension(150, 50));
         btnPastasCereales.setRequestFocusEnabled(false);
+        btnPastasCereales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPastasCerealesActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -558,6 +585,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnAperitivos.setForeground(new java.awt.Color(255, 255, 255));
         btnAperitivos.setText("Aperitivos");
         btnAperitivos.setPreferredSize(new java.awt.Dimension(83, 50));
+        btnAperitivos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAperitivosActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -569,6 +601,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnDulces.setForeground(new java.awt.Color(255, 255, 255));
         btnDulces.setText("Dulces");
         btnDulces.setPreferredSize(new java.awt.Dimension(72, 50));
+        btnDulces.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDulcesActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -580,6 +617,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnCondimentos.setForeground(new java.awt.Color(255, 255, 255));
         btnCondimentos.setText("Condimentos");
         btnCondimentos.setPreferredSize(new java.awt.Dimension(102, 50));
+        btnCondimentos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCondimentosActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -591,6 +633,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnLacteos.setForeground(new java.awt.Color(255, 255, 255));
         btnLacteos.setText("Lácteos");
         btnLacteos.setPreferredSize(new java.awt.Dimension(72, 50));
+        btnLacteos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLacteosActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
@@ -602,6 +649,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnAlcoholicas.setForeground(new java.awt.Color(255, 255, 255));
         btnAlcoholicas.setText("Alcohólicas");
         btnAlcoholicas.setPreferredSize(new java.awt.Dimension(91, 50));
+        btnAlcoholicas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlcoholicasActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
@@ -613,6 +665,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnZumosBebidas.setForeground(new java.awt.Color(255, 255, 255));
         btnZumosBebidas.setText("Zumos/Bebidas");
         btnZumosBebidas.setPreferredSize(new java.awt.Dimension(113, 50));
+        btnZumosBebidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnZumosBebidasActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
@@ -624,6 +681,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnCervezas.setForeground(new java.awt.Color(255, 255, 255));
         btnCervezas.setText("Cervezas");
         btnCervezas.setPreferredSize(new java.awt.Dimension(76, 50));
+        btnCervezas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCervezasActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
@@ -635,6 +697,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         btnNuevos.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevos.setText("Nuevos");
         btnNuevos.setPreferredSize(new java.awt.Dimension(75, 50));
+        btnNuevos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevosActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 9;
@@ -3280,19 +3347,84 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 9000, Short.MAX_VALUE)
+            .addComponent(PnlTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 8263, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void FieldBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FieldBusquedaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_FieldBusquedaActionPerformed
 
     private void BtnStockP5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnStockP5ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_BtnStockP5ActionPerformed
+
+    private void btnLupaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLupaActionPerformed
+        String textoBuscado = FieldBusqueda.getText().trim();
+
+        JLabel lblEncontrado = buscarLabelPorTexto(PnlContenedor, textoBuscado);
+
+        if (lblEncontrado != null) {
+            System.out.println("encontrado " + lblEncontrado.getText());
+            lblEncontrado.scrollRectToVisible(lblEncontrado.getBounds());
+
+        } else {
+            System.out.println("no encontrao");
+        }
+        
+
+    }//GEN-LAST:event_btnLupaActionPerformed
+
+    private void btnConservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConservasActionPerformed
+        TtlConservas.scrollRectToVisible(TtlConservas.getBounds());
+    }//GEN-LAST:event_btnConservasActionPerformed
+
+    private void btnPastasCerealesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPastasCerealesActionPerformed
+        TtlPastasCereales.scrollRectToVisible(TtlPastasCereales.getBounds());
+    }//GEN-LAST:event_btnPastasCerealesActionPerformed
+
+    private void btnAperitivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAperitivosActionPerformed
+        TtlAperitivos.scrollRectToVisible(TtlAperitivos.getBounds());
+    }//GEN-LAST:event_btnAperitivosActionPerformed
+
+    private void btnDulcesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDulcesActionPerformed
+        TtlDulces.scrollRectToVisible(TtlDulces.getBounds());
+    }//GEN-LAST:event_btnDulcesActionPerformed
+
+    private void btnCondimentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCondimentosActionPerformed
+        TtlCondimentos.scrollRectToVisible(TtlCondimentos.getBounds());
+    }//GEN-LAST:event_btnCondimentosActionPerformed
+
+    private void btnLacteosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLacteosActionPerformed
+        TtlLacteos.scrollRectToVisible(TtlLacteos.getBounds());
+        System.out.println("lacteos");
+    }//GEN-LAST:event_btnLacteosActionPerformed
+
+    private void btnZumosBebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZumosBebidasActionPerformed
+        TtlZumosBebidas.scrollRectToVisible(TtlZumosBebidas.getBounds());
+        System.out.println("zumos y bebidas");
+    }//GEN-LAST:event_btnZumosBebidasActionPerformed
+
+    private void btnAlcoholicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlcoholicasActionPerformed
+        TtlAlcoholicas.scrollRectToVisible(TtlAlcoholicas.getBounds());
+        System.out.println("alcoholicas");
+    }//GEN-LAST:event_btnAlcoholicasActionPerformed
+
+    private void btnCervezasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCervezasActionPerformed
+        TtlCervezas.scrollRectToVisible(TtlCervezas.getBounds());
+        System.out.println("cervezas");
+    }//GEN-LAST:event_btnCervezasActionPerformed
+
+    private void btnNuevosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevosActionPerformed
+        TtlNuevos.scrollRectToVisible(TtlNuevos.getBounds());
+        System.out.println("nuevas");
+    }//GEN-LAST:event_btnNuevosActionPerformed
+
+    private void BtnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCerrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnCerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3319,6 +3451,34 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> new VentanaGestionProductos().setVisible(true));
         
     }
+    
+    public JLabel buscarLabelPorTexto(Container container, String textoBuscado) {
+
+    for (Component comp : container.getComponents()) {
+
+        // Si es un JLabel, comparar su texto
+        if (comp instanceof JLabel) {
+            JLabel lbl = (JLabel) comp;
+
+            if (lbl.getText() != null && lbl.getText().equals(textoBuscado)) {
+                return lbl;  // label encontrado
+            }
+        }
+
+        // Si es otro contenedor, buscar recursivamente
+        if (comp instanceof Container) {
+            JLabel encontrado = buscarLabelPorTexto((Container) comp, textoBuscado);
+
+            if (encontrado != null) {
+                return encontrado;
+            }
+        }
+    }
+
+    return null; // si no se encuentra
+}
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCerrar;
@@ -3374,6 +3534,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
     private javax.swing.JButton BtnStockZ4;
     private javax.swing.JButton BtnStockZ5;
     private javax.swing.JButton BtnStockZ6;
+    private javax.swing.JTextField FieldBusqueda;
     private javax.swing.JPanel PnlAlcoholicas;
     private javax.swing.JPanel PnlAlertas;
     private javax.swing.JPanel PnlAperitivos;
@@ -3438,7 +3599,6 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbbAlertas;
     private javax.swing.JLabel lblAlertaA1;
     private javax.swing.JLabel lblAlertaA2;
