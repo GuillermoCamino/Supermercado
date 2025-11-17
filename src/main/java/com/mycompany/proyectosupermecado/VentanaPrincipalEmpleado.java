@@ -22,6 +22,9 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     public VentanaPrincipalEmpleado() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+            jLabel3.setText(" ");
+         jLabel3.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+                 jTextField1.setText(nombre);
     }
      public VentanaPrincipalEmpleado(String nombre) {
         initComponents();
