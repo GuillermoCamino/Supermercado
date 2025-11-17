@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author MEDAC
@@ -20,6 +22,14 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         setResizable(false);
     }
+        public VentanaModificarClientes(String nombre, String dni) {
+        initComponents();
+        setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        setResizable(false);
+        jLabel1.setText(nombre);
+        jTextField12.setText(nombre);
+        jTextField13.setText(dni);    
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,14 +41,45 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        Pnlmenucito = new javax.swing.JPanel();
+        PanelCliente1 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        jButton25 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jTextField12 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField();
+        PanelCliente2 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        PanelCliente3 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        PanelCliente4 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -48,7 +89,7 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
         jButton14 = new javax.swing.JButton();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
+        PanelCliente5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -60,6 +101,17 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
@@ -106,142 +158,328 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         jPanel3.add(jLabel1, gridBagConstraints);
 
-        jPanel2.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel2.setLayout(new java.awt.GridBagLayout());
+        Pnlmenucito.setForeground(new java.awt.Color(51, 51, 51));
+        Pnlmenucito.setLayout(new java.awt.GridLayout(20, 1, 5, 0));
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255), 4));
-        jPanel5.setLayout(new java.awt.GridBagLayout());
+        PanelCliente1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255), 4));
+        PanelCliente1.setLayout(new java.awt.GridBagLayout());
+
+        jLabel16.setText("Nombre y apellidos");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        PanelCliente1.add(jLabel16, gridBagConstraints);
+
+        jLabel17.setText("Dni");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        PanelCliente1.add(jLabel17, gridBagConstraints);
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estrella.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        PanelCliente1.add(jLabel18, gridBagConstraints);
+
+        jButton23.setForeground(new java.awt.Color(51, 153, 0));
+        jButton23.setText("Dar de alta ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        PanelCliente1.add(jButton23, gridBagConstraints);
+
+        jButton24.setForeground(new java.awt.Color(255, 51, 51));
+        jButton24.setText("Dar de baja");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        PanelCliente1.add(jButton24, gridBagConstraints);
+
+        jButton25.setForeground(new java.awt.Color(0, 153, 0));
+        jButton25.setText("Editar");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        PanelCliente1.add(jButton25, gridBagConstraints);
+
+        jButton26.setForeground(new java.awt.Color(51, 102, 255));
+        jButton26.setText("Consultar compras y puntos");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        PanelCliente1.add(jButton26, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        PanelCliente1.add(jTextField12, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        PanelCliente1.add(jTextField13, gridBagConstraints);
+
+        Pnlmenucito.add(PanelCliente1);
+
+        PanelCliente2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255), 4));
+        PanelCliente2.setLayout(new java.awt.GridBagLayout());
+
+        jLabel13.setText("Nombre y apellidos");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        PanelCliente2.add(jLabel13, gridBagConstraints);
+
+        jLabel14.setText("Dni");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        PanelCliente2.add(jLabel14, gridBagConstraints);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estrella.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        PanelCliente2.add(jLabel15, gridBagConstraints);
+
+        jButton19.setForeground(new java.awt.Color(51, 153, 0));
+        jButton19.setText("Dar de alta ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        PanelCliente2.add(jButton19, gridBagConstraints);
+
+        jButton20.setForeground(new java.awt.Color(255, 51, 51));
+        jButton20.setText("Dar de baja");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        PanelCliente2.add(jButton20, gridBagConstraints);
+
+        jButton21.setForeground(new java.awt.Color(0, 153, 0));
+        jButton21.setText("Editar");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        PanelCliente2.add(jButton21, gridBagConstraints);
+
+        jButton22.setForeground(new java.awt.Color(51, 102, 255));
+        jButton22.setText("Consultar compras y puntos");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        PanelCliente2.add(jButton22, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        PanelCliente2.add(jTextField10, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        PanelCliente2.add(jTextField11, gridBagConstraints);
+
+        Pnlmenucito.add(PanelCliente2);
+
+        PanelCliente3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255), 4));
+        PanelCliente3.setLayout(new java.awt.GridBagLayout());
+
+        jLabel10.setText("Nombre y apellidos");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        PanelCliente3.add(jLabel10, gridBagConstraints);
+
+        jLabel11.setText("Dni");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        PanelCliente3.add(jLabel11, gridBagConstraints);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estrella.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        PanelCliente3.add(jLabel12, gridBagConstraints);
+
+        jButton15.setForeground(new java.awt.Color(51, 153, 0));
+        jButton15.setText("Dar de alta ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        PanelCliente3.add(jButton15, gridBagConstraints);
+
+        jButton16.setForeground(new java.awt.Color(255, 51, 51));
+        jButton16.setText("Dar de baja");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        PanelCliente3.add(jButton16, gridBagConstraints);
+
+        jButton17.setForeground(new java.awt.Color(0, 153, 0));
+        jButton17.setText("Editar");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        PanelCliente3.add(jButton17, gridBagConstraints);
+
+        jButton18.setForeground(new java.awt.Color(51, 102, 255));
+        jButton18.setText("Consultar compras y puntos");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        PanelCliente3.add(jButton18, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        PanelCliente3.add(jTextField8, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        PanelCliente3.add(jTextField9, gridBagConstraints);
+
+        Pnlmenucito.add(PanelCliente3);
+
+        PanelCliente4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255), 4));
+        PanelCliente4.setLayout(new java.awt.GridBagLayout());
 
         jLabel7.setText("Nombre y apellidos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        jPanel5.add(jLabel7, gridBagConstraints);
+        PanelCliente4.add(jLabel7, gridBagConstraints);
 
         jLabel8.setText("Dni");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        jPanel5.add(jLabel8, gridBagConstraints);
+        PanelCliente4.add(jLabel8, gridBagConstraints);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estrella.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
-        jPanel5.add(jLabel9, gridBagConstraints);
+        PanelCliente4.add(jLabel9, gridBagConstraints);
 
         jButton11.setForeground(new java.awt.Color(0, 153, 0));
         jButton11.setText("Dar de alta ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        jPanel5.add(jButton11, gridBagConstraints);
+        PanelCliente4.add(jButton11, gridBagConstraints);
 
         jButton12.setForeground(new java.awt.Color(255, 0, 51));
         jButton12.setText("Dar de baja");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
-        jPanel5.add(jButton12, gridBagConstraints);
+        PanelCliente4.add(jButton12, gridBagConstraints);
 
         jButton13.setForeground(new java.awt.Color(0, 153, 0));
         jButton13.setText("Editar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
-        jPanel5.add(jButton13, gridBagConstraints);
+        PanelCliente4.add(jButton13, gridBagConstraints);
 
         jButton14.setForeground(new java.awt.Color(51, 51, 255));
         jButton14.setText("Consultar compras y puntos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 1;
-        jPanel5.add(jButton14, gridBagConstraints);
+        PanelCliente4.add(jButton14, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        jPanel5.add(jTextField6, gridBagConstraints);
+        PanelCliente4.add(jTextField6, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        jPanel5.add(jTextField7, gridBagConstraints);
+        PanelCliente4.add(jTextField7, gridBagConstraints);
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 426;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 6, 92, 6);
-        jPanel2.add(jPanel5, gridBagConstraints);
+        Pnlmenucito.add(PanelCliente4);
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255), 4));
-        jPanel4.setLayout(new java.awt.GridBagLayout());
+        PanelCliente5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 102, 255), 4));
+        PanelCliente5.setLayout(new java.awt.GridBagLayout());
 
         jLabel4.setText("Nombre y apellidos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        jPanel4.add(jLabel4, gridBagConstraints);
+        PanelCliente5.add(jLabel4, gridBagConstraints);
 
         jLabel5.setText("Dni");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        jPanel4.add(jLabel5, gridBagConstraints);
+        PanelCliente5.add(jLabel5, gridBagConstraints);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estrella.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
-        jPanel4.add(jLabel6, gridBagConstraints);
+        PanelCliente5.add(jLabel6, gridBagConstraints);
 
         jButton7.setForeground(new java.awt.Color(51, 153, 0));
         jButton7.setText("Dar de alta ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        jPanel4.add(jButton7, gridBagConstraints);
+        PanelCliente5.add(jButton7, gridBagConstraints);
 
         jButton8.setForeground(new java.awt.Color(255, 51, 51));
         jButton8.setText("Dar de baja");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
-        jPanel4.add(jButton8, gridBagConstraints);
+        PanelCliente5.add(jButton8, gridBagConstraints);
 
         jButton9.setForeground(new java.awt.Color(0, 153, 0));
         jButton9.setText("Editar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
-        jPanel4.add(jButton9, gridBagConstraints);
+        PanelCliente5.add(jButton9, gridBagConstraints);
 
         jButton10.setForeground(new java.awt.Color(51, 102, 255));
         jButton10.setText("Consultar compras y puntos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 1;
-        jPanel4.add(jButton10, gridBagConstraints);
+        PanelCliente5.add(jButton10, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        jPanel4.add(jTextField4, gridBagConstraints);
+        PanelCliente5.add(jTextField4, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        jPanel4.add(jTextField5, gridBagConstraints);
+        PanelCliente5.add(jTextField5, gridBagConstraints);
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 426;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(19, 6, 0, 6);
-        jPanel2.add(jPanel4, gridBagConstraints);
+        Pnlmenucito.add(PanelCliente5);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -251,8 +489,13 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Pnlmenucito, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,7 +503,12 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Pnlmenucito, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -278,6 +526,36 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
        vuelta_inicio.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        String [] opciones={"Eliminar peticion producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Qué desea hacer?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           Pnlmenucito.remove(PanelCliente1);
+           Pnlmenucito.revalidate();
+           Pnlmenucito.repaint();
+        }
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+                String [] opciones={"Eliminar peticion producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Qué desea hacer?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           Pnlmenucito.remove(PanelCliente2);
+           Pnlmenucito.revalidate();
+           Pnlmenucito.repaint();
+        }
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+                String [] opciones={"Eliminar peticion producto","Cancelar"};
+       int seleccion= JOptionPane.showOptionDialog(this,"¿Qué desea hacer?","Modificación de producto",JOptionPane.DEFAULT_OPTION,JOptionPane.QUESTION_MESSAGE,null,opciones,opciones[1]);
+        if(seleccion==0){
+           Pnlmenucito.remove(PanelCliente3);
+           Pnlmenucito.revalidate();
+           Pnlmenucito.repaint();
+        }
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -305,17 +583,44 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanelCliente1;
+    private javax.swing.JPanel PanelCliente2;
+    private javax.swing.JPanel PanelCliente3;
+    private javax.swing.JPanel PanelCliente4;
+    private javax.swing.JPanel PanelCliente5;
+    private javax.swing.JPanel Pnlmenucito;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel4;
@@ -324,13 +629,17 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
