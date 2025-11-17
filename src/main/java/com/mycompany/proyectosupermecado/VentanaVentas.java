@@ -73,6 +73,11 @@ public class VentanaVentas extends javax.swing.JFrame {
 
         jButton3.setForeground(new java.awt.Color(255, 102, 102));
         jButton3.setText("Cerrar sesion");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 1;
@@ -216,6 +221,12 @@ public class VentanaVentas extends javax.swing.JFrame {
         principal.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        VentanaLogin vuelta_inicio=new VentanaLogin();
+       vuelta_inicio.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
