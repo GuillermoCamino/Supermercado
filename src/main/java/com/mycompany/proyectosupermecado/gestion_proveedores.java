@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -24,6 +25,8 @@ public class gestion_proveedores extends javax.swing.JFrame {
   public gestion_proveedores(String nombre) {
         initComponents();
         this.nombre=nombre;
+        LblUsuario.setText(this.nombre);
+        LblPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
         setExtendedState(MAXIMIZED_BOTH);
     }
 

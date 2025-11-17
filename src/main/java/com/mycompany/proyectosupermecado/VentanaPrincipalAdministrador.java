@@ -267,7 +267,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGestionarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarEmpleadosActionPerformed
-        // TODO add your handling code here:
+        //Lo tuyo nestor
         
     }//GEN-LAST:event_btnGestionarEmpleadosActionPerformed
 
@@ -280,28 +280,28 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
     private void btnProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresActionPerformed
         // TODO add your handling code here:
-        Lista_Pedidos_Proveedores LisGesPro= new Lista_Pedidos_Proveedores();
+        Lista_Pedidos_Proveedores LisGesPro= new Lista_Pedidos_Proveedores(nombre);
         LisGesPro.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnProveedoresActionPerformed
 
     private void btnFuncionesEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionesEmpleadoActionPerformed
         // TODO add your handling code here:
-        VentanaPrincipalEmpleado VenPrinEm= new VentanaPrincipalEmpleado();
+        VentanaPrincipalEmpleado VenPrinEm= new VentanaPrincipalEmpleado(nombre);
         VenPrinEm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnFuncionesEmpleadoActionPerformed
 
     private void btnGestionProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionProductoActionPerformed
         // TODO add your handling code here:
-        VentanaGestionProductos VenGesPro= new VentanaGestionProductos();
+        VentanaGestionProductos VenGesPro= new VentanaGestionProductos(nombre);
         VenGesPro.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGestionProductoActionPerformed
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
         // TODO add your handling code here:
-        Gestion_ventas_cajasDiarias GesVenCaja= new Gestion_ventas_cajasDiarias();
+        Gestion_ventas_cajasDiarias GesVenCaja= new Gestion_ventas_cajasDiarias(nombre);
         GesVenCaja.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVentasActionPerformed
