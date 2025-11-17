@@ -92,6 +92,11 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Cerrar Sesión");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -145,18 +150,38 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         btnProductos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnProductos.setText("Gestión de Productos, Inventario y Stock");
+        btnProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProductosActionPerformed(evt);
+            }
+        });
         pnlBoton.add(btnProductos);
 
         btnPedidos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPedidos.setText("Gestión de Pedidos a Proveedores");
+        btnPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPedidosActionPerformed(evt);
+            }
+        });
         pnlBoton.add(btnPedidos);
 
         btnClientes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnClientes.setText("Modificar Clientes");
+        btnClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClientesActionPerformed(evt);
+            }
+        });
         pnlBoton.add(btnClientes);
 
         btnVentaYCaja.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnVentaYCaja.setText("Ventas y Cajas");
+        btnVentaYCaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVentaYCajaActionPerformed(evt);
+            }
+        });
         pnlBoton.add(btnVentaYCaja);
 
         pnlPrincipal.add(pnlBoton, java.awt.BorderLayout.CENTER);
@@ -174,6 +199,42 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosActionPerformed
+        // TODO add your handling code here:
+        
+        VentanaGestionProductos ventanaGProductos= new VentanaGestionProductos();
+        ventanaGProductos.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnProductosActionPerformed
+
+    private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
+        // TODO add your handling code here:
+        Lista_Pedidos_Proveedores ListaPedidoProv= new Lista_Pedidos_Proveedores();
+        ListaPedidoProv.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnPedidosActionPerformed
+
+    private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
+        // TODO add your handling code here:
+        VentanaModificarClientes VenModCli= new VentanaModificarClientes();
+        VenModCli.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnClientesActionPerformed
+
+    private void btnVentaYCajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentaYCajaActionPerformed
+        // TODO add your handling code here:
+        Gestion_ventas_cajasDiarias GesVenCa= new Gestion_ventas_cajasDiarias();
+        GesVenCa.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVentaYCajaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        VentanaLogin VenLo= new VentanaLogin();
+        VenLo.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

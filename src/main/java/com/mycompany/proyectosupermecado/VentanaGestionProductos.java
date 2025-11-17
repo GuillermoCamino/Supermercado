@@ -3425,7 +3425,9 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNuevosActionPerformed
 
     private void BtnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCerrarActionPerformed
-        // TODO add your handling code here:
+         VentanaLogin vuelta_inicio=new VentanaLogin();
+       vuelta_inicio.setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_BtnCerrarActionPerformed
 
     /**

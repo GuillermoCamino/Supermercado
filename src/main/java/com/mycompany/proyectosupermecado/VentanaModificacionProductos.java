@@ -515,6 +515,11 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         BtnCerrar.setBackground(new java.awt.Color(255, 255, 255));
         BtnCerrar.setForeground(new java.awt.Color(255, 0, 0));
         BtnCerrar.setText("Cerrar Sesión");
+        BtnCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCerrarActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -3747,6 +3752,12 @@ if (opcion == JOptionPane.OK_OPTION) {
         volver_admin.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BtnSalirActionPerformed
+
+    private void BtnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCerrarActionPerformed
+         VentanaLogin vuelta_inicio=new VentanaLogin();
+       vuelta_inicio.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_BtnCerrarActionPerformed
 
     /**
      * @param args the command line arguments
