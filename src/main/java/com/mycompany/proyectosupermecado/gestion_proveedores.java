@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author Darío
  */
 public class gestion_proveedores extends javax.swing.JFrame {
-    
+    String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(gestion_proveedores.class.getName());
 
     /**
@@ -19,6 +19,11 @@ public class gestion_proveedores extends javax.swing.JFrame {
      */
     public gestion_proveedores() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+    }
+  public gestion_proveedores(String nombre) {
+        initComponents();
+        this.nombre=nombre;
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -508,7 +513,7 @@ public class gestion_proveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnBaja1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador(nombre);
         volver_admin.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

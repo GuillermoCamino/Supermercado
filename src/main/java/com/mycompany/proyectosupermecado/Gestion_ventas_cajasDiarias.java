@@ -15,7 +15,7 @@ import javax.swing.JLabel;
  * @author MEDAC
  */
 public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
-    
+String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Gestion_ventas_cajasDiarias.class.getName());
 
     /**
@@ -25,7 +25,12 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
         initComponents();
         setExtendedState(Gestion_ventas_cajasDiarias.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
-   
+    }
+     public Gestion_ventas_cajasDiarias(String nombre) {
+        initComponents();
+        setExtendedState(Gestion_ventas_cajasDiarias.MAXIMIZED_BOTH);
+        setLocationRelativeTo(null);
+        this.nombre=nombre;
     }
 
     /**
@@ -265,7 +270,7 @@ public class Gestion_ventas_cajasDiarias extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador(nombre);
         volver_admin.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

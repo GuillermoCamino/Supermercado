@@ -17,6 +17,8 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     /**
      * Creates new form VentanaPrincipalEmpleado
      */
+    private String nombreUsuario;
+    private String dniUsuario;
     public VentanaPrincipalEmpleado() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
@@ -28,8 +30,12 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         jTextField1.setText(nombre);
         jLabel3.setText(" ");
                 jLabel3.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
-
     }
+        public VentanaPrincipalEmpleado(String nombre, String dni) {
+       initComponents();
+       this.nombreUsuario = nombre;
+       this.dniUsuario = dni;
+   }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -210,16 +216,17 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
     private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
         // TODO add your handling code here:
-        Lista_Pedidos_Proveedores ListaPedidoProv= new Lista_Pedidos_Proveedores();
+        Lista_Pedidos_Proveedores ListaPedidoProv= new Lista_Pedidos_Proveedores(jTextField1.getText());
         ListaPedidoProv.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnPedidosActionPerformed
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
         // TODO add your handling code here:
-        VentanaModificarClientes VenModCli= new VentanaModificarClientes();
-        VenModCli.setVisible(true);
+        VentanaModificarClientes ventanaCliente = new VentanaModificarClientes(nombreUsuario, dniUsuario);
+        ventanaCliente.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_btnClientesActionPerformed
 
     private void btnVentaYCajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentaYCajaActionPerformed
