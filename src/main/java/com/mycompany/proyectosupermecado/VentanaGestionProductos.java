@@ -239,6 +239,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         lblAlertaD4 = new javax.swing.JLabel();
         lblAlertaD5 = new javax.swing.JLabel();
         lblAlertaD6 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         PnlCondimentos = new javax.swing.JPanel();
         BtnStockCo4 = new javax.swing.JButton();
         lblDescripcionCo4 = new javax.swing.JLabel();
@@ -2114,6 +2115,9 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         gridBagConstraints.gridy = 6;
         PnlDulces.add(lblAlertaD6, gridBagConstraints);
 
+        jLabel19.setText("jLabel19");
+        PnlDulces.add(jLabel19, new java.awt.GridBagConstraints());
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -3595,6 +3599,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
