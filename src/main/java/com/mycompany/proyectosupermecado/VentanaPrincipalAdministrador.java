@@ -9,7 +9,10 @@ package com.mycompany.proyectosupermecado;
  * @author MEDAC
  */
 public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
-    
+    String numero_referencia;
+            String nombre_producto;
+                    int precio;
+                    boolean alcohol;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaPrincipalAdministrador.class.getName());
 
     /**
@@ -17,6 +20,17 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
      */
     public VentanaPrincipalAdministrador() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+    }
+        public VentanaPrincipalAdministrador(String numero_referencia,String nombre_producto, int precio,boolean alcohol) {
+                    initComponents();
+        this.numero_referencia=numero_referencia;
+        this.nombre_producto=nombre_producto;
+        this.precio=precio;
+        this.alcohol=alcohol;
+        jLabel1.setText("Esto es una prueba de dario, el producto transferido es:"+this.nombre_producto+" el numero de ref es:"+this.numero_referencia+"'el precio y si tiene alcohol es:"+precio+alcohol);
+        //NESTOR ESTO LO HA HECHO DARIO QUE ES PARA LA CONEXION DE PAGINAS ENTRE LA PRINCIPAL DEL ADMIN Y YA LA CREACION DEL PRODUCTO, HAY QUE UNIRLA AL CATALOGO Y HACER QUE SE AGREGE ESTE PRODUCTO
+        //Esta conectado al label que tenias en el encabezado el JLABEL1 
     }
 
     /**
