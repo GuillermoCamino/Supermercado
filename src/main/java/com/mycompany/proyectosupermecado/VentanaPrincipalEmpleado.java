@@ -22,6 +22,9 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     public VentanaPrincipalEmpleado() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+            jLabel3.setText(" ");
+         jLabel3.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+                 jTextField1.setText(nombre);
     }
      public VentanaPrincipalEmpleado(String nombre) {
         initComponents();
@@ -209,7 +212,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     private void btnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosActionPerformed
         // TODO add your handling code here:
         
-        VentanaGestionProductos ventanaGProductos= new VentanaGestionProductos();
+        VentanaGestionProductos ventanaGProductos= new VentanaGestionProductos(nombre);
         ventanaGProductos.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnProductosActionPerformed
@@ -223,7 +226,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
         // TODO add your handling code here:
-        VentanaModificarClientes ventanaCliente = new VentanaModificarClientes(nombreUsuario, dniUsuario);
+        VentanaModificarClientes ventanaCliente = new VentanaModificarClientes(nombre);
         ventanaCliente.setVisible(true);
         this.dispose();
         
@@ -231,8 +234,8 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
     private void btnVentaYCajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentaYCajaActionPerformed
         // TODO add your handling code here:
-        Gestion_ventas_cajasDiarias GesVenCa= new Gestion_ventas_cajasDiarias();
-        GesVenCa.setVisible(true);
+        VentanaVentas ir_ventas_empleado=new VentanaVentas(nombre);
+        ir_ventas_empleado.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVentaYCajaActionPerformed
 

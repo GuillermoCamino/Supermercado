@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -11,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author MEDAC
  */
 public class VentanaModificarClientes extends javax.swing.JFrame {
-    
+    String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaModificarClientes.class.getName());
 
     /**
@@ -22,13 +23,14 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         setResizable(false);
     }
-        public VentanaModificarClientes(String nombre, String dni) {
+        public VentanaModificarClientes(String nombre) {
         initComponents();
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         setResizable(false);
+        this.nombre=nombre;
         jLabel1.setText(nombre);
+        jLabel26.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
         jTextField12.setText(nombre);
-        jTextField13.setText(dni);    
     }
 
     /**
@@ -515,7 +517,7 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        VentanaPrincipalEmpleado principal= new VentanaPrincipalEmpleado();
+        VentanaPrincipalEmpleado principal= new VentanaPrincipalEmpleado(nombre);
         principal.setVisible(true);
         this.dispose();
         

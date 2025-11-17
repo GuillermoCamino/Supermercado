@@ -4,12 +4,14 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author MEDAC
  */
 public class VentanaVentas extends javax.swing.JFrame {
-    
+    String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaVentas.class.getName());
 
     /**
@@ -19,6 +21,14 @@ public class VentanaVentas extends javax.swing.JFrame {
         initComponents();
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         setResizable(false);
+    }
+     public VentanaVentas(String nombre) {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        setResizable(false);
+        this.nombre=nombre;
+        jTextField1.setText(nombre);
+        jLabel26.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -217,7 +227,7 @@ public class VentanaVentas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        VentanaPrincipalEmpleado principal=new VentanaPrincipalEmpleado();
+        VentanaPrincipalEmpleado principal=new VentanaPrincipalEmpleado(nombre);
         principal.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
