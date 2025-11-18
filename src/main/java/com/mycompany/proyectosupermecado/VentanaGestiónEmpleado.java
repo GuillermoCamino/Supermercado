@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -11,12 +12,21 @@ import javax.swing.JOptionPane;
  * @author Coron
  */
 public class VentanaGestiónEmpleado extends javax.swing.JFrame {
-
+String nombre;
     /**
      * Creates new form VentanaGestiónEmpleado
      */
     public VentanaGestiónEmpleado() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+    }
+      public VentanaGestiónEmpleado(String nombre) {
+        initComponents();
+        this.nombre=nombre;
+         lblIDEmpleadoCabeza.setText(nombre);
+        lblFotoEmpleado.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
+        lblIDEmpleadoCabeza.setText(nombre);
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -293,7 +303,7 @@ public class VentanaGestiónEmpleado extends javax.swing.JFrame {
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
-        VentanaPrincipalAdministrador VenPrinAdm= new VentanaPrincipalAdministrador();
+        VentanaPrincipalAdministrador VenPrinAdm= new VentanaPrincipalAdministrador(nombre);
         VenPrinAdm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed

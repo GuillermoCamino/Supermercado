@@ -28,8 +28,8 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         setResizable(false);
         this.nombre=nombre;
-        jLabel1.setText(nombre);
-        jLabel26.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+        lblNombre.setText(nombre);
+        fotoPerfil.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
         jTextField12.setText(nombre);
     }
 
@@ -46,10 +46,10 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
+        fotoPerfil = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
         Pnlmenucito = new javax.swing.JPanel();
         PanelCliente1 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
@@ -124,11 +124,11 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         jPanel3.add(jLabel24, gridBagConstraints);
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
+        fotoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
         gridBagConstraints.gridy = 0;
-        jPanel3.add(jLabel26, gridBagConstraints);
+        jPanel3.add(fotoPerfil, gridBagConstraints);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotocostamarketLogo.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -153,12 +153,12 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         jPanel3.add(jButton3, gridBagConstraints);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Nombre y apellidos");
+        lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblNombre.setText("Nombre y apellidos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
         gridBagConstraints.gridy = 0;
-        jPanel3.add(jLabel1, gridBagConstraints);
+        jPanel3.add(lblNombre, gridBagConstraints);
 
         Pnlmenucito.setForeground(new java.awt.Color(51, 51, 51));
         Pnlmenucito.setLayout(new java.awt.GridLayout(20, 1, 5, 0));
@@ -591,6 +591,7 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
     private javax.swing.JPanel PanelCliente4;
     private javax.swing.JPanel PanelCliente5;
     private javax.swing.JPanel Pnlmenucito;
+    private javax.swing.JLabel fotoPerfil;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -613,7 +614,6 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -624,7 +624,6 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -643,5 +642,6 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel lblNombre;
     // End of variables declaration//GEN-END:variables
 }

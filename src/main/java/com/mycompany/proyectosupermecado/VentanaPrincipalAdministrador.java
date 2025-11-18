@@ -17,6 +17,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
                     int precio;
                     boolean alcohol;
             String nombre;
+            String foto;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaPrincipalAdministrador.class.getName());
 
     /**
@@ -33,6 +34,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         this.nombre_producto=nombre_producto;
         this.precio=precio;
         this.alcohol=alcohol;
+        jLabel1.setText("el producto creado es:"+this.nombre_producto+" con  numero de referencia:"+this.numero_referencia+" con un precio de "+this.precio+" y lleva alcohol? o es +18:"+alcohol);
     }
           public VentanaPrincipalAdministrador(String nombre) {
         initComponents();
@@ -40,6 +42,8 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         txtIDEmpleado.setText(nombre);
         lblFotoPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
         setExtendedState(MAXIMIZED_BOTH);
+        foto=lblFotoPerfil.toString();
+       
     }
 
     /**
@@ -69,6 +73,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         btnGestionarProveedores = new javax.swing.JButton();
         btnHistoricoVentas = new javax.swing.JButton();
         btnInformes = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Página Principal Administrador");
@@ -145,7 +150,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         pnlCopy.setLayout(pnlCopyLayout);
         pnlCopyLayout.setHorizontalGroup(
             pnlCopyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 846, Short.MAX_VALUE)
+            .addGap(0, 838, Short.MAX_VALUE)
         );
         pnlCopyLayout.setVerticalGroup(
             pnlCopyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,6 +257,12 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
         pnlBotonesAdmin.add(btnInformes, gridBagConstraints);
 
+        jLabel1.setText("Comprobacion_texto producto");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        pnlBotonesAdmin.add(jLabel1, gridBagConstraints);
+
         pnlPrincipal.add(pnlBotonesAdmin, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -278,7 +289,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
     private void btnPromocionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPromocionesActionPerformed
         // TODO add your handling code here:
-        Gestion_Promociones gesPromo= new Gestion_Promociones();
+        Gestion_Promociones gesPromo= new Gestion_Promociones(nombre);
         gesPromo.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnPromocionesActionPerformed
@@ -292,7 +303,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
     private void btnFuncionesEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionesEmpleadoActionPerformed
         // TODO add your handling code here:
-        VentanaPrincipalEmpleado VenPrinEm= new VentanaPrincipalEmpleado(nombre);
+        VentanaPrincipalEmpleado VenPrinEm= new VentanaPrincipalEmpleado(nombre,foto);
         VenPrinEm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnFuncionesEmpleadoActionPerformed
@@ -325,35 +336,35 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
     private void btnGestionEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionEmpleadosActionPerformed
         // TODO add your handling code here:
-        VentanaGestiónEmpleado VenGesEm= new VentanaGestiónEmpleado();
+        VentanaGestiónEmpleado VenGesEm= new VentanaGestiónEmpleado(nombre);
         VenGesEm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGestionEmpleadosActionPerformed
 
     private void btnGestionarPromocionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarPromocionesActionPerformed
         // TODO add your handling code here:
-        Gestion_Promociones gestpro= new Gestion_Promociones();
+        Gestion_Promociones gestpro= new Gestion_Promociones(nombre);
         gestpro.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGestionarPromocionesActionPerformed
 
     private void btnGestionarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarProveedoresActionPerformed
         // TODO add your handling code here:
-        Lista_Pedidos_Proveedores lispedpro= new Lista_Pedidos_Proveedores();
+        Lista_Pedidos_Proveedores lispedpro= new Lista_Pedidos_Proveedores(nombre);
         lispedpro.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGestionarProveedoresActionPerformed
 
     private void btnModificarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarProductoActionPerformed
         // TODO add your handling code here:
-        VentanaModificacionProductos modifProd= new VentanaModificacionProductos();
+        VentanaModificacionProductos modifProd= new VentanaModificacionProductos(nombre);
         modifProd.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnModificarProductoActionPerformed
 
     private void btnHistoricoVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoricoVentasActionPerformed
         // TODO add your handling code here:
-        Gestion_ventas_cajasDiarias gestvendia= new Gestion_ventas_cajasDiarias();
+        Gestion_ventas_cajasDiarias gestvendia= new Gestion_ventas_cajasDiarias(nombre);
         gestvendia.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnHistoricoVentasActionPerformed
@@ -392,6 +403,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton btnHistoricoVentas;
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnModificarProducto;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblFotoPerfil;
     private javax.swing.JLabel lblLogoCostaMarket;
     private javax.swing.JPanel pnlBotonesAdmin;
