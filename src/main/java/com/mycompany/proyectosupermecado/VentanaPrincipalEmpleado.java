@@ -60,7 +60,7 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         lblFotoLogo = new javax.swing.JLabel();
         lblTextoBienvenida = new javax.swing.JLabel();
         pnlSeccionEmpleado = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        BtnCerrar_sesion = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         pnlCopy = new javax.swing.JPanel();
@@ -103,18 +103,18 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
         pnlSeccionEmpleado.setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("Cerrar Sesión");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnCerrar_sesion.setBackground(new java.awt.Color(255, 255, 255));
+        BtnCerrar_sesion.setForeground(new java.awt.Color(255, 0, 0));
+        BtnCerrar_sesion.setText("Cerrar Sesión");
+        BtnCerrar_sesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnCerrar_sesionActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        pnlSeccionEmpleado.add(jButton1, gridBagConstraints);
+        pnlSeccionEmpleado.add(BtnCerrar_sesion, gridBagConstraints);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -244,12 +244,12 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnVentaYCajaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnCerrar_sesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCerrar_sesionActionPerformed
         // TODO add your handling code here:
         VentanaLogin VenLo= new VentanaLogin();
         VenLo.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnCerrar_sesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,11 +277,11 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnCerrar_sesion;
     private javax.swing.JButton btnClientes;
     private javax.swing.JButton btnPedidos;
     private javax.swing.JButton btnProductos;
     private javax.swing.JButton btnVentaYCaja;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblFotoLogo;
