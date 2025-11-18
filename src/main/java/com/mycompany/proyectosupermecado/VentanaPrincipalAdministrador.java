@@ -206,6 +206,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         btnHistoricoVentas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnHistoricoVentas.setText("Histórico de Ventas");
+        btnHistoricoVentas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHistoricoVentasActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -215,6 +220,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         btnInformes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnInformes.setText("Informes");
+        btnInformes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInformesActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
@@ -299,6 +309,10 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         VenGesEm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGestionEmpleadosActionPerformed
+
+    private void btnHistoricoVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoricoVentasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHistoricoVentasActionPerformed
 
     /**
      * @param args the command line arguments
