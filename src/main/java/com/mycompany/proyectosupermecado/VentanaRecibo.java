@@ -5,13 +5,14 @@
 package com.mycompany.proyectosupermecado;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author MEDAC
  */
 public class VentanaRecibo extends javax.swing.JFrame {
-    
+        String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaRecibo.class.getName());
 
     /**
@@ -22,11 +23,18 @@ public class VentanaRecibo extends javax.swing.JFrame {
         LocalDate hoy = LocalDate.now();
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         jLabel17.setText("Fecha: " + hoy.format(formato));
-
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
-        setResizable(true);
+        setResizable(false);
     }
-
+    public VentanaRecibo(String nombre) {
+        initComponents();
+        setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        setResizable(false);
+        this.nombre=nombre;
+        lblNombre.setText(nombre);
+        lblFoto.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+    }
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,10 +47,10 @@ public class VentanaRecibo extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
+        lblFoto = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        lblNombre = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -79,12 +87,12 @@ public class VentanaRecibo extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         jPanel3.add(jLabel24, gridBagConstraints);
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
+        lblFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 3;
-        jPanel3.add(jLabel26, gridBagConstraints);
+        jPanel3.add(lblFoto, gridBagConstraints);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotocostamarketLogo.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -109,11 +117,11 @@ public class VentanaRecibo extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         jPanel3.add(jButton3, gridBagConstraints);
 
-        jTextField1.setText("Nombre y apellidos");
+        lblNombre.setText("Nombre y apellidos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 0;
-        jPanel3.add(jTextField1, gridBagConstraints);
+        jPanel3.add(lblNombre, gridBagConstraints);
 
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
@@ -357,7 +365,6 @@ public class VentanaRecibo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -368,6 +375,7 @@ public class VentanaRecibo extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblFoto;
+    private javax.swing.JTextField lblNombre;
     // End of variables declaration//GEN-END:variables
 }
