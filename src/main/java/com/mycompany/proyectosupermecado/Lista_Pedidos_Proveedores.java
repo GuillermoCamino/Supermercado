@@ -30,6 +30,7 @@ public class Lista_Pedidos_Proveedores extends javax.swing.JFrame {
     
     public Lista_Pedidos_Proveedores(String nombre_usuario){
        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
         this.nombre_usuario=nombre_usuario;
         if(!this.nombre_usuario.equals("lobatito")){
             BtnConfirmarPedido.setEnabled(false);
