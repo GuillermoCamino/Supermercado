@@ -38,6 +38,11 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
        initComponents();
        this.nombreUsuario = nombre;
        this.dniUsuario = dni;
+          jTextField1.setText(nombre);
+        jLabel3.setText(" ");
+                jLabel3.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
+                        setExtendedState(MAXIMIZED_BOTH);
+
    }
 
     /**
@@ -219,8 +224,8 @@ public class VentanaPrincipalEmpleado extends javax.swing.JFrame {
 
     private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
         // TODO add your handling code here:
-        Lista_Pedidos_Proveedores ListaPedidoProv= new Lista_Pedidos_Proveedores(jTextField1.getText());
-        ListaPedidoProv.setVisible(false);
+        Lista_Pedidos_Proveedores ListaPedidoProv= new Lista_Pedidos_Proveedores(nombre);
+        ListaPedidoProv.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnPedidosActionPerformed
 

@@ -1728,11 +1728,11 @@ String [] opciones={"Eliminar peticion producto","Cancelar"};
     }//GEN-LAST:event_BtnModificar_Pedido6ActionPerformed
 
     private void BtnSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalidaActionPerformed
-        if(this.nombre_usuario=="lobatito"){
+        if(this.nombre_usuario.equals("lobatito")){
          VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador(nombre_usuario);
         volver_admin.setVisible(true);
         this.dispose();   
-        }else{
+        }else {
             VentanaPrincipalEmpleado volver_empleado=new VentanaPrincipalEmpleado(nombre_usuario);
             volver_empleado.setVisible(true);
             this.dispose();

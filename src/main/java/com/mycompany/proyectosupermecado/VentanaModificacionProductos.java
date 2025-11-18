@@ -15,7 +15,7 @@ import javax.swing.SpinnerNumberModel;
  * @author MEDAC
  */
 public class VentanaModificacionProductos extends javax.swing.JFrame {
-    
+   String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaModificacionProductos.class.getName());
 
     /**
@@ -25,6 +25,19 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         PnlCentral.getVerticalScrollBar().setUnitIncrement(35);
+    }
+    public VentanaModificacionProductos(String nombre) {
+        initComponents();
+        this.nombre=nombre;
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        PnlCentral.getVerticalScrollBar().setUnitIncrement(35);
+        lblUsuario.setText(nombre);
+        if(this.nombre.equals("lobatito")){
+            lblPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
+
+        }else if(this.nombre.equals("CR7")){
+         lblPerfil.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+        }
     }
 
     /**
@@ -54,7 +67,7 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         lblUsuario = new javax.swing.JLabel();
         BtnCerrar = new javax.swing.JButton();
         lblPerfil = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BtnCreacion = new javax.swing.JButton();
         PnlOeste = new javax.swing.JPanel();
         PnlTipos = new javax.swing.JPanel();
         PnlTabla = new javax.swing.JPanel();
@@ -535,16 +548,16 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 14);
         PnlPerfil.add(lblPerfil, gridBagConstraints);
 
-        jButton1.setBackground(new java.awt.Color(51, 255, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("NUEVO PRODUCTO");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnCreacion.setBackground(new java.awt.Color(51, 255, 51));
+        BtnCreacion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        BtnCreacion.setForeground(new java.awt.Color(0, 0, 0));
+        BtnCreacion.setText("NUEVO PRODUCTO");
+        BtnCreacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnCreacionActionPerformed(evt);
             }
         });
-        PnlPerfil.add(jButton1, new java.awt.GridBagConstraints());
+        PnlPerfil.add(BtnCreacion, new java.awt.GridBagConstraints());
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -3743,12 +3756,14 @@ if (opcion == JOptionPane.OK_OPTION) {
         }
     }//GEN-LAST:event_DarBaja1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BtnCreacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCreacionActionPerformed
+        Ventana_Creacion_Producto creacion=new Ventana_Creacion_Producto(nombre);
+        creacion.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BtnCreacionActionPerformed
 
     private void BtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalirActionPerformed
-        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador();
+        VentanaPrincipalAdministrador volver_admin=new VentanaPrincipalAdministrador(nombre);
         volver_admin.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BtnSalirActionPerformed
@@ -3838,6 +3853,7 @@ if (opcion == JOptionPane.OK_OPTION) {
     private javax.swing.JButton BtnConfigurrarminimoC7;
     private javax.swing.JButton BtnConfigurrarminimoC8;
     private javax.swing.JButton BtnConfigurrarminimoC9;
+    private javax.swing.JButton BtnCreacion;
     private javax.swing.JButton BtnSalir;
     private javax.swing.JButton DarBaja1;
     private javax.swing.JButton DarBaja10;
@@ -3932,7 +3948,6 @@ if (opcion == JOptionPane.OK_OPTION) {
     private javax.swing.JButton btnLupa_Asociar_Producto;
     private javax.swing.JButton btnPastasCereales;
     private javax.swing.JButton btnZumosBebidas;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton13;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbbAlertas;

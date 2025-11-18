@@ -23,7 +23,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class Ventana_Creacion_Producto extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Ventana_Creacion_Producto.class.getName());
-
+String nombre;
     /**
      * Creates new form Ventana_Creacion_Producto
      */
@@ -32,7 +32,11 @@ public class Ventana_Creacion_Producto extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         texto_inicial();
     }
-
+   public Ventana_Creacion_Producto(String nombre) {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        texto_inicial();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
