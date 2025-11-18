@@ -27,8 +27,9 @@ public class VentanaVentas extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         setResizable(false);
         this.nombre=nombre;
-        jTextField1.setText(nombre);
-        jLabel26.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+        lblNombre.setText(nombre);
+        lblFoto.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,10 +43,10 @@ public class VentanaVentas extends javax.swing.JFrame {
 
         jPanel3 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
+        lblFoto = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        lblNombre = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -63,12 +64,12 @@ public class VentanaVentas extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         jPanel3.add(jLabel24, gridBagConstraints);
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
+        lblFoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 3;
-        jPanel3.add(jLabel26, gridBagConstraints);
+        jPanel3.add(lblFoto, gridBagConstraints);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotocostamarketLogo.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -93,11 +94,11 @@ public class VentanaVentas extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         jPanel3.add(jButton3, gridBagConstraints);
 
-        jTextField1.setText("Nombre y apellidos");
+        lblNombre.setText("Nombre y apellidos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 0;
-        jPanel3.add(jTextField1, gridBagConstraints);
+        jPanel3.add(lblNombre, gridBagConstraints);
 
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
@@ -270,10 +271,10 @@ public class VentanaVentas extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblFoto;
+    private javax.swing.JTextField lblNombre;
     // End of variables declaration//GEN-END:variables
 }
