@@ -5,6 +5,7 @@
 package com.mycompany.proyectosupermecado;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,6 +25,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     public VentanaPrincipalAdministrador() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        
     }
         public VentanaPrincipalAdministrador(String numero_referencia,String nombre_producto, int precio,boolean alcohol) {
                     initComponents();
@@ -31,16 +33,12 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         this.nombre_producto=nombre_producto;
         this.precio=precio;
         this.alcohol=alcohol;
-        lblTextoBienvenida.setText("Esto es una prueba de dario, el producto transferido es:"+this.nombre_producto+" el numero de ref es:"+this.numero_referencia+"'el precio y si tiene alcohol es:"+precio+alcohol);
-        //NESTOR ESTO LO HA HECHO DARIO QUE ES PARA LA CONEXION DE PAGINAS ENTRE LA PRINCIPAL DEL ADMIN Y YA LA CREACION DEL PRODUCTO, HAY QUE UNIRLA AL CATALOGO Y HACER QUE SE AGREGE ESTE PRODUCTO
-        //Esta conectado al label que tenias en el encabezado el JLABEL1 
     }
           public VentanaPrincipalAdministrador(String nombre) {
         initComponents();
         this.nombre=nombre;
-        jTextField1.setText(nombre);
-          jLabel3.setText(" ");
-        jLabel3.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
+        txtIDEmpleado.setText(nombre);
+        lblFotoPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -55,16 +53,22 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         pnlPrincipal = new javax.swing.JPanel();
+        pnlCabezera = new javax.swing.JPanel();
+        lblLogoCostaMarket = new javax.swing.JLabel();
+        txtMensajeAdmin = new javax.swing.JLabel();
+        pnlSeccionCliente = new javax.swing.JPanel();
+        lblFotoPerfil = new javax.swing.JLabel();
+        txtIDEmpleado = new javax.swing.JTextField();
+        btnCerrarSesion = new javax.swing.JButton();
         pnlCopy = new javax.swing.JPanel();
         pnlBotonesAdmin = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        pnlMensaje = new javax.swing.JPanel();
-        lblFotoLogo = new javax.swing.JLabel();
-        lblTextoBienvenida = new javax.swing.JLabel();
-        pnlSeccionEmpleado = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        btnGestionEmpleados = new javax.swing.JButton();
+        btnModificarProducto = new javax.swing.JButton();
+        btnGestionarPromociones = new javax.swing.JButton();
+        btnFuncionesEmpleado = new javax.swing.JButton();
+        btnGestionarProveedores = new javax.swing.JButton();
+        btnHistoricoVentas = new javax.swing.JButton();
+        btnInformes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Página Principal Administrador");
@@ -72,7 +76,70 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         pnlPrincipal.setLayout(new java.awt.BorderLayout());
 
+        pnlCabezera.setBackground(new java.awt.Color(255, 204, 51));
+        pnlCabezera.setPreferredSize(new java.awt.Dimension(555, 70));
+        pnlCabezera.setLayout(new java.awt.GridBagLayout());
+
+        lblLogoCostaMarket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        pnlCabezera.add(lblLogoCostaMarket, gridBagConstraints);
+
+        txtMensajeAdmin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtMensajeAdmin.setForeground(new java.awt.Color(0, 0, 0));
+        txtMensajeAdmin.setText("Seleccione un tipo de gestión:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        pnlCabezera.add(txtMensajeAdmin, gridBagConstraints);
+
+        pnlSeccionCliente.setBackground(new java.awt.Color(51, 51, 51));
+        pnlSeccionCliente.setLayout(new java.awt.GridBagLayout());
+
+        lblFotoPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        pnlSeccionCliente.add(lblFotoPerfil, gridBagConstraints);
+
+        txtIDEmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        txtIDEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        txtIDEmpleado.setText("ID Admin");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
+        pnlSeccionCliente.add(txtIDEmpleado, gridBagConstraints);
+
+        btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setForeground(new java.awt.Color(255, 51, 51));
+        btnCerrarSesion.setText("Cerrar Sesión");
+        btnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSesionActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        pnlSeccionCliente.add(btnCerrarSesion, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        gridBagConstraints.weightx = 1.0;
+        pnlCabezera.add(pnlSeccionCliente, gridBagConstraints);
+
+        pnlPrincipal.add(pnlCabezera, java.awt.BorderLayout.PAGE_START);
+
         pnlCopy.setBackground(new java.awt.Color(255, 204, 0));
+        pnlCopy.setPreferredSize(new java.awt.Dimension(555, 70));
 
         javax.swing.GroupLayout pnlCopyLayout = new javax.swing.GroupLayout(pnlCopy);
         pnlCopy.setLayout(pnlCopyLayout);
@@ -82,91 +149,80 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         );
         pnlCopyLayout.setVerticalGroup(
             pnlCopyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 70, Short.MAX_VALUE)
         );
 
         pnlPrincipal.add(pnlCopy, java.awt.BorderLayout.PAGE_END);
 
-        jButton2.setText("LLEVAR A LISTA PEDIDOS");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        pnlBotonesAdmin.setLayout(new java.awt.GridBagLayout());
+
+        btnGestionEmpleados.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGestionEmpleados.setText("Gestionar Empleados");
+        btnGestionEmpleados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnGestionEmpleadosActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout pnlBotonesAdminLayout = new javax.swing.GroupLayout(pnlBotonesAdmin);
-        pnlBotonesAdmin.setLayout(pnlBotonesAdminLayout);
-        pnlBotonesAdminLayout.setHorizontalGroup(
-            pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBotonesAdminLayout.createSequentialGroup()
-                .addGap(379, 379, 379)
-                .addComponent(jButton2)
-                .addContainerGap(304, Short.MAX_VALUE))
-        );
-        pnlBotonesAdminLayout.setVerticalGroup(
-            pnlBotonesAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBotonesAdminLayout.createSequentialGroup()
-                .addGap(175, 175, 175)
-                .addComponent(jButton2)
-                .addContainerGap(191, Short.MAX_VALUE))
-        );
-
-        pnlPrincipal.add(pnlBotonesAdmin, java.awt.BorderLayout.CENTER);
-
-        pnlMensaje.setBackground(new java.awt.Color(255, 204, 51));
-        pnlMensaje.setForeground(new java.awt.Color(255, 255, 255));
-        pnlMensaje.setLayout(new java.awt.GridBagLayout());
-
-        lblFotoLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minicostamarket.png"))); // NOI18N
-        lblFotoLogo.setToolTipText("");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        pnlMensaje.add(lblFotoLogo, gridBagConstraints);
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnGestionEmpleados, gridBagConstraints);
 
-        lblTextoBienvenida.setFont(new java.awt.Font("Segoe UI", 3, 20)); // NOI18N
-        lblTextoBienvenida.setForeground(new java.awt.Color(0, 0, 0));
-        lblTextoBienvenida.setText("Un gusto verle de nuevo!");
+        btnModificarProducto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnModificarProducto.setText("Modificación Producto");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnModificarProducto, gridBagConstraints);
+
+        btnGestionarPromociones.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGestionarPromociones.setText("Gestionar Promociones");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.weightx = 1.0;
-        pnlMensaje.add(lblTextoBienvenida, gridBagConstraints);
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnGestionarPromociones, gridBagConstraints);
 
-        pnlSeccionEmpleado.setLayout(new java.awt.GridBagLayout());
-
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("Cerrar Sesión");
+        btnFuncionesEmpleado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnFuncionesEmpleado.setText("Funciones de Empleado");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        pnlSeccionEmpleado.add(jButton1, gridBagConstraints);
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnFuncionesEmpleado, gridBagConstraints);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perfil.png"))); // NOI18N
+        btnGestionarProveedores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGestionarProveedores.setText("Gestionar Proveedores");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 2;
-        pnlSeccionEmpleado.add(jLabel3, gridBagConstraints);
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnGestionarProveedores, gridBagConstraints);
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setText("ID empleado");
+        btnHistoricoVentas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnHistoricoVentas.setText("Histórico de Ventas");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        pnlSeccionEmpleado.add(jTextField1, gridBagConstraints);
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnHistoricoVentas, gridBagConstraints);
 
+        btnInformes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnInformes.setText("Informes");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-        gridBagConstraints.weightx = 1.0;
-        pnlMensaje.add(pnlSeccionEmpleado, gridBagConstraints);
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 20, 20);
+        pnlBotonesAdmin.add(btnInformes, gridBagConstraints);
 
-        pnlPrincipal.add(pnlMensaje, java.awt.BorderLayout.PAGE_START);
+        pnlPrincipal.add(pnlBotonesAdmin, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -178,17 +234,71 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Lista_Pedidos_Proveedores pedidos_proveedores_admin=new Lista_Pedidos_Proveedores(nombre);
-        pedidos_proveedores_admin.setVisible(true);
+    private void btnGestionarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarEmpleadosActionPerformed
+         Ventana_Creacion_Producto VenCrePro= new Ventana_Creacion_Producto();
+         VenCrePro.setVisible(true);
+         this.dispose();
+    }//GEN-LAST:event_btnGestionarEmpleadosActionPerformed
+
+    private void btnPromocionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPromocionesActionPerformed
+        // TODO add your handling code here:
+        Gestion_Promociones gesPromo= new Gestion_Promociones();
+        gesPromo.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnPromocionesActionPerformed
+
+    private void btnProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresActionPerformed
+        // TODO add your handling code here:
+        Lista_Pedidos_Proveedores LisGesPro= new Lista_Pedidos_Proveedores(nombre);
+        LisGesPro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnProveedoresActionPerformed
+
+    private void btnFuncionesEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionesEmpleadoActionPerformed
+        // TODO add your handling code here:
+        VentanaPrincipalEmpleado VenPrinEm= new VentanaPrincipalEmpleado(nombre);
+        VenPrinEm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnFuncionesEmpleadoActionPerformed
+
+    private void btnGestionProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionProductoActionPerformed
+        // TODO add your handling code here:
+        VentanaGestionProductos VenGesPro= new VentanaGestionProductos(nombre);
+        VenGesPro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnGestionProductoActionPerformed
+
+    private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
+        // TODO add your handling code here:
+        Gestion_ventas_cajasDiarias GesVenCaja= new Gestion_ventas_cajasDiarias(nombre);
+        GesVenCaja.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVentasActionPerformed
+
+    private void btnInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformesActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this,"Ventana en construcción, por favor seleccione otra opción.","Apartado en construcción.",JOptionPane.WARNING_MESSAGE);
+    }//GEN-LAST:event_btnInformesActionPerformed
+
+    private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
+        // TODO add your handling code here:
+        VentanaLogin VenLog = new VentanaLogin();
+        VenLog.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCerrarSesionActionPerformed
+
+    private void btnGestionEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionEmpleadosActionPerformed
+        // TODO add your handling code here:
+        VentanaGestiónEmpleado VenGesEm= new VentanaGestiónEmpleado();
+        VenGesEm.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnGestionEmpleadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,16 +326,22 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel lblFotoLogo;
-    private javax.swing.JLabel lblTextoBienvenida;
+    private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnFuncionesEmpleado;
+    private javax.swing.JButton btnGestionEmpleados;
+    private javax.swing.JButton btnGestionarPromociones;
+    private javax.swing.JButton btnGestionarProveedores;
+    private javax.swing.JButton btnHistoricoVentas;
+    private javax.swing.JButton btnInformes;
+    private javax.swing.JButton btnModificarProducto;
+    private javax.swing.JLabel lblFotoPerfil;
+    private javax.swing.JLabel lblLogoCostaMarket;
     private javax.swing.JPanel pnlBotonesAdmin;
+    private javax.swing.JPanel pnlCabezera;
     private javax.swing.JPanel pnlCopy;
-    private javax.swing.JPanel pnlMensaje;
     private javax.swing.JPanel pnlPrincipal;
-    private javax.swing.JPanel pnlSeccionEmpleado;
+    private javax.swing.JPanel pnlSeccionCliente;
+    private javax.swing.JTextField txtIDEmpleado;
+    private javax.swing.JLabel txtMensajeAdmin;
     // End of variables declaration//GEN-END:variables
 }

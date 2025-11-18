@@ -15,7 +15,7 @@ import javax.swing.JLabel;
  * @author MEDAC
  */
 public class VentanaGestionProductos extends javax.swing.JFrame {
-    
+    String nombre;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaGestionProductos.class.getName());
 
     /**
@@ -36,8 +36,14 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         PnlCentral.getVerticalScrollBar().setUnitIncrement(35);
-        lblUsuario.setText(nombre);
-        lblPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
+        this.nombre=nombre;
+        if(this.nombre.trim().equals("lobatito")){
+           lblUsuario.setText(nombre);
+           lblPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
+        }else if(this.nombre.trim().equals("CR7")){
+            lblUsuario.setText(nombre);
+           lblPerfil.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
+        }
     }
 
     /**
@@ -756,6 +762,11 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         BtnSalir.setForeground(new java.awt.Color(255, 255, 255));
         BtnSalir.setText("SALIR");
         BtnSalir.setPreferredSize(new java.awt.Dimension(150, 60));
+        BtnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSalirActionPerformed(evt);
+            }
+        });
         PnlSalir.add(BtnSalir, new java.awt.GridBagConstraints());
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -3443,6 +3454,18 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
        vuelta_inicio.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_BtnCerrarActionPerformed
+
+    private void BtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalirActionPerformed
+                if(this.nombre.equals("lobatito")){
+           VentanaPrincipalAdministrador vuelta_admin=new VentanaPrincipalAdministrador(nombre);
+           vuelta_admin.setVisible(true);
+           this.dispose();
+        }else{
+            VentanaPrincipalEmpleado vuelta_emple=new VentanaPrincipalEmpleado(nombre);
+            vuelta_emple.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_BtnSalirActionPerformed
 
     /**
      * @param args the command line arguments

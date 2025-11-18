@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectosupermecado;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author MEDAC
@@ -17,8 +19,15 @@ public class Gestion_Promociones extends javax.swing.JFrame {
      */
     public Gestion_Promociones() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+    }
+      public Gestion_Promociones(String nombre) {
+        initComponents();
         this.nombre=nombre;
         setExtendedState(MAXIMIZED_BOTH);
+           LblUsuario.setText(this.nombre);
+        LblPerfil.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
+    
     }
 
     /**
