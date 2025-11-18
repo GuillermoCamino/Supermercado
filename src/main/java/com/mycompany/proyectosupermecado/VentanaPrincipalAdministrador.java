@@ -170,6 +170,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         btnModificarProducto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnModificarProducto.setText("Modificación Producto");
+        btnModificarProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarProductoActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
@@ -179,6 +184,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         btnGestionarPromociones.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnGestionarPromociones.setText("Gestionar Promociones");
+        btnGestionarPromociones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGestionarPromocionesActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -188,6 +198,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         btnFuncionesEmpleado.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnFuncionesEmpleado.setText("Funciones de Empleado");
+        btnFuncionesEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFuncionesEmpleadoActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -197,6 +212,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         btnGestionarProveedores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnGestionarProveedores.setText("Gestionar Proveedores");
+        btnGestionarProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGestionarProveedoresActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
@@ -206,6 +226,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         btnHistoricoVentas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnHistoricoVentas.setText("Histórico de Ventas");
+        btnHistoricoVentas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHistoricoVentasActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -215,6 +240,11 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
 
         btnInformes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnInformes.setText("Informes");
+        btnInformes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInformesActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
@@ -234,7 +264,7 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
         );
 
         pack();
@@ -299,6 +329,34 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         VenGesEm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGestionEmpleadosActionPerformed
+
+    private void btnGestionarPromocionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarPromocionesActionPerformed
+        // TODO add your handling code here:
+        Gestion_Promociones gestpro= new Gestion_Promociones();
+        gestpro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnGestionarPromocionesActionPerformed
+
+    private void btnGestionarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionarProveedoresActionPerformed
+        // TODO add your handling code here:
+        Lista_Pedidos_Proveedores lispedpro= new Lista_Pedidos_Proveedores();
+        lispedpro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnGestionarProveedoresActionPerformed
+
+    private void btnModificarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarProductoActionPerformed
+        // TODO add your handling code here:
+        VentanaModificacionProductos modifProd= new VentanaModificacionProductos();
+        modifProd.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnModificarProductoActionPerformed
+
+    private void btnHistoricoVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoricoVentasActionPerformed
+        // TODO add your handling code here:
+        Gestion_ventas_cajasDiarias gestvendia= new Gestion_ventas_cajasDiarias();
+        gestvendia.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnHistoricoVentasActionPerformed
 
     /**
      * @param args the command line arguments
