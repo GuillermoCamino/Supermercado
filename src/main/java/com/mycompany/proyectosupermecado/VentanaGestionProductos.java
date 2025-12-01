@@ -31,6 +31,8 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         PnlCentral.getVerticalScrollBar().setUnitIncrement(35);
+        
+        
     }
         public VentanaGestionProductos(String nombre) {
         initComponents();
@@ -92,315 +94,44 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlCentral = new javax.swing.JScrollPane();
         PnlContenedor = new javax.swing.JPanel();
         PnlConservas = new javax.swing.JPanel();
+        productoGestionProducto1 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto2 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto3 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
         TtlConservas = new javax.swing.JLabel();
-        lblIconoC1 = new javax.swing.JLabel();
-        BtnStockC1 = new javax.swing.JButton();
-        lblDescripcionC1 = new javax.swing.JLabel();
-        lblIconoC2 = new javax.swing.JLabel();
-        lblDescripcionC2 = new javax.swing.JLabel();
-        BtnStockC2 = new javax.swing.JButton();
-        lblIconoC3 = new javax.swing.JLabel();
-        lblDescripcionC3 = new javax.swing.JLabel();
-        BtnStockC3 = new javax.swing.JButton();
-        lblIconoC4 = new javax.swing.JLabel();
-        lblDescripcionC4 = new javax.swing.JLabel();
-        BtnStockC4 = new javax.swing.JButton();
-        lblIconoC5 = new javax.swing.JLabel();
-        lblDescripcionC5 = new javax.swing.JLabel();
-        BtnStockC5 = new javax.swing.JButton();
-        lblIconoC6 = new javax.swing.JLabel();
-        lblDescripcionC6 = new javax.swing.JLabel();
-        BtnStockC6 = new javax.swing.JButton();
-        lblStockC1 = new javax.swing.JLabel();
-        lblStockC2 = new javax.swing.JLabel();
-        lblStockC3 = new javax.swing.JLabel();
-        lblStockC6 = new javax.swing.JLabel();
-        lblStockC5 = new javax.swing.JLabel();
-        lblStockC4 = new javax.swing.JLabel();
-        lblAlertaC1 = new javax.swing.JLabel();
-        lblAlertaC2 = new javax.swing.JLabel();
-        lblAlertaC3 = new javax.swing.JLabel();
-        lblAlertaC4 = new javax.swing.JLabel();
-        lblAlertaC5 = new javax.swing.JLabel();
-        lblAlertaC6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        lblCodigoC1 = new javax.swing.JLabel();
-        lblCodigoC2 = new javax.swing.JLabel();
-        lblCodigoC3 = new javax.swing.JLabel();
-        lblCodigoC4 = new javax.swing.JLabel();
-        lblCodigoC5 = new javax.swing.JLabel();
-        lblCodigoC6 = new javax.swing.JLabel();
         PnlPastasCereales = new javax.swing.JPanel();
-        BtnStockP4 = new javax.swing.JButton();
-        lblDescripcionP4 = new javax.swing.JLabel();
-        lblIconoP4 = new javax.swing.JLabel();
-        BtnStockP1 = new javax.swing.JButton();
-        lblDescripcionP1 = new javax.swing.JLabel();
-        lblIconoP1 = new javax.swing.JLabel();
-        lblIconoP2 = new javax.swing.JLabel();
-        lblDescripcionP2 = new javax.swing.JLabel();
-        BtnStockP2 = new javax.swing.JButton();
-        lblIconoP5 = new javax.swing.JLabel();
-        lblDescripcionP5 = new javax.swing.JLabel();
-        BtnStockP5 = new javax.swing.JButton();
-        BtnStockP6 = new javax.swing.JButton();
-        lblDescripcionP6 = new javax.swing.JLabel();
-        lblIconoP6 = new javax.swing.JLabel();
-        BtnStockP3 = new javax.swing.JButton();
-        lblDescripcionP3 = new javax.swing.JLabel();
-        lblIconoP3 = new javax.swing.JLabel();
         TtlPastasCereales = new javax.swing.JLabel();
-        lblStockP1 = new javax.swing.JLabel();
-        lblStockP2 = new javax.swing.JLabel();
-        lblStockP3 = new javax.swing.JLabel();
-        lblStockP4 = new javax.swing.JLabel();
-        lblStockP5 = new javax.swing.JLabel();
-        lblStockP6 = new javax.swing.JLabel();
-        lblAlertaP1 = new javax.swing.JLabel();
-        lblAlertaP2 = new javax.swing.JLabel();
-        lblAlertaP3 = new javax.swing.JLabel();
-        lblAlertaP4 = new javax.swing.JLabel();
-        lblAlertaP5 = new javax.swing.JLabel();
-        lblAlertaP6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        lblCodigoP1 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        lblCodigoP2 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        lblCodigoP3 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        lblCodigoP4 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        lblCodigoP5 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        lblCodigoP6 = new javax.swing.JLabel();
+        productoGestionProducto7 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto8 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
         PnlAperitivos = new javax.swing.JPanel();
-        BtnStockA4 = new javax.swing.JButton();
-        lblDescripcionA4 = new javax.swing.JLabel();
-        lblIconoA4 = new javax.swing.JLabel();
-        BtnStockA1 = new javax.swing.JButton();
-        lblDescripcionA1 = new javax.swing.JLabel();
-        lblIconoA1 = new javax.swing.JLabel();
-        lblIconoA2 = new javax.swing.JLabel();
-        lblDescripcionA2 = new javax.swing.JLabel();
-        BtnStockA2 = new javax.swing.JButton();
-        lblIconoA5 = new javax.swing.JLabel();
-        lblDescripcionA5 = new javax.swing.JLabel();
-        BtnStockA5 = new javax.swing.JButton();
-        BtnStockA6 = new javax.swing.JButton();
-        lblDescripcionA6 = new javax.swing.JLabel();
-        lblIconoA6 = new javax.swing.JLabel();
-        BtnStockA3 = new javax.swing.JButton();
-        lblDescripcionA3 = new javax.swing.JLabel();
-        lblIconoA3 = new javax.swing.JLabel();
         TtlAperitivos = new javax.swing.JLabel();
-        lblStockA1 = new javax.swing.JLabel();
-        lblStockA2 = new javax.swing.JLabel();
-        lblStockA3 = new javax.swing.JLabel();
-        lblStockA4 = new javax.swing.JLabel();
-        lblStockA5 = new javax.swing.JLabel();
-        lblStockA6 = new javax.swing.JLabel();
-        lblAlertaA1 = new javax.swing.JLabel();
-        lblAlertaA2 = new javax.swing.JLabel();
-        lblAlertaA3 = new javax.swing.JLabel();
-        lblAlertaA4 = new javax.swing.JLabel();
-        lblAlertaA5 = new javax.swing.JLabel();
-        lblAlertaA6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        lblCodigoA1 = new javax.swing.JLabel();
-        lblCodigoA2 = new javax.swing.JLabel();
-        lblCodigoA3 = new javax.swing.JLabel();
-        lblCodigoA4 = new javax.swing.JLabel();
-        lblCodigoA5 = new javax.swing.JLabel();
-        lblCodigoA6 = new javax.swing.JLabel();
+        productoGestionProducto9 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto10 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto11 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto12 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
         PnlDulces = new javax.swing.JPanel();
-        BtnStockD4 = new javax.swing.JButton();
-        lblDescripcionD4 = new javax.swing.JLabel();
-        lblIconoD4 = new javax.swing.JLabel();
-        BtnStockD1 = new javax.swing.JButton();
-        lblDescripcionD1 = new javax.swing.JLabel();
-        lblIconoD1 = new javax.swing.JLabel();
-        lblIconoD2 = new javax.swing.JLabel();
-        lblDescripcionD2 = new javax.swing.JLabel();
-        BtnStockD2 = new javax.swing.JButton();
-        lblIconoD5 = new javax.swing.JLabel();
-        lblDescripcionD5 = new javax.swing.JLabel();
-        BtnStockD5 = new javax.swing.JButton();
-        BtnStockD6 = new javax.swing.JButton();
-        lblDescripcionD6 = new javax.swing.JLabel();
-        lblIconoD6 = new javax.swing.JLabel();
-        BtnStockD3 = new javax.swing.JButton();
-        lblDescripcionD3 = new javax.swing.JLabel();
-        lblIconoD3 = new javax.swing.JLabel();
         TtlDulces = new javax.swing.JLabel();
-        lblStockD1 = new javax.swing.JLabel();
-        lblStockD2 = new javax.swing.JLabel();
-        lblStockD3 = new javax.swing.JLabel();
-        lblStockD4 = new javax.swing.JLabel();
-        lblStockD5 = new javax.swing.JLabel();
-        lblStockD6 = new javax.swing.JLabel();
-        lblAlertaD1 = new javax.swing.JLabel();
-        lblAlertaD2 = new javax.swing.JLabel();
-        lblAlertaD3 = new javax.swing.JLabel();
-        lblAlertaD4 = new javax.swing.JLabel();
-        lblAlertaD5 = new javax.swing.JLabel();
-        lblAlertaD6 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        productoGestionProducto13 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto14 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
         PnlCondimentos = new javax.swing.JPanel();
-        BtnStockCo4 = new javax.swing.JButton();
-        lblDescripcionCo4 = new javax.swing.JLabel();
-        lblIconoCo4 = new javax.swing.JLabel();
-        BtnStockCo1 = new javax.swing.JButton();
-        lblDescripcionCo1 = new javax.swing.JLabel();
-        lblIconoCo1 = new javax.swing.JLabel();
-        lblIconoCo2 = new javax.swing.JLabel();
-        lblDescripcionCo2 = new javax.swing.JLabel();
-        BtnStockCo2 = new javax.swing.JButton();
-        lblIconoCo5 = new javax.swing.JLabel();
-        lblDescripcionCo5 = new javax.swing.JLabel();
-        BtnStockCo5 = new javax.swing.JButton();
-        BtnStockCo6 = new javax.swing.JButton();
-        lblDescripcionCo6 = new javax.swing.JLabel();
-        lblIconoCo6 = new javax.swing.JLabel();
-        BtnStockCo3 = new javax.swing.JButton();
-        lblDescripcionCo3 = new javax.swing.JLabel();
-        lblIconoCo3 = new javax.swing.JLabel();
         TtlCondimentos = new javax.swing.JLabel();
-        lblStockCo1 = new javax.swing.JLabel();
-        lblStockCo2 = new javax.swing.JLabel();
-        lblStockCo3 = new javax.swing.JLabel();
-        lblStockCo4 = new javax.swing.JLabel();
-        lblStockCo5 = new javax.swing.JLabel();
-        lblStockCo6 = new javax.swing.JLabel();
-        lblAlertaCo1 = new javax.swing.JLabel();
-        lblAlertaCo2 = new javax.swing.JLabel();
-        lblAlertaCo3 = new javax.swing.JLabel();
-        lblAlertaCo4 = new javax.swing.JLabel();
-        lblAlertaCo5 = new javax.swing.JLabel();
-        lblAlertaCo6 = new javax.swing.JLabel();
+        productoGestionProducto15 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
         PnlLacteos = new javax.swing.JPanel();
-        BtnStockL4 = new javax.swing.JButton();
-        lblDescripcionL4 = new javax.swing.JLabel();
-        lblIconoL4 = new javax.swing.JLabel();
-        BtnStockL1 = new javax.swing.JButton();
-        lblDescripcionL1 = new javax.swing.JLabel();
-        lblIconoL1 = new javax.swing.JLabel();
-        lblIconoL2 = new javax.swing.JLabel();
-        lblDescripcionL2 = new javax.swing.JLabel();
-        BtnStockL2 = new javax.swing.JButton();
-        lblIconoL5 = new javax.swing.JLabel();
-        lblDescripcionL5 = new javax.swing.JLabel();
-        BtnStockL5 = new javax.swing.JButton();
-        BtnStockL6 = new javax.swing.JButton();
-        lblDescripcionL6 = new javax.swing.JLabel();
-        lblIconoL6 = new javax.swing.JLabel();
-        BtnStockL3 = new javax.swing.JButton();
-        lblDescripcionL3 = new javax.swing.JLabel();
-        lblIconoL3 = new javax.swing.JLabel();
         TtlLacteos = new javax.swing.JLabel();
-        lblStockL1 = new javax.swing.JLabel();
-        lblStockL2 = new javax.swing.JLabel();
-        lblStockL3 = new javax.swing.JLabel();
-        lblStockL4 = new javax.swing.JLabel();
-        lblStockL5 = new javax.swing.JLabel();
-        lblStockL6 = new javax.swing.JLabel();
-        lblAlertaL1 = new javax.swing.JLabel();
-        lblAlertaL2 = new javax.swing.JLabel();
-        lblAlertaL3 = new javax.swing.JLabel();
-        lblAlertaL4 = new javax.swing.JLabel();
-        lblAlertaL5 = new javax.swing.JLabel();
-        lblAlertaL6 = new javax.swing.JLabel();
+        productoGestionProducto4 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto5 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto6 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto16 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto17 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
         PnlZumosBebidas = new javax.swing.JPanel();
-        BtnStockZ4 = new javax.swing.JButton();
-        lblDescripcionZ4 = new javax.swing.JLabel();
-        lblIconoZ4 = new javax.swing.JLabel();
-        BtnStockZ1 = new javax.swing.JButton();
-        lblDescripcionZ1 = new javax.swing.JLabel();
-        lblIconoZ1 = new javax.swing.JLabel();
-        lblIconoZ2 = new javax.swing.JLabel();
-        lblDescripcionZ2 = new javax.swing.JLabel();
-        BtnStockZ2 = new javax.swing.JButton();
-        lblIconoZ5 = new javax.swing.JLabel();
-        lblDescripcionZ5 = new javax.swing.JLabel();
-        BtnStockZ5 = new javax.swing.JButton();
-        BtnStockZ6 = new javax.swing.JButton();
-        lblDescripcionZ6 = new javax.swing.JLabel();
-        lblIconoZ6 = new javax.swing.JLabel();
-        BtnStockZ3 = new javax.swing.JButton();
-        lblDescripcionZ3 = new javax.swing.JLabel();
-        lblIconoZ3 = new javax.swing.JLabel();
         TtlZumosBebidas = new javax.swing.JLabel();
-        lblStockZ1 = new javax.swing.JLabel();
-        lblStockZ2 = new javax.swing.JLabel();
-        lblStockZ3 = new javax.swing.JLabel();
-        lblStockZ4 = new javax.swing.JLabel();
-        lblStockZ5 = new javax.swing.JLabel();
-        lblStockZ6 = new javax.swing.JLabel();
-        lblAlertaZ1 = new javax.swing.JLabel();
-        lblAlertaZ2 = new javax.swing.JLabel();
-        lblAlertaZ3 = new javax.swing.JLabel();
-        lblAlertaZ4 = new javax.swing.JLabel();
-        lblAlertaZ5 = new javax.swing.JLabel();
-        lblAlertaZ6 = new javax.swing.JLabel();
+        productoGestionProducto18 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
         PnlAlcoholicas = new javax.swing.JPanel();
-        BtnStockAl4 = new javax.swing.JButton();
-        lblDescripcionAl4 = new javax.swing.JLabel();
-        lblIconoAl4 = new javax.swing.JLabel();
-        BtnStockAl1 = new javax.swing.JButton();
-        lblDescripcionAl1 = new javax.swing.JLabel();
-        lblIconoAl1 = new javax.swing.JLabel();
-        lblIconoAl2 = new javax.swing.JLabel();
-        lblDescripcionAl2 = new javax.swing.JLabel();
-        BtnStockAl2 = new javax.swing.JButton();
-        lblIconoAl5 = new javax.swing.JLabel();
-        lblDescripcionAl5 = new javax.swing.JLabel();
-        BtnStockAl5 = new javax.swing.JButton();
-        BtnStockAl6 = new javax.swing.JButton();
-        lblDescripcionAl6 = new javax.swing.JLabel();
-        lblIconoAl6 = new javax.swing.JLabel();
-        BtnStockAl3 = new javax.swing.JButton();
-        lblDescripcionAl3 = new javax.swing.JLabel();
-        lblIconoAl3 = new javax.swing.JLabel();
         TtlAlcoholicas = new javax.swing.JLabel();
-        lblStockAl1 = new javax.swing.JLabel();
-        lblStockAl2 = new javax.swing.JLabel();
-        lblStockAl3 = new javax.swing.JLabel();
-        lblStockAl4 = new javax.swing.JLabel();
-        lblStockAl5 = new javax.swing.JLabel();
-        lblStockAl6 = new javax.swing.JLabel();
-        lblAlertaAl1 = new javax.swing.JLabel();
-        lblAlertaAl2 = new javax.swing.JLabel();
-        lblAlertaAl3 = new javax.swing.JLabel();
-        lblAlertaAl4 = new javax.swing.JLabel();
-        lblAlertaAl5 = new javax.swing.JLabel();
-        lblAlertaAl6 = new javax.swing.JLabel();
+        productoGestionProducto19 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
+        productoGestionProducto20 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
         PnlCervezas = new javax.swing.JPanel();
-        BtnStockCe1 = new javax.swing.JButton();
-        lblDescripcionCe1 = new javax.swing.JLabel();
-        lblIconoCe1 = new javax.swing.JLabel();
-        lblIconoCe2 = new javax.swing.JLabel();
-        lblDescripcionCe2 = new javax.swing.JLabel();
-        BtnStockCe2 = new javax.swing.JButton();
-        BtnStockCe3 = new javax.swing.JButton();
-        lblDescripcionCe3 = new javax.swing.JLabel();
-        lblIconoCe3 = new javax.swing.JLabel();
         TtlCervezas = new javax.swing.JLabel();
-        lblStockCe1 = new javax.swing.JLabel();
-        lblStockCe2 = new javax.swing.JLabel();
-        lblStockCe3 = new javax.swing.JLabel();
-        lblAlertaCe1 = new javax.swing.JLabel();
-        lblAlertaCe2 = new javax.swing.JLabel();
-        lblAlertaCe3 = new javax.swing.JLabel();
+        productoGestionProducto21 = new com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto();
         PnlNuevos = new javax.swing.JPanel();
         TtlNuevos = new javax.swing.JLabel();
         PnlProductos = new javax.swing.JPanel();
@@ -785,728 +516,61 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlContenedor.setLayout(new java.awt.GridBagLayout());
 
         PnlConservas.setBackground(new java.awt.Color(255, 255, 255));
-        PnlConservas.setPreferredSize(new java.awt.Dimension(1500, 900));
+        PnlConservas.setPreferredSize(new java.awt.Dimension(1500, 1000));
         PnlConservas.setRequestFocusEnabled(false);
         PnlConservas.setLayout(new java.awt.GridBagLayout());
+
+        productoGestionProducto1.setName(""); // NOI18N
+        productoGestionProducto1.setVerifyInputWhenFocusTarget(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(10, 30, 10, 30);
+        PnlConservas.add(productoGestionProducto1, gridBagConstraints);
+
+        productoGestionProducto2.setLblNombre(null);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(10, 30, 10, 30);
+        PnlConservas.add(productoGestionProducto2, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(10, 30, 10, 30);
+        PnlConservas.add(productoGestionProducto3, gridBagConstraints);
 
         TtlConservas.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         TtlConservas.setText("Conservas");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.weightx = 1.0;
         PnlConservas.add(TtlConservas, gridBagConstraints);
-
-        lblIconoC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atun.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlConservas.add(lblIconoC1, gridBagConstraints);
-
-        BtnStockC1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC1.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(BtnStockC1, gridBagConstraints);
-
-        lblDescripcionC1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionC1.setText("Atún - 3,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(lblDescripcionC1, gridBagConstraints);
-
-        lblIconoC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guisante.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlConservas.add(lblIconoC2, gridBagConstraints);
-
-        lblDescripcionC2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionC2.setText("Guisantes - 3,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(lblDescripcionC2, gridBagConstraints);
-
-        BtnStockC2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC2.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(BtnStockC2, gridBagConstraints);
-
-        lblIconoC3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aceituna.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlConservas.add(lblIconoC3, gridBagConstraints);
-
-        lblDescripcionC3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionC3.setText("Acecitunas - 4,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(lblDescripcionC3, gridBagConstraints);
-
-        BtnStockC3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC3.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(BtnStockC3, gridBagConstraints);
-
-        lblIconoC4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gato.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlConservas.add(lblIconoC4, gridBagConstraints);
-
-        lblDescripcionC4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionC4.setText("Comida para gato - 6,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(lblDescripcionC4, gridBagConstraints);
-
-        BtnStockC4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC4.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(BtnStockC4, gridBagConstraints);
-
-        lblIconoC5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/perro.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlConservas.add(lblIconoC5, gridBagConstraints);
-
-        lblDescripcionC5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionC5.setText("Comida para perro - 6,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(lblDescripcionC5, gridBagConstraints);
-
-        BtnStockC5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC5.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(BtnStockC5, gridBagConstraints);
-
-        lblIconoC6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bebe.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlConservas.add(lblIconoC6, gridBagConstraints);
-
-        lblDescripcionC6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionC6.setText("Niño infante - 0,03€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(lblDescripcionC6, gridBagConstraints);
-
-        BtnStockC6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockC6.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlConservas.add(BtnStockC6, gridBagConstraints);
-
-        lblStockC1.setText("100");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.ipadx = 1;
-        PnlConservas.add(lblStockC1, gridBagConstraints);
-
-        lblStockC2.setText("100");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 4;
-        PnlConservas.add(lblStockC2, gridBagConstraints);
-
-        lblStockC3.setText("100");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 4;
-        PnlConservas.add(lblStockC3, gridBagConstraints);
-
-        lblStockC6.setText("3");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 10;
-        PnlConservas.add(lblStockC6, gridBagConstraints);
-
-        lblStockC5.setText("100");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 10;
-        PnlConservas.add(lblStockC5, gridBagConstraints);
-
-        lblStockC4.setText("100");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 10;
-        PnlConservas.add(lblStockC4, gridBagConstraints);
-
-        lblAlertaC1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        PnlConservas.add(lblAlertaC1, gridBagConstraints);
-
-        lblAlertaC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 4;
-        PnlConservas.add(lblAlertaC2, gridBagConstraints);
-
-        lblAlertaC3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 4;
-        PnlConservas.add(lblAlertaC3, gridBagConstraints);
-
-        lblAlertaC4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 10;
-        PnlConservas.add(lblAlertaC4, gridBagConstraints);
-
-        lblAlertaC5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 10;
-        PnlConservas.add(lblAlertaC5, gridBagConstraints);
-
-        lblAlertaC6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoerror.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 10;
-        PnlConservas.add(lblAlertaC6, gridBagConstraints);
-
-        jLabel1.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlConservas.add(jLabel1, gridBagConstraints);
-
-        jLabel2.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlConservas.add(jLabel2, gridBagConstraints);
-
-        jLabel3.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlConservas.add(jLabel3, gridBagConstraints);
-
-        jLabel4.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlConservas.add(jLabel4, gridBagConstraints);
-
-        jLabel5.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlConservas.add(jLabel5, gridBagConstraints);
-
-        jLabel6.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlConservas.add(jLabel6, gridBagConstraints);
-
-        lblCodigoC1.setText("48392015");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        PnlConservas.add(lblCodigoC1, gridBagConstraints);
-
-        lblCodigoC2.setText("72018493");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        PnlConservas.add(lblCodigoC2, gridBagConstraints);
-
-        lblCodigoC3.setText("15974308");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        PnlConservas.add(lblCodigoC3, gridBagConstraints);
-
-        lblCodigoC4.setText("60429187");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 3;
-        PnlConservas.add(lblCodigoC4, gridBagConstraints);
-
-        lblCodigoC5.setText("21750846");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 3;
-        PnlConservas.add(lblCodigoC5, gridBagConstraints);
-
-        lblCodigoC6.setText("98301452");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 3;
-        PnlConservas.add(lblCodigoC6, gridBagConstraints);
 
         PnlContenedor.add(PnlConservas, new java.awt.GridBagConstraints());
 
         PnlPastasCereales.setBackground(new java.awt.Color(255, 255, 255));
-        PnlPastasCereales.setPreferredSize(new java.awt.Dimension(1500, 900));
+        PnlPastasCereales.setPreferredSize(new java.awt.Dimension(1500, 1000));
         PnlPastasCereales.setLayout(new java.awt.GridBagLayout());
-
-        BtnStockP4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP4.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 12;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(BtnStockP4, gridBagConstraints);
-
-        lblDescripcionP4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionP4.setText("Kellogs - 3,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(lblDescripcionP4, gridBagConstraints);
-
-        lblIconoP4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kellogs.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlPastasCereales.add(lblIconoP4, gridBagConstraints);
-
-        BtnStockP1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP1.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(BtnStockP1, gridBagConstraints);
-
-        lblDescripcionP1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionP1.setText("Macarrones - 4,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(lblDescripcionP1, gridBagConstraints);
-
-        lblIconoP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/macarrone.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlPastasCereales.add(lblIconoP1, gridBagConstraints);
-
-        lblIconoP2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/espagueti.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlPastasCereales.add(lblIconoP2, gridBagConstraints);
-
-        lblDescripcionP2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionP2.setText("Sphagettis - 3,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(lblDescripcionP2, gridBagConstraints);
-
-        BtnStockP2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP2.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(BtnStockP2, gridBagConstraints);
-
-        lblIconoP5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cincuenta.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlPastasCereales.add(lblIconoP5, gridBagConstraints);
-
-        lblDescripcionP5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionP5.setText("Billete de 50 - 50,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(lblDescripcionP5, gridBagConstraints);
-
-        BtnStockP5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP5.setText("Añadir Stock");
-        BtnStockP5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnStockP5ActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 12;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(BtnStockP5, gridBagConstraints);
-
-        BtnStockP6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP6.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 12;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(BtnStockP6, gridBagConstraints);
-
-        lblDescripcionP6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionP6.setText("Krave - 2,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(lblDescripcionP6, gridBagConstraints);
-
-        lblIconoP6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/krave.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlPastasCereales.add(lblIconoP6, gridBagConstraints);
-
-        BtnStockP3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockP3.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(BtnStockP3, gridBagConstraints);
-
-        lblDescripcionP3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionP3.setText("Choco Flakes - 2,99€");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlPastasCereales.add(lblDescripcionP3, gridBagConstraints);
-
-        lblIconoP3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/choco.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlPastasCereales.add(lblIconoP3, gridBagConstraints);
 
         TtlPastasCereales.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         TtlPastasCereales.setText("Pastas/Cereales");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.weightx = 1.0;
         PnlPastasCereales.add(TtlPastasCereales, gridBagConstraints);
-
-        lblStockP1.setText("60");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlPastasCereales.add(productoGestionProducto7, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 4;
-        PnlPastasCereales.add(lblStockP1, gridBagConstraints);
-
-        lblStockP2.setText("60");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 4;
-        PnlPastasCereales.add(lblStockP2, gridBagConstraints);
-
-        lblStockP3.setText("60");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 4;
-        PnlPastasCereales.add(lblStockP3, gridBagConstraints);
-
-        lblStockP4.setText("60");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 11;
-        PnlPastasCereales.add(lblStockP4, gridBagConstraints);
-
-        lblStockP5.setText("13");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 11;
-        PnlPastasCereales.add(lblStockP5, gridBagConstraints);
-
-        lblStockP6.setText("60");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 11;
-        PnlPastasCereales.add(lblStockP6, gridBagConstraints);
-
-        lblAlertaP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        PnlPastasCereales.add(lblAlertaP1, gridBagConstraints);
-
-        lblAlertaP2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 4;
-        PnlPastasCereales.add(lblAlertaP2, gridBagConstraints);
-
-        lblAlertaP3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 4;
-        PnlPastasCereales.add(lblAlertaP3, gridBagConstraints);
-
-        lblAlertaP4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 11;
-        PnlPastasCereales.add(lblAlertaP4, gridBagConstraints);
-
-        lblAlertaP5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoalerta.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 11;
-        PnlPastasCereales.add(lblAlertaP5, gridBagConstraints);
-
-        lblAlertaP6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 11;
-        PnlPastasCereales.add(lblAlertaP6, gridBagConstraints);
-
-        jLabel7.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        PnlPastasCereales.add(jLabel7, gridBagConstraints);
-
-        lblCodigoP1.setText("53872019");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        PnlPastasCereales.add(lblCodigoP1, gridBagConstraints);
-
-        jLabel9.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        PnlPastasCereales.add(jLabel9, gridBagConstraints);
-
-        lblCodigoP2.setText("10294857");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        PnlPastasCereales.add(lblCodigoP2, gridBagConstraints);
-
-        jLabel11.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        PnlPastasCereales.add(jLabel11, gridBagConstraints);
-
-        lblCodigoP3.setText("86420153");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        PnlPastasCereales.add(lblCodigoP3, gridBagConstraints);
-
-        jLabel13.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        PnlPastasCereales.add(jLabel13, gridBagConstraints);
-
-        lblCodigoP4.setText("79531028");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 3;
-        PnlPastasCereales.add(lblCodigoP4, gridBagConstraints);
-
-        jLabel15.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        PnlPastasCereales.add(jLabel15, gridBagConstraints);
-
-        lblCodigoP5.setText("34985721");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 3;
-        PnlPastasCereales.add(lblCodigoP5, gridBagConstraints);
-
-        jLabel17.setText("En Stock:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        PnlPastasCereales.add(jLabel17, gridBagConstraints);
-
-        lblCodigoP6.setText("90814263");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 3;
-        PnlPastasCereales.add(lblCodigoP6, gridBagConstraints);
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlPastasCereales.add(productoGestionProducto8, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1514,364 +578,40 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlContenedor.add(PnlPastasCereales, gridBagConstraints);
 
         PnlAperitivos.setBackground(new java.awt.Color(255, 255, 255));
-        PnlAperitivos.setPreferredSize(new java.awt.Dimension(1500, 900));
+        PnlAperitivos.setPreferredSize(new java.awt.Dimension(1500, 1000));
         PnlAperitivos.setLayout(new java.awt.GridBagLayout());
-
-        BtnStockA4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA4.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(BtnStockA4, gridBagConstraints);
-
-        lblDescripcionA4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionA4.setText("Jumpers");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(lblDescripcionA4, gridBagConstraints);
-
-        lblIconoA4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jumpers.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAperitivos.add(lblIconoA4, gridBagConstraints);
-
-        BtnStockA1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA1.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(BtnStockA1, gridBagConstraints);
-
-        lblDescripcionA1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionA1.setText("Pringles clásicas");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(lblDescripcionA1, gridBagConstraints);
-
-        lblIconoA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pringles.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAperitivos.add(lblIconoA1, gridBagConstraints);
-
-        lblIconoA2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fritas.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAperitivos.add(lblIconoA2, gridBagConstraints);
-
-        lblDescripcionA2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionA2.setText("Patatas fritas");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(lblDescripcionA2, gridBagConstraints);
-
-        BtnStockA2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA2.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(BtnStockA2, gridBagConstraints);
-
-        lblIconoA5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/palomitas.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAperitivos.add(lblIconoA5, gridBagConstraints);
-
-        lblDescripcionA5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionA5.setText("Palomitas de mantequilla");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(lblDescripcionA5, gridBagConstraints);
-
-        BtnStockA5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA5.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(BtnStockA5, gridBagConstraints);
-
-        BtnStockA6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA6.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(BtnStockA6, gridBagConstraints);
-
-        lblDescripcionA6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionA6.setText("Gusanitos");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(lblDescripcionA6, gridBagConstraints);
-
-        lblIconoA6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gusanitos.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAperitivos.add(lblIconoA6, gridBagConstraints);
-
-        BtnStockA3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockA3.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(BtnStockA3, gridBagConstraints);
-
-        lblDescripcionA3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionA3.setText("Doritos");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAperitivos.add(lblDescripcionA3, gridBagConstraints);
-
-        lblIconoA3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/doritos.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAperitivos.add(lblIconoA3, gridBagConstraints);
 
         TtlAperitivos.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         TtlAperitivos.setText("Aperitivos");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.weightx = 1.0;
         PnlAperitivos.add(TtlAperitivos, gridBagConstraints);
-
-        lblStockA1.setText("89");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlAperitivos.add(productoGestionProducto9, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 4;
-        PnlAperitivos.add(lblStockA1, gridBagConstraints);
-
-        lblStockA2.setText("89");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 4;
-        PnlAperitivos.add(lblStockA2, gridBagConstraints);
-
-        lblStockA3.setText("89");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 4;
-        PnlAperitivos.add(lblStockA3, gridBagConstraints);
-
-        lblStockA4.setText("89");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 10;
-        PnlAperitivos.add(lblStockA4, gridBagConstraints);
-
-        lblStockA5.setText("89");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 10;
-        PnlAperitivos.add(lblStockA5, gridBagConstraints);
-
-        lblStockA6.setText("89");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 10;
-        PnlAperitivos.add(lblStockA6, gridBagConstraints);
-
-        lblAlertaA1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlAperitivos.add(productoGestionProducto10, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        PnlAperitivos.add(lblAlertaA1, gridBagConstraints);
-
-        lblAlertaA2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 4;
-        PnlAperitivos.add(lblAlertaA2, gridBagConstraints);
-
-        lblAlertaA3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 4;
-        PnlAperitivos.add(lblAlertaA3, gridBagConstraints);
-
-        lblAlertaA4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 10;
-        PnlAperitivos.add(lblAlertaA4, gridBagConstraints);
-
-        lblAlertaA5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 10;
-        PnlAperitivos.add(lblAlertaA5, gridBagConstraints);
-
-        lblAlertaA6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 10;
-        PnlAperitivos.add(lblAlertaA6, gridBagConstraints);
-
-        jLabel8.setText("jLabel8");
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlAperitivos.add(productoGestionProducto11, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlAperitivos.add(jLabel8, gridBagConstraints);
-
-        jLabel10.setText("jLabel10");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlAperitivos.add(jLabel10, gridBagConstraints);
-
-        jLabel12.setText("jLabel12");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlAperitivos.add(jLabel12, gridBagConstraints);
-
-        jLabel14.setText("jLabel14");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlAperitivos.add(jLabel14, gridBagConstraints);
-
-        jLabel16.setText("jLabel16");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlAperitivos.add(jLabel16, gridBagConstraints);
-
-        jLabel18.setText("jLabel18");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
-        PnlAperitivos.add(jLabel18, gridBagConstraints);
-
-        lblCodigoA1.setText("67209514");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        PnlAperitivos.add(lblCodigoA1, gridBagConstraints);
-
-        lblCodigoA2.setText("42178603");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        PnlAperitivos.add(lblCodigoA2, gridBagConstraints);
-
-        lblCodigoA3.setText("23685479");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        PnlAperitivos.add(lblCodigoA3, gridBagConstraints);
-
-        lblCodigoA4.setText("51432098");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 3;
-        PnlAperitivos.add(lblCodigoA4, gridBagConstraints);
-
-        lblCodigoA5.setText("78091642");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 3;
-        PnlAperitivos.add(lblCodigoA5, gridBagConstraints);
-
-        lblCodigoA6.setText("15360724");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 3;
-        PnlAperitivos.add(lblCodigoA6, gridBagConstraints);
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlAperitivos.add(productoGestionProducto12, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1879,265 +619,28 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlContenedor.add(PnlAperitivos, gridBagConstraints);
 
         PnlDulces.setBackground(new java.awt.Color(255, 255, 255));
-        PnlDulces.setPreferredSize(new java.awt.Dimension(1500, 900));
+        PnlDulces.setPreferredSize(new java.awt.Dimension(1500, 1000));
         PnlDulces.setLayout(new java.awt.GridBagLayout());
-
-        BtnStockD4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD4.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(BtnStockD4, gridBagConstraints);
-
-        lblDescripcionD4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionD4.setText("Bonbón");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(lblDescripcionD4, gridBagConstraints);
-
-        lblIconoD4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lindor.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlDulces.add(lblIconoD4, gridBagConstraints);
-
-        BtnStockD1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD1.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(BtnStockD1, gridBagConstraints);
-
-        lblDescripcionD1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionD1.setText("Galletas principe");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(lblDescripcionD1, gridBagConstraints);
-
-        lblIconoD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/principe.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlDulces.add(lblIconoD1, gridBagConstraints);
-
-        lblIconoD2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/donut.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlDulces.add(lblIconoD2, gridBagConstraints);
-
-        lblDescripcionD2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionD2.setText("Donut de chocolate");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(lblDescripcionD2, gridBagConstraints);
-
-        BtnStockD2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD2.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(BtnStockD2, gridBagConstraints);
-
-        lblIconoD5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ladron.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlDulces.add(lblIconoD5, gridBagConstraints);
-
-        lblDescripcionD5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionD5.setText("Ferrero Robé");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(lblDescripcionD5, gridBagConstraints);
-
-        BtnStockD5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD5.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(BtnStockD5, gridBagConstraints);
-
-        BtnStockD6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD6.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(BtnStockD6, gridBagConstraints);
-
-        lblDescripcionD6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionD6.setText("Kinder Bueno");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(lblDescripcionD6, gridBagConstraints);
-
-        lblIconoD6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bueno.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlDulces.add(lblIconoD6, gridBagConstraints);
-
-        BtnStockD3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockD3.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(BtnStockD3, gridBagConstraints);
-
-        lblDescripcionD3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionD3.setText("Gofre");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlDulces.add(lblDescripcionD3, gridBagConstraints);
-
-        lblIconoD3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gofre.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlDulces.add(lblIconoD3, gridBagConstraints);
 
         TtlDulces.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         TtlDulces.setText("Dulces");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.weightx = 1.0;
         PnlDulces.add(TtlDulces, gridBagConstraints);
-
-        lblStockD1.setText("55");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlDulces.add(productoGestionProducto13, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        PnlDulces.add(lblStockD1, gridBagConstraints);
-
-        lblStockD2.setText("55");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        PnlDulces.add(lblStockD2, gridBagConstraints);
-
-        lblStockD3.setText("55");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 2;
-        PnlDulces.add(lblStockD3, gridBagConstraints);
-
-        lblStockD4.setText("55");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 6;
-        PnlDulces.add(lblStockD4, gridBagConstraints);
-
-        lblStockD5.setText("0");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 6;
-        PnlDulces.add(lblStockD5, gridBagConstraints);
-
-        lblStockD6.setText("55");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 6;
-        PnlDulces.add(lblStockD6, gridBagConstraints);
-
-        lblAlertaD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        PnlDulces.add(lblAlertaD1, gridBagConstraints);
-
-        lblAlertaD2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 2;
-        PnlDulces.add(lblAlertaD2, gridBagConstraints);
-
-        lblAlertaD3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 2;
-        PnlDulces.add(lblAlertaD3, gridBagConstraints);
-
-        lblAlertaD4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 6;
-        PnlDulces.add(lblAlertaD4, gridBagConstraints);
-
-        lblAlertaD5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoerror.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 6;
-        PnlDulces.add(lblAlertaD5, gridBagConstraints);
-
-        lblAlertaD6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 6;
-        PnlDulces.add(lblAlertaD6, gridBagConstraints);
-
-        jLabel19.setText("jLabel19");
-        PnlDulces.add(jLabel19, new java.awt.GridBagConstraints());
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlDulces.add(productoGestionProducto14, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -2145,262 +648,23 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlContenedor.add(PnlDulces, gridBagConstraints);
 
         PnlCondimentos.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCondimentos.setPreferredSize(new java.awt.Dimension(1500, 900));
+        PnlCondimentos.setPreferredSize(new java.awt.Dimension(1500, 1000));
         PnlCondimentos.setLayout(new java.awt.GridBagLayout());
-
-        BtnStockCo4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo4.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(BtnStockCo4, gridBagConstraints);
-
-        lblDescripcionCo4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionCo4.setText("Pimienta");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(lblDescripcionCo4, gridBagConstraints);
-
-        lblIconoCo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pimienta.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlCondimentos.add(lblIconoCo4, gridBagConstraints);
-
-        BtnStockCo1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo1.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(BtnStockCo1, gridBagConstraints);
-
-        lblDescripcionCo1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionCo1.setText("Orégano");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(lblDescripcionCo1, gridBagConstraints);
-
-        lblIconoCo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/oregano.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlCondimentos.add(lblIconoCo1, gridBagConstraints);
-
-        lblIconoCo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clavo.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlCondimentos.add(lblIconoCo2, gridBagConstraints);
-
-        lblDescripcionCo2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionCo2.setText("Clavo");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(lblDescripcionCo2, gridBagConstraints);
-
-        BtnStockCo2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo2.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(BtnStockCo2, gridBagConstraints);
-
-        lblIconoCo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/girasol.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlCondimentos.add(lblIconoCo5, gridBagConstraints);
-
-        lblDescripcionCo5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionCo5.setText("Aceite de girasol");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(lblDescripcionCo5, gridBagConstraints);
-
-        BtnStockCo5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo5.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(BtnStockCo5, gridBagConstraints);
-
-        BtnStockCo6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo6.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(BtnStockCo6, gridBagConstraints);
-
-        lblDescripcionCo6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionCo6.setText("Bloste");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(lblDescripcionCo6, gridBagConstraints);
-
-        lblIconoCo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bloste.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlCondimentos.add(lblIconoCo6, gridBagConstraints);
-
-        BtnStockCo3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCo3.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(BtnStockCo3, gridBagConstraints);
-
-        lblDescripcionCo3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionCo3.setText("Sal");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCondimentos.add(lblDescripcionCo3, gridBagConstraints);
-
-        lblIconoCo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sal.jpeg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlCondimentos.add(lblIconoCo3, gridBagConstraints);
 
         TtlCondimentos.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         TtlCondimentos.setText("Condimentos");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.weightx = 1.0;
         PnlCondimentos.add(TtlCondimentos, gridBagConstraints);
-
-        lblStockCo1.setText("430");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        PnlCondimentos.add(lblStockCo1, gridBagConstraints);
-
-        lblStockCo2.setText("430");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        PnlCondimentos.add(lblStockCo2, gridBagConstraints);
-
-        lblStockCo3.setText("430");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 2;
-        PnlCondimentos.add(lblStockCo3, gridBagConstraints);
-
-        lblStockCo4.setText("430");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 6;
-        PnlCondimentos.add(lblStockCo4, gridBagConstraints);
-
-        lblStockCo5.setText("430");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 6;
-        PnlCondimentos.add(lblStockCo5, gridBagConstraints);
-
-        lblStockCo6.setText("20");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 6;
-        PnlCondimentos.add(lblStockCo6, gridBagConstraints);
-
-        lblAlertaCo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        PnlCondimentos.add(lblAlertaCo1, gridBagConstraints);
-
-        lblAlertaCo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 2;
-        PnlCondimentos.add(lblAlertaCo2, gridBagConstraints);
-
-        lblAlertaCo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 2;
-        PnlCondimentos.add(lblAlertaCo3, gridBagConstraints);
-
-        lblAlertaCo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 6;
-        PnlCondimentos.add(lblAlertaCo4, gridBagConstraints);
-
-        lblAlertaCo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 6;
-        PnlCondimentos.add(lblAlertaCo5, gridBagConstraints);
-
-        lblAlertaCo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoalerta.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 6;
-        PnlCondimentos.add(lblAlertaCo6, gridBagConstraints);
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlCondimentos.add(productoGestionProducto15, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -2408,262 +672,41 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlContenedor.add(PnlCondimentos, gridBagConstraints);
 
         PnlLacteos.setBackground(new java.awt.Color(255, 255, 255));
-        PnlLacteos.setPreferredSize(new java.awt.Dimension(1500, 900));
+        PnlLacteos.setPreferredSize(new java.awt.Dimension(1500, 1000));
         PnlLacteos.setLayout(new java.awt.GridBagLayout());
-
-        BtnStockL4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL4.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(BtnStockL4, gridBagConstraints);
-
-        lblDescripcionL4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionL4.setText("Yogur griego");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(lblDescripcionL4, gridBagConstraints);
-
-        lblIconoL4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/yogur.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlLacteos.add(lblIconoL4, gridBagConstraints);
-
-        BtnStockL1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL1.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(BtnStockL1, gridBagConstraints);
-
-        lblDescripcionL1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionL1.setText("Leche asturiana");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(lblDescripcionL1, gridBagConstraints);
-
-        lblIconoL1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asturiana.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlLacteos.add(lblIconoL1, gridBagConstraints);
-
-        lblIconoL2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/toro.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlLacteos.add(lblIconoL2, gridBagConstraints);
-
-        lblDescripcionL2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionL2.setText("Leche de toro");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(lblDescripcionL2, gridBagConstraints);
-
-        BtnStockL2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL2.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(BtnStockL2, gridBagConstraints);
-
-        lblIconoL5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actimel.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlLacteos.add(lblIconoL5, gridBagConstraints);
-
-        lblDescripcionL5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionL5.setText("Actimel");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(lblDescripcionL5, gridBagConstraints);
-
-        BtnStockL5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL5.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(BtnStockL5, gridBagConstraints);
-
-        BtnStockL6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL6.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(BtnStockL6, gridBagConstraints);
-
-        lblDescripcionL6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionL6.setText("Leche australiana");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(lblDescripcionL6, gridBagConstraints);
-
-        lblIconoL6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/canguro.jpeg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlLacteos.add(lblIconoL6, gridBagConstraints);
-
-        BtnStockL3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockL3.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(BtnStockL3, gridBagConstraints);
-
-        lblDescripcionL3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionL3.setText("Queso de cabra");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlLacteos.add(lblDescripcionL3, gridBagConstraints);
-
-        lblIconoL3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cabra.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlLacteos.add(lblIconoL3, gridBagConstraints);
 
         TtlLacteos.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         TtlLacteos.setText("Lácteos");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.weightx = 1.0;
         PnlLacteos.add(TtlLacteos, gridBagConstraints);
-
-        lblStockL1.setText("78");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
+        PnlLacteos.add(productoGestionProducto4, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
+        PnlLacteos.add(productoGestionProducto5, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.weightx = 1.0;
+        PnlLacteos.add(productoGestionProducto6, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.weightx = 1.0;
+        PnlLacteos.add(productoGestionProducto16, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
-        PnlLacteos.add(lblStockL1, gridBagConstraints);
-
-        lblStockL2.setText("15");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        PnlLacteos.add(lblStockL2, gridBagConstraints);
-
-        lblStockL3.setText("78");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 2;
-        PnlLacteos.add(lblStockL3, gridBagConstraints);
-
-        lblStockL4.setText("78");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 6;
-        PnlLacteos.add(lblStockL4, gridBagConstraints);
-
-        lblStockL5.setText("78");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 6;
-        PnlLacteos.add(lblStockL5, gridBagConstraints);
-
-        lblStockL6.setText("64");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 6;
-        PnlLacteos.add(lblStockL6, gridBagConstraints);
-
-        lblAlertaL1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        PnlLacteos.add(lblAlertaL1, gridBagConstraints);
-
-        lblAlertaL2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoalerta.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 2;
-        PnlLacteos.add(lblAlertaL2, gridBagConstraints);
-
-        lblAlertaL3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 2;
-        PnlLacteos.add(lblAlertaL3, gridBagConstraints);
-
-        lblAlertaL4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 6;
-        PnlLacteos.add(lblAlertaL4, gridBagConstraints);
-
-        lblAlertaL5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 6;
-        PnlLacteos.add(lblAlertaL5, gridBagConstraints);
-
-        lblAlertaL6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 6;
-        PnlLacteos.add(lblAlertaL6, gridBagConstraints);
+        gridBagConstraints.weightx = 1.0;
+        PnlLacteos.add(productoGestionProducto17, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -2671,262 +714,21 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlContenedor.add(PnlLacteos, gridBagConstraints);
 
         PnlZumosBebidas.setBackground(new java.awt.Color(255, 255, 255));
-        PnlZumosBebidas.setPreferredSize(new java.awt.Dimension(1500, 900));
+        PnlZumosBebidas.setPreferredSize(new java.awt.Dimension(1500, 1000));
         PnlZumosBebidas.setLayout(new java.awt.GridBagLayout());
-
-        BtnStockZ4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ4.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(BtnStockZ4, gridBagConstraints);
-
-        lblDescripcionZ4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionZ4.setText("Pepsi");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(lblDescripcionZ4, gridBagConstraints);
-
-        lblIconoZ4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pepsi.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlZumosBebidas.add(lblIconoZ4, gridBagConstraints);
-
-        BtnStockZ1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ1.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(BtnStockZ1, gridBagConstraints);
-
-        lblDescripcionZ1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionZ1.setText("Puleva");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(lblDescripcionZ1, gridBagConstraints);
-
-        lblIconoZ1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/puleva.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlZumosBebidas.add(lblIconoZ1, gridBagConstraints);
-
-        lblIconoZ2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cafe.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlZumosBebidas.add(lblIconoZ2, gridBagConstraints);
-
-        lblDescripcionZ2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionZ2.setText("Café");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(lblDescripcionZ2, gridBagConstraints);
-
-        BtnStockZ2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ2.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(BtnStockZ2, gridBagConstraints);
-
-        lblIconoZ5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fanta.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlZumosBebidas.add(lblIconoZ5, gridBagConstraints);
-
-        lblDescripcionZ5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionZ5.setText("Fanta");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(lblDescripcionZ5, gridBagConstraints);
-
-        BtnStockZ5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ5.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(BtnStockZ5, gridBagConstraints);
-
-        BtnStockZ6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ6.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(BtnStockZ6, gridBagConstraints);
-
-        lblDescripcionZ6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionZ6.setText("Nestéa");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(lblDescripcionZ6, gridBagConstraints);
-
-        lblIconoZ6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nestea.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlZumosBebidas.add(lblIconoZ6, gridBagConstraints);
-
-        BtnStockZ3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockZ3.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(BtnStockZ3, gridBagConstraints);
-
-        lblDescripcionZ3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionZ3.setText("Coca Cola");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlZumosBebidas.add(lblDescripcionZ3, gridBagConstraints);
-
-        lblIconoZ3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/espuma.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlZumosBebidas.add(lblIconoZ3, gridBagConstraints);
 
         TtlZumosBebidas.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         TtlZumosBebidas.setText("Zumos/Bebidas");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.weightx = 1.0;
         PnlZumosBebidas.add(TtlZumosBebidas, gridBagConstraints);
-
-        lblStockZ1.setText("111");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        PnlZumosBebidas.add(lblStockZ1, gridBagConstraints);
-
-        lblStockZ2.setText("111");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        PnlZumosBebidas.add(lblStockZ2, gridBagConstraints);
-
-        lblStockZ3.setText("1");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 2;
-        PnlZumosBebidas.add(lblStockZ3, gridBagConstraints);
-
-        lblStockZ4.setText("111");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 6;
-        PnlZumosBebidas.add(lblStockZ4, gridBagConstraints);
-
-        lblStockZ5.setText("111");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 6;
-        PnlZumosBebidas.add(lblStockZ5, gridBagConstraints);
-
-        lblStockZ6.setText("111");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 6;
-        PnlZumosBebidas.add(lblStockZ6, gridBagConstraints);
-
-        lblAlertaZ1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        PnlZumosBebidas.add(lblAlertaZ1, gridBagConstraints);
-
-        lblAlertaZ2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 2;
-        PnlZumosBebidas.add(lblAlertaZ2, gridBagConstraints);
-
-        lblAlertaZ3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoerror.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 2;
-        PnlZumosBebidas.add(lblAlertaZ3, gridBagConstraints);
-
-        lblAlertaZ4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 6;
-        PnlZumosBebidas.add(lblAlertaZ4, gridBagConstraints);
-
-        lblAlertaZ5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 6;
-        PnlZumosBebidas.add(lblAlertaZ5, gridBagConstraints);
-
-        lblAlertaZ6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 6;
-        PnlZumosBebidas.add(lblAlertaZ6, gridBagConstraints);
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 1;
+        PnlZumosBebidas.add(productoGestionProducto18, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -2934,262 +736,28 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlContenedor.add(PnlZumosBebidas, gridBagConstraints);
 
         PnlAlcoholicas.setBackground(new java.awt.Color(255, 255, 255));
-        PnlAlcoholicas.setPreferredSize(new java.awt.Dimension(1500, 900));
+        PnlAlcoholicas.setPreferredSize(new java.awt.Dimension(1500, 1000));
         PnlAlcoholicas.setLayout(new java.awt.GridBagLayout());
-
-        BtnStockAl4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl4.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(BtnStockAl4, gridBagConstraints);
-
-        lblDescripcionAl4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionAl4.setText("Vodka negro");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(lblDescripcionAl4, gridBagConstraints);
-
-        lblIconoAl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vodkane.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAlcoholicas.add(lblIconoAl4, gridBagConstraints);
-
-        BtnStockAl1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl1.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(BtnStockAl1, gridBagConstraints);
-
-        lblDescripcionAl1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionAl1.setText("Vodka");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(lblDescripcionAl1, gridBagConstraints);
-
-        lblIconoAl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vodka.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAlcoholicas.add(lblIconoAl1, gridBagConstraints);
-
-        lblIconoAl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jager.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAlcoholicas.add(lblIconoAl2, gridBagConstraints);
-
-        lblDescripcionAl2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionAl2.setText("Jagger");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(lblDescripcionAl2, gridBagConstraints);
-
-        BtnStockAl2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl2.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(BtnStockAl2, gridBagConstraints);
-
-        lblIconoAl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cacique.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAlcoholicas.add(lblIconoAl5, gridBagConstraints);
-
-        lblDescripcionAl5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionAl5.setText("Ron Cacique");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(lblDescripcionAl5, gridBagConstraints);
-
-        BtnStockAl5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl5.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(BtnStockAl5, gridBagConstraints);
-
-        BtnStockAl6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl6.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(BtnStockAl6, gridBagConstraints);
-
-        lblDescripcionAl6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionAl6.setText("Vodka azul");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(lblDescripcionAl6, gridBagConstraints);
-
-        lblIconoAl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vodkaaz.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAlcoholicas.add(lblIconoAl6, gridBagConstraints);
-
-        BtnStockAl3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockAl3.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(BtnStockAl3, gridBagConstraints);
-
-        lblDescripcionAl3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionAl3.setText("Red Label");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlAlcoholicas.add(lblDescripcionAl3, gridBagConstraints);
-
-        lblIconoAl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redlabel.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlAlcoholicas.add(lblIconoAl3, gridBagConstraints);
 
         TtlAlcoholicas.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         TtlAlcoholicas.setText("Alcohólicas");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.weightx = 1.0;
         PnlAlcoholicas.add(TtlAlcoholicas, gridBagConstraints);
-
-        lblStockAl1.setText("35");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlAlcoholicas.add(productoGestionProducto19, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        PnlAlcoholicas.add(lblStockAl1, gridBagConstraints);
-
-        lblStockAl2.setText("35");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        PnlAlcoholicas.add(lblStockAl2, gridBagConstraints);
-
-        lblStockAl3.setText("35");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 2;
-        PnlAlcoholicas.add(lblStockAl3, gridBagConstraints);
-
-        lblStockAl4.setText("35");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 6;
-        PnlAlcoholicas.add(lblStockAl4, gridBagConstraints);
-
-        lblStockAl5.setText("35");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 6;
-        PnlAlcoholicas.add(lblStockAl5, gridBagConstraints);
-
-        lblStockAl6.setText("35");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 6;
-        PnlAlcoholicas.add(lblStockAl6, gridBagConstraints);
-
-        lblAlertaAl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        PnlAlcoholicas.add(lblAlertaAl1, gridBagConstraints);
-
-        lblAlertaAl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 2;
-        PnlAlcoholicas.add(lblAlertaAl2, gridBagConstraints);
-
-        lblAlertaAl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 2;
-        PnlAlcoholicas.add(lblAlertaAl3, gridBagConstraints);
-
-        lblAlertaAl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 6;
-        PnlAlcoholicas.add(lblAlertaAl4, gridBagConstraints);
-
-        lblAlertaAl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 6;
-        PnlAlcoholicas.add(lblAlertaAl5, gridBagConstraints);
-
-        lblAlertaAl6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 6;
-        PnlAlcoholicas.add(lblAlertaAl6, gridBagConstraints);
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.insets = new java.awt.Insets(15, 30, 15, 30);
+        PnlAlcoholicas.add(productoGestionProducto20, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -3197,139 +765,16 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         PnlContenedor.add(PnlAlcoholicas, gridBagConstraints);
 
         PnlCervezas.setBackground(new java.awt.Color(255, 255, 255));
-        PnlCervezas.setPreferredSize(new java.awt.Dimension(1500, 600));
+        PnlCervezas.setPreferredSize(new java.awt.Dimension(1500, 800));
         PnlCervezas.setLayout(new java.awt.GridBagLayout());
 
-        BtnStockCe1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCe1.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCervezas.add(BtnStockCe1, gridBagConstraints);
-
-        lblDescripcionCe1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionCe1.setText("Estrella galicia");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCervezas.add(lblDescripcionCe1, gridBagConstraints);
-
-        lblIconoCe1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estrella_1.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlCervezas.add(lblIconoCe1, gridBagConstraints);
-
-        lblIconoCe2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heineken.jpg"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlCervezas.add(lblIconoCe2, gridBagConstraints);
-
-        lblDescripcionCe2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionCe2.setText("Heineken");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCervezas.add(lblDescripcionCe2, gridBagConstraints);
-
-        BtnStockCe2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCe2.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCervezas.add(BtnStockCe2, gridBagConstraints);
-
-        BtnStockCe3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        BtnStockCe3.setText("Añadir Stock");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCervezas.add(BtnStockCe3, gridBagConstraints);
-
-        lblDescripcionCe3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblDescripcionCe3.setText("San Miguel");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
-        PnlCervezas.add(lblDescripcionCe3, gridBagConstraints);
-
-        lblIconoCe3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/miguel.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
-        PnlCervezas.add(lblIconoCe3, gridBagConstraints);
-
-        TtlCervezas.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
+        TtlCervezas.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         TtlCervezas.setText("Cervezas");
+        PnlCervezas.add(TtlCervezas, new java.awt.GridBagConstraints());
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.weightx = 1.0;
-        PnlCervezas.add(TtlCervezas, gridBagConstraints);
-
-        lblStockCe1.setText("1706");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        PnlCervezas.add(lblStockCe1, gridBagConstraints);
-
-        lblStockCe2.setText("1706");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 2;
-        PnlCervezas.add(lblStockCe2, gridBagConstraints);
-
-        lblStockCe3.setText("1706");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 2;
-        PnlCervezas.add(lblStockCe3, gridBagConstraints);
-
-        lblAlertaCe1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        PnlCervezas.add(lblAlertaCe1, gridBagConstraints);
-
-        lblAlertaCe2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 2;
-        PnlCervezas.add(lblAlertaCe2, gridBagConstraints);
-
-        lblAlertaCe3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 8;
-        gridBagConstraints.gridy = 2;
-        PnlCervezas.add(lblAlertaCe3, gridBagConstraints);
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        PnlCervezas.add(productoGestionProducto21, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -3372,7 +817,7 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 8263, Short.MAX_VALUE)
+            .addComponent(PnlTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 9030, Short.MAX_VALUE)
         );
 
         pack();
@@ -3381,10 +826,6 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
     private void FieldBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FieldBusquedaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_FieldBusquedaActionPerformed
-
-    private void BtnStockP5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnStockP5ActionPerformed
-        
-    }//GEN-LAST:event_BtnStockP5ActionPerformed
 
     private void btnLupaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLupaActionPerformed
         String textoBuscado = FieldBusqueda.getText().trim();
@@ -3524,57 +965,6 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCerrar;
     private javax.swing.JButton BtnSalir;
-    private javax.swing.JButton BtnStockA1;
-    private javax.swing.JButton BtnStockA2;
-    private javax.swing.JButton BtnStockA3;
-    private javax.swing.JButton BtnStockA4;
-    private javax.swing.JButton BtnStockA5;
-    private javax.swing.JButton BtnStockA6;
-    private javax.swing.JButton BtnStockAl1;
-    private javax.swing.JButton BtnStockAl2;
-    private javax.swing.JButton BtnStockAl3;
-    private javax.swing.JButton BtnStockAl4;
-    private javax.swing.JButton BtnStockAl5;
-    private javax.swing.JButton BtnStockAl6;
-    private javax.swing.JButton BtnStockC1;
-    private javax.swing.JButton BtnStockC2;
-    private javax.swing.JButton BtnStockC3;
-    private javax.swing.JButton BtnStockC4;
-    private javax.swing.JButton BtnStockC5;
-    private javax.swing.JButton BtnStockC6;
-    private javax.swing.JButton BtnStockCe1;
-    private javax.swing.JButton BtnStockCe2;
-    private javax.swing.JButton BtnStockCe3;
-    private javax.swing.JButton BtnStockCo1;
-    private javax.swing.JButton BtnStockCo2;
-    private javax.swing.JButton BtnStockCo3;
-    private javax.swing.JButton BtnStockCo4;
-    private javax.swing.JButton BtnStockCo5;
-    private javax.swing.JButton BtnStockCo6;
-    private javax.swing.JButton BtnStockD1;
-    private javax.swing.JButton BtnStockD2;
-    private javax.swing.JButton BtnStockD3;
-    private javax.swing.JButton BtnStockD4;
-    private javax.swing.JButton BtnStockD5;
-    private javax.swing.JButton BtnStockD6;
-    private javax.swing.JButton BtnStockL1;
-    private javax.swing.JButton BtnStockL2;
-    private javax.swing.JButton BtnStockL3;
-    private javax.swing.JButton BtnStockL4;
-    private javax.swing.JButton BtnStockL5;
-    private javax.swing.JButton BtnStockL6;
-    private javax.swing.JButton BtnStockP1;
-    private javax.swing.JButton BtnStockP2;
-    private javax.swing.JButton BtnStockP3;
-    private javax.swing.JButton BtnStockP4;
-    private javax.swing.JButton BtnStockP5;
-    private javax.swing.JButton BtnStockP6;
-    private javax.swing.JButton BtnStockZ1;
-    private javax.swing.JButton BtnStockZ2;
-    private javax.swing.JButton BtnStockZ3;
-    private javax.swing.JButton BtnStockZ4;
-    private javax.swing.JButton BtnStockZ5;
-    private javax.swing.JButton BtnStockZ6;
     private javax.swing.JTextField FieldBusqueda;
     private javax.swing.JPanel PnlAlcoholicas;
     private javax.swing.JPanel PnlAlertas;
@@ -3622,253 +1012,33 @@ public class VentanaGestionProductos extends javax.swing.JFrame {
     private javax.swing.JButton btnNuevos;
     private javax.swing.JButton btnPastasCereales;
     private javax.swing.JButton btnZumosBebidas;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lbbAlertas;
-    private javax.swing.JLabel lblAlertaA1;
-    private javax.swing.JLabel lblAlertaA2;
-    private javax.swing.JLabel lblAlertaA3;
-    private javax.swing.JLabel lblAlertaA4;
-    private javax.swing.JLabel lblAlertaA5;
-    private javax.swing.JLabel lblAlertaA6;
-    private javax.swing.JLabel lblAlertaAl1;
-    private javax.swing.JLabel lblAlertaAl2;
-    private javax.swing.JLabel lblAlertaAl3;
-    private javax.swing.JLabel lblAlertaAl4;
-    private javax.swing.JLabel lblAlertaAl5;
-    private javax.swing.JLabel lblAlertaAl6;
-    private javax.swing.JLabel lblAlertaC1;
-    private javax.swing.JLabel lblAlertaC2;
-    private javax.swing.JLabel lblAlertaC3;
-    private javax.swing.JLabel lblAlertaC4;
-    private javax.swing.JLabel lblAlertaC5;
-    private javax.swing.JLabel lblAlertaC6;
-    private javax.swing.JLabel lblAlertaCe1;
-    private javax.swing.JLabel lblAlertaCe2;
-    private javax.swing.JLabel lblAlertaCe3;
-    private javax.swing.JLabel lblAlertaCo1;
-    private javax.swing.JLabel lblAlertaCo2;
-    private javax.swing.JLabel lblAlertaCo3;
-    private javax.swing.JLabel lblAlertaCo4;
-    private javax.swing.JLabel lblAlertaCo5;
-    private javax.swing.JLabel lblAlertaCo6;
-    private javax.swing.JLabel lblAlertaD1;
-    private javax.swing.JLabel lblAlertaD2;
-    private javax.swing.JLabel lblAlertaD3;
-    private javax.swing.JLabel lblAlertaD4;
-    private javax.swing.JLabel lblAlertaD5;
-    private javax.swing.JLabel lblAlertaD6;
-    private javax.swing.JLabel lblAlertaL1;
-    private javax.swing.JLabel lblAlertaL2;
-    private javax.swing.JLabel lblAlertaL3;
-    private javax.swing.JLabel lblAlertaL4;
-    private javax.swing.JLabel lblAlertaL5;
-    private javax.swing.JLabel lblAlertaL6;
-    private javax.swing.JLabel lblAlertaP1;
-    private javax.swing.JLabel lblAlertaP2;
-    private javax.swing.JLabel lblAlertaP3;
-    private javax.swing.JLabel lblAlertaP4;
-    private javax.swing.JLabel lblAlertaP5;
-    private javax.swing.JLabel lblAlertaP6;
-    private javax.swing.JLabel lblAlertaZ1;
-    private javax.swing.JLabel lblAlertaZ2;
-    private javax.swing.JLabel lblAlertaZ3;
-    private javax.swing.JLabel lblAlertaZ4;
-    private javax.swing.JLabel lblAlertaZ5;
-    private javax.swing.JLabel lblAlertaZ6;
-    private javax.swing.JLabel lblCodigoA1;
-    private javax.swing.JLabel lblCodigoA2;
-    private javax.swing.JLabel lblCodigoA3;
-    private javax.swing.JLabel lblCodigoA4;
-    private javax.swing.JLabel lblCodigoA5;
-    private javax.swing.JLabel lblCodigoA6;
-    private javax.swing.JLabel lblCodigoC1;
-    private javax.swing.JLabel lblCodigoC2;
-    private javax.swing.JLabel lblCodigoC3;
-    private javax.swing.JLabel lblCodigoC4;
-    private javax.swing.JLabel lblCodigoC5;
-    private javax.swing.JLabel lblCodigoC6;
-    private javax.swing.JLabel lblCodigoP1;
-    private javax.swing.JLabel lblCodigoP2;
-    private javax.swing.JLabel lblCodigoP3;
-    private javax.swing.JLabel lblCodigoP4;
-    private javax.swing.JLabel lblCodigoP5;
-    private javax.swing.JLabel lblCodigoP6;
     private javax.swing.JLabel lblCritico;
-    private javax.swing.JLabel lblDescripcionA1;
-    private javax.swing.JLabel lblDescripcionA2;
-    private javax.swing.JLabel lblDescripcionA3;
-    private javax.swing.JLabel lblDescripcionA4;
-    private javax.swing.JLabel lblDescripcionA5;
-    private javax.swing.JLabel lblDescripcionA6;
-    private javax.swing.JLabel lblDescripcionAl1;
-    private javax.swing.JLabel lblDescripcionAl2;
-    private javax.swing.JLabel lblDescripcionAl3;
-    private javax.swing.JLabel lblDescripcionAl4;
-    private javax.swing.JLabel lblDescripcionAl5;
-    private javax.swing.JLabel lblDescripcionAl6;
-    private javax.swing.JLabel lblDescripcionC1;
-    private javax.swing.JLabel lblDescripcionC2;
-    private javax.swing.JLabel lblDescripcionC3;
-    private javax.swing.JLabel lblDescripcionC4;
-    private javax.swing.JLabel lblDescripcionC5;
-    private javax.swing.JLabel lblDescripcionC6;
-    private javax.swing.JLabel lblDescripcionCe1;
-    private javax.swing.JLabel lblDescripcionCe2;
-    private javax.swing.JLabel lblDescripcionCe3;
-    private javax.swing.JLabel lblDescripcionCo1;
-    private javax.swing.JLabel lblDescripcionCo2;
-    private javax.swing.JLabel lblDescripcionCo3;
-    private javax.swing.JLabel lblDescripcionCo4;
-    private javax.swing.JLabel lblDescripcionCo5;
-    private javax.swing.JLabel lblDescripcionCo6;
-    private javax.swing.JLabel lblDescripcionD1;
-    private javax.swing.JLabel lblDescripcionD2;
-    private javax.swing.JLabel lblDescripcionD3;
-    private javax.swing.JLabel lblDescripcionD4;
-    private javax.swing.JLabel lblDescripcionD5;
-    private javax.swing.JLabel lblDescripcionD6;
-    private javax.swing.JLabel lblDescripcionL1;
-    private javax.swing.JLabel lblDescripcionL2;
-    private javax.swing.JLabel lblDescripcionL3;
-    private javax.swing.JLabel lblDescripcionL4;
-    private javax.swing.JLabel lblDescripcionL5;
-    private javax.swing.JLabel lblDescripcionL6;
-    private javax.swing.JLabel lblDescripcionP1;
-    private javax.swing.JLabel lblDescripcionP2;
-    private javax.swing.JLabel lblDescripcionP3;
-    private javax.swing.JLabel lblDescripcionP4;
-    private javax.swing.JLabel lblDescripcionP5;
-    private javax.swing.JLabel lblDescripcionP6;
-    private javax.swing.JLabel lblDescripcionZ1;
-    private javax.swing.JLabel lblDescripcionZ2;
-    private javax.swing.JLabel lblDescripcionZ3;
-    private javax.swing.JLabel lblDescripcionZ4;
-    private javax.swing.JLabel lblDescripcionZ5;
-    private javax.swing.JLabel lblDescripcionZ6;
     private javax.swing.JLabel lblIconoA;
-    private javax.swing.JLabel lblIconoA1;
-    private javax.swing.JLabel lblIconoA2;
-    private javax.swing.JLabel lblIconoA3;
-    private javax.swing.JLabel lblIconoA4;
-    private javax.swing.JLabel lblIconoA5;
-    private javax.swing.JLabel lblIconoA6;
-    private javax.swing.JLabel lblIconoAl1;
-    private javax.swing.JLabel lblIconoAl2;
-    private javax.swing.JLabel lblIconoAl3;
-    private javax.swing.JLabel lblIconoAl4;
-    private javax.swing.JLabel lblIconoAl5;
-    private javax.swing.JLabel lblIconoAl6;
     private javax.swing.JLabel lblIconoC;
-    private javax.swing.JLabel lblIconoC1;
-    private javax.swing.JLabel lblIconoC2;
-    private javax.swing.JLabel lblIconoC3;
-    private javax.swing.JLabel lblIconoC4;
-    private javax.swing.JLabel lblIconoC5;
-    private javax.swing.JLabel lblIconoC6;
-    private javax.swing.JLabel lblIconoCe1;
-    private javax.swing.JLabel lblIconoCe2;
-    private javax.swing.JLabel lblIconoCe3;
-    private javax.swing.JLabel lblIconoCo1;
-    private javax.swing.JLabel lblIconoCo2;
-    private javax.swing.JLabel lblIconoCo3;
-    private javax.swing.JLabel lblIconoCo4;
-    private javax.swing.JLabel lblIconoCo5;
-    private javax.swing.JLabel lblIconoCo6;
-    private javax.swing.JLabel lblIconoD1;
-    private javax.swing.JLabel lblIconoD2;
-    private javax.swing.JLabel lblIconoD3;
-    private javax.swing.JLabel lblIconoD4;
-    private javax.swing.JLabel lblIconoD5;
-    private javax.swing.JLabel lblIconoD6;
-    private javax.swing.JLabel lblIconoL1;
-    private javax.swing.JLabel lblIconoL2;
-    private javax.swing.JLabel lblIconoL3;
-    private javax.swing.JLabel lblIconoL4;
-    private javax.swing.JLabel lblIconoL5;
-    private javax.swing.JLabel lblIconoL6;
-    private javax.swing.JLabel lblIconoP1;
-    private javax.swing.JLabel lblIconoP2;
-    private javax.swing.JLabel lblIconoP3;
-    private javax.swing.JLabel lblIconoP4;
-    private javax.swing.JLabel lblIconoP5;
-    private javax.swing.JLabel lblIconoP6;
-    private javax.swing.JLabel lblIconoZ1;
-    private javax.swing.JLabel lblIconoZ2;
-    private javax.swing.JLabel lblIconoZ3;
-    private javax.swing.JLabel lblIconoZ4;
-    private javax.swing.JLabel lblIconoZ5;
-    private javax.swing.JLabel lblIconoZ6;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblPerfil;
-    private javax.swing.JLabel lblStockA1;
-    private javax.swing.JLabel lblStockA2;
-    private javax.swing.JLabel lblStockA3;
-    private javax.swing.JLabel lblStockA4;
-    private javax.swing.JLabel lblStockA5;
-    private javax.swing.JLabel lblStockA6;
-    private javax.swing.JLabel lblStockAl1;
-    private javax.swing.JLabel lblStockAl2;
-    private javax.swing.JLabel lblStockAl3;
-    private javax.swing.JLabel lblStockAl4;
-    private javax.swing.JLabel lblStockAl5;
-    private javax.swing.JLabel lblStockAl6;
-    private javax.swing.JLabel lblStockC1;
-    private javax.swing.JLabel lblStockC2;
-    private javax.swing.JLabel lblStockC3;
-    private javax.swing.JLabel lblStockC4;
-    private javax.swing.JLabel lblStockC5;
-    private javax.swing.JLabel lblStockC6;
-    private javax.swing.JLabel lblStockCe1;
-    private javax.swing.JLabel lblStockCe2;
-    private javax.swing.JLabel lblStockCe3;
-    private javax.swing.JLabel lblStockCo1;
-    private javax.swing.JLabel lblStockCo2;
-    private javax.swing.JLabel lblStockCo3;
-    private javax.swing.JLabel lblStockCo4;
-    private javax.swing.JLabel lblStockCo5;
-    private javax.swing.JLabel lblStockCo6;
-    private javax.swing.JLabel lblStockD1;
-    private javax.swing.JLabel lblStockD2;
-    private javax.swing.JLabel lblStockD3;
-    private javax.swing.JLabel lblStockD4;
-    private javax.swing.JLabel lblStockD5;
-    private javax.swing.JLabel lblStockD6;
-    private javax.swing.JLabel lblStockL1;
-    private javax.swing.JLabel lblStockL2;
-    private javax.swing.JLabel lblStockL3;
-    private javax.swing.JLabel lblStockL4;
-    private javax.swing.JLabel lblStockL5;
-    private javax.swing.JLabel lblStockL6;
-    private javax.swing.JLabel lblStockP1;
-    private javax.swing.JLabel lblStockP2;
-    private javax.swing.JLabel lblStockP3;
-    private javax.swing.JLabel lblStockP4;
-    private javax.swing.JLabel lblStockP5;
-    private javax.swing.JLabel lblStockP6;
-    private javax.swing.JLabel lblStockZ1;
-    private javax.swing.JLabel lblStockZ2;
-    private javax.swing.JLabel lblStockZ3;
-    private javax.swing.JLabel lblStockZ4;
-    private javax.swing.JLabel lblStockZ5;
-    private javax.swing.JLabel lblStockZ6;
     private javax.swing.JLabel lblUsuario;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto1;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto10;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto11;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto12;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto13;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto14;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto15;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto16;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto17;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto18;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto19;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto2;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto20;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto21;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto3;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto4;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto5;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto6;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto7;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto8;
+    private com.mycompany.proyectosupermecado.componentes.ProductoGestionProducto productoGestionProducto9;
     // End of variables declaration//GEN-END:variables
 }
