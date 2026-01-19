@@ -4,6 +4,7 @@
  */
 package com.mycompany.proyectosupermecado.componentes;
 
+import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
@@ -119,6 +120,13 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         this.lblStock = lblStock;
     }
     
+    public void setPrecio(String precio) {
+        lblPrecio.setText(precio);
+    }
+    
+    public void setIcono(Icon icono) {
+        lblIcono.setIcon(icono);
+    }
     
 
     /**
@@ -142,6 +150,7 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         btnCprecio = new javax.swing.JButton();
         btnEproducto = new javax.swing.JButton();
         lblEuro = new javax.swing.JLabel();
+        lblMayoredad = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.GridBagLayout());
@@ -150,8 +159,8 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         btnAstock.setForeground(new java.awt.Color(0, 0, 0));
         btnAstock.setText("Añadir Stock");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
@@ -161,8 +170,9 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         lblEnstock.setForeground(new java.awt.Color(0, 0, 0));
         lblEnstock.setText("En Stock:");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
@@ -172,31 +182,34 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         lblCodigo.setForeground(new java.awt.Color(0, 0, 0));
         lblCodigo.setText("48392015");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.gridwidth = 4;
         add(lblCodigo, gridBagConstraints);
 
         lblStock.setForeground(new java.awt.Color(0, 0, 0));
         lblStock.setText("100");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.ipadx = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         add(lblStock, gridBagConstraints);
 
         lblAlerta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vacio.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
         add(lblAlerta, gridBagConstraints);
 
         lblIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atun.png"))); // NOI18N
+        lblIcono.setMaximumSize(new java.awt.Dimension(150, 150));
+        lblIcono.setMinimumSize(new java.awt.Dimension(150, 150));
+        lblIcono.setPreferredSize(new java.awt.Dimension(150, 150));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridheight = 4;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 5, 10);
         add(lblIcono, gridBagConstraints);
@@ -205,8 +218,8 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         lblNombre.setForeground(new java.awt.Color(0, 0, 0));
         lblNombre.setText("Atún");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 1.0;
@@ -216,8 +229,8 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         lblPrecio.setForeground(new java.awt.Color(0, 0, 0));
         lblPrecio.setText("3,99");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.weightx = 0.5;
         add(lblPrecio, gridBagConstraints);
@@ -227,8 +240,8 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         btnCprecio.setText("Cambiar el precio");
         btnCprecio.setPreferredSize(new java.awt.Dimension(75, 32));
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
@@ -240,8 +253,8 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         btnEproducto.setText("Eliminar producto");
         btnEproducto.setPreferredSize(new java.awt.Dimension(75, 32));
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
@@ -252,11 +265,20 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
         lblEuro.setForeground(new java.awt.Color(0, 0, 0));
         lblEuro.setText("€");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.weightx = 0.5;
         add(lblEuro, gridBagConstraints);
+
+        lblMayoredad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mas18.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        gridBagConstraints.insets = new java.awt.Insets(15, 0, 15, 0);
+        add(lblMayoredad, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -269,6 +291,7 @@ public class ProductoGestionProducto extends javax.swing.JPanel {
     private javax.swing.JLabel lblEnstock;
     private javax.swing.JLabel lblEuro;
     private javax.swing.JLabel lblIcono;
+    private javax.swing.JLabel lblMayoredad;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblPrecio;
     private javax.swing.JLabel lblStock;
