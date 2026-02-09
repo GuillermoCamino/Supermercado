@@ -94,7 +94,6 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         pnlCabezera.add(lblLogoCostaMarket, gridBagConstraints);
 
         txtMensajeAdmin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        txtMensajeAdmin.setForeground(new java.awt.Color(0, 0, 0));
         txtMensajeAdmin.setText("Seleccione un tipo de gestión:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
@@ -113,8 +112,6 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         pnlSeccionCliente.add(lblFotoPerfil, gridBagConstraints);
 
-        txtIDEmpleado.setBackground(new java.awt.Color(255, 255, 255));
-        txtIDEmpleado.setForeground(new java.awt.Color(0, 0, 0));
         txtIDEmpleado.setText("ID Admin");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -122,7 +119,6 @@ public class VentanaPrincipalAdministrador extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
         pnlSeccionCliente.add(txtIDEmpleado, gridBagConstraints);
 
-        btnCerrarSesion.setBackground(new java.awt.Color(255, 255, 255));
         btnCerrarSesion.setForeground(new java.awt.Color(255, 51, 51));
         btnCerrarSesion.setText("Cerrar Sesión");
         btnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {

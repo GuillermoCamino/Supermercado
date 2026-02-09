@@ -63,16 +63,13 @@ public class VentanaModificarClientes extends javax.swing.JFrame {
      * Configura los eventos de los botones del panel de cliente
      */
     private void configurarEventosPanel(ClienteGestionCliente panel, Cliente cliente) {
-        // En VentanaModificarClientes.java, dentro del método configurarEventosPanel()
-
-        // Botón Insertar/Dar de alta
-        panel.btnInsertar.addActionListener(e -> {
-            VentanaAñadirCliente ventana = new VentanaAñadirCliente(this.nombre);
-            ventana.setVisible(true);
-            ventana.addWindowListener(new java.awt.event.WindowAdapter() {
-                @Override
-                public void windowClosed(java.awt.event.WindowEvent ev) {
-                    cargarClientes();
+            panel.btnInsertar.addActionListener(e -> {
+        VentanaAñadirCliente ventana = new VentanaAñadirCliente(this.nombre);
+        ventana.setVisible(true);
+        ventana.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosed(java.awt.event.WindowEvent ev) {
+                cargarClientes();
                 }
             });
         });

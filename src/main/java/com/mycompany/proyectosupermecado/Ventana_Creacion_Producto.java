@@ -15,6 +15,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import com.mycompany.proyectosupermecado.servicio.ProductoServicio;
 
 /**
  *
@@ -23,7 +24,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class Ventana_Creacion_Producto extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Ventana_Creacion_Producto.class.getName());
-String nombre;
+    String nombre;
+    private ProductoServicio productoServicio;
+    private String rutaImagen;
     /**
      * Creates new form Ventana_Creacion_Producto
      */
@@ -31,11 +34,15 @@ String nombre;
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         texto_inicial();
+        this.productoServicio = new ProductoServicio();
+        this.rutaImagen = null;
     }
    public Ventana_Creacion_Producto(String nombre) {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         texto_inicial();
+        this.productoServicio = new ProductoServicio();
+        this.rutaImagen = null;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -124,7 +131,6 @@ String nombre;
 
         Btn_Cargar_producto.setBackground(new java.awt.Color(204, 204, 204));
         Btn_Cargar_producto.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        Btn_Cargar_producto.setForeground(new java.awt.Color(0, 0, 0));
         Btn_Cargar_producto.setText("Cargar Fotografia");
         Btn_Cargar_producto.setToolTipText("");
         Btn_Cargar_producto.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +147,6 @@ String nombre;
         jPanel1.add(Btn_Cargar_producto, gridBagConstraints);
 
         LblTitulo_numeroref_producto_creado.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        LblTitulo_numeroref_producto_creado.setForeground(new java.awt.Color(0, 0, 0));
         LblTitulo_numeroref_producto_creado.setText("Codigo_Referencia");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -152,6 +157,11 @@ String nombre;
         jPanel1.add(LblTitulo_numeroref_producto_creado, gridBagConstraints);
 
         TxtProducto.setPreferredSize(new java.awt.Dimension(200, 26));
+        TxtProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtProductoActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -162,7 +172,6 @@ String nombre;
         jPanel1.add(TxtProducto, gridBagConstraints);
 
         LblTitulo_restriccion_edad.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        LblTitulo_restriccion_edad.setForeground(new java.awt.Color(0, 0, 0));
         LblTitulo_restriccion_edad.setText("Restrición de edad");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -173,7 +182,6 @@ String nombre;
         jPanel1.add(LblTitulo_restriccion_edad, gridBagConstraints);
 
         LblTitulo_producto_creado.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        LblTitulo_producto_creado.setForeground(new java.awt.Color(0, 0, 0));
         LblTitulo_producto_creado.setText("Nombre_Producto");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -202,7 +210,6 @@ String nombre;
         jPanel1.add(Spinner_Precio_inicial, gridBagConstraints);
 
         LblPrecio_Inicial.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        LblPrecio_Inicial.setForeground(new java.awt.Color(0, 0, 0));
         LblPrecio_Inicial.setText("Precio_inicial");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -213,7 +220,6 @@ String nombre;
         jPanel1.add(LblPrecio_Inicial, gridBagConstraints);
 
         test_anti_alcohol.add(No_Alcohol);
-        No_Alcohol.setForeground(new java.awt.Color(0, 0, 0));
         No_Alcohol.setText("Producto normal");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -223,7 +229,6 @@ String nombre;
         jPanel1.add(No_Alcohol, gridBagConstraints);
 
         test_anti_alcohol.add(Si_Alcohol);
-        Si_Alcohol.setForeground(new java.awt.Color(0, 0, 0));
         Si_Alcohol.setText("Producto +18");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -289,7 +294,7 @@ String nombre;
     }// </editor-fold>//GEN-END:initComponents
 
     private void Btn_Cargar_productoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_Cargar_productoActionPerformed
-          JFileChooser fileChooser = new JFileChooser();
+        JFileChooser fileChooser = new JFileChooser();
 
         FileNameExtensionFilter filtro = new FileNameExtensionFilter("Imágenes (JPG o PNG)", "jpg", "jpeg", "png");
         fileChooser.setFileFilter(filtro);
@@ -306,6 +311,8 @@ String nombre;
                     Image imagenEscalada = imagen.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
                     LblFoto.setIcon(new ImageIcon(imagenEscalada));
                     LblFoto.setText("");
+                    // Guardar la ruta de la imagen para usarla al crear el producto
+                    rutaImagen = "/" + archivo.getName();
                 } else {
                     // Archivo leído ok, pero no es una imagen válida, puede estar corrupto
                     JOptionPane.showMessageDialog(
@@ -328,26 +335,94 @@ String nombre;
     }//GEN-LAST:event_Btn_Cargar_productoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String numero_referencia=TxtCodigo_Referencia.getText();
-       String nombre_producto=TxtProducto.getText();
-       int cambio_precio = (int) Spinner_Precio_inicial.getValue(); //Lo usamos para trasnformar el valor del JSpinner en un int 
-       Boolean alcohol;
-        if(cambio_precio<=0){
-       JOptionPane.showMessageDialog(this, "Error", "No se puede poner precio negativos, a menos que quieras perder dinero", JOptionPane.INFORMATION_MESSAGE);
-       }else{
-        JOptionPane.showMessageDialog(this, "Objeto creado", "CREACION COMPLETADA", JOptionPane.INFORMATION_MESSAGE);
-      
-       
-       if(Si_Alcohol.isSelected()==true){
-           alcohol=true;
-       }else{
-           alcohol=false;
-       }
-       VentanaPrincipalAdministrador vuelta_pagAdmin=new VentanaPrincipalAdministrador(numero_referencia,nombre_producto,cambio_precio,alcohol);
-       vuelta_pagAdmin.setVisible(true);
-       this.dispose();
+       // Obtener los valores de los campos
+        String numero_referencia = TxtCodigo_Referencia.getText().trim();
+        String nombre_producto = TxtProducto.getText().trim();
+        
+        // Validar que no sean los textos de placeholder
+        if (nombre_producto.equals("Escribe aqui el nombre del producto") || nombre_producto.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Por favor, ingrese el nombre del producto", 
+                "Campo Requerido", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (numero_referencia.equals("Escribe aqui el numero de referencia") || numero_referencia.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Por favor, ingrese el código de referencia del producto", 
+                "Campo Requerido", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // Validar que el código de referencia sea numérico
+        int codigoReferencia;
+        try {
+            codigoReferencia = Integer.parseInt(numero_referencia);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, 
+                "El código de referencia debe ser un número válido de 8 dígitos", 
+                "Error de Formato", 
+                JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        // Obtener el precio del spinner
+        double precio = ((Number) Spinner_Precio_inicial.getValue()).doubleValue();
+        
+        // Validar precio
+        if (precio <= 0) {
+            JOptionPane.showMessageDialog(this, 
+                "No se puede poner precios negativos o cero", 
+                "Error de Precio", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // Obtener restricción de edad basado en los radio buttons
+        boolean restriccionEdad = Si_Alcohol.isSelected();
+        
+        // Validar que se haya cargado una imagen
+        if (rutaImagen == null || rutaImagen.isEmpty()) {
+            int respuesta = JOptionPane.showConfirmDialog(this, 
+                "No se ha cargado ninguna imagen. ¿Desea continuar sin imagen?", 
+                "Imagen no cargada", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE);
+            
+            if (respuesta == JOptionPane.NO_OPTION) {
+                return;
+            }
+            rutaImagen = "/vacio.png"; // Imagen por defecto
+        }
+        
+        // Crear el producto usando el servicio
+        boolean resultado = productoServicio.registrarProducto(
+            codigoReferencia, 
+            nombre_producto, 
+            precio, 
+            restriccionEdad, 
+            0, // Stock inicial en 0
+            rutaImagen
+        );
+        
+        // Si se creó exitosamente, volver a la ventana principal
+        if (resultado) {
+            VentanaPrincipalAdministrador vuelta_pagAdmin = new VentanaPrincipalAdministrador(
+                numero_referencia, 
+                nombre_producto, 
+                (int) precio, 
+                restriccionEdad
+            );
+            vuelta_pagAdmin.setVisible(true);
+            this.dispose();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void TxtProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtProductoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -380,7 +455,7 @@ String nombre;
             }
         }
     });
-
+    
     // Listener para TxtCodigo_Referencia
     TxtCodigo_Referencia.addFocusListener(new java.awt.event.FocusAdapter() {
         @Override

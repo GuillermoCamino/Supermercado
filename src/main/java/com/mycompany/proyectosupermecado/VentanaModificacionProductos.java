@@ -71,15 +71,6 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         PnlOeste = new javax.swing.JPanel();
         PnlTipos = new javax.swing.JPanel();
         PnlTabla = new javax.swing.JPanel();
-        btnConservas = new javax.swing.JButton();
-        btnPastasCereales = new javax.swing.JButton();
-        btnAperitivos = new javax.swing.JButton();
-        btnDulces = new javax.swing.JButton();
-        btnCondimentos = new javax.swing.JButton();
-        btnLacteos = new javax.swing.JButton();
-        btnAlcoholicas = new javax.swing.JButton();
-        btnZumosBebidas = new javax.swing.JButton();
-        btnCervezas = new javax.swing.JButton();
         PnlFiller = new javax.swing.JPanel();
         PnlSalir = new javax.swing.JPanel();
         BtnSalir = new javax.swing.JButton();
@@ -107,7 +98,6 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         PnlAlertas.setBackground(new java.awt.Color(255, 255, 255));
         PnlAlertas.setLayout(new java.awt.GridBagLayout());
 
-        lbbAlertas.setForeground(new java.awt.Color(0, 0, 0));
         lbbAlertas.setText("0");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.insets = new java.awt.Insets(0, 15, 0, 0);
@@ -116,7 +106,6 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         lblIconoA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoalerta.png"))); // NOI18N
         PnlAlertas.add(lblIconoA, new java.awt.GridBagConstraints());
 
-        lblCritico.setForeground(new java.awt.Color(0, 0, 0));
         lblCritico.setText("0");
         PnlAlertas.add(lblCritico, new java.awt.GridBagConstraints());
 
@@ -200,7 +189,6 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 10);
         PnlPerfil.add(lblUsuario, gridBagConstraints);
 
-        BtnCerrar.setBackground(new java.awt.Color(255, 255, 255));
         BtnCerrar.setForeground(new java.awt.Color(255, 0, 0));
         BtnCerrar.setText("Cerrar Sesión");
         BtnCerrar.addActionListener(new java.awt.event.ActionListener() {
@@ -225,7 +213,6 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
 
         BtnCreacion.setBackground(new java.awt.Color(51, 255, 51));
         BtnCreacion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        BtnCreacion.setForeground(new java.awt.Color(0, 0, 0));
         BtnCreacion.setText("NUEVO PRODUCTO");
         BtnCreacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,150 +240,6 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
 
         PnlTabla.setBackground(new java.awt.Color(153, 153, 153));
         PnlTabla.setLayout(new java.awt.GridBagLayout());
-
-        btnConservas.setBackground(new java.awt.Color(153, 153, 153));
-        btnConservas.setForeground(new java.awt.Color(255, 255, 255));
-        btnConservas.setText("Conservas");
-        btnConservas.setPreferredSize(new java.awt.Dimension(150, 50));
-        btnConservas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConservasActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        PnlTabla.add(btnConservas, gridBagConstraints);
-
-        btnPastasCereales.setBackground(new java.awt.Color(153, 153, 153));
-        btnPastasCereales.setForeground(new java.awt.Color(255, 255, 255));
-        btnPastasCereales.setText("Pastas/Cereales");
-        btnPastasCereales.setPreferredSize(new java.awt.Dimension(150, 50));
-        btnPastasCereales.setRequestFocusEnabled(false);
-        btnPastasCereales.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPastasCerealesActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        PnlTabla.add(btnPastasCereales, gridBagConstraints);
-
-        btnAperitivos.setBackground(new java.awt.Color(153, 153, 153));
-        btnAperitivos.setForeground(new java.awt.Color(255, 255, 255));
-        btnAperitivos.setText("Aperitivos");
-        btnAperitivos.setPreferredSize(new java.awt.Dimension(83, 50));
-        btnAperitivos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAperitivosActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        PnlTabla.add(btnAperitivos, gridBagConstraints);
-
-        btnDulces.setBackground(new java.awt.Color(153, 153, 153));
-        btnDulces.setForeground(new java.awt.Color(255, 255, 255));
-        btnDulces.setText("Dulces");
-        btnDulces.setPreferredSize(new java.awt.Dimension(72, 50));
-        btnDulces.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDulcesActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        PnlTabla.add(btnDulces, gridBagConstraints);
-
-        btnCondimentos.setBackground(new java.awt.Color(153, 153, 153));
-        btnCondimentos.setForeground(new java.awt.Color(255, 255, 255));
-        btnCondimentos.setText("Condimentos");
-        btnCondimentos.setPreferredSize(new java.awt.Dimension(102, 50));
-        btnCondimentos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCondimentosActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        PnlTabla.add(btnCondimentos, gridBagConstraints);
-
-        btnLacteos.setBackground(new java.awt.Color(153, 153, 153));
-        btnLacteos.setForeground(new java.awt.Color(255, 255, 255));
-        btnLacteos.setText("Lácteos");
-        btnLacteos.setPreferredSize(new java.awt.Dimension(72, 50));
-        btnLacteos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLacteosActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        PnlTabla.add(btnLacteos, gridBagConstraints);
-
-        btnAlcoholicas.setBackground(new java.awt.Color(153, 153, 153));
-        btnAlcoholicas.setForeground(new java.awt.Color(255, 255, 255));
-        btnAlcoholicas.setText("Alcohólicas");
-        btnAlcoholicas.setPreferredSize(new java.awt.Dimension(91, 50));
-        btnAlcoholicas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAlcoholicasActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        PnlTabla.add(btnAlcoholicas, gridBagConstraints);
-
-        btnZumosBebidas.setBackground(new java.awt.Color(153, 153, 153));
-        btnZumosBebidas.setForeground(new java.awt.Color(255, 255, 255));
-        btnZumosBebidas.setText("Zumos/Bebidas");
-        btnZumosBebidas.setPreferredSize(new java.awt.Dimension(113, 50));
-        btnZumosBebidas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnZumosBebidasActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        PnlTabla.add(btnZumosBebidas, gridBagConstraints);
-
-        btnCervezas.setBackground(new java.awt.Color(153, 153, 153));
-        btnCervezas.setForeground(new java.awt.Color(255, 255, 255));
-        btnCervezas.setText("Cervezas");
-        btnCervezas.setPreferredSize(new java.awt.Dimension(76, 50));
-        btnCervezas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCervezasActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 0);
-        PnlTabla.add(btnCervezas, gridBagConstraints);
-
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTH;
         gridBagConstraints.weighty = 1.0;
@@ -476,44 +319,7 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-/*
-    private void btnConservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConservasActionPerformed
-            TtlConservas.scrollRectToVisible(TtlConservas.getBounds());
-
-    }//GEN-LAST:event_btnConservasActionPerformed
-
-    private void btnPastasCerealesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPastasCerealesActionPerformed
-        TtlPastasCereales.scrollRectToVisible(TtlPastasCereales.getBounds());
-    }//GEN-LAST:event_btnPastasCerealesActionPerformed
-
-    private void btnAperitivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAperitivosActionPerformed
-        TtlAperitivos.scrollRectToVisible(TtlAperitivos.getBounds());        
-    }//GEN-LAST:event_btnAperitivosActionPerformed
-
-    private void btnDulcesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDulcesActionPerformed
-            TtlDulces.scrollRectToVisible(TtlDulces.getBounds());
-    }//GEN-LAST:event_btnDulcesActionPerformed
-
-    private void btnCondimentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCondimentosActionPerformed
-              TtlCondimentos.scrollRectToVisible(TtlCondimentos.getBounds());
-    }//GEN-LAST:event_btnCondimentosActionPerformed
-
-    private void btnLacteosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLacteosActionPerformed
-             TtlLacteos.scrollRectToVisible(TtlLacteos.getBounds());
-    }//GEN-LAST:event_btnLacteosActionPerformed
-
-    private void btnZumosBebidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZumosBebidasActionPerformed
-               TtlZumosBebidas.scrollRectToVisible(TtlZumosBebidas.getBounds());
-    }//GEN-LAST:event_btnZumosBebidasActionPerformed
-
-    private void btnAlcoholicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlcoholicasActionPerformed
-                TtlAlcoholicas.scrollRectToVisible(TtlAlcoholicas.getBounds());
-    }//GEN-LAST:event_btnAlcoholicasActionPerformed
-
-    private void btnCervezasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCervezasActionPerformed
-                TtlCervezas.scrollRectToVisible(TtlCervezas.getBounds());
-    }//GEN-LAST:event_btnCervezasActionPerformed
-*/
+/**/
     private void BtnCreacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCreacionActionPerformed
         Ventana_Creacion_Producto creacion=new Ventana_Creacion_Producto(nombre);
         creacion.setVisible(true);
@@ -576,16 +382,7 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTipos;
     private javax.swing.JPanel PnlTotal;
-    private javax.swing.JButton btnAlcoholicas;
-    private javax.swing.JButton btnAperitivos;
-    private javax.swing.JButton btnCervezas;
-    private javax.swing.JButton btnCondimentos;
-    private javax.swing.JButton btnConservas;
-    private javax.swing.JButton btnDulces;
-    private javax.swing.JButton btnLacteos;
     private javax.swing.JButton btnLupa_Asociar_Producto;
-    private javax.swing.JButton btnPastasCereales;
-    private javax.swing.JButton btnZumosBebidas;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbbAlertas;
     private javax.swing.JLabel lblCritico;

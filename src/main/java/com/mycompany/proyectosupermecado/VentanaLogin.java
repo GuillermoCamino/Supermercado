@@ -60,7 +60,6 @@ public class VentanaLogin extends javax.swing.JFrame {
         pnlLogin.add(lblLogoCosta, gridBagConstraints);
 
         txtMensajeBienvenida.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
-        txtMensajeBienvenida.setForeground(new java.awt.Color(0, 0, 0));
         txtMensajeBienvenida.setText("Bienvenido de Nuevo");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
