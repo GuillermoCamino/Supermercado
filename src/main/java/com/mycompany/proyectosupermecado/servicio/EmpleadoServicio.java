@@ -4,6 +4,7 @@ import com.mycompany.proyectosupermecado.dao.EmpleadoDAO;
 import com.mycompany.proyectosupermecado.dao.impl.EmpleadoDAOImpl;
 import com.mycompany.proyectosupermecado.modelo.Empleado;
 import java.util.List;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -32,8 +33,8 @@ public class EmpleadoServicio {
             return false;
         }
         
-        // Verificar si el DNI ya existe
-        if (empleadoDAO.existePorDni(dni)) {
+        // Verificar si el DNI ya existe - CORREGIDO: existeDni() en vez de existePorDni()
+        if (empleadoDAO.existeDni(dni.trim().toUpperCase())) {
             JOptionPane.showMessageDialog(null, 
                 "Ya existe un empleado registrado con el DNI: " + dni, 
                 "DNI Duplicado", 
@@ -41,8 +42,8 @@ public class EmpleadoServicio {
             return false;
         }
         
-        // Verificar si el ID ya existe
-        if (empleadoDAO.existePorId(id)) {
+        // Verificar si el ID ya existe - CORREGIDO: existeId() en vez de existePorId()
+        if (empleadoDAO.existeId(id)) {
             JOptionPane.showMessageDialog(null, 
                 "Ya existe un empleado registrado con el ID: " + id, 
                 "ID Duplicado", 
@@ -150,54 +151,6 @@ public class EmpleadoServicio {
     }
     
     /**
-     * Actualiza solo el nombre de un empleado
-     * @param dni DNI del empleado
-     * @param nuevoNombre Nuevo nombre
-     * @return true si se actualizó correctamente, false en caso contrario
-     */
-    public boolean actualizarNombre(String dni, String nuevoNombre) {
-        if (nuevoNombre == null || nuevoNombre.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(null, 
-                "El nombre es obligatorio", 
-                "Campo Requerido", 
-                JOptionPane.WARNING_MESSAGE);
-            return false;
-        }
-        
-        return empleadoDAO.actualizarNombre(dni.trim().toUpperCase(), nuevoNombre.trim());
-    }
-    
-    /**
-     * Actualiza solo el ID de un empleado
-     * @param dni DNI del empleado
-     * @param nuevoId Nuevo ID
-     * @return true si se actualizó correctamente, false en caso contrario
-     */
-    public boolean actualizarId(String dni, int nuevoId) {
-        if (nuevoId <= 0) {
-            JOptionPane.showMessageDialog(null, 
-                "El ID debe ser mayor a cero", 
-                "ID Inválido", 
-                JOptionPane.WARNING_MESSAGE);
-            return false;
-        }
-        
-        // Verificar si el ID ya existe
-        if (empleadoDAO.existePorId(nuevoId)) {
-            Empleado empleadoExistente = empleadoDAO.buscarPorId(nuevoId);
-            if (!empleadoExistente.getDni().equals(dni.trim().toUpperCase())) {
-                JOptionPane.showMessageDialog(null, 
-                    "Ya existe otro empleado con el ID: " + nuevoId, 
-                    "ID Duplicado", 
-                    JOptionPane.WARNING_MESSAGE);
-                return false;
-            }
-        }
-        
-        return empleadoDAO.actualizarId(dni.trim().toUpperCase(), nuevoId);
-    }
-    
-    /**
      * Da de baja (lógica) a un empleado
      * @param dni DNI del empleado a dar de baja
      * @return true si se dio de baja correctamente, false en caso contrario
@@ -283,7 +236,7 @@ public class EmpleadoServicio {
     }
     
     /**
-     * Busca empleados por nombre
+     * Busca empleados por nombre (filtrado en memoria)
      * @param criterio texto a buscar
      * @return Lista de empleados que coinciden
      */
@@ -291,7 +244,20 @@ public class EmpleadoServicio {
         if (criterio == null || criterio.trim().isEmpty()) {
             return listarEmpleadosActivos();
         }
-        return empleadoDAO.buscarPorNombre(criterio.trim());
+        
+        // Obtener todos los empleados activos
+        List<Empleado> todosEmpleados = empleadoDAO.listarTodos();
+        List<Empleado> empleadosFiltrados = new ArrayList<>();
+        
+        // Filtrar por nombre (búsqueda que contenga el criterio)
+        String criterioBusqueda = criterio.trim().toLowerCase();
+        for (Empleado emp : todosEmpleados) {
+            if (emp.getNombre().toLowerCase().contains(criterioBusqueda)) {
+                empleadosFiltrados.add(emp);
+            }
+        }
+        
+        return empleadosFiltrados;
     }
     
     /**
@@ -311,7 +277,8 @@ public class EmpleadoServicio {
         }
         
         // Validar formato de DNI (9 caracteres: 8 números y 1 letra)
-        if (!dni.trim().matches("^[0-9]{8}[A-Z]$")) {
+        String dniUpper = dni.trim().toUpperCase();
+        if (!dniUpper.matches("^[0-9]{8}[A-Z]$")) {
             JOptionPane.showMessageDialog(null, 
                 "El DNI debe tener 8 números seguidos de una letra (ej: 12345678A)", 
                 "Formato Incorrecto", 

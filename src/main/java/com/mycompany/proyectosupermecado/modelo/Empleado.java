@@ -1,37 +1,35 @@
 package com.mycompany.proyectosupermecado.modelo;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
- * Clase que representa a un Empleado en el sistema
- * @author Supermercado Team
+ * Clase modelo que representa un empleado del supermercado
  */
 public class Empleado {
     private String dni;
     private String nombre;
     private int id;
-    private Date fechaRegistro;
+    private Timestamp fechaRegistro;
     private boolean activo;
 
     // Constructor vacío
     public Empleado() {
-        this.activo = true;
-    }
-
-    // Constructor con parámetros principales
-    public Empleado(String dni, String nombre, int id) {
-        this();
-        this.dni = dni;
-        this.nombre = nombre;
-        this.id = id;
     }
 
     // Constructor completo
-    public Empleado(String dni, String nombre, int id, Date fechaRegistro, boolean activo) {
+    public Empleado(String dni, String nombre, int id, Timestamp fechaRegistro, boolean activo) {
         this.dni = dni;
         this.nombre = nombre;
         this.id = id;
         this.fechaRegistro = fechaRegistro;
+        this.activo = activo;
+    }
+
+    // Constructor sin fecha (para nuevos empleados)
+    public Empleado(String dni, String nombre, int id, boolean activo) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.id = id;
         this.activo = activo;
     }
 
@@ -60,11 +58,11 @@ public class Empleado {
         this.id = id;
     }
 
-    public Date getFechaRegistro() {
+    public Timestamp getFechaRegistro() {
         return fechaRegistro;
     }
 
-    public void setFechaRegistro(Date fechaRegistro) {
+    public void setFechaRegistro(Timestamp fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
 
@@ -76,22 +74,6 @@ public class Empleado {
         this.activo = activo;
     }
 
-    /**
-     * Obtiene el nombre completo del empleado
-     * @return nombre completo
-     */
-    public String getNombreCompleto() {
-        return this.nombre;
-    }
-
-    /**
-     * Obtiene la información resumida del empleado
-     * @return String con formato "ID: [id] - [nombre]"
-     */
-    public String getInfoResumida() {
-        return "ID: " + this.id + " - " + this.nombre;
-    }
-
     @Override
     public String toString() {
         return "Empleado{" +
@@ -101,19 +83,5 @@ public class Empleado {
                 ", fechaRegistro=" + fechaRegistro +
                 ", activo=" + activo +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        
-        Empleado empleado = (Empleado) o;
-        return dni != null ? dni.equals(empleado.dni) : empleado.dni == null;
-    }
-
-    @Override
-    public int hashCode() {
-        return dni != null ? dni.hashCode() : 0;
     }
 }

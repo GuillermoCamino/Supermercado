@@ -6,8 +6,10 @@ package com.mycompany.proyectosupermecado;
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import com.mycompany.proyectosupermecado.servicio.EmpleadoServicio;
+import com.mycompany.proyectosupermecado.dao.EmpleadoDAO;
+import com.mycompany.proyectosupermecado.dao.impl.EmpleadoDAOImpl;
 import com.mycompany.proyectosupermecado.modelo.Empleado;
+import com.mycompany.proyectosupermecado.servicio.EmpleadoServicio;
 
 /**
  *

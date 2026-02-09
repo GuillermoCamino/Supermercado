@@ -4,99 +4,68 @@ import com.mycompany.proyectosupermecado.modelo.Empleado;
 import java.util.List;
 
 /**
- * Interfaz que define las operaciones CRUD para la entidad Empleado
- * @author Supermercado Team
+ * Interfaz DAO para operaciones CRUD de empleados
  */
 public interface EmpleadoDAO {
     
     /**
-     * Inserta un nuevo empleado en la base de datos
-     * @param empleado objeto Empleado a insertar
+     * Insertar un nuevo empleado en la base de datos
+     * @param empleado Objeto empleado a insertar
      * @return true si se insertó correctamente, false en caso contrario
      */
     boolean insertar(Empleado empleado);
     
     /**
-     * Actualiza los datos de un empleado existente
-     * @param empleado objeto Empleado con los datos actualizados
+     * Actualizar un empleado existente
+     * @param empleado Objeto empleado con los datos actualizados
      * @return true si se actualizó correctamente, false en caso contrario
      */
     boolean actualizar(Empleado empleado);
     
     /**
-     * Elimina un empleado de la base de datos (eliminación lógica)
+     * Eliminar un empleado (baja lógica, cambia activo a false)
      * @param dni DNI del empleado a eliminar
      * @return true si se eliminó correctamente, false en caso contrario
      */
     boolean eliminar(String dni);
     
     /**
-     * Elimina físicamente un empleado de la base de datos
-     * @param dni DNI del empleado a eliminar
-     * @return true si se eliminó correctamente, false en caso contrario
-     */
-    boolean eliminarFisico(String dni);
-    
-    /**
-     * Busca un empleado por su DNI
+     * Buscar un empleado por DNI
      * @param dni DNI del empleado a buscar
-     * @return objeto Empleado si se encuentra, null en caso contrario
+     * @return Objeto Empleado si se encuentra, null en caso contrario
      */
     Empleado buscarPorDni(String dni);
     
     /**
-     * Busca un empleado por su ID
+     * Buscar un empleado por ID
      * @param id ID del empleado a buscar
-     * @return objeto Empleado si se encuentra, null en caso contrario
+     * @return Objeto Empleado si se encuentra, null en caso contrario
      */
     Empleado buscarPorId(int id);
     
     /**
-     * Obtiene todos los empleados activos de la base de datos
+     * Listar todos los empleados activos
      * @return Lista de empleados activos
      */
     List<Empleado> listarTodos();
     
     /**
-     * Obtiene todos los empleados (activos e inactivos)
+     * Listar todos los empleados (activos e inactivos)
      * @return Lista de todos los empleados
      */
     List<Empleado> listarTodosConInactivos();
     
     /**
-     * Busca empleados por nombre (búsqueda parcial)
-     * @param criterio texto a buscar en el nombre
-     * @return Lista de empleados que coinciden con el criterio
-     */
-    List<Empleado> buscarPorNombre(String criterio);
-    
-    /**
-     * Actualiza solo el nombre de un empleado
-     * @param dni DNI del empleado
-     * @param nuevoNombre nuevo nombre del empleado
-     * @return true si se actualizó correctamente, false en caso contrario
-     */
-    boolean actualizarNombre(String dni, String nuevoNombre);
-    
-    /**
-     * Actualiza solo el ID de un empleado
-     * @param dni DNI del empleado
-     * @param nuevoId nuevo ID del empleado
-     * @return true si se actualizó correctamente, false en caso contrario
-     */
-    boolean actualizarId(String dni, int nuevoId);
-    
-    /**
-     * Verifica si existe un empleado con el DNI especificado
+     * Verificar si un DNI ya existe en la base de datos
      * @param dni DNI a verificar
-     * @return true si existe, false en caso contrario
+     * @return true si existe, false si no existe
      */
-    boolean existePorDni(String dni);
+    boolean existeDni(String dni);
     
     /**
-     * Verifica si existe un empleado con el ID especificado
+     * Verificar si un ID ya existe en la base de datos
      * @param id ID a verificar
-     * @return true si existe, false en caso contrario
+     * @return true si existe, false si no existe
      */
-    boolean existePorId(int id);
+    boolean existeId(int id);
 }
