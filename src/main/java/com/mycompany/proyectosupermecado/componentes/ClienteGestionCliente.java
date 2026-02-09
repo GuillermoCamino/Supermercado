@@ -163,10 +163,10 @@ public void setApellido(String apellido) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel apellido;
     private javax.swing.JTextField apellidoFIeld;
-    private javax.swing.JButton btnConsultar;
-    private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnEliminar;
-    private javax.swing.JButton btnInsertar;
+    public javax.swing.JButton btnConsultar;
+    public javax.swing.JButton btnEditar;
+    public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnInsertar;
     private javax.swing.JLabel dni;
     private javax.swing.JTextField dniFIeld;
     private javax.swing.JLabel jLabel18;

@@ -476,7 +476,7 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
+/*
     private void btnConservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConservasActionPerformed
             TtlConservas.scrollRectToVisible(TtlConservas.getBounds());
 
@@ -513,7 +513,7 @@ public class VentanaModificacionProductos extends javax.swing.JFrame {
     private void btnCervezasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCervezasActionPerformed
                 TtlCervezas.scrollRectToVisible(TtlCervezas.getBounds());
     }//GEN-LAST:event_btnCervezasActionPerformed
-
+*/
     private void BtnCreacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCreacionActionPerformed
         Ventana_Creacion_Producto creacion=new Ventana_Creacion_Producto(nombre);
         creacion.setVisible(true);

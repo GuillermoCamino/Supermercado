@@ -1,45 +1,46 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mycompany.proyectosupermecado;
 
 import com.mycompany.proyectosupermecado.componentes.ClienteGestionCliente;
-import java.sql.Statement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import com.mycompany.proyectosupermecado.modelo.Cliente;
+import com.mycompany.proyectosupermecado.servicio.ClienteServicio;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Ventana para modificar y gestionar clientes
+ * ACTUALIZADA CON PATRÓN DAO
  * @author MEDAC
  */
 public class VentanaModificarClientes extends javax.swing.JFrame {
+    
     String nombre;
+    private ClienteServicio clienteServicio;
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaModificarClientes.class.getName());
-public void cargarClientes() {
-        try {
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost/costamarketDB", "root", "root"
-            );
 
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("SELECT dni, nombre, apellido FROM cliente");
+    /**
+     * Carga todos los clientes activos y los muestra en el panel
+     */
+    public void cargarClientes() {
+        try {
+            // Usar el servicio en lugar de conexión directa
+            List<Cliente> clientes = clienteServicio.listarClientesActivos();
 
             // Limpiar panel
             Pnlmenucito.removeAll();
             Pnlmenucito.setLayout(new java.awt.GridLayout(0, 1, 5, 5)); // dinámico
 
             // Crear un panel por cada cliente
-            while (rs.next()) {
+            for (Cliente cliente : clientes) {
                 ClienteGestionCliente panel = new ClienteGestionCliente();
 
-                panel.setDni(rs.getString("dni"));
-                panel.setNombre(rs.getString("nombre"));
-                panel.setApellido(rs.getString("apellido"));
+                // Configurar el panel con los datos del cliente
+                panel.setDni(cliente.getDni());
+                panel.setNombre(cliente.getNombre());
+                panel.setApellido(cliente.getApellidos());
+                
+                // Asociar los eventos de los botones
+                configurarEventosPanel(panel, cliente);
 
                 Pnlmenucito.add(panel);
             }
@@ -47,12 +48,106 @@ public void cargarClientes() {
             Pnlmenucito.revalidate();
             Pnlmenucito.repaint();
 
-            con.close();
+            System.out.println("Clientes cargados: " + clientes.size());
 
-        } catch (SQLException ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(this,
-                "Error cargando clientes: " + ex.getMessage());
+                "Error cargando clientes: " + ex.getMessage(),
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    /**
+     * Configura los eventos de los botones del panel de cliente
+     */
+    private void configurarEventosPanel(ClienteGestionCliente panel, Cliente cliente) {
+        // Botón Consultar - Muestra información del cliente
+        panel.btnConsultar.addActionListener(e -> {
+            String mensaje = String.format(
+                "Información del Cliente:\n\n" +
+                "DNI: %s\n" +
+                "Nombre: %s %s\n" +
+                "Teléfono: %s\n" +
+                "Email: %s\n" +
+                "Dirección: %s\n" +
+                "Puntos Acumulados: %d\n" +
+                "Fecha Registro: %s\n" +
+                "Estado: %s",
+                cliente.getDni(),
+                cliente.getNombre(),
+                cliente.getApellidos(),
+                cliente.getTelefono() != null ? cliente.getTelefono() : "No registrado",
+                cliente.getEmail() != null ? cliente.getEmail() : "No registrado",
+                cliente.getDireccion() != null ? cliente.getDireccion() : "No registrada",
+                cliente.getPuntosAcumulados(),
+                cliente.getFechaRegistro() != null ? cliente.getFechaRegistro().toString() : "No disponible",
+                cliente.isActivo() ? "Activo" : "Inactivo"
+            );
+            
+            JOptionPane.showMessageDialog(this, mensaje, 
+                "Información del Cliente", 
+                JOptionPane.INFORMATION_MESSAGE);
+        });
+
+        // Botón Editar - Abre ventana para editar
+        panel.btnEditar.addActionListener(e -> {
+            abrirVentanaEdicion(cliente);
+        });
+
+        // Botón Eliminar - Da de baja al cliente
+        panel.btnEliminar.addActionListener(e -> {
+            int confirmacion = JOptionPane.showConfirmDialog(this,
+                "¿Está seguro de dar de baja al cliente:\n" + 
+                cliente.getNombre() + " " + cliente.getApellidos() + "?",
+                "Confirmar Baja",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.WARNING_MESSAGE);
+            
+            if (confirmacion == JOptionPane.YES_OPTION) {
+                if (clienteServicio.darDeBajaCliente(cliente.getIdCliente())) {
+                    cargarClientes(); // Recargar la lista
+                }
+            }
+        });
+    }
+
+    /**
+     * Abre una ventana de diálogo para editar el cliente
+     */
+    private void abrirVentanaEdicion(Cliente cliente) {
+        // Crear campos para editar
+        javax.swing.JTextField txtNombre = new javax.swing.JTextField(cliente.getNombre());
+        javax.swing.JTextField txtApellidos = new javax.swing.JTextField(cliente.getApellidos());
+        javax.swing.JTextField txtTelefono = new javax.swing.JTextField(cliente.getTelefono() != null ? cliente.getTelefono() : "");
+        javax.swing.JTextField txtEmail = new javax.swing.JTextField(cliente.getEmail() != null ? cliente.getEmail() : "");
+        javax.swing.JTextField txtDireccion = new javax.swing.JTextField(cliente.getDireccion() != null ? cliente.getDireccion() : "");
+
+        Object[] campos = {
+            "Nombre:", txtNombre,
+            "Apellidos:", txtApellidos,
+            "Teléfono:", txtTelefono,
+            "Email:", txtEmail,
+            "Dirección:", txtDireccion
+        };
+
+        int opcion = JOptionPane.showConfirmDialog(this, campos, 
+            "Editar Cliente - " + cliente.getDni(), 
+            JOptionPane.OK_CANCEL_OPTION);
+
+        if (opcion == JOptionPane.OK_OPTION) {
+            // Actualizar el objeto cliente
+            cliente.setNombre(txtNombre.getText().trim());
+            cliente.setApellidos(txtApellidos.getText().trim());
+            cliente.setTelefono(txtTelefono.getText().trim());
+            cliente.setEmail(txtEmail.getText().trim());
+            cliente.setDireccion(txtDireccion.getText().trim());
+
+            // Guardar cambios
+            if (clienteServicio.modificarCliente(cliente)) {
+                cargarClientes(); // Recargar la lista
+            }
         }
     }
 
@@ -63,15 +158,27 @@ public void cargarClientes() {
         initComponents();
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         setResizable(false);
+        
+        // Inicializar servicio
+        this.clienteServicio = new ClienteServicio();
+        
+        // Cargar clientes al iniciar
+        cargarClientes();
     }
-        public VentanaModificarClientes(String nombre) {
+
+    public VentanaModificarClientes(String nombre) {
         initComponents();
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         setResizable(false);
-        this.nombre=nombre;
+        this.nombre = nombre;
         lblNombre.setText(nombre);
         fotoPerfil.setIcon(new ImageIcon(getClass().getResource("/bicho_lidel.png")));
-        //jTextField12.setText(nombre);
+        
+        // Inicializar servicio
+        this.clienteServicio = new ClienteServicio();
+        
+        // Cargar clientes al iniciar
+        cargarClientes();
     }
 
     /**
@@ -110,7 +217,7 @@ public void cargarClientes() {
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel24.setText("Ventas y compras");
+        jLabel24.setText("Gestión de Clientes");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 0;
@@ -189,16 +296,15 @@ public void cargarClientes() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        VentanaPrincipalEmpleado principal= new VentanaPrincipalEmpleado(nombre);
+        VentanaPrincipalEmpleado principal = new VentanaPrincipalEmpleado(nombre);
         principal.setVisible(true);
         this.dispose();
-        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-         VentanaLogin vuelta_inicio=new VentanaLogin();
-       vuelta_inicio.setVisible(true);
-       this.dispose();
+        VentanaLogin vuelta_inicio = new VentanaLogin();
+        vuelta_inicio.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -207,9 +313,6 @@ public void cargarClientes() {
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
