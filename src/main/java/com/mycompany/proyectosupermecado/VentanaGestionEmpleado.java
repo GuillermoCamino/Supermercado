@@ -6,27 +6,32 @@ package com.mycompany.proyectosupermecado;
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import com.mycompany.proyectosupermecado.servicio.EmpleadoServicio;
+import com.mycompany.proyectosupermecado.modelo.Empleado;
 
 /**
  *
  * @author Coron
  */
-public class VentanaGestiónEmpleado extends javax.swing.JFrame {
-String nombre;
+public class VentanaGestionEmpleado extends javax.swing.JFrame {
+    String nombre;
+    private EmpleadoServicio empleadoServicio;
     /**
      * Creates new form VentanaGestiónEmpleado
      */
-    public VentanaGestiónEmpleado() {
+    public VentanaGestionEmpleado() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
+        this.empleadoServicio = new EmpleadoServicio();
     }
-      public VentanaGestiónEmpleado(String nombre) {
+      public VentanaGestionEmpleado(String nombre) {
         initComponents();
         this.nombre=nombre;
          lblIDEmpleadoCabeza.setText(nombre);
         lblFotoEmpleado.setIcon(new ImageIcon(getClass().getResource("/lobatito.jpg")));
         lblIDEmpleadoCabeza.setText(nombre);
         setExtendedState(MAXIMIZED_BOTH);
+        this.empleadoServicio = new EmpleadoServicio();
     }
 
     /**
@@ -285,9 +290,57 @@ String nombre;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearPerfilActionPerformed
-        // TODO add your handling code here:
+        // Obtener los valores de los campos
+        String dni = txtNumeroDNI.getText().trim().toUpperCase();
+        String nombre = txtNombreApellido.getText().trim();
+        String idTexto = txtIDEmpleado.getText().trim();
         
-        JOptionPane.showMessageDialog(this, "Se ha creado el perfil correctamente", "Perfil Guardado", JOptionPane.INFORMATION_MESSAGE);
+        // Validar que los campos no estén vacíos
+        if (dni.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Por favor, ingrese el DNI del empleado", 
+                "Campo Requerido", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (nombre.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Por favor, ingrese el nombre del empleado", 
+                "Campo Requerido", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        if (idTexto.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Por favor, ingrese el ID del empleado", 
+                "Campo Requerido", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // Convertir el ID a número
+        int id;
+        try {
+            id = Integer.parseInt(idTexto);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, 
+                "El ID debe ser un número válido", 
+                "Error de Formato", 
+                JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        // Registrar el empleado usando el servicio
+        boolean resultado = empleadoServicio.registrarEmpleado(dni, nombre, id);
+        
+        // Si se creó exitosamente, limpiar los campos
+        if (resultado) {
+            txtNumeroDNI.setText("");
+            txtNombreApellido.setText("");
+            txtIDEmpleado.setText("");
+        }
     }//GEN-LAST:event_btnCrearPerfilActionPerformed
 
     private void btnSalirSinGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirSinGuardarActionPerformed
@@ -298,8 +351,52 @@ String nombre;
     }//GEN-LAST:event_btnSalirSinGuardarActionPerformed
 
     private void btnGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCambiosActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "Se han guardado los datos correctamente", "Datos Guardado", JOptionPane.INFORMATION_MESSAGE);
+        // Obtener los valores de los campos
+        String dni = txtNumeroDNI.getText().trim().toUpperCase();
+        String nuevoNombre = txtNombreApellido.getText().trim();
+        String idTexto = txtIDEmpleado.getText().trim();
+        
+        // Validar que el DNI no esté vacío (es la clave para actualizar)
+        if (dni.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Por favor, ingrese el DNI del empleado para actualizar sus datos", 
+                "Campo Requerido", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // Validar que el nombre no esté vacío
+        if (nuevoNombre.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Por favor, ingrese el nombre del empleado", 
+                "Campo Requerido", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // Validar que el ID no esté vacío
+        if (idTexto.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Por favor, ingrese el ID del empleado", 
+                "Campo Requerido", 
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        // Convertir el ID a número
+        int nuevoId;
+        try {
+            nuevoId = Integer.parseInt(idTexto);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, 
+                "El ID debe ser un número válido", 
+                "Error de Formato", 
+                JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        // Actualizar el empleado usando el servicio
+        empleadoServicio.actualizarEmpleado(dni, nuevoNombre, nuevoId);
     }//GEN-LAST:event_btnGuardarCambiosActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
